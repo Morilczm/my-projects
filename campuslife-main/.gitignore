@@ -1,0 +1,17 @@
+# Local editor and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# WeChat Developer Tools local private config
+project.private.config.json
+
+# Dependencies and build outputs
+node_modules/
+miniprogram_npm/
+cloudfunctions/**/node_modules/
+
+# Logs and archives
+*.log
+*.zip

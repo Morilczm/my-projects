@@ -1,0 +1,794 @@
+/* 全局背景：带有微弱渐变的深色/浅色科技风 */
+.dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+  padding: 40rpx 30rpx;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* 顶部数据流 */
+.header-stream {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 15rpx 25rpx;
+  border-radius: 30rpx;
+  margin-bottom: 40rpx;
+  font-size: 22rpx;
+  color: #555;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4rpx 15rpx rgba(0, 0, 0, 0.03);
+}
+
+.stream-item {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+.highlight-num {
+  font-weight: bold;
+  color: #00796b;
+  font-family: monospace;
+  font-size: 24rpx;
+}
+
+/* 标题区 */
+.main-title {
+  text-align: center;
+  margin-bottom: 60rpx;
+}
+
+.title-text {
+  font-size: 56rpx;
+  font-weight: 900;
+  color: #1a202c;
+  letter-spacing: 2rpx;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.sub-title {
+  font-size: 24rpx;
+  color: #718096;
+  letter-spacing: 1rpx;
+}
+
+/* 玻璃质感卡片 */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 35rpx;
+  margin-bottom: 40rpx;
+}
+
+.glass-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 30rpx;
+  border-radius: 24rpx;
+  box-shadow: 0 10rpx 30rpx rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 1);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(20px);
+}
+
+.glass-card:active {
+  transform: scale(0.98);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* 图标区域 */
+.card-icon {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30rpx;
+  position: relative;
+}
+
+.emoji {
+  font-size: 45rpx;
+  z-index: 2;
+}
+
+.bg-teal {
+  background: linear-gradient(135deg, #4fd1c5 0%, #319795 100%);
+  box-shadow: 0 8rpx 20rpx rgba(49, 151, 149, 0.3);
+}
+
+.bg-blue {
+  background: linear-gradient(135deg, #63b3ed 0%, #3182ce 100%);
+  box-shadow: 0 8rpx 20rpx rgba(49, 130, 206, 0.3);
+}
+
+.bg-orange {
+  background: linear-gradient(135deg, #f6ad55 0%, #dd6b20 100%);
+  box-shadow: 0 8rpx 20rpx rgba(221, 107, 32, 0.3);
+}
+
+/* 卡片文字 */
+.card-content {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #2d3748;
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+.card-desc {
+  font-size: 22rpx;
+  color: #718096;
+}
+
+.arrow {
+  color: #cbd5e0;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+/* 地图区域 */
+.map-section {
+  background: #1a202c;
+  border-radius: 24rpx;
+  padding: 30rpx;
+  color: #fff;
+  box-shadow: 0 15rpx 35rpx rgba(26, 32, 44, 0.2);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40rpx;
+}
+
+/* 区域头部 */
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  font-size: 24rpx;
+}
+
+/* 取件码栏 */
+.pickup-code-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12rpx;
+  padding: 20rpx 24rpx;
+  margin-bottom: 16rpx;
+}
+
+.pickup-label {
+  font-size: 26rpx;
+  color: #fff;
+}
+
+.pickup-code {
+  font-size: 44rpx;
+  font-weight: bold;
+  color: #ffeb3b;
+  letter-spacing: 8rpx;
+  text-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+  flex: 1;
+  color: #a0aec0;
+  margin-left: 15rpx;
+}
+
+.live-tag {
+  background: #e53e3e;
+  color: white;
+  font-size: 18rpx;
+  font-weight: bold;
+  padding: 4rpx 12rpx;
+  border-radius: 8rpx;
+  animation: pulse-red 1.5s infinite;
+}
+
+.battery {
+  color: #48bb78;
+  font-family: monospace;
+  font-size: 24rpx;
+}
+
+/* 地图容器 */
+.map-container {
+  position: relative;
+  height: 500rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+  margin-bottom: 25rpx;
+  background: #2d3748;
+}
+
+/* 送达提示弹窗 */
+.delivery-toast {
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+  right: 20rpx;
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  border-radius: 16rpx;
+  padding: 24rpx 30rpx;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  box-shadow: 0 10rpx 30rpx rgba(72, 187, 120, 0.4);
+  animation: toast-in 0.4s ease-out;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20rpx);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toast-icon {
+  font-size: 48rpx;
+  margin-right: 20rpx;
+}
+
+.toast-content {
+  flex: 1;
+}
+
+.toast-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  margin-bottom: 6rpx;
+}
+
+.toast-time {
+  font-size: 22rpx;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.toast-code {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #ffeb3b;
+  letter-spacing: 6rpx;
+  margin: 8rpx 0;
+}
+
+.toast-hint {
+  font-size: 22rpx;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 6rpx;
+}
+
+.toast-close {
+  font-size: 40rpx;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0 10rpx;
+  line-height: 1;
+}
+
+/* 可缩放滑动地图 */
+.scroll-map {
+  width: 100%;
+  height: 100%;
+}
+
+.map-content {
+  position: relative;
+  background: #2d3748;
+  transform-origin: center center;
+  transition: transform 0.3s ease;
+}
+
+/* 地图图片 */
+.map-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 地图标记层 */
+.map-markers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+/* 路线路径 */
+.route-path {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.route-line {
+  position: absolute;
+  background: rgba(79, 209, 197, 0.6);
+  border-radius: 4rpx;
+}
+
+/* 车辆标记 */
+.car-marker {
+  position: absolute;
+  z-index: 10;
+  transition: left 0.12s linear, top 0.12s linear, transform 0.3s ease;
+}
+
+.car-icon {
+  font-size: 48rpx;
+  position: relative;
+  z-index: 2;
+}
+
+.car-halo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60rpx;
+  height: 60rpx;
+  background: rgba(79, 209, 197, 0.4);
+  border-radius: 50%;
+  animation: pulse-halo 1.5s infinite;
+}
+
+/* 起点标记 */
+.start-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.start-icon {
+  font-size: 36rpx;
+}
+
+.start-label {
+  font-size: 18rpx;
+  color: #48bb78;
+  white-space: nowrap;
+  margin-top: 4rpx;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 4rpx 8rpx;
+  border-radius: 6rpx;
+}
+
+/* 终点标记 */
+.end-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.end-icon {
+  font-size: 36rpx;
+}
+
+.end-label {
+  font-size: 18rpx;
+  color: #f6ad55;
+  white-space: nowrap;
+  margin-top: 4rpx;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 4rpx 8rpx;
+  border-radius: 6rpx;
+}
+
+/* 地图覆盖层 */
+.map-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(26, 32, 44, 0.95));
+  padding: 30rpx 20rpx;
+}
+
+/* 信息面板 */
+.info-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+  min-width: 140rpx;
+}
+
+.info-label {
+  font-size: 20rpx;
+  color: #718096;
+  margin-bottom: 5rpx;
+}
+
+.info-value {
+  font-size: 24rpx;
+  color: #fff;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.info-value.highlight {
+  color: #4fd1c5;
+}
+
+/* 路线进度条 */
+.route-progress-bar {
+  margin-top: 10rpx;
+}
+
+.progress-track {
+  height: 8rpx;
+  background: #4a5568;
+  border-radius: 4rpx;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4fd1c5, #319795);
+  border-radius: 4rpx;
+  transition: width 1s linear;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rpx;
+  font-size: 20rpx;
+  color: #718096;
+}
+
+/* 图例 */
+.legend {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20rpx;
+  border-top: 1px solid #4a5568;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 20rpx;
+  color: #a0aec0;
+}
+
+.legend-dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+.legend-dot.car-dot {
+  background: #4fd1c5;
+  box-shadow: 0 0 10rpx #4fd1c5;
+}
+
+.legend-dot.start-dot {
+  background: #48bb78;
+}
+
+.legend-dot.end-dot {
+  background: #f6ad55;
+}
+
+.legend-line {
+  width: 24rpx;
+  height: 4rpx;
+  background: #4fd1c5;
+  border-radius: 2rpx;
+  margin-right: 10rpx;
+}
+
+/* 状态行 */
+.status-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(74, 85, 104, 0.5);
+  border-radius: 12rpx;
+  padding: 16rpx 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.status-icon {
+  font-size: 32rpx;
+  margin-right: 10rpx;
+}
+
+.status-text {
+  font-size: 24rpx;
+  color: #e2e8f0;
+}
+
+.status-divider {
+  width: 1px;
+  height: 30rpx;
+  background: #4a5568;
+  margin: 0 30rpx;
+}
+
+/* 货物信息 */
+.cargo-info {
+  background: rgba(74, 85, 104, 0.5);
+  border-radius: 12rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.cargo-title {
+  font-size: 26rpx;
+  font-weight: bold;
+  color: #e2e8f0;
+  margin-bottom: 16rpx;
+}
+
+.cargo-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12rpx;
+}
+
+.cargo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.cargo-label {
+  font-size: 20rpx;
+  color: #a0aec0;
+  margin-bottom: 6rpx;
+}
+
+.cargo-value {
+  font-size: 24rpx;
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.cargo-remark {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 12rpx;
+  border-top: 1px solid rgba(74, 85, 104, 0.8);
+}
+
+.cargo-remark .cargo-label {
+  margin-right: 16rpx;
+  flex-shrink: 0;
+}
+
+.cargo-remark .cargo-value {
+  color: #4fd1c5;
+}
+
+/* 帮助与支持模块 */
+.help-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 24rpx;
+  padding: 30rpx;
+  margin-top: 20rpx;
+}
+
+.help-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24rpx;
+}
+
+.help-icon {
+  font-size: 36rpx;
+  margin-right: 12rpx;
+}
+
+.help-text {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #fff;
+}
+
+.help-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16rpx;
+  margin-bottom: 24rpx;
+}
+
+.help-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16rpx;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.help-card:active {
+  transform: scale(0.96);
+  background: rgba(255, 255, 255, 1);
+}
+
+.help-card-icon {
+  font-size: 40rpx;
+  margin-bottom: 12rpx;
+}
+
+.help-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.help-card-title {
+  font-size: 26rpx;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 6rpx;
+}
+
+.help-card-desc {
+  font-size: 20rpx;
+  color: #718096;
+}
+
+.help-card-action {
+  margin-top: 12rpx;
+  font-size: 22rpx;
+  color: #667eea;
+  font-weight: 500;
+  padding: 6rpx 20rpx;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 20rpx;
+}
+
+.help-footer {
+  text-align: center;
+  padding-top: 20rpx;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-text {
+  display: block;
+  font-size: 20rpx;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+}
+
+/* 核心动画 Keyframes */
+@keyframes pulse-green {
+  0% {
+    box-shadow: 0 0 0 0 rgba(72, 187, 120, 0.7);
+    background: #48bb78;
+  }
+
+  70% {
+    box-shadow: 0 0 0 10rpx rgba(72, 187, 120, 0);
+    background: #68d391;
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(72, 187, 120, 0);
+    background: #48bb78;
+  }
+}
+
+@keyframes pulse-blue {
+  0% {
+    box-shadow: 0 0 0 0 rgba(66, 153, 225, 0.7);
+    background: #4299e1;
+  }
+
+  70% {
+    box-shadow: 0 0 0 10rpx rgba(66, 153, 225, 0);
+    background: #63b3ed;
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(66, 153, 225, 0);
+    background: #4299e1;
+  }
+}
+
+@keyframes pulse-red {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-halo {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8rpx);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.pulse-green {
+  animation: pulse-green 2s infinite;
+}
+
+.pulse-blue {
+  animation: pulse-blue 3s infinite;
+}
+
+.hover-float {}
+
+.delay-1 {}
+
+.delay-2 {}

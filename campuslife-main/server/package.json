@@ -1,0 +1,17 @@
+{
+  "name": "campuslife-server",
+  "version": "1.0.0",
+  "description": "Campus Life service for processing and distributing mini program messages.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node src/index.js"
+  },
+  "keywords": [
+    "campuslife",
+    "mini-program",
+    "server"
+  ],
+  "author": "",
+  "license": "MIT"
+}

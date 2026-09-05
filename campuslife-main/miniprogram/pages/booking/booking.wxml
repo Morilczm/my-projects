@@ -1,0 +1,84 @@
+<view class="booking-container">
+  
+  <view class="toggle-wrapper">
+    <view class="toggle-slider" style="transform: translateX({{bizType === 'receive' ? '100%' : '0'}});"></view>
+    <view class="toggle-item {{bizType === 'send' ? 'active' : ''}}" bindtap="switchType" data-type="send">
+      <text class="icon">📦</text> 寄件预订
+    </view>
+    <view class="toggle-item {{bizType === 'receive' ? 'active' : ''}}" bindtap="switchType" data-type="receive">
+      <text class="icon">🏃</text> 跑腿代取
+    </view>
+  </view>
+
+  <view class="glass-panel location-card">
+    <view class="loc-row">
+      <view class="pulse-dot green"></view>
+      <picker mode="selector" range="{{locations}}" bindchange="onStartChange" class="flex-1">
+        <view class="picker-text {{startPoint ? 'has-val' : ''}}">{{startPoint || '请点击选择起始点'}}</view>
+      </picker>
+    </view>
+    
+    <view class="route-line {{startPoint && endPoint ? 'flow-active' : ''}}"></view>
+
+    <view class="loc-row">
+      <view class="pulse-dot orange"></view>
+      <picker mode="selector" range="{{locations}}" bindchange="onEndChange" class="flex-1">
+        <view class="picker-text {{endPoint ? 'has-val' : ''}}">{{endPoint || '请点击选择送达点'}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="glass-panel ai-feedback {{isCalculating ? 'calculating' : ''}}" wx:if="{{startPoint && endPoint}}">
+    <view wx:if="{{isCalculating}}" class="loading-state">
+      <view class="spinner"></view>
+      <text>大模型路径规划中...</text>
+    </view>
+    <view wx:else class="result-state fade-in">
+      <view class="result-item">预计抵达 <text class="highlight">{{estTime}}</text> 分钟</view>
+      <view class="result-item">当前运力 <text class="highlight">空闲</text> (占用率 {{occupancy}}%)</view>
+    </view>
+  </view>
+
+  <view class="glass-panel form-card">
+    <view class="input-group">
+      <text class="label">您的姓名</text>
+      <input class="smart-input" placeholder="输入真实姓名" bindinput="inputS" value="{{senderName}}" placeholder-class="ph-style"/>
+    </view>
+    <view class="input-group">
+      <text class="label">对方姓名</text>
+      <input class="smart-input" placeholder="收/发件人姓名" bindinput="inputR" value="{{receiverName}}" placeholder-class="ph-style"/>
+    </view>
+    <view class="input-group">
+      <text class="label">联系电话</text>
+      <input class="smart-input" type="number" maxlength="11" placeholder="输入手机号码" bindinput="inputP" value="{{phone}}" placeholder-class="ph-style"/>
+    </view>
+  </view>
+
+  <view class="glass-panel cargo-card">
+    <view class="card-header">
+      <text class="header-icon">📦</text>
+      <text class="header-title">货物信息</text>
+    </view>
+    <view class="input-group">
+      <text class="label">重量</text>
+      <input class="smart-input" placeholder="请输入重量(如: 2.5kg)" bindinput="onCargoWeightChange" value="{{cargoWeight}}" placeholder-class="ph-style"/>
+    </view>
+    <view class="input-group">
+      <text class="label">类型</text>
+      <input class="smart-input" placeholder="请输入货物类型" bindinput="onCargoTypeChange" value="{{cargoType}}" placeholder-class="ph-style"/>
+    </view>
+    <view class="input-group">
+      <text class="label">要求</text>
+      <input class="smart-input" placeholder="请输入特殊要求(如:轻拿轻放)" bindinput="onCargoRequireChange" value="{{cargoRequire}}" placeholder-class="ph-style"/>
+    </view>
+    <view class="input-group no-border">
+      <text class="label">备注</text>
+      <textarea class="smart-textarea" placeholder="请输入备注信息" bindinput="onCargoRemarkChange" value="{{cargoRemark}}" placeholder-class="ph-style"></textarea>
+    </view>
+  </view>
+
+  <button class="btn-submit" hover-class="btn-hover" loading="{{submitting}}" disabled="{{submitting}}" bindtap="submitBooking">
+    {{submitting ? '正在创建订单...' : '确认发送智能调度'}}
+  </button>
+
+</view>

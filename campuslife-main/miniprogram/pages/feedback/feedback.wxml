@@ -1,0 +1,52 @@
+<view class="feedback-container">
+  
+  <view class="header-section slide-up">
+    <view class="title-row">
+      <view class="pulse-dot green"></view>
+      <text class="title">Campus Life 聆听中心</text>
+    </view>
+    <text class="subtitle">您的每一个建议，都在驱动无人车调度系统进化</text>
+  </view>
+
+  <view class="glass-panel slide-up delay-1">
+    <text class="section-title">快速选择反馈类型</text>
+    <view class="tag-group">
+      <view 
+        wx:for="{{tags}}" 
+        wx:key="index"
+        class="smart-tag {{activeTag === item ? 'active' : ''}}" 
+        bindtap="selectTag" 
+        data-tag="{{item}}">
+        {{item}}
+      </view>
+    </view>
+  </view>
+
+  <view class="glass-panel slide-up delay-2 {{isFocused ? 'focused' : ''}}">
+    <textarea 
+      class="feedback-area" 
+      placeholder="请详细描述您遇到的问题或改善建议，例如：“希望增加雨雪天气的保温包装”..." 
+      maxlength="200"
+      bindinput="onInput"
+      bindfocus="onFocus"
+      bindblur="onBlur"
+      value="{{content}}"
+    ></textarea>
+    
+    <view class="area-footer">
+      <view class="ai-analysis">
+        <text wx:if="{{aiKeywords.length > 0}}" class="ai-label pulse-blue">AI 提取关键字：</text>
+        <view class="keyword-tags">
+          <text wx:for="{{aiKeywords}}" wx:key="index" class="k-tag fade-in">{{item}}</text>
+        </view>
+      </view>
+      
+      <text class="char-count {{charCount >= 200 ? 'limit' : ''}}">{{charCount}}/200</text>
+    </view>
+  </view>
+
+  <button class="btn-submit slide-up delay-3" hover-class="btn-hover" loading="{{submitting}}" disabled="{{submitting}}" bindtap="submitFeedback">
+    {{submitting ? '正在提交...' : '安全提交至云端控制台'}}
+  </button>
+
+</view>

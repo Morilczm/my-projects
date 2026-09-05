@@ -1,0 +1,61 @@
+/* 全局背景色，与主页呼应 */
+.booking-container { min-height: 100vh; background: #f4f7f6; padding: 40rpx 30rpx; box-sizing: border-box; font-family: -apple-system, sans-serif; }
+
+/* 玻璃质感面板基础类 */
+.glass-panel { background: #ffffff; border-radius: 24rpx; padding: 30rpx; margin-bottom: 40rpx; box-shadow: 0 8rpx 20rpx rgba(0,0,0,0.03); border: 1px solid rgba(255,255,255,0.6); }
+
+/* 1. 滑动切换开关 (极具动态感) */
+.toggle-wrapper { position: relative; display: flex; background: #e2e8f0; border-radius: 100rpx; height: 80rpx; margin-bottom: 50rpx; padding: 6rpx; box-sizing: border-box; }
+.toggle-slider { position: absolute; width: 50%; height: 68rpx; background: #fff; border-radius: 100rpx; box-shadow: 0 4rpx 10rpx rgba(0,0,0,0.1); transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1); z-index: 1; }
+.toggle-item { flex: 1; display: flex; justify-content: center; align-items: center; font-size: 28rpx; font-weight: bold; color: #718096; z-index: 2; transition: color 0.3s; }
+.toggle-item.active { color: #00796b; }
+.icon { margin-right: 10rpx; font-size: 32rpx; }
+
+/* 2. 地点选择器交互 */
+.location-card { position: relative; padding: 40rpx 30rpx; }
+.loc-row { display: flex; align-items: center; }
+.pulse-dot { width: 16rpx; height: 16rpx; border-radius: 50%; margin-right: 30rpx; position: relative; }
+.pulse-dot.green { background: #48bb78; box-shadow: 0 0 0 6rpx rgba(72,187,120,0.2); }
+.pulse-dot.orange { background: #ed8936; box-shadow: 0 0 0 6rpx rgba(237,137,54,0.2); }
+
+.flex-1 { flex: 1; }
+.picker-text { font-size: 32rpx; color: #a0aec0; padding: 15rpx 0; border-bottom: 1px solid #edf2f7; transition: all 0.3s; }
+.picker-text.has-val { color: #2d3748; font-weight: bold; }
+
+/* 路线连接线动画 */
+.route-line { margin: 10rpx 0 10rpx 7rpx; height: 60rpx; border-left: 2px dashed #cbd5e0; transition: border-color 0.5s; }
+.route-line.flow-active { border-left: 2px solid #00796b; animation: line-flow 1.5s infinite linear; }
+@keyframes line-flow { 0% { opacity: 0.4; } 50% { opacity: 1; } 100% { opacity: 0.4; } }
+
+/* 3. AI 推演面板 */
+.ai-feedback { background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%); color: #004d40; border: none; transition: all 0.5s ease; overflow: hidden; }
+.ai-feedback.calculating { opacity: 0.8; filter: blur(1px); }
+.loading-state { display: flex; align-items: center; justify-content: center; font-size: 26rpx; }
+.spinner { width: 30rpx; height: 30rpx; border: 3px solid rgba(0,77,64,0.2); border-top-color: #004d40; border-radius: 50%; animation: spin 1s linear infinite; margin-right: 15rpx; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.result-state { display: flex; justify-content: space-around; font-size: 26rpx; }
+.highlight { font-size: 36rpx; font-weight: 900; color: #00796b; font-family: monospace; }
+.fade-in { animation: fadeIn 0.6s ease-out forwards; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10rpx); } to { opacity: 1; transform: translateY(0); } }
+
+/* 4. 输入框表单 */
+.form-card { padding: 10rpx 30rpx; }
+.input-group { display: flex; align-items: center; padding: 30rpx 0; border-bottom: 1rpx solid #edf2f7; }
+.input-group.no-border { border-bottom: none; }
+.label { width: 160rpx; font-size: 28rpx; color: #4a5568; font-weight: bold; }
+.smart-input { flex: 1; font-size: 28rpx; color: #2d3748; }
+.smart-textarea { flex: 1; font-size: 28rpx; color: #2d3748; height: 120rpx; }
+.ph-style { color: #cbd5e0; font-weight: normal; }
+
+/* 5. 货物信息卡片 */
+.cargo-card { background: linear-gradient(135deg, #fff8e1 0%, #fff3e0 100%); border: 1px solid #ffe0b2; }
+.card-header { display: flex; align-items: center; margin-bottom: 20rpx; padding-bottom: 20rpx; border-bottom: 1rpx solid rgba(0,0,0,0.1); }
+.header-icon { font-size: 36rpx; margin-right: 12rpx; }
+.header-title { font-size: 30rpx; font-weight: bold; color: #4a3728; }
+
+/* 5. 动态提交按钮 */
+.btn-submit { background: #00796b; color: #fff; font-size: 32rpx; font-weight: bold; border-radius: 100rpx; padding: 25rpx 0; box-shadow: 0 10rpx 20rpx rgba(0,121,107,0.3); transition: all 0.2s; position: relative; overflow: hidden; }
+.btn-hover { transform: translateY(4rpx); box-shadow: 0 4rpx 10rpx rgba(0,121,107,0.2); background: #00695c; }
+/* 按钮光泽划过特效 */
+.btn-submit::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%); transform: rotate(45deg); animation: shine 3s infinite; }
+@keyframes shine { 0% { left: -100%; } 20% { left: 100%; } 100% { left: 100%; } }

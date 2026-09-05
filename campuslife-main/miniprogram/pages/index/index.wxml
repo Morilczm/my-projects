@@ -1,0 +1,220 @@
+<view class="dashboard">
+  <view class="header-stream">
+    <view class="stream-item">
+      <view class="dot pulse-green"></view>
+      <text>
+        大模型预测:
+        <text class="highlight-num">91.7%</text>
+      </text>
+    </view>
+    <view class="stream-item">
+      <view class="dot pulse-blue"></view>
+      <text>
+        系统延迟:
+        <text class="highlight-num">{{latency}}ms</text>
+      </text>
+    </view>
+  </view>
+  <view class="main-title">
+    <text class="title-text shimmer-text">Campus Life</text>
+    <text class="sub-title">www.campuslife.com</text>
+  </view>
+  <view class="card-list">
+    <view class="glass-card delay-0" bindtap="navTo" data-url="/pages/booking/booking">
+      <view class="card-icon bg-teal">
+        <view class="icon-pulse"></view>
+        <text class="emoji">🤖</text>
+      </view>
+      <view class="card-content">
+        <text class="card-title">配送预订</text>
+        <text class="card-desc">对接课表 · 智能时间规划</text>
+      </view>
+      <view class="arrow">></view>
+    </view>
+    <view class="glass-card delay-1" bindtap="navTo" data-url="/pages/orders/orders">
+      <view class="card-icon bg-blue">
+        <text class="emoji">📦</text>
+      </view>
+      <view class="card-content">
+        <text class="card-title">订单查询</text>
+        <text class="card-desc">实时追踪 · 精准避障路线</text>
+      </view>
+      <view class="arrow">></view>
+    </view>
+    <view class="glass-card delay-2" bindtap="navTo" data-url="/pages/feedback/feedback">
+      <view class="card-icon bg-orange">
+        <text class="emoji">💬</text>
+      </view>
+      <view class="card-content">
+        <text class="card-title">需求反馈</text>
+        <text class="card-desc">个性化服务 · 应急响应</text>
+      </view>
+      <view class="arrow">></view>
+    </view>
+  </view>
+  <view class="map-section">
+    <view class="section-header">
+      <view class="live-tag pulse-red">LIVE</view>
+      <text class="section-title">无人车实时路径追踪</text>
+      <text class="battery">🔋 {{battery}}%</text>
+    </view>
+    <view class="pickup-code-bar">
+      <text class="pickup-label">📦 您的取件码</text>
+      <text class="pickup-code">{{pickupCode}}</text>
+    </view>
+    <view class="map-container">
+      <view wx:if="{{showDeliveryToast}}" class="delivery-toast" bindtap="hideDeliveryToast">
+        <view class="toast-icon">📦</view>
+        <view class="toast-content">
+          <text class="toast-title">您的物品已送达</text>
+          <text class="toast-code">取件码：{{pickupCode}}</text>
+          <text class="toast-time">送达时间：{{deliveryTime}}</text>
+          <text class="toast-hint">请输入取件码取件</text>
+        </view>
+        <view class="toast-close">×</view>
+      </view>
+      <scroll-view class="scroll-map" scroll-x scroll-y scroll-left="{{scrollLeft}}" scroll-top="{{scrollTop}}" enhanced show-scrollbar="false" bindscroll="onMapScroll" style="width: 100%; height: 100%;">
+        <view class="map-content" style="width: {{mapWidth}}rpx; height: {{mapHeight}}rpx; transform: scale({{mapScale}}); transform-origin: {{carPosition.x}}% {{carPosition.y}}%;">
+          <image class="map-image" src="../../images/icons/school_map.jpg" mode="aspectFill"></image>
+          <view class="map-markers">
+            <view class="car-marker" style="left: {{carPosition.x}}%; top: {{carPosition.y}}%; transform: translate(-50%, -50%) rotate({{carRotation}}deg);">
+              <view class="car-icon">🚗</view>
+              <view class="car-halo"></view>
+            </view>
+            <view class="start-marker" style="left: {{routePoints[0].x}}%; top: {{routePoints[0].y}}%;">
+              <view class="start-icon">📍</view>
+              <text class="start-label">{{routePoints[0].name}}</text>
+            </view>
+            <view class="end-marker" style="left: {{routePoints[routePoints.length-1].x}}%; top: {{routePoints[routePoints.length-1].y}}%;">
+              <view class="end-icon">🏠</view>
+              <text class="end-label">{{routePoints[routePoints.length-1].name}}</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+      <view class="map-overlay">
+        <view class="info-panel">
+          <view class="info-row">
+            <text class="info-label">当前位置</text>
+            <text class="info-value">{{currentLocationName}}</text>
+          </view>
+          <view class="info-row">
+            <text class="info-label">速度</text>
+            <text class="info-value">{{speed}} km/h</text>
+          </view>
+          <view class="info-row">
+            <text class="info-label">方向</text>
+            <text class="info-value">{{direction}}</text>
+          </view>
+          <view class="info-row">
+            <text class="info-label">预计到达</text>
+            <text class="info-value highlight">{{eta}} 分钟</text>
+          </view>
+        </view>
+        <view class="route-progress-bar">
+          <view class="progress-track">
+            <view class="progress-fill" style="width: {{progressPercent}}%"></view>
+          </view>
+          <view class="progress-labels">
+            <text>{{startPoint}}</text>
+            <text>{{endPoint}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="status-row">
+      <view class="status-item">
+        <text class="status-icon">{{weatherIcon}}</text>
+        <text class="status-text">{{weatherText}}</text>
+      </view>
+      <view class="status-divider"></view>
+      <view class="status-item">
+        <text class="status-icon">🚗</text>
+        <text class="status-text">车速：{{speedStatus}}</text>
+      </view>
+    </view>
+    <view class="cargo-info">
+      <view class="cargo-title">📦 货物信息</view>
+      <view class="cargo-details">
+        <view class="cargo-item">
+          <text class="cargo-label">重量</text>
+          <text class="cargo-value">{{cargoWeight || '未填写'}}</text>
+        </view>
+        <view class="cargo-item">
+          <text class="cargo-label">类型</text>
+          <text class="cargo-value">{{cargoType || '未填写'}}</text>
+        </view>
+        <view class="cargo-item">
+          <text class="cargo-label">要求</text>
+          <text class="cargo-value">{{cargoRequire || '无'}}</text>
+        </view>
+      </view>
+      <view class="cargo-remark">
+        <text class="cargo-label">备注</text>
+        <text class="cargo-value">{{cargoRemark || '无'}}</text>
+      </view>
+    </view>
+    <view class="legend">
+      <view class="legend-item">
+        <view class="legend-dot car-dot"></view>
+        <text>无人车</text>
+      </view>
+      <view class="legend-item">
+        <view class="legend-line"></view>
+        <text>行驶路径</text>
+      </view>
+      <view class="legend-item">
+        <view class="legend-dot start-dot"></view>
+        <text>起点</text>
+      </view>
+      <view class="legend-item">
+        <view class="legend-dot end-dot"></view>
+        <text>终点</text>
+      </view>
+    </view>
+  </view>
+  <view class="help-section">
+    <view class="help-title">
+      <text class="help-icon">💡</text>
+      <text class="help-text">帮助与支持</text>
+    </view>
+    <view class="help-cards">
+      <view class="help-card" bindtap="copyWechat">
+        <view class="help-card-icon wechat-icon">💬</view>
+        <view class="help-card-content">
+          <text class="help-card-title">微信客服</text>
+          <text class="help-card-desc">CampusLife_Service</text>
+        </view>
+        <text class="help-card-action">复制</text>
+      </view>
+      <view class="help-card" bindtap="makePhoneCall">
+        <view class="help-card-icon phone-icon">📞</view>
+        <view class="help-card-content">
+          <text class="help-card-title">电话联系</text>
+          <text class="help-card-desc">010-12345678</text>
+        </view>
+        <text class="help-card-action">拨打</text>
+      </view>
+      <view class="help-card" bindtap="showFAQ">
+        <view class="help-card-icon faq-icon">❓</view>
+        <view class="help-card-content">
+          <text class="help-card-title">常见问题</text>
+          <text class="help-card-desc">配送、取件、退换等</text>
+        </view>
+        <text class="help-card-action">查看更多</text>
+      </view>
+      <view class="help-card" bindtap="showServiceTime">
+        <view class="help-card-icon time-icon">🕐</view>
+        <view class="help-card-content">
+          <text class="help-card-title">服务时间</text>
+          <text class="help-card-desc">08:00 - 22:00</text>
+        </view>
+        <text class="help-card-action">详情</text>
+      </view>
+    </view>
+    <view class="help-footer">
+      <text class="footer-text">© 2024 Campus Life 智慧校园配送</text>
+      <text class="footer-text">北邮沙河校区 · 无人车配送服务</text>
+    </view>
+  </view>
+</view>

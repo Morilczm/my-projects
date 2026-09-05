@@ -1,0 +1,88 @@
+<view class="orders-container">
+  
+  <view class="toggle-wrapper">
+    <view class="toggle-slider" style="transform: translateX({{role === 'merchant' ? '100%' : '0'}});"></view>
+    <view class="toggle-item {{role === 'student' ? 'active' : ''}}" bindtap="switchRole" data-role="student">
+      <text class="icon">👨‍🎓</text> 学生视图
+    </view>
+    <view class="toggle-item {{role === 'merchant' ? 'active' : ''}}" bindtap="switchRole" data-role="merchant">
+      <text class="icon">📊</text> 运营数据大屏
+    </view>
+  </view>
+
+  <view wx:if="{{role === 'student'}}" class="view-panel slide-up">
+    <view wx:if="{{loadingOrders}}" class="glass-panel empty-state">订单加载中...</view>
+    <view wx:elif="{{orders.length === 0}}" class="glass-panel empty-state">暂无订单，先去创建一次配送预订</view>
+
+    <view wx:for="{{orders}}" wx:key="_id" class="glass-panel order-card {{item.status === 'delivering' ? 'active-order' : 'history-order'}}">
+      <view class="order-header">
+        <text class="order-tag {{item.status === 'delivering' ? 'pulse-blue' : 'gray'}}">{{item.statusText}}</text>
+        <text class="order-time">预计 {{item.estTime}} 分钟送达</text>
+      </view>
+      <view class="order-title">📦 {{item.bizTypeText}} - {{item.endPoint}}</view>
+      <view class="order-route">{{item.routeText}}</view>
+      <view class="order-meta">订单号 {{item.orderNo}} · {{item.createdText}}</view>
+      
+      <view class="timeline">
+        <view class="time-step completed">
+          <view class="dot"></view>
+          <text>驿站揽件</text>
+        </view>
+        <view class="time-step completed">
+          <view class="dot"></view>
+          <text>AI规划</text>
+        </view>
+        <view class="time-step current">
+          <view class="dot pulse-green-small"></view>
+          <text>无人车运送</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{role === 'merchant'}}" class="view-panel slide-up">
+    <view class="dashboard-header">
+      <text class="dash-title">雏雁计划 · 核心效益分析</text>
+      <view class="live-status"><view class="live-dot pulse-red"></view> 实时数据同步中</view>
+    </view>
+
+    <view class="data-grid">
+      <view class="glass-panel data-card delay-1">
+        <text class="data-label">当前配送中</text>
+        <view class="data-value highlight-teal">{{dashboard.activeOrders}}<text class="unit">单</text></view>
+        <view class="data-compare">累计订单 {{dashboard.totalOrders}} 单</view>
+      </view>
+
+      <view class="glass-panel data-card delay-2">
+        <text class="data-label">用户反馈</text>
+        <view class="data-value highlight-blue">{{dashboard.feedbacks}}<text class="unit">条</text></view>
+        <view class="data-compare">已同步云端控制台</view>
+      </view>
+
+      <view class="glass-panel data-card delay-3">
+        <text class="data-label">单件配送成本</text>
+        <view class="data-value highlight-teal">{{dashboard.unitCost}}<text class="unit">元</text></view>
+        <view class="data-compare">较人工 2.3元 <text class="trend down">↓ 69.6%</text></view>
+      </view>
+
+      <view class="glass-panel data-card delay-4">
+        <text class="data-label">午间高峰完成率</text>
+        <view class="data-value highlight-blue">{{dashboard.peakCompletionRate}}<text class="unit">%</text></view>
+        <view class="data-compare">较人工 68% <text class="trend up">↑ 35.3%</text></view>
+      </view>
+
+      <view class="glass-panel data-card delay-5">
+        <text class="data-label">平均配送时效</text>
+        <view class="data-value highlight-orange">{{dashboard.avgDeliveryTime}}<text class="unit">min</text></view>
+        <view class="data-compare">较传统 14.7min <text class="trend down">↓ 41.0%</text></view>
+      </view>
+
+      <view class="glass-panel data-card delay-6">
+        <text class="data-label">包裹异常损耗</text>
+        <view class="data-value highlight-purple">{{dashboard.exceptionLoss}}<text class="unit">元/月</text></view>
+        <view class="data-compare">较上月 850元 <text class="trend down">↓ 75.3%</text></view>
+      </view>
+    </view>
+  </view>
+
+</view>

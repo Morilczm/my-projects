@@ -1,0 +1,51 @@
+/* 全局背景与布局 */
+.feedback-container { min-height: 100vh; background: #f4f7f6; padding: 40rpx 30rpx; box-sizing: border-box; font-family: -apple-system, sans-serif; }
+
+/* 玻璃质感面板基础类 */
+.glass-panel { background: #ffffff; border-radius: 24rpx; padding: 30rpx; margin-bottom: 40rpx; box-shadow: 0 8rpx 20rpx rgba(0,0,0,0.03); border: 1px solid rgba(255,255,255,0.6); transition: all 0.3s ease; }
+
+/* 头部样式 */
+.header-section { margin-bottom: 40rpx; padding-left: 10rpx; }
+.title-row { display: flex; align-items: center; margin-bottom: 10rpx; }
+.pulse-dot { width: 16rpx; height: 16rpx; border-radius: 50%; margin-right: 20rpx; }
+.pulse-dot.green { background: #48bb78; box-shadow: 0 0 0 6rpx rgba(72,187,120,0.2); animation: pulse-green 2s infinite; }
+.title { font-size: 40rpx; font-weight: 900; color: #1a202c; letter-spacing: 2rpx; }
+.subtitle { font-size: 24rpx; color: #718096; padding-left: 36rpx; }
+
+/* 快捷标签 */
+.section-title { font-size: 28rpx; font-weight: bold; color: #4a5568; margin-bottom: 25rpx; display: block; }
+.tag-group { display: flex; flex-wrap: wrap; gap: 20rpx; }
+.smart-tag { padding: 12rpx 30rpx; background: #edf2f7; color: #718096; font-size: 26rpx; border-radius: 100rpx; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid transparent; }
+.smart-tag.active { background: #e0f2f1; color: #00796b; border-color: #80cbc4; transform: scale(1.05); box-shadow: 0 4rpx 10rpx rgba(0,121,107,0.15); font-weight: bold; }
+
+/* 智能文本框 */
+.glass-panel.focused { border-color: #00796b; box-shadow: 0 8rpx 25rpx rgba(0,121,107,0.1); transform: translateY(-4rpx); }
+.feedback-area { width: 100%; height: 280rpx; font-size: 28rpx; color: #2d3748; line-height: 1.6; }
+.area-footer { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 20rpx; border-top: 1rpx dashed #edf2f7; padding-top: 20rpx; min-height: 40rpx; }
+
+/* AI 语义标签特效 */
+.ai-analysis { display: flex; align-items: center; flex: 1; overflow: hidden; }
+.ai-label { font-size: 20rpx; color: #4299e1; font-weight: bold; margin-right: 10rpx; }
+.keyword-tags { display: flex; gap: 10rpx; }
+.k-tag { font-size: 20rpx; background: #ebf8ff; color: #3182ce; padding: 4rpx 12rpx; border-radius: 6rpx; }
+
+/* 字数统计 */
+.char-count { font-size: 22rpx; color: #a0aec0; font-family: monospace; transition: color 0.3s; }
+.char-count.limit { color: #e53e3e; font-weight: bold; }
+
+/* 提交按钮 */
+.btn-submit { background: #00796b; color: #fff; font-size: 32rpx; font-weight: bold; border-radius: 100rpx; padding: 25rpx 0; box-shadow: 0 10rpx 20rpx rgba(0,121,107,0.3); transition: all 0.2s; position: relative; overflow: hidden; margin-top: 20rpx; }
+.btn-hover { transform: translateY(4rpx); box-shadow: 0 4rpx 10rpx rgba(0,121,107,0.2); background: #00695c; }
+.btn-submit::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%); transform: rotate(45deg); animation: shine 3s infinite; }
+
+/* 核心动画 */
+.slide-up { opacity: 0; animation: slideUp 0.6s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.fade-in { animation: fadeIn 0.4s ease-out forwards; }
+
+@keyframes slideUp { from { opacity: 0; transform: translateY(40rpx); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10rpx); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(72, 187, 120, 0.7); } 70% { box-shadow: 0 0 0 10rpx rgba(72, 187, 120, 0); } 100% { box-shadow: 0 0 0 0 rgba(72, 187, 120, 0); } }
+@keyframes shine { 0% { left: -100%; } 20% { left: 100%; } 100% { left: 100%; } }

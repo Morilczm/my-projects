@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/booking/booking",
+    "pages/orders/orders",
+    "pages/feedback/feedback",
+    "pages/faq/faq"
+  ],
+  "window": {
+    "navigationBarTitleText": "Campus Life",
+    "navigationBarBackgroundColor": "#00796b",
+    "navigationBarTextStyle": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于获取当前位置，实现无人车实时路径追踪功能"
+    }
+  },
+  "requiredBackgroundModes": ["location"],
+  "sitemapLocation": "sitemap.json"
+}

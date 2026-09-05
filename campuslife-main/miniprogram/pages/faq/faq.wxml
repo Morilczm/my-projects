@@ -1,0 +1,158 @@
+<view class="faq-container">
+  <view class="faq-header">
+    <text class="faq-header-title">常见问题</text>
+    <text class="faq-header-desc">以下是用户最常遇到的问题，点击展开查看详细解答</text>
+  </view>
+
+  <view class="faq-category">
+    <view class="category-title">
+      <text class="category-icon">📦</text>
+      <text class="category-text">配送相关</text>
+    </view>
+    
+    <view class="faq-item" bindtap="toggleFaq" data-id="1">
+      <view class="faq-question">
+        <text class="question-text">如何修改收货地址？</text>
+        <text class="question-arrow {{expandedId == '1' ? 'expanded' : ''}}">▼</text>
+      </view>
+      <view class="faq-answer {{expandedId == '1' ? 'show' : ''}}">
+        <text class="answer-text">1. 进入"订单查询"页面，找到需要修改的订单\n2. 点击订单卡片进入详情页\n3. 在配送信息区域点击"修改地址"\n4. 注意：仅限配送开始前修改，配送中无法更改</text>
+      </view>
+    </view>
+
+    <view class="faq-item" bindtap="toggleFaq" data-id="2">
+      <view class="faq-question">
+        <text class="question-text">可以指定配送时间吗？</text>
+        <text class="question-arrow {{expandedId == '2' ? 'expanded' : ''}}">▼</text>
+      </view>
+      <view class="faq-answer {{expandedId == '2' ? 'show' : ''}}">
+        <text class="answer-text">可以的！下单时可以选择预约配送时段：\n• 上午时段：08:00 - 12:00\n• 下午时段：12:00 - 18:00\n• 晚间时段：18:00 - 22:00\n\n系统会根据您的课表智能推荐最佳配送时间。</text>
+      </view>
+    </view>
+
+    <view class="faq-item" bindtap="toggleFaq" data-id="3">
+      <view class="faq-question">
+        <text class="question-text">配送范围有哪些区域？</text>
+        <text class="question-arrow {{expandedId == '3' ? 'expanded' : ''}}">▼</text>
+      </view>
+      <view class="faq-answer {{expandedId == '3' ? 'show' : ''}}">
+        <text class="answer-text">目前支持北邮沙河校区全区域配送：\n• 学生公寓A/B/C/D/E/F区\n• 公共教学楼\n• 图书馆\n• 学生活动中心\n• 食堂区域\n• 体育馆\n\n其他区域暂未开放，敬请期待！</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="faq-category">
+    <view class="category-title">
+      <text class="category-icon">🔍</text>
+      <text class="category-text">取件相关</text>
+    </view>
+    
+    <view class="faq-item" bindtap="toggleFaq" data-id="4">
+      <view class="faq-question">
+        <text class="question-text">无人车到了怎么取件？</text>
+        <text class="question-arrow {{expandedId == '4' ? 'expanded' : ''}}">▼</text>
+      </view>
+      <view class="faq-answer {{expandedId == '4' ? 'show' : ''}}">
+        <text class="answer-text">取件流程：\n1. 收到送达通知后，前往指定地点\n2. 在无人车屏幕上输入取件码\n3. 柜门自动打开，取出物品\n4. 关闭柜门完成取件\n\n取件码有效期为24小时，请及时取件。</text>
+      </view>
+    </view>
+
+    <view class="faq-item" bindtap="toggleFaq" data-id="5">
+      <view class="faq-question">
+        <text class="question-text">取件码忘记了怎么办？</text>
+        <text class="question-arrow {{expandedId == '5' ? 'expanded' : ''}}">▼</text>
+      </view>
+      <view class="faq-answer {{expandedId == '5' ? 'show' : ''}}">
+        <text class="answer-text">别担心，您可以通过以下方式获取取件码：\n• 在"订单查询"中查看订单详情\n• 查收微信送达通知消息\n• 联系客服获取帮助\n\n建议您保存好取件码，方便快速取件。</text>
+      </view>
+    </view>
+
+    <view class="faq-item" bindtap="toggleFaq" data-id="6">
+      <view class="faq-question">
+        <text class="question-text">可以帮同学代取吗？</text>
+        <text class="question-arrow {{expandedId == '6' ? 'expanded' : ''}}">▼</text>
+      </view>
+      <view class="faq-answer {{expandedId == '6' ? 'show' : ''}}">
+        <text class="answer-text">可以的！只需要将取件码分享给同学即可代取。\n\n注意事项：\n• 请确保分享给可信任的人\n• 代取后订单状态会更新为已完成\n• 如有疑问可联系客服核实</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="faq-category">
+    <view class="category-title">
+      <text class="category-icon">⚠️</text>
+      <text class="category-text">问题处理</text>
+    </view>
+    
+    <view class="faq-item" bindtap="toggleFaq" data-id="7">
+      <view class="faq-question">
+        <text class="question-text">物品损坏怎么办？</text>
+        <text class="question-arrow {{expandedId == '7' ? 'expanded' : ''}}">▼</text>
+      </view>
+      <view class="faq-answer {{expandedId == '7' ? 'show' : ''}}">
+        <text class="answer-text">如发现物品损坏，请按以下步骤处理：\n1. 立即拍照保留证据\n2. 在取件时选择"物品异常"选项\n3. 联系客服说明情况\n4. 提交相关照片和订单信息\n\n我们会在24小时内处理并给予赔偿。</text>
+      </view>
+    </view>
+
+    <view class="faq-item" bindtap="toggleFaq" data-id="8">
+      <view class="faq-question">
+        <text class="question-text">配送超时怎么处理？</text>
+        <text class="question-arrow {{expandedId == '8' ? 'expanded' : ''}}">▼</text>
+      </view>
+      <view class="faq-answer {{expandedId == '8' ? 'show' : ''}}">
+        <text class="answer-text">配送超时可能原因：\n• 天气恶劣影响行驶\n• 校园道路临时管制\n• 无人车电量不足需充电\n• 订单高峰期运力紧张\n\n如遇超时，系统会自动推送通知，您也可以联系客服查询实时状态。</text>
+      </view>
+    </view>
+
+    <view class="faq-item" bindtap="toggleFaq" data-id="9">
+      <view class="faq-question">
+        <text class="question-text">如何申请退款？</text>
+        <text class="question-arrow {{expandedId == '9' ? 'expanded' : ''}}">▼</text>
+      </view>
+      <view class="faq-answer {{expandedId == '9' ? 'show' : ''}}">
+        <text class="answer-text">退款申请条件：\n• 配送前可全额退款\n• 配送中需联系客服处理\n• 配送后不支持退款\n\n退款流程：\n1. 进入订单详情页\n2. 点击"申请退款"\n3. 填写退款原因\n4. 1-3个工作日原路退回</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="faq-category">
+    <view class="category-title">
+      <text class="category-icon">💡</text>
+      <text class="category-text">其他问题</text>
+    </view>
+    
+    <view class="faq-item" bindtap="toggleFaq" data-id="10">
+      <view class="faq-question">
+        <text class="question-text">无人车安全吗？</text>
+        <text class="question-arrow {{expandedId == '10' ? 'expanded' : ''}}">▼</text>
+      </view>
+      <view class="faq-answer {{expandedId == '10' ? 'show' : ''}}">
+        <text class="answer-text">我们的无人车具备多重安全保障：\n• 激光雷达+视觉双重避障\n• 最高时速限制在15km/h\n• 紧急情况自动刹车\n• 全程GPS定位追踪\n• 保险柜设计，防盗防损\n\n已安全运营超过10000次配送！</text>
+      </view>
+    </view>
+
+    <view class="faq-item" bindtap="toggleFaq" data-id="11">
+      <view class="faq-question">
+        <text class="question-text">如何成为配送员？</text>
+        <text class="question-arrow {{expandedId == '11' ? 'expanded' : ''}}">▼</text>
+      </view>
+      <view class="faq-answer {{expandedId == '11' ? 'show' : ''}}">
+        <text class="answer-text">目前我们的配送服务由无人车自动完成，暂不招募人工配送员。\n\n但欢迎加入我们的技术团队，参与无人车研发！\n关注公众号"CampusLife"获取招聘信息。</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="faq-contact">
+    <text class="contact-title">没有找到答案？</text>
+    <view class="contact-buttons">
+      <view class="contact-btn" bindtap="contactService">
+        <text class="contact-icon">💬</text>
+        <text class="contact-text">在线客服</text>
+      </view>
+      <view class="contact-btn" bindtap="makePhoneCall">
+        <text class="contact-icon">📞</text>
+        <text class="contact-text">电话咨询</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,71 @@
+/* 全局背景与布局 */
+.orders-container { min-height: 100vh; background: #f4f7f6; padding: 40rpx 30rpx; box-sizing: border-box; font-family: -apple-system, sans-serif; overflow-x: hidden; }
+.glass-panel { background: #ffffff; border-radius: 24rpx; padding: 30rpx; margin-bottom: 30rpx; box-shadow: 0 8rpx 20rpx rgba(0,0,0,0.03); border: 1px solid rgba(255,255,255,0.6); backdrop-filter: blur(10px); }
+
+/* 滑动切换开关 (复用配置) */
+.toggle-wrapper { position: relative; display: flex; background: #e2e8f0; border-radius: 100rpx; height: 80rpx; margin-bottom: 40rpx; padding: 6rpx; box-sizing: border-box; box-shadow: inset 0 4rpx 8rpx rgba(0,0,0,0.05); }
+.toggle-slider { position: absolute; width: 50%; height: 68rpx; background: #fff; border-radius: 100rpx; box-shadow: 0 4rpx 10rpx rgba(0,0,0,0.1); transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1); z-index: 1; }
+.toggle-item { flex: 1; display: flex; justify-content: center; align-items: center; font-size: 28rpx; font-weight: bold; color: #718096; z-index: 2; transition: color 0.3s; }
+.toggle-item.active { color: #00796b; }
+.icon { margin-right: 10rpx; font-size: 32rpx; }
+
+/* 页面切换动画 */
+.slide-up { animation: slideUp 0.5s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(40rpx); } to { opacity: 1; transform: translateY(0); } }
+
+/* ================= 学生端视图样式 ================= */
+.order-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20rpx; font-size: 24rpx; }
+.order-tag { padding: 4rpx 16rpx; border-radius: 8rpx; font-weight: bold; color: #fff; }
+.pulse-blue { background: #4299e1; animation: pulse-blue 2s infinite; }
+.gray { background: #cbd5e0; }
+.order-time { color: #718096; font-weight: bold; }
+.order-title { font-size: 30rpx; font-weight: bold; color: #2d3748; margin-bottom: 30rpx; }
+.history-order { opacity: 0.7; }
+
+/* 动态物流时间轴 */
+.timeline { display: flex; justify-content: space-between; position: relative; padding: 0 20rpx; margin-top: 40rpx; }
+.timeline::before { content: ''; position: absolute; top: 12rpx; left: 40rpx; right: 40rpx; height: 4rpx; background: #edf2f7; z-index: 0; }
+.time-step { display: flex; flex-direction: column; align-items: center; z-index: 1; font-size: 22rpx; color: #a0aec0; }
+.dot { width: 24rpx; height: 24rpx; border-radius: 50%; background: #e2e8f0; margin-bottom: 15rpx; border: 4rpx solid #fff; }
+.completed .dot { background: #4299e1; }
+.completed text { color: #4299e1; font-weight: bold; }
+.current text { color: #48bb78; font-weight: bold; }
+.pulse-green-small { background: #48bb78; box-shadow: 0 0 0 0 rgba(72,187,120,0.6); animation: pulse-green 1.5s infinite; }
+
+/* ================= 商户端/大屏视图样式 ================= */
+.dashboard-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30rpx; padding: 0 10rpx; }
+.dash-title { font-size: 32rpx; font-weight: 900; color: #1a202c; }
+.live-status { font-size: 20rpx; color: #e53e3e; display: flex; align-items: center; font-weight: bold; }
+.live-dot { width: 12rpx; height: 12rpx; background: #e53e3e; border-radius: 50%; margin-right: 10rpx; }
+.pulse-red { animation: pulse-red 1.5s infinite; }
+
+.data-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20rpx; }
+.data-card { padding: 30rpx 20rpx; display: flex; flex-direction: column; justify-content: center; opacity: 0; animation: slideUp 0.5s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+.delay-6 { animation-delay: 0.6s; }
+
+.data-label { font-size: 22rpx; color: #718096; margin-bottom: 10rpx; }
+.data-value { font-size: 48rpx; font-weight: 900; font-family: monospace; line-height: 1.1; margin-bottom: 15rpx; }
+.unit { font-size: 22rpx; font-weight: normal; margin-left: 5rpx; }
+.highlight-teal { color: #00796b; }
+.highlight-blue { color: #3182ce; }
+.highlight-orange { color: #dd6b20; }
+.highlight-purple { color: #805ad5; }
+
+.data-compare { font-size: 20rpx; color: #a0aec0; background: #f7fafc; padding: 8rpx; border-radius: 8rpx; display: inline-block; }
+.trend { font-weight: bold; margin-left: 10rpx; }
+.trend.down { color: #48bb78; } /* 成本/时间下降是好事，用绿色 */
+.trend.up { color: #e53e3e; }   /* 完成率上升，用红色/显眼色 */
+
+.empty-state { color: #718096; text-align: center; font-size: 28rpx; }
+.order-route { font-size: 24rpx; color: #4a5568; margin-top: -16rpx; margin-bottom: 12rpx; }
+.order-meta { font-size: 22rpx; color: #a0aec0; margin-bottom: 24rpx; }
+
+/* 核心动画 */
+@keyframes pulse-blue { 0% { box-shadow: 0 0 0 0 rgba(66, 153, 225, 0.4); } 70% { box-shadow: 0 0 0 10rpx rgba(66, 153, 225, 0); } 100% { box-shadow: 0 0 0 0 rgba(66, 153, 225, 0); } }
+@keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(72, 187, 120, 0.7); } 70% { box-shadow: 0 0 0 10rpx rgba(72, 187, 120, 0); } 100% { box-shadow: 0 0 0 0 rgba(72, 187, 120, 0); } }
+@keyframes pulse-red { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
