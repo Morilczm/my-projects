@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  pre-release-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    env:
+      APP_ENV: development
+      AI_PROVIDER: none
+      AI_PROVIDER_MODE: none
+      ALLOW_MOCK_AI: "true"
+      ALLOW_LOCAL_HEURISTIC_AI: "true"
+      AI_PROVIDER_HEALTHCHECK_ENABLED: "false"
+      OCR_PROVIDER: none
+      FORMULA_OCR_PROVIDER: none
+      AUTH_REQUIRED: "true"
+      LOG_REDACT_SECRETS: "true"
+      DEEPSEEK_API_KEY: ""
+      OPENAI_API_KEY: ""
+      MATHPIX_APP_ID: ""
+      MATHPIX_APP_KEY: ""
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r backend/requirements.txt
+
+      - name: Run local pre-release gate
+        run: python scripts/dev_check.py

@@ -1,0 +1,137 @@
+[
+  {
+    "group": "electric field / electric field strength",
+    "concept_id": "cx-7f22",
+    "upstream_eligible": false,
+    "english_query_hash": "1d19f4967106e5c2092a40ed0819a5c8e649278503ac0e8d54957caec1503380",
+    "candidate_pool": [
+      "功",
+      "功率",
+      "力",
+      "压强",
+      "电势",
+      "电势差",
+      "电势能"
+    ],
+    "candidate_extraction_rank": "",
+    "semantic_pairing_ranks": [
+      "力",
+      "电势",
+      "功率",
+      "电势能",
+      "功",
+      "压强",
+      "电势差"
+    ],
+    "correct_pair_rank": "",
+    "semantic_score": "",
+    "final_score": "",
+    "score_margin": "",
+    "primary_attribution": "UPSTREAM_CROSS_LANGUAGE_RETRIEVAL_MISS",
+    "requires_reranker": false
+  },
+  {
+    "group": "electric potential / electric potential energy",
+    "concept_id": "cx-7f23",
+    "upstream_eligible": true,
+    "english_query_hash": "918cd29e81ccd2fce12cadae3053d064661f00ee119c41a0ab6f5c09236eb775",
+    "candidate_pool": [
+      "电势",
+      "电势差",
+      "电势能",
+      "力",
+      "压强",
+      "电容"
+    ],
+    "candidate_extraction_rank": 1,
+    "semantic_pairing_ranks": [
+      "电势",
+      "电势能",
+      "电容",
+      "力",
+      "电势差",
+      "压强"
+    ],
+    "correct_pair_rank": 1,
+    "semantic_score": 0.87075684,
+    "final_score": 2.36882138,
+    "score_margin": 0.140919,
+    "primary_attribution": "EVIDENCE_QUALIFICATION_MISSING",
+    "requires_reranker": false
+  },
+  {
+    "group": "angular velocity / angular acceleration",
+    "concept_id": "cx-7f18",
+    "upstream_eligible": true,
+    "english_query_hash": "62c4cf3f39b48983fa9e8046fe6b22e4c908733cf1bc09287d741cfddbc0a7c8",
+    "candidate_pool": [
+      "向心加速度",
+      "角速度",
+      "加速度",
+      "惯性",
+      "质量",
+      "力矩",
+      "转动惯量"
+    ],
+    "candidate_extraction_rank": 2,
+    "semantic_pairing_ranks": [
+      "角速度",
+      "向心加速度",
+      "惯性",
+      "力矩",
+      "加速度",
+      "转动惯量",
+      "质量"
+    ],
+    "correct_pair_rank": 1,
+    "semantic_score": 0.88731964,
+    "final_score": 4.90978776,
+    "score_margin": 1.013022,
+    "primary_attribution": "EVIDENCE_QUALIFICATION_MISSING",
+    "requires_reranker": false
+  },
+  {
+    "group": "momentum / angular momentum",
+    "concept_id": "cx-7f07",
+    "upstream_eligible": false,
+    "english_query_hash": "446be308664e1964b816217ba48334a777837850765f863efbba3c6608da6b90",
+    "candidate_pool": [],
+    "candidate_extraction_rank": "",
+    "semantic_pairing_ranks": [],
+    "correct_pair_rank": "",
+    "semantic_score": "",
+    "final_score": "",
+    "score_margin": "",
+    "primary_attribution": "UPSTREAM_ENGLISH_BINDING_AMBIGUOUS",
+    "requires_reranker": false
+  },
+  {
+    "group": "mass / weight",
+    "concept_id": "cx-7f05",
+    "upstream_eligible": true,
+    "english_query_hash": "4084a32b9bba4b4a03d06f24edf285c34ebf98ee44d6772c05bda9560a7bc3b2",
+    "candidate_pool": [
+      "冲量",
+      "动量",
+      "加速度",
+      "惯性",
+      "质量",
+      "重量"
+    ],
+    "candidate_extraction_rank": 5,
+    "semantic_pairing_ranks": [
+      "冲量",
+      "动量",
+      "质量",
+      "重量",
+      "惯性",
+      "加速度"
+    ],
+    "correct_pair_rank": 3,
+    "semantic_score": 0.85363239,
+    "final_score": 0.63392431,
+    "score_margin": -1.263198,
+    "primary_attribution": "BILINGUAL_SEMANTIC_PAIRING_MISS",
+    "requires_reranker": true
+  }
+]

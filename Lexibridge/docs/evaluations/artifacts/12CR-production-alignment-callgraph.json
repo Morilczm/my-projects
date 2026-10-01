@@ -1,0 +1,322 @@
+{
+  "callgraph": [
+    {
+      "entrypoint": "POST /api/documents/upload",
+      "file": "backend/app.py",
+      "function": "upload_document",
+      "input_dto": "multipart form: file, course, language, source_type",
+      "node": "course_document_upload",
+      "order": 1,
+      "output_dto": "HTTP upload/job response",
+      "persistence": [
+        "Document",
+        "IngestionJob",
+        "BackgroundJob"
+      ]
+    },
+    {
+      "entrypoint": "document_ingestion background job",
+      "file": "backend/app.py",
+      "function": "process_document_ingestion_job",
+      "input_dto": "BackgroundJob input_json + Document",
+      "node": "governed_ingestion",
+      "order": 2,
+      "output_dto": "ingestion result_json",
+      "persistence": [
+        "DocumentParseRecord",
+        "DocumentParseBlock",
+        "KnowledgeSource",
+        "KnowledgeChunk"
+      ]
+    },
+    {
+      "entrypoint": "POST /api/document-alignment-runs",
+      "file": "backend/routes/document_alignment_workflow_routes.py",
+      "function": "create_document_alignment_run",
+      "input_dto": "StartDocumentAlignmentWorkflowCommand",
+      "node": "formal_workflow_admission",
+      "order": 3,
+      "output_dto": "StartDocumentAlignmentWorkflowResult",
+      "persistence": [
+        "DocumentAlignmentWorkflowRun",
+        "BackgroundJob"
+      ]
+    },
+    {
+      "entrypoint": "formal document alignment worker",
+      "file": "backend/services/document_alignment_item_bootstrap.py",
+      "function": "bootstrap_document_alignment_workflow_items",
+      "input_dto": "BootstrapDocumentAlignmentItemsCommand",
+      "node": "english_candidate_bootstrap",
+      "order": 4,
+      "output_dto": "BootstrapDocumentAlignmentItemsResult",
+      "persistence": [
+        "DocumentAlignmentWorkflowItem"
+      ]
+    },
+    {
+      "entrypoint": "bootstrap collaborator",
+      "file": "backend/services/document_alignment_term_candidates.py",
+      "function": "extract_chunk_scoped_term_candidates",
+      "input_dto": "GovernedSourceChunkSnapshot tuple",
+      "node": "english_candidate_extraction_and_governance",
+      "order": 5,
+      "output_dto": "GovernedCandidateExtractionResult",
+      "persistence": [
+        "DocumentAlignmentWorkflowItem source_chunk_refs"
+      ]
+    },
+    {
+      "entrypoint": "processing orchestrator item preparation",
+      "file": "backend/services/document_alignment_item_preparation.py",
+      "function": "prepare_document_alignment_item",
+      "input_dto": "PrepareDocumentAlignmentItemCommand",
+      "node": "chinese_candidate_preparation",
+      "order": 6,
+      "output_dto": "PrepareDocumentAlignmentItemResult",
+      "persistence": [
+        "none; transaction rolled back at preparation boundary"
+      ]
+    },
+    {
+      "entrypoint": "preparation candidate_generator",
+      "file": "backend/services/chinese_term_candidates.py",
+      "function": "generate_chinese_term_candidates",
+      "input_dto": "english_term + course/chapter + governed model handles",
+      "node": "chinese_candidate_generation",
+      "order": 7,
+      "output_dto": "ChineseTermCandidateResult",
+      "persistence": [
+        "none"
+      ]
+    },
+    {
+      "entrypoint": "find_candidates_from_bilingual_chunks",
+      "file": "backend/services/evidence_retrieval.py",
+      "function": "search_evidence",
+      "input_dto": "English term + language/source_role filters",
+      "node": "english_lexical_search_of_chinese_sources",
+      "order": 8,
+      "output_dto": "EvidenceSearchResult",
+      "persistence": [
+        "none"
+      ]
+    },
+    {
+      "entrypoint": "bilingual chunk candidate finder",
+      "file": "backend/services/chinese_term_candidates.py",
+      "function": "extract_chinese_candidates_from_text_around_english_term",
+      "input_dto": "retrieved snippet + exact English term",
+      "node": "inline_bilingual_identification",
+      "order": 9,
+      "output_dto": "inline regex candidate dictionaries",
+      "persistence": [
+        "none"
+      ]
+    },
+    {
+      "entrypoint": "formal item preparation",
+      "file": "backend/services/document_alignment_item_preparation.py",
+      "function": "select_primary_chinese_candidate",
+      "input_dto": "ranked Chinese candidate list",
+      "node": "candidate_selection",
+      "order": 10,
+      "output_dto": "one selected candidate",
+      "persistence": [
+        "candidate reference copied into prepared verification input"
+      ]
+    },
+    {
+      "entrypoint": "formal item preparation",
+      "file": "backend/services/bilingual_evidence_workflow.py",
+      "function": "retrieve_bilingual_evidence",
+      "input_dto": "English term + selected Chinese string + course/chapter",
+      "node": "bilingual_evidence_retrieval",
+      "order": 11,
+      "output_dto": "BilingualEvidenceResult",
+      "persistence": [
+        "none"
+      ]
+    },
+    {
+      "entrypoint": "formal preparation/verification adapter",
+      "file": "backend/services/concept_card_drafts.py",
+      "function": "create_or_reuse_prepared_concept_card_draft",
+      "input_dto": "PreparedFormalItemVerificationInput",
+      "node": "readiness_and_draft",
+      "order": 12,
+      "output_dto": "PreparedConceptCardDraftResult",
+      "persistence": [
+        "ConceptAlignmentCard"
+      ]
+    },
+    {
+      "entrypoint": "verification adapter after preparation",
+      "file": "backend/services/document_alignment_item_verification_adapter.py",
+      "function": "execute_document_alignment_item_verification",
+      "input_dto": "ExecuteDocumentAlignmentItemVerificationCommand",
+      "node": "provider_verification",
+      "order": 13,
+      "output_dto": "ExecuteDocumentAlignmentItemVerificationResult",
+      "persistence": [
+        "AlignmentVerificationRun",
+        "ConceptAlignmentCard verification fields"
+      ]
+    }
+  ],
+  "cross_corpus_alignment_validated": false,
+  "evidence_readiness": {
+    "chinese_evidence_required": true,
+    "denominator": 25,
+    "english_evidence_required": true,
+    "meaning": "The preparation DTO has governed English and Chinese evidence refs and one selected candidate; it is ready for later verification, not proven aligned.",
+    "provider_ready_count": 5,
+    "ready_concept_ids": [
+      "physics-21",
+      "physics-22",
+      "physics-23",
+      "physics-24",
+      "physics-25"
+    ],
+    "ready_domain": "electricity",
+    "ready_items": [
+      {
+        "candidate_chunk_refs": [
+          "8cb0e2cb-0eb7-43db-be36-54642f8fe7eb"
+        ],
+        "candidate_source_refs": [
+          "7e1bbb6d-b6a6-4d81-8ac1-8c5b45da7838"
+        ],
+        "chinese_evidence_refs": [
+          "8cb0e2cb-0eb7-43db-be36-54642f8fe7eb"
+        ],
+        "concept_id": "physics-21",
+        "english_evidence_refs": [
+          "2deb8508-3fb2-484b-afe4-2ce150beefdb"
+        ],
+        "english_term": "electric charge",
+        "readiness_status": "prepared",
+        "selected_candidate_confidence": 0.81,
+        "selected_chinese_candidate_summary": "电荷是物质产生电相互作用的属性",
+        "semantic_pairing_verified": false
+      },
+      {
+        "candidate_chunk_refs": [
+          "bbd4bc3d-ea51-4e56-aed3-c7851a73ca1d"
+        ],
+        "candidate_source_refs": [
+          "7e1bbb6d-b6a6-4d81-8ac1-8c5b45da7838"
+        ],
+        "chinese_evidence_refs": [
+          "bbd4bc3d-ea51-4e56-aed3-c7851a73ca1d"
+        ],
+        "concept_id": "physics-22",
+        "english_evidence_refs": [
+          "52867b76-8896-496f-9755-7a93e085e448",
+          "ba24c371-3590-4375-835f-8437ca176fe0"
+        ],
+        "english_term": "electric field",
+        "readiness_status": "prepared",
+        "selected_candidate_confidence": 0.81,
+        "selected_chinese_candidate_summary": "电场表示单位正试探电荷在某点受到的力",
+        "semantic_pairing_verified": false
+      },
+      {
+        "candidate_chunk_refs": [
+          "68a933b8-c787-416e-beb4-d33d9ef2d464"
+        ],
+        "candidate_source_refs": [
+          "7e1bbb6d-b6a6-4d81-8ac1-8c5b45da7838"
+        ],
+        "chinese_evidence_refs": [
+          "68a933b8-c787-416e-beb4-d33d9ef2d464"
+        ],
+        "concept_id": "physics-23",
+        "english_evidence_refs": [
+          "8d68d9df-e009-4930-9ad5-5821d7185d49",
+          "96147f3c-fb89-4f20-af3e-488f23e5c183",
+          "ba24c371-3590-4375-835f-8437ca176fe0"
+        ],
+        "english_term": "electric potential",
+        "readiness_status": "prepared",
+        "selected_candidate_confidence": 0.81,
+        "selected_chinese_candidate_summary": "电势是单位电荷在某点具有的电势能",
+        "semantic_pairing_verified": false
+      },
+      {
+        "candidate_chunk_refs": [
+          "0f882be2-0c53-4b40-a49d-0a75f251c2ed"
+        ],
+        "candidate_source_refs": [
+          "7e1bbb6d-b6a6-4d81-8ac1-8c5b45da7838"
+        ],
+        "chinese_evidence_refs": [
+          "0f882be2-0c53-4b40-a49d-0a75f251c2ed"
+        ],
+        "concept_id": "physics-24",
+        "english_evidence_refs": [
+          "8d68d9df-e009-4930-9ad5-5821d7185d49",
+          "ba24c371-3590-4375-835f-8437ca176fe0",
+          "e12b92b8-a0be-4a24-9c32-c97712b92e39"
+        ],
+        "english_term": "potential difference",
+        "readiness_status": "prepared",
+        "selected_candidate_confidence": 0.81,
+        "selected_chinese_candidate_summary": "电势差是两点电势的差值",
+        "semantic_pairing_verified": false
+      },
+      {
+        "candidate_chunk_refs": [
+          "66a68ca6-fde2-46b3-8877-4ad92a4f5ed7"
+        ],
+        "candidate_source_refs": [
+          "7e1bbb6d-b6a6-4d81-8ac1-8c5b45da7838"
+        ],
+        "chinese_evidence_refs": [
+          "66a68ca6-fde2-46b3-8877-4ad92a4f5ed7"
+        ],
+        "concept_id": "physics-25",
+        "english_evidence_refs": [
+          "e12b92b8-a0be-4a24-9c32-c97712b92e39"
+        ],
+        "english_term": "capacitance",
+        "readiness_status": "prepared",
+        "selected_candidate_confidence": 0.81,
+        "selected_chinese_candidate_summary": "电容是单位电势差下储存的电荷量",
+        "semantic_pairing_verified": false
+      }
+    ],
+    "selected_chinese_term_verified_before_ready": false,
+    "semantic_pair_correctness_required_before_ready": false,
+    "why_only_five": "Only the five-item electricity source survives the frozen evidence-limit and source-chunk scoping interaction. The result is a structural selection effect, not a semantic-quality subset."
+  },
+  "frozen_hashes": {
+    "corpus_sha256": "33715999c16a74610091b1e40896ee41921570a3740ebc2815565cf0ab7202dc",
+    "gold_sha256": "199baed9a8cb6deb68ae3480c3a67679b2daf273d3733e909d4e861685d45302"
+  },
+  "production_core_path": "English course source -> English candidate extraction -> governed independent Chinese-source discovery -> Chinese standard term identification -> semantic pairing -> evidence-qualified ConceptAlignmentCard",
+  "production_quality_modified": false,
+  "real_provider_requests": 0,
+  "source_model": {
+    "bundled_production_chinese_corpus": false,
+    "chinese_source_required_from_user_or_governed_store": true,
+    "default_synthetic_chinese_source_in_production": false,
+    "english_chinese_sources_are_independent_records": true,
+    "english_source_can_be_selected_as_chinese_source": false,
+    "final_card_provenance": "ConceptAlignmentCard english_evidence/chinese_evidence store source_uid, chunk_uid, parse and locator metadata",
+    "independent_chinese_source_ingestion_supported": true,
+    "inline_bilingual_shortcut_exists": true,
+    "knowledge_chunk_has_language": true,
+    "knowledge_source_has_language": true,
+    "language_filter_implementation": "evidence_retrieval.search_knowledge_chunks_lexical applies chunk and source language/source_role filters",
+    "no_chinese_source_behavior": "candidate generation returns no candidate unless an existing card/legacy mapping supplies one; preparation fails closed as DOCUMENT_ALIGNMENT_CHINESE_CANDIDATE_UNAVAILABLE",
+    "source_roles": [
+      "english_course_material",
+      "chinese_reference_material",
+      "bilingual_reference",
+      "student_private_material"
+    ]
+  },
+  "status": "CROSS_CORPUS_ALIGNMENT_ARCHITECTURE_AUDIT_COMPLETED",
+  "task": "12C-R"
+}

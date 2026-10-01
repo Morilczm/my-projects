@@ -1,0 +1,6 @@
+actor,own_personal_query,own_course_query,other_student_query,personal_note,reviewer_command
+student_owner,allow,allow,deny,allow,deny
+other_student,deny,deny,deny,deny,deny
+instructor,deny,deny,deny,deny,deny
+reviewer,deny,deny,deny,deny,separate_reviewer_console_only
+admin,deny_via_student_api,deny_via_student_api,deny,deny,separate_admin_compatibility

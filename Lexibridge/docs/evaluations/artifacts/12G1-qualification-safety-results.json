@@ -1,0 +1,127 @@
+{
+  "technical_status": "EVIDENCE_QUALIFICATION_SAFETY_CONTRACT_CLOSED",
+  "quality_status": "EVIDENCE_QUALIFICATION_FALSE_ACCEPTS_CLOSED",
+  "metrics": {
+    "coverage": 25,
+    "english_matched": 18,
+    "english_missing": 3,
+    "english_ambiguous": 4,
+    "retrieval_eligible": 18,
+    "identification_eligible": 15,
+    "pairing_eligible": 14,
+    "retrieval_hit_at_1": 0.7222,
+    "retrieval_hit_at_3": 0.8333,
+    "retrieval_mrr": 0.7778,
+    "exact_chinese_candidates": 14,
+    "candidate_top1_count": 7,
+    "candidate_top3_count": 12,
+    "candidate_top1": 0.4667,
+    "candidate_top3": 0.8,
+    "candidate_mrr": 0.6378,
+    "pair_top1_count": 11,
+    "pair_top3_count": 14,
+    "pair_top1": 0.7857,
+    "pair_top3": 1.0,
+    "pair_mrr": 0.869,
+    "no_pair_count": 0,
+    "chinese_evidence_retrieved": 18,
+    "correct_chinese_evidence_top3": 15,
+    "evidence_qualified": 3,
+    "provider_ready": 0,
+    "pairing_miss": 3,
+    "evidence_qualification_missing": 8,
+    "dominant_next_failure": "PROVIDER_READINESS_NOT_EVALUATED",
+    "all_25": 25,
+    "evidence_qualification_eligible": 11,
+    "eligible": {
+      "qualified": 3,
+      "review_required": 8,
+      "rejected": 0,
+      "missing_decisions": 0
+    },
+    "outside_eligible": {
+      "total": 14,
+      "qualification_executed": 7,
+      "qualified": 0,
+      "review_required": 7,
+      "rejected": 0
+    },
+    "baseline_false_qualification_count": 6,
+    "false_qualification_count": 0,
+    "correct_pair_review_count": 8
+  },
+  "baseline_false_qualification_categories": {
+    "UPSTREAM_STATE_GATE_BYPASS": 3,
+    "PAIR_UNCERTAINTY_NOT_PROPAGATED": 0,
+    "TERM_SCOPE_FALSE_ACCEPT": 3,
+    "SCORE_COMPONENT_DOMINANCE": 0,
+    "POLICY_REASON_MAPPING_DEFECT": 0,
+    "OTHER_FALSE_ACCEPT_DEFECT": 0
+  },
+  "observed_outside_eligible_categories": {
+    "TERM_SCOPE_FALSE_ACCEPT": 3,
+    "UPSTREAM_STATE_GATE_BYPASS": 3
+  },
+  "policy": {
+    "policy_id": "governed-bilingual-evidence-qualification",
+    "policy_version": "1.1.0",
+    "thresholds": {
+      "minimum_evidence_score": 0.35,
+      "minimum_pair_semantic_score": 0.35,
+      "minimum_pair_margin": 0.05,
+      "minimum_qualification_score": 0.65,
+      "minimum_context_chars": 12,
+      "minimum_pair_consistency_score": 4.0,
+      "minimum_reranker_component_score": 0.0,
+      "maximum_consistency_context_chars": 600
+    },
+    "existing_evidence_threshold_changed": false,
+    "score_weights": {
+      "english_span_validity": 0.1,
+      "chinese_span_validity": 0.1,
+      "provenance_completeness": 0.15,
+      "source_governance": 0.15,
+      "pair_semantic_score": 0.25,
+      "pair_margin_score": 0.1,
+      "retrieval_support": 0.075,
+      "extraction_support": 0.075
+    },
+    "hard_governance_gates": [
+      "EVIDENCE_PROVENANCE_INCOMPLETE",
+      "EVIDENCE_SOURCE_NOT_ELIGIBLE",
+      "EVIDENCE_LANGUAGE_SCOPE_INVALID",
+      "EVIDENCE_PAIR_NOT_TOP1",
+      "EVIDENCE_PAIR_SCORE_INSUFFICIENT",
+      "EVIDENCE_CONTEXT_INSUFFICIENT"
+    ],
+    "decision_mapping": {
+      "QUALIFIED": "all eligibility and semantic-consistency gates pass",
+      "REVIEW_REQUIRED": "pair remains plausible but uncertainty, component conflict, margin, or term-scope risk exists",
+      "REJECTED": "hard eligibility, provenance, governance, representation, or execution gate fails"
+    },
+    "unknown_decision_fails_closed": true,
+    "qualification_score_is_probability": false,
+    "threshold_calibration_source": "benchmark-external synthetic semantic-equivalence fixtures",
+    "hard_eligibility_gates": [
+      "EVIDENCE_UPSTREAM_STATE_NOT_READY",
+      "EVIDENCE_PROVENANCE_INCOMPLETE",
+      "EVIDENCE_SOURCE_NOT_ELIGIBLE",
+      "EVIDENCE_LANGUAGE_SCOPE_INVALID",
+      "EVIDENCE_PAIR_NOT_TOP1",
+      "EVIDENCE_QUALIFICATION_EXECUTION_FAILED"
+    ],
+    "semantic_consistency_gates": [
+      "EVIDENCE_PAIR_UNCERTAIN",
+      "EVIDENCE_PAIR_MARGIN_INSUFFICIENT",
+      "EVIDENCE_SCORE_COMPONENT_CONFLICT",
+      "EVIDENCE_TERM_SCOPE_RISK"
+    ],
+    "legacy_policy": "governed-bilingual-evidence-qualification@1.0.0",
+    "default_activation": "governed-bilingual-evidence-qualification@1.1.0"
+  },
+  "production_policy_uses_gold": false,
+  "threshold_changed": false,
+  "threshold_calibration_source": "benchmark-external synthetic semantic-equivalence fixtures",
+  "external_api_requests": 0,
+  "real_provider_requests": 0
+}

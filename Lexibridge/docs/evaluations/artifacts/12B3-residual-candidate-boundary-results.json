@@ -1,0 +1,188 @@
+{
+  "accident_database_after": {
+    "exists": true,
+    "mtime_epoch": 1785496597,
+    "sha256": "9e6fb68ab13dff2763e2fff18d2aee531486360c557f058eb8a471d9209a9eaa",
+    "shm_exists": false,
+    "size": 1015808,
+    "wal_exists": false
+  },
+  "accident_database_before": {
+    "exists": true,
+    "mtime_epoch": 1785496597,
+    "sha256": "9e6fb68ab13dff2763e2fff18d2aee531486360c557f058eb8a471d9209a9eaa",
+    "shm_exists": false,
+    "size": 1015808,
+    "wal_exists": false
+  },
+  "admission_ordering_changed": false,
+  "after": {
+    "admitted_candidates": 78,
+    "ambiguous": 0,
+    "boundary_defect_count": 0,
+    "candidate_precision_proxy": 0.2841,
+    "canonical_candidates": 88,
+    "definition_fragment_false_positive_count": 0,
+    "exact_binding_recall": 1.0,
+    "exact_matched": 25,
+    "extraction_missing_count": 0,
+    "missing": 0,
+    "overflow_candidates": 10,
+    "provider_ready": 5
+  },
+  "before": {
+    "admitted_candidates": 78,
+    "ambiguous": 0,
+    "boundary_defect_count": 2,
+    "candidate_precision_proxy": 0.2444,
+    "canonical_candidates": 90,
+    "definition_fragment_false_positive_count": 2,
+    "exact_binding_recall": 0.88,
+    "exact_matched": 22,
+    "extraction_missing_count": 0,
+    "missing": 3,
+    "overflow_candidates": 12,
+    "provider_ready": 5
+  },
+  "benchmark_specific_rules_added": false,
+  "boundary_traces": {
+    "angular momentum": {
+      "after_exact_candidate": {
+        "canonical_text": "Angular momentum",
+        "chunk_ref": "english-mechanics:chunk-20",
+        "confidence": 72,
+        "governance_status": "admitted",
+        "normalized_text": "angular momentum",
+        "original_span": "Angular momentum",
+        "source_id": "english-mechanics",
+        "token_count": 2
+      },
+      "before_raw_candidates": [
+        {
+          "emitted": true,
+          "score": 67,
+          "span": "Angular momentum describes rotational",
+          "token_count": 4
+        },
+        {
+          "emitted": true,
+          "score": 61,
+          "span": "Angular momentum describes",
+          "token_count": 3
+        },
+        {
+          "emitted": false,
+          "score": 57,
+          "span": "Angular momentum",
+          "token_count": 2
+        },
+        {
+          "emitted": true,
+          "score": 67,
+          "span": "Angular",
+          "token_count": 1
+        }
+      ],
+      "binding_status_after": "matched",
+      "chunk_index": 20,
+      "chunk_offset": 0,
+      "chunk_ref": "english-mechanics:chunk-20",
+      "earliest_failure_before": "extract_terms_from_text definition-subject boundary",
+      "extractor_input_prefix": "Angular Momentum describes …",
+      "parsed_text_offset": 1368,
+      "predicate_fragments_after": [],
+      "score_components": {
+        "base": 45,
+        "definition_subject_boost": 12,
+        "minimum_seeded_confidence": 72,
+        "multiword": 12,
+        "title_case": 0
+      },
+      "source_id": "english-mechanics",
+      "source_offset": 1368
+    },
+    "mass": {
+      "after_exact_candidate": {
+        "canonical_text": "Mass",
+        "chunk_ref": "english-mechanics:chunk-6",
+        "confidence": 72,
+        "governance_status": "admitted",
+        "normalized_text": "mass",
+        "original_span": "Mass",
+        "source_id": "english-mechanics",
+        "token_count": 1
+      },
+      "before_raw_candidates": [
+        {
+          "emitted": true,
+          "score": 61,
+          "span": "Mass measures the amount",
+          "token_count": 4
+        },
+        {
+          "emitted": false,
+          "score": 57,
+          "span": "Mass measures",
+          "token_count": 2
+        },
+        {
+          "emitted": false,
+          "score": 53,
+          "span": "Mass",
+          "token_count": 1
+        }
+      ],
+      "binding_status_after": "matched",
+      "chunk_index": 6,
+      "chunk_offset": 0,
+      "chunk_ref": "english-mechanics:chunk-6",
+      "earliest_failure_before": "extract_terms_from_text definition-subject boundary",
+      "extractor_input_prefix": "Mass measures …",
+      "parsed_text_offset": 359,
+      "predicate_fragments_after": [],
+      "score_components": {
+        "base": 45,
+        "definition_subject_boost": 12,
+        "minimum_seeded_confidence": 72,
+        "multiword": 0,
+        "title_case": 8
+      },
+      "source_id": "english-mechanics",
+      "source_offset": 359
+    }
+  },
+  "frozen_hashes": {
+    "corpus_sha256": "33715999c16a74610091b1e40896ee41921570a3740ebc2815565cf0ab7202dc",
+    "gold_sha256": "199baed9a8cb6deb68ae3480c3a67679b2daf273d3733e909d4e861685d45302"
+  },
+  "mechanics_governance": {
+    "admitted_candidates": 50,
+    "canonical_candidates": 60,
+    "item_limit": 50,
+    "overflow_candidates": 10
+  },
+  "real_provider_requests": 0,
+  "status": "RESIDUAL_CANDIDATE_BOUNDARY_CONTRACT_CLOSED",
+  "task": "12B.3",
+  "torque_overflow_audit": {
+    "admission_sort_position_after": 50,
+    "admission_sort_position_before": 52,
+    "benchmark_promotion_added": false,
+    "candidate_score": 72,
+    "canonical_order_position_after": 50,
+    "canonical_order_position_before": 52,
+    "exact_candidate_present": true,
+    "first_chunk_index": 21,
+    "governance_reason_after": "within_item_limit",
+    "governance_status_after": "admitted",
+    "governance_status_before": "overflow_rejected",
+    "ordering_contract_unchanged": true,
+    "position_change_reason": "Two invalid earlier definition-predicate fragments were removed by the general boundary repair.",
+    "selection_defect": false,
+    "selection_key": [
+      21,
+      "torque",
+      "Torque"
+    ]
+  }
+}

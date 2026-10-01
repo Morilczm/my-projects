@@ -1,0 +1,29 @@
+{
+  "contract_id": "personal-evidence-source-admission-13c2@1.0.0",
+  "material_roles": {
+    "CHINESE_REFERENCE_EVIDENCE": {
+      "language": "zh",
+      "source_role": "chinese_reference_material",
+      "usage": "independent_chinese_evidence"
+    },
+    "ENGLISH_COURSE_MATERIAL": {
+      "language": "en",
+      "source_role": "english_course_material",
+      "usage": "concept_query_source"
+    }
+  },
+  "required": {
+    "file_type": "pdf",
+    "rights_attestation": true,
+    "scope_type": "personal",
+    "visibility": "private"
+  },
+  "search_policy": {
+    "other_course_private_sources_allowed": false,
+    "other_student_sources_allowed": false,
+    "personal_sources_first": true,
+    "platform_governed_fallback_explicit": true,
+    "translation_hint_is_evidence": false
+  },
+  "status": "PASS"
+}

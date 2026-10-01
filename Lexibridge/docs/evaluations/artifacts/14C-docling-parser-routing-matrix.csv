@@ -1,0 +1,5 @@
+fixture_class,selected_parser,parse_status,quality_status,block_count,knowledge_chunk_count,table_detected,provenance_complete,external_requests
+simple_digital_pdf,pymupdf_native,success,native_text_ok,1,1,false,true,0
+simple_table_pdf,docling_layout,success,native_text_ok,1,1,true,true,0
+scanned_pdf,docling_layout,success,ocr_text_ok,5,1,false,true,0
+multi_column_pdf,current_parser_excluded_from_docling,not_executed,not_applicable,0,0,false,not_applicable,0

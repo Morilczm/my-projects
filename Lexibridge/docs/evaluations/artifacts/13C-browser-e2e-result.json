@@ -1,0 +1,22 @@
+{
+  "contract_id": "personal-workspace-browser-e2e@1.0.0",
+  "environment": "synthetic-local",
+  "status": "PASS",
+  "student_flow": [
+    "login",
+    "open My Workspace",
+    "upload synthetic PDF",
+    "process with existing ingestion worker",
+    "observe READY private material",
+    "select concept in shared ConceptQuery page",
+    "view private non-official alignment",
+    "save note",
+    "mark understood"
+  ],
+  "instructor_flow": "PASS",
+  "reviewer_flow": "PASS",
+  "managed_course_regression": "PASS",
+  "external_dependency_requests": 0,
+  "real_provider_requests": 0,
+  "private_course_material_used": false
+}

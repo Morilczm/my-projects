@@ -1,0 +1,49 @@
+{
+  "technical_status": "BILINGUAL_RERANKING_CONTRACT_CLOSED",
+  "quality_status": "BILINGUAL_RERANKING_QUALITY_IMPROVED",
+  "baseline": {
+    "pair_top1": 0.4286,
+    "pair_top3": 0.8571,
+    "pair_mrr": 0.6476,
+    "pairing_miss": 8,
+    "evidence_qualification_missing": 6
+  },
+  "metrics": {
+    "coverage": 25,
+    "english_matched": 18,
+    "english_missing": 3,
+    "english_ambiguous": 4,
+    "retrieval_eligible": 18,
+    "identification_eligible": 15,
+    "pairing_eligible": 14,
+    "retrieval_hit_at_1": 0.7222,
+    "retrieval_hit_at_3": 0.8333,
+    "retrieval_mrr": 0.7778,
+    "exact_chinese_candidates": 14,
+    "candidate_top1_count": 7,
+    "candidate_top3_count": 12,
+    "candidate_top1": 0.4667,
+    "candidate_top3": 0.8,
+    "candidate_mrr": 0.6378,
+    "pair_top1_count": 11,
+    "pair_top3_count": 14,
+    "pair_top1": 0.7857,
+    "pair_top3": 1.0,
+    "pair_mrr": 0.869,
+    "no_pair_count": 0,
+    "chinese_evidence_retrieved": 18,
+    "correct_chinese_evidence_top3": 15,
+    "evidence_qualified": 0,
+    "provider_ready": 0,
+    "pairing_miss": 3,
+    "evidence_qualification_missing": 11,
+    "dominant_next_failure": "EVIDENCE_QUALIFICATION_MISSING"
+  },
+  "error_categories": {
+    "TERM_SCOPE_CONFUSION": 5,
+    "AUXILIARY_PRIOR_DOMINANCE": 3
+  },
+  "real_provider_requests": 0,
+  "external_api_requests": 0,
+  "gold_alias_mapping_added": false
+}

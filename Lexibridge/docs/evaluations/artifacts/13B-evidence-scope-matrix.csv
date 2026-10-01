@@ -1,0 +1,11 @@
+query_scope,source_scope,relationship,policy,allowed
+PERSONAL,personal,same_student,governed_and_student_search,true
+PERSONAL,personal,other_student,any,false
+PERSONAL,managed_course,any,any,false
+PERSONAL,platform,shared_licensed,explicit_platform_policy,true
+PERSONAL,platform,shared_licensed,platform_policy_disabled,false
+MANAGED_COURSE,managed_course,same_course,governed_and_student_search,true
+MANAGED_COURSE,managed_course,other_course,any,false
+MANAGED_COURSE,personal,any_student,any,false
+MANAGED_COURSE,platform,shared_licensed,explicit_platform_policy,true
+MANAGED_COURSE,platform,shared_licensed,platform_policy_disabled,false

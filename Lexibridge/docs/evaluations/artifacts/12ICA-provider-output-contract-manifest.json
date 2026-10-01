@@ -1,0 +1,75 @@
+{
+  "artifact_schema_version": "12ICA-provider-output-contract-manifest-v1",
+  "technical_status": "REAL_PROVIDER_STRUCTURED_OUTPUT_CONTRACT_CLOSED",
+  "quality_status": "REAL_PROVIDER_STRUCTURED_OUTPUT_OFFLINE_BASELINE_ESTABLISHED",
+  "provider_id": "deepseek-alignment-v1",
+  "endpoint_path": "/chat/completions",
+  "request_contract": {
+    "response_format": {
+      "type": "json_object"
+    },
+    "response_format_caller_override_allowed": false,
+    "max_output_tokens": 1000,
+    "minimum_schema_output_tokens": 512,
+    "stream": false
+  },
+  "prompt_contract": {
+    "registry_id": "formal_alignment",
+    "previous_version": "alignment-v1",
+    "active_structured_version": "alignment-json-v2",
+    "legacy_version_retained_for_audit": true,
+    "json_only_instruction": true,
+    "schema_example_present": true,
+    "markdown_code_fence_forbidden": true
+  },
+  "parser_contract": {
+    "previous_version": "alignment-parser-v1",
+    "active_structured_version": "alignment-parser-json-v2",
+    "output_schema_version": "alignment-output-json-v2",
+    "pure_json_object_only": true,
+    "code_fence_compatibility": false,
+    "mixed_prose_compatibility": false,
+    "reasoning_content_fallback": false,
+    "finish_reason_length_fails_closed": true,
+    "provenance_allowlist_validation": true
+  },
+  "model_contract": {
+    "requested_model": "deepseek-chat",
+    "allowed_resolved_models": [
+      "deepseek-chat",
+      "deepseek-v4-flash"
+    ],
+    "disallowed_example": "deepseek-v4-pro",
+    "policy_version": "deepseek-formal-model-compatibility@1.0.0",
+    "automatic_model_switching": false
+  },
+  "pricing_contract": {
+    "pricing_model_identity": "deepseek-chat",
+    "policy_version": "deepseek-chat-pricing@2025-02-08",
+    "effective_date": "2025-02-08",
+    "currency": "USD",
+    "input_cache_hit_per_1000_tokens": 0.00007,
+    "input_cache_miss_per_1000_tokens": 0.00027,
+    "output_per_1000_tokens": 0.0011,
+    "ceiling_comparison_uses": "input_cache_miss_worst_case",
+    "unknown_pricing_behavior": "unavailable_not_zero"
+  },
+  "sanitized_output_shape_fields": [
+    "content_present",
+    "content_length_bucket",
+    "first_non_whitespace_character_class",
+    "looks_like_json_object",
+    "outer_code_fence_present",
+    "finish_reason",
+    "response_model",
+    "response_hash",
+    "schema_validation_stage",
+    "stable_parser_reason"
+  ],
+  "stores_request_body": false,
+  "stores_response_body": false,
+  "stores_prompt_body": false,
+  "external_api_used": false,
+  "real_provider_requests": 0,
+  "real_credentials_read": false
+}

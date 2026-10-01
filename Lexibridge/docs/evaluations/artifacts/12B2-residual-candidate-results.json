@@ -1,0 +1,510 @@
+{
+  "accident_database_after": {
+    "exists": true,
+    "mtime_epoch": 1785496597,
+    "sha256": "9e6fb68ab13dff2763e2fff18d2aee531486360c557f058eb8a471d9209a9eaa",
+    "shm_exists": false,
+    "size": 1015808,
+    "wal_exists": false
+  },
+  "accident_database_before": {
+    "exists": true,
+    "mtime_epoch": 1785496597,
+    "sha256": "9e6fb68ab13dff2763e2fff18d2aee531486360c557f058eb8a471d9209a9eaa",
+    "shm_exists": false,
+    "size": 1015808,
+    "wal_exists": false
+  },
+  "after": {
+    "admitted_candidates": 78,
+    "ambiguous": 0,
+    "boundary_defect_count": 2,
+    "candidate_precision_proxy": 0.2444,
+    "canonical_candidates": 90,
+    "definition_fragment_false_positive_count": 2,
+    "exact_binding_recall": 0.88,
+    "exact_matched": 22,
+    "extraction_missing_count": 0,
+    "missing": 3,
+    "nonbenchmark_candidate_proxy": 68,
+    "overflow_candidates": 12,
+    "overflow_not_admitted_count": 1,
+    "provider_ready": 5,
+    "whole_set_rejected_sources": 0
+  },
+  "after_attribution_counts": {
+    "CANDIDATE_BOUNDARY_DEFECT": 2,
+    "MATCHED": 8,
+    "OVERFLOW_NOT_ADMITTED": 1
+  },
+  "before": {
+    "admitted_candidates": 76,
+    "ambiguous": 0,
+    "boundary_defect_count": 2,
+    "candidate_precision_proxy": 0.1728,
+    "canonical_candidates": 81,
+    "definition_fragment_false_positive_count": 2,
+    "exact_binding_recall": 0.56,
+    "exact_matched": 14,
+    "extraction_missing_count": 9,
+    "missing": 11,
+    "nonbenchmark_candidate_proxy": 67,
+    "overflow_candidates": 5,
+    "overflow_not_admitted_count": 0,
+    "provider_ready": 3
+  },
+  "before_attribution_counts": {
+    "CANDIDATE_BOUNDARY_DEFECT": 2,
+    "EXTRACTION_MISSING": 9
+  },
+  "benchmark_specific_rules_added": false,
+  "frozen_hashes": {
+    "corpus_sha256": "33715999c16a74610091b1e40896ee41921570a3740ebc2815565cf0ab7202dc",
+    "gold_sha256": "199baed9a8cb6deb68ae3480c3a67679b2daf273d3733e909d4e861685d45302"
+  },
+  "real_provider_requests": 0,
+  "residual_rows": [
+    {
+      "before_primary_attribution": "EXTRACTION_MISSING",
+      "binding_status": "matched",
+      "candidate_admitted": true,
+      "candidate_overflowed": false,
+      "chunk_ids": [
+        "d453d1be-133f-4096-ad89-f4465108c421",
+        "cecef6b1-ffe4-48af-bb9f-3e55cb3279d0",
+        "edcc86f0-e774-4f72-9737-eac134d52f7d",
+        "8ab0133d-950e-4559-905f-4421a6dd6a9c",
+        "7bc00cf3-5ffd-4cb4-b5bb-90172d75d6bc"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-04",
+      "earliest_failure_stage": "none",
+      "exact_production_candidate_present": true,
+      "fragmented_candidate_present": false,
+      "gold_term": "force",
+      "included_in_denominator": true,
+      "near_production_candidate_present": false,
+      "normalization_status": "normalized_match",
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "MATCHED",
+      "source_id": "english-mechanics",
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "aaa9aa83c54e9d8b",
+        "3d57e903ad210e21",
+        "de16f4a1490ecac9",
+        "f9622ba8d8c7e1e4",
+        "cf0e93cbea723dd2"
+      ],
+      "system_candidate_summaries": [
+        "Force",
+        "Centripetal force",
+        "authoritative teaching",
+        "English Mechanics",
+        "evaluation only"
+      ]
+    },
+    {
+      "before_primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "binding_status": "missing",
+      "candidate_admitted": false,
+      "candidate_overflowed": false,
+      "chunk_ids": [
+        "c40b4006-07cd-46c0-b1a5-861139e87165",
+        "0bc1f0d4-ded9-46de-9ffe-e8f3a2faa75a"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-05",
+      "earliest_failure_stage": "candidate_boundary",
+      "exact_production_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "gold_term": "mass",
+      "included_in_denominator": true,
+      "near_production_candidate_present": true,
+      "normalization_status": "no_normalized_match",
+      "overlong_candidate_present": true,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "source_id": "english-mechanics",
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "c9d2afcd892a1995",
+        "de16f4a1490ecac9",
+        "f9622ba8d8c7e1e4",
+        "cf0e93cbea723dd2",
+        "b66dc91a827a0d9e"
+      ],
+      "system_candidate_summaries": [
+        "Mass measures the amount",
+        "authoritative teaching",
+        "English Mechanics",
+        "evaluation only",
+        "Mechanics"
+      ]
+    },
+    {
+      "before_primary_attribution": "EXTRACTION_MISSING",
+      "binding_status": "matched",
+      "candidate_admitted": true,
+      "candidate_overflowed": false,
+      "chunk_ids": [
+        "4fa0f402-0b04-4775-a44a-1c13e106b865",
+        "68e441d0-a48d-4f87-8e10-3159b92e303c"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-06",
+      "earliest_failure_stage": "none",
+      "exact_production_candidate_present": true,
+      "fragmented_candidate_present": false,
+      "gold_term": "inertia",
+      "included_in_denominator": true,
+      "near_production_candidate_present": false,
+      "normalization_status": "normalized_match",
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "MATCHED",
+      "source_id": "english-mechanics",
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "5fe5e2103dcbd759",
+        "de16f4a1490ecac9",
+        "f9622ba8d8c7e1e4",
+        "cf0e93cbea723dd2",
+        "b66dc91a827a0d9e"
+      ],
+      "system_candidate_summaries": [
+        "Inertia",
+        "authoritative teaching",
+        "English Mechanics",
+        "evaluation only",
+        "Mechanics"
+      ]
+    },
+    {
+      "before_primary_attribution": "EXTRACTION_MISSING",
+      "binding_status": "matched",
+      "candidate_admitted": true,
+      "candidate_overflowed": false,
+      "chunk_ids": [
+        "cecef6b1-ffe4-48af-bb9f-3e55cb3279d0",
+        "bfd3a081-18bf-4345-b740-6f77d508d3a9"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-08",
+      "earliest_failure_stage": "none",
+      "exact_production_candidate_present": true,
+      "fragmented_candidate_present": false,
+      "gold_term": "impulse",
+      "included_in_denominator": true,
+      "near_production_candidate_present": false,
+      "normalization_status": "normalized_match",
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "MATCHED",
+      "source_id": "english-mechanics",
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "e9bef4b3d6cac1ee",
+        "de16f4a1490ecac9",
+        "f9622ba8d8c7e1e4",
+        "cf0e93cbea723dd2",
+        "b66dc91a827a0d9e"
+      ],
+      "system_candidate_summaries": [
+        "Impulse",
+        "authoritative teaching",
+        "English Mechanics",
+        "evaluation only",
+        "Mechanics"
+      ]
+    },
+    {
+      "before_primary_attribution": "EXTRACTION_MISSING",
+      "binding_status": "matched",
+      "candidate_admitted": true,
+      "candidate_overflowed": false,
+      "chunk_ids": [
+        "27c3bc02-e858-4585-bf94-33624d5c3b3c",
+        "e3cb4eb7-50c6-44e2-84f2-07d7487c4e13"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-09",
+      "earliest_failure_stage": "none",
+      "exact_production_candidate_present": true,
+      "fragmented_candidate_present": false,
+      "gold_term": "kinetic energy",
+      "included_in_denominator": true,
+      "near_production_candidate_present": false,
+      "normalization_status": "normalized_match",
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "MATCHED",
+      "source_id": "english-mechanics",
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "579ea5fa9a4c69a2",
+        "28e3fa0bffbd9c60",
+        "e30aba661d491326",
+        "379c29498aee17fb",
+        "4c46fab43928bfca"
+      ],
+      "system_candidate_summaries": [
+        "Kinetic energy",
+        "potential energy",
+        "Mechanical energy",
+        "Gravitational potential energy",
+        "Conservation of mechanical energy"
+      ]
+    },
+    {
+      "before_primary_attribution": "EXTRACTION_MISSING",
+      "binding_status": "matched",
+      "candidate_admitted": true,
+      "candidate_overflowed": false,
+      "chunk_ids": [
+        "edcc86f0-e774-4f72-9737-eac134d52f7d",
+        "e98bc189-83c5-46de-9e63-ba233a540336",
+        "8ab0133d-950e-4559-905f-4421a6dd6a9c",
+        "bfd3a081-18bf-4345-b740-6f77d508d3a9"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-11",
+      "earliest_failure_stage": "none",
+      "exact_production_candidate_present": true,
+      "fragmented_candidate_present": false,
+      "gold_term": "work",
+      "included_in_denominator": true,
+      "near_production_candidate_present": false,
+      "normalization_status": "normalized_match",
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "MATCHED",
+      "source_id": "english-mechanics",
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "954e8a5934744667",
+        "de16f4a1490ecac9",
+        "f9622ba8d8c7e1e4",
+        "cf0e93cbea723dd2",
+        "b66dc91a827a0d9e"
+      ],
+      "system_candidate_summaries": [
+        "Work",
+        "authoritative teaching",
+        "English Mechanics",
+        "evaluation only",
+        "Mechanics"
+      ]
+    },
+    {
+      "before_primary_attribution": "EXTRACTION_MISSING",
+      "binding_status": "matched",
+      "candidate_admitted": true,
+      "candidate_overflowed": false,
+      "chunk_ids": [
+        "e98bc189-83c5-46de-9e63-ba233a540336"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-12",
+      "earliest_failure_stage": "none",
+      "exact_production_candidate_present": true,
+      "fragmented_candidate_present": false,
+      "gold_term": "power",
+      "included_in_denominator": true,
+      "near_production_candidate_present": false,
+      "normalization_status": "normalized_match",
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "MATCHED",
+      "source_id": "english-mechanics",
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "9797165f424e35e2",
+        "de16f4a1490ecac9",
+        "f9622ba8d8c7e1e4",
+        "cf0e93cbea723dd2",
+        "b66dc91a827a0d9e"
+      ],
+      "system_candidate_summaries": [
+        "Power",
+        "authoritative teaching",
+        "English Mechanics",
+        "evaluation only",
+        "Mechanics"
+      ]
+    },
+    {
+      "before_primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "binding_status": "missing",
+      "candidate_admitted": false,
+      "candidate_overflowed": false,
+      "chunk_ids": [
+        "68e441d0-a48d-4f87-8e10-3159b92e303c",
+        "bfd3a081-18bf-4345-b740-6f77d508d3a9"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-19",
+      "earliest_failure_stage": "candidate_boundary",
+      "exact_production_candidate_present": false,
+      "fragmented_candidate_present": true,
+      "gold_term": "angular momentum",
+      "included_in_denominator": true,
+      "near_production_candidate_present": true,
+      "normalization_status": "no_normalized_match",
+      "overlong_candidate_present": true,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "source_id": "english-mechanics",
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "c4d517c4f147e552",
+        "c32a21c877228752",
+        "5e6ae5d7f885d260",
+        "7698f178cb34e0d7",
+        "965557a0f094cdc4"
+      ],
+      "system_candidate_summaries": [
+        "Angular momentum describes",
+        "Momentum",
+        "Angular",
+        "Angular momentum describes rotational",
+        "total momentum"
+      ]
+    },
+    {
+      "before_primary_attribution": "EXTRACTION_MISSING",
+      "binding_status": "missing",
+      "candidate_admitted": false,
+      "candidate_overflowed": true,
+      "chunk_ids": [
+        "695f23ee-3852-4883-96e9-9b4fb571528d",
+        "bfd3a081-18bf-4345-b740-6f77d508d3a9"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-20",
+      "earliest_failure_stage": "candidate_governance",
+      "exact_production_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "gold_term": "torque",
+      "included_in_denominator": true,
+      "near_production_candidate_present": false,
+      "normalization_status": "no_normalized_match",
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "OVERFLOW_NOT_ADMITTED",
+      "source_id": "english-mechanics",
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "de16f4a1490ecac9",
+        "f9622ba8d8c7e1e4",
+        "cf0e93cbea723dd2",
+        "b66dc91a827a0d9e",
+        "8e44fae7e7e96cb8"
+      ],
+      "system_candidate_summaries": [
+        "authoritative teaching",
+        "English Mechanics",
+        "evaluation only",
+        "Mechanics",
+        "not authoritative"
+      ]
+    },
+    {
+      "before_primary_attribution": "EXTRACTION_MISSING",
+      "binding_status": "matched",
+      "candidate_admitted": true,
+      "candidate_overflowed": false,
+      "chunk_ids": [
+        "40c170de-11ae-4379-aa25-cb8bb7e52254",
+        "4b6ff595-cd65-44ca-b7bb-0ee324b38e2d"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-21",
+      "earliest_failure_stage": "none",
+      "exact_production_candidate_present": true,
+      "fragmented_candidate_present": false,
+      "gold_term": "electric charge",
+      "included_in_denominator": true,
+      "near_production_candidate_present": false,
+      "normalization_status": "normalized_match",
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "MATCHED",
+      "source_id": "english-electricity",
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "70ded2a4761f7bcc",
+        "09326ff00ac52baf",
+        "0ab5652fb91cf3b5",
+        "93daf9aeb60634d6",
+        "d2aa54535734f2a1"
+      ],
+      "system_candidate_summaries": [
+        "Electric charge",
+        "Electric",
+        "Electric field",
+        "Electric potential",
+        "Confusion checks electric"
+      ]
+    },
+    {
+      "before_primary_attribution": "EXTRACTION_MISSING",
+      "binding_status": "matched",
+      "candidate_admitted": true,
+      "candidate_overflowed": false,
+      "chunk_ids": [
+        "5bb6571a-2c2b-40d7-bcd0-79be999858ec",
+        "4b6ff595-cd65-44ca-b7bb-0ee324b38e2d"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-22",
+      "earliest_failure_stage": "none",
+      "exact_production_candidate_present": true,
+      "fragmented_candidate_present": false,
+      "gold_term": "electric field",
+      "included_in_denominator": true,
+      "near_production_candidate_present": false,
+      "normalization_status": "normalized_match",
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "MATCHED",
+      "source_id": "english-electricity",
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "0ab5652fb91cf3b5",
+        "09326ff00ac52baf",
+        "70ded2a4761f7bcc",
+        "93daf9aeb60634d6",
+        "d2aa54535734f2a1"
+      ],
+      "system_candidate_summaries": [
+        "Electric field",
+        "Electric",
+        "Electric charge",
+        "Electric potential",
+        "Confusion checks electric"
+      ]
+    }
+  ],
+  "source_results": [
+    {
+      "admitted_candidates": 50,
+      "canonical_candidates": 62,
+      "governance_status": "overflow_rejected",
+      "overflow_candidates": 12,
+      "source_id": "english-mechanics",
+      "whole_set_rejected": false
+    },
+    {
+      "admitted_candidates": 28,
+      "canonical_candidates": 28,
+      "governance_status": "admitted",
+      "overflow_candidates": 0,
+      "source_id": "english-electricity",
+      "whole_set_rejected": false
+    }
+  ],
+  "status": "RESIDUAL_CANDIDATE_EXTRACTION_CONTRACT_PARTIAL",
+  "task": "12B.2"
+}

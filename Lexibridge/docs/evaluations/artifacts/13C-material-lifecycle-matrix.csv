@@ -1,0 +1,6 @@
+event,document_state,source_state,chunks_accessible,future_query,historical_result,physical_object
+upload,UPLOADED,pending,false,NOT_READY,not_applicable,stored_private
+processing,PARSING,pending,false,NOT_READY,not_applicable,stored_private
+ready,READY,active,true,allowed,available,stored_private
+failed,FAILED,blocked,false,NOT_READY,not_applicable,stored_private
+delete,DELETED,deprecated,false,blocked,SOURCE_UNAVAILABLE,deleted

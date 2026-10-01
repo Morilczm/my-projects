@@ -1,0 +1,132 @@
+{
+  "retrieval": {
+    "backend": "deterministic_formula_feature_fake_v1",
+    "production_model_contract": "intfloat/multilingual-e5-small",
+    "production_model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "denominator": 10,
+    "hit_at_1": 1.0,
+    "hit_at_3": 1.0,
+    "mrr": 1.0,
+    "no_result_count": 0,
+    "correct_evidence_average_rank": 1
+  },
+  "downstream_smoke": {
+    "chinese_candidate_generated": 10,
+    "pair_generated": 10,
+    "evidence_provenance_retained": 10
+  },
+  "rows": [
+    {
+      "opaque_item_id": "9c38b569bd57be07e6c4",
+      "query_hash": "9c7ba3a3b46a6a15f46d20087ce5cb8803918cbe4c429a1f39ba51ad1c052556",
+      "retrieved_chunk_ids": "65fcfada-f79b-5324-bca8-ea9c4487a449|00dc2d2d-7804-5493-804f-14bd39cf51f0|0b0e9efc-d604-51a9-b016-cb2a0b5ac9f3",
+      "correct_rank": 1,
+      "top1": true,
+      "top3": true,
+      "candidate_generated": true,
+      "pair_count": 3,
+      "provenance_complete": true
+    },
+    {
+      "opaque_item_id": "eb41e2c1334238be2f0c",
+      "query_hash": "c81de4dc3ddf0f8d3ad61eabd6f62df8c2b3ae6a9578634c42608d1c7b2027f5",
+      "retrieved_chunk_ids": "0b0e9efc-d604-51a9-b016-cb2a0b5ac9f3|00dc2d2d-7804-5493-804f-14bd39cf51f0|65fcfada-f79b-5324-bca8-ea9c4487a449",
+      "correct_rank": 1,
+      "top1": true,
+      "top3": true,
+      "candidate_generated": true,
+      "pair_count": 3,
+      "provenance_complete": true
+    },
+    {
+      "opaque_item_id": "81b6b2c874b787640efa",
+      "query_hash": "c5757f9f4d2464fb11a2a2b5dae9b73a41cca78144a3bf86cf554db2212699e4",
+      "retrieved_chunk_ids": "00dc2d2d-7804-5493-804f-14bd39cf51f0|0b0e9efc-d604-51a9-b016-cb2a0b5ac9f3|65fcfada-f79b-5324-bca8-ea9c4487a449",
+      "correct_rank": 1,
+      "top1": true,
+      "top3": true,
+      "candidate_generated": true,
+      "pair_count": 3,
+      "provenance_complete": true
+    },
+    {
+      "opaque_item_id": "3edd9f874833eee45cdf",
+      "query_hash": "16fe1e51a234a2819850441eb394a738c8882f37e9f045f222fc60f533ca447e",
+      "retrieved_chunk_ids": "c369b6ca-612f-5e0f-ac71-ea1833ec0a83|00dc2d2d-7804-5493-804f-14bd39cf51f0|0b0e9efc-d604-51a9-b016-cb2a0b5ac9f3",
+      "correct_rank": 1,
+      "top1": true,
+      "top3": true,
+      "candidate_generated": true,
+      "pair_count": 3,
+      "provenance_complete": true
+    },
+    {
+      "opaque_item_id": "baa017638d268468f342",
+      "query_hash": "a18d291c4d7c1d5a2717b7247d6dd5cb09568e3c35503b9dcd0a669c8526c092",
+      "retrieved_chunk_ids": "88e705bf-516d-5241-9eb1-e24faeeda7ac|00dc2d2d-7804-5493-804f-14bd39cf51f0|0b0e9efc-d604-51a9-b016-cb2a0b5ac9f3",
+      "correct_rank": 1,
+      "top1": true,
+      "top3": true,
+      "candidate_generated": true,
+      "pair_count": 3,
+      "provenance_complete": true
+    },
+    {
+      "opaque_item_id": "8995ac6f577e4b01dc3f",
+      "query_hash": "52f3868f3c0943024ed9e6b1bb33b89aadd7cfe49822648795127d661cd324e4",
+      "retrieved_chunk_ids": "0abe1067-2297-5c8f-b31d-aa7394f2c9aa|00dc2d2d-7804-5493-804f-14bd39cf51f0|0b0e9efc-d604-51a9-b016-cb2a0b5ac9f3",
+      "correct_rank": 1,
+      "top1": true,
+      "top3": true,
+      "candidate_generated": true,
+      "pair_count": 3,
+      "provenance_complete": true
+    },
+    {
+      "opaque_item_id": "4084a32b9bba4b4a03d0",
+      "query_hash": "cf69a40a135c2a9b0b17d72e4311288f29857c4d0a3a05733221f7140462a5d5",
+      "retrieved_chunk_ids": "5a8fbcc2-fb27-54e0-8d79-dbf73e581e83|00dc2d2d-7804-5493-804f-14bd39cf51f0|0b0e9efc-d604-51a9-b016-cb2a0b5ac9f3",
+      "correct_rank": 1,
+      "top1": true,
+      "top3": true,
+      "candidate_generated": true,
+      "pair_count": 4,
+      "provenance_complete": true
+    },
+    {
+      "opaque_item_id": "0844df8fee9eeadaa344",
+      "query_hash": "dfbafec6402bfb4612d8d78f9ed72d3131984e6364aa48f87b633d6d12e21d45",
+      "retrieved_chunk_ids": "cb58a735-1820-586c-aa96-f56bc7fd1131|00dc2d2d-7804-5493-804f-14bd39cf51f0|0b0e9efc-d604-51a9-b016-cb2a0b5ac9f3",
+      "correct_rank": 1,
+      "top1": true,
+      "top3": true,
+      "candidate_generated": true,
+      "pair_count": 3,
+      "provenance_complete": true
+    },
+    {
+      "opaque_item_id": "446be308664e1964b816",
+      "query_hash": "5efbee325c2d1f2753a2c6eb9e14ff6bdd4fe604fc05a84752943d476218006a",
+      "retrieved_chunk_ids": "7e652ad8-3000-5987-94fb-c5b951b91484|00dc2d2d-7804-5493-804f-14bd39cf51f0|0b0e9efc-d604-51a9-b016-cb2a0b5ac9f3",
+      "correct_rank": 1,
+      "top1": true,
+      "top3": true,
+      "candidate_generated": true,
+      "pair_count": 3,
+      "provenance_complete": true
+    },
+    {
+      "opaque_item_id": "28cee9e4286aa009659b",
+      "query_hash": "c3a3fceb0d86c533e684c8c825360e9be8f72cdd14338c8f16d09d842a032b25",
+      "retrieved_chunk_ids": "87ce0d80-34aa-50f1-902f-13689519a483|00dc2d2d-7804-5493-804f-14bd39cf51f0|0b0e9efc-d604-51a9-b016-cb2a0b5ac9f3",
+      "correct_rank": 1,
+      "top1": true,
+      "top3": true,
+      "candidate_generated": true,
+      "pair_count": 3,
+      "provenance_complete": true
+    }
+  ],
+  "external_api_used": false,
+  "real_provider_requests": 0
+}

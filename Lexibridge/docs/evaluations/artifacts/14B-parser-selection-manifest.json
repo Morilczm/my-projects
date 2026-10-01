@@ -1,0 +1,46 @@
+{
+  "baseline_commit": "6cca8cb0881226c6031f3adafff0d89c1146d584",
+  "parsers": [
+    {
+      "license_gate": "pass",
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "parser_version": "current_commit"
+    },
+    {
+      "license_gate": "pass",
+      "parser_id": "docling",
+      "parser_version": "2.117.0"
+    },
+    {
+      "license_gate": "blocked_nonstandard_license",
+      "parser_id": "mineru",
+      "parser_version": "3.4.4"
+    }
+  ],
+  "production_adapter_authorized": false,
+  "schema_version": "parser-selection-manifest-14b@1.0.0",
+  "selection": {
+    "composition_requirements": [
+      "per_document_quality_routing",
+      "current_native_parser_fallback",
+      "existing_formula_region"
+    ],
+    "excluded_scope": [
+      "multi_column_pdf",
+      "mixed_layout_table_pdf",
+      "formula_pdf_without_existing_formula_region"
+    ],
+    "fallback_parser_id": "baseline_native_tesseract_formula_region",
+    "mineru_eligible": false,
+    "production_adapter_authorized": false,
+    "reason": "Selected a conditional integration candidate; failed document-class gates remain excluded and production routing is unchanged.",
+    "recommended_scope": [
+      "scanned_pdf",
+      "simple_table_pdf"
+    ],
+    "selected_parser_id": "docling",
+    "selected_role": "conditional_complex_document_parser_candidate",
+    "simple_document_policy": "retain_current_native_parser"
+  },
+  "task": "14B"
+}

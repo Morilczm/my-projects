@@ -1,0 +1,25 @@
+{
+  "chinese_source_count": 4,
+  "chinese_targets_present": 25,
+  "chinese_term_leakage_in_english": false,
+  "corpus_builder_imports_gold": false,
+  "coverage": 25,
+  "distractor_count": 15,
+  "english_has_cjk": false,
+  "english_source_count": 4,
+  "english_targets_present": 25,
+  "english_term_leakage_in_chinese": false,
+  "gold_isolation_passed": true,
+  "hashes": {
+    "chinese_bundle_sha256": "cebd3274cb0802fa645948d9b641b1776c60ab99700bbf3cd4a80999bc45b5f7",
+    "english_bundle_sha256": "e84fc99a993c099628fe7d740c1e248fefe1e03cbece7b4df43d02cd7dfaddc5",
+    "gold_sha256": "3379bc1e6c589256dcec384a9f7435c96277f6754b7cb44cff69f86244a9b3f0",
+    "manifest_sha256": "a53a5152aa66189c954b703c42fb815a6a8c7f83933051f80f1538e78bdc3f88"
+  },
+  "inline_bilingual_leakage": false,
+  "physical_sources_independent": true,
+  "production_reads_gold": false,
+  "real_provider_requests": 0,
+  "source_orders_differ": true,
+  "status": "LEAKAGE_RESISTANT_CROSS_CORPUS_BENCHMARK_FROZEN"
+}

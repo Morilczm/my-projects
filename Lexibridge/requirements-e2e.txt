@@ -1,0 +1,3 @@
+-r backend/requirements-dev.lock.txt
+playwright==1.60.0
+pyee==13.0.1

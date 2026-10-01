@@ -1,0 +1,89 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pycache-*/
+
+# Test, coverage, and tooling cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+.venv-1/
+.venv-macos/
+.venv-*/
+venv/
+env/
+
+# Environment variables and local secrets
+.env
+.env.*
+!.env.example
+!.env.development.example
+!.env.production.example
+
+# Local SQLite/runtime databases
+lexibridge.db
+*.db
+*.sqlite
+*.sqlite3
+
+# User uploads and derived local data
+uploads/
+backend/uploads/
+frontend/uploads/
+derived/
+LexiBridge-AI-uploads/
+LexiBridge-AI-data/
+
+# Generated release/package artifacts and nested archives
+dist/
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+# Generated local data and exports
+data/vector_indexes/
+model_cache/
+models/
+.cache/huggingface/
+*.safetensors
+*.onnx
+*.pt
+*.pth
+*.gguf
+backups/
+exports/
+restore_test/
+
+# Flask instance folder
+instance/
+
+# Editor and local machine files
+.vscode/
+.idea/
+*.local
+local_paths.*
+absolute_paths.*
+
+# Logs and temporary files
+logs/
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+tmp/
+temp/
+
+# System files
+.DS_Store
+Thumbs.db

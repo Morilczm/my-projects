@@ -1,0 +1,30 @@
+{
+  "technical_status": "PROVIDER_EXECUTION_CONTRACT_CLOSED",
+  "quality_status": "PROVIDER_EXECUTION_DRY_RUN_BASELINE_ESTABLISHED",
+  "metrics": {
+    "all_25": 25,
+    "ready_denominator": 3,
+    "request_constructed": 3,
+    "fake_execution_success": 3,
+    "parse_success": 3,
+    "budget_denied": 0,
+    "idempotency_conflict": 0,
+    "review_not_ready_blocked": 22,
+    "review_not_ready_executed": 0,
+    "false_execution_count": 0,
+    "fake_transport_calls": 3
+  },
+  "prompt_ids": {
+    "v2": "term_alignment@v1",
+    "production_formal": "formal_alignment@alignment-v1"
+  },
+  "policies": {
+    "qualification": "governed-bilingual-evidence-qualification@1.1.0",
+    "readiness": "governed-provider-readiness@1.0.0",
+    "execution": "governed-provider-execution@1.0.0"
+  },
+  "external_network_requests": 0,
+  "real_provider_requests": 0,
+  "real_credentials_read": false,
+  "production_request_uses_gold_aliases_or_required_propositions": false
+}

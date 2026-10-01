@@ -1,0 +1,79 @@
+{
+  "artifact_version": "14A-runtime-stabilization-v1",
+  "baseline_commit": "029111df941ed6582ac88096086829baf66efbfb",
+  "technical_status": "CONTROLLED_RUNTIME_STABILIZATION_CLOSED",
+  "quality_status": "CONTROLLED_RUNTIME_BASELINE_ESTABLISHED",
+  "canonical_runtime": {
+    "repository_external": true,
+    "python_version": "3.12.10",
+    "dependency_integrity": "PASS",
+    "exact_runtime_lock": true,
+    "exact_dev_lock": true,
+    "exact_browser_e2e_lock": true,
+    "legacy_venv_required": false
+  },
+  "server": {
+    "entrypoint": "wsgi:application",
+    "implementation": "gunicorn",
+    "version": "23.0.0",
+    "default_mode": "pilot",
+    "development_server_explicit_only": true,
+    "workers": 1,
+    "threads": 4,
+    "temporary_database_migration": "PASS",
+    "health_probe": "PASS",
+    "health_http_status": 200,
+    "worker_once": "PASS"
+  },
+  "observation": {
+    "probe_contract": "PASS",
+    "payload_free": true,
+    "loopback_only": true,
+    "report_contract": "PASS",
+    "real_window_status": "RUNTIME_OBSERVATION_PENDING",
+    "real_window_complete": false
+  },
+  "browser_e2e": {
+    "status": "PASS",
+    "browser": "chromium",
+    "browser_version": "148.0.7778.96",
+    "playwright_version": "1.60.0",
+    "student_flow": "PASS",
+    "instructor_flow": "PASS",
+    "reviewer_flow": "PASS",
+    "console_errors": 0,
+    "page_errors": 0,
+    "external_dependency_requests": 0
+  },
+  "frozen_v2": {
+    "manifest_sha256": "a53a5152aa66189c954b703c42fb815a6a8c7f83933051f80f1538e78bdc3f88",
+    "gold_sha256": "3379bc1e6c589256dcec384a9f7435c96277f6754b7cb44cff69f86244a9b3f0",
+    "english_bundle_sha256": "e84fc99a993c099628fe7d740c1e248fefe1e03cbece7b4df43d02cd7dfaddc5",
+    "chinese_bundle_sha256": "cebd3274cb0802fa645948d9b641b1776c60ab99700bbf3cd4a80999bc45b5f7",
+    "modified": false
+  },
+  "accident_database": {
+    "sha256": "9e6fb68ab13dff2763e2fff18d2aee531486360c557f058eb8a471d9209a9eaa",
+    "size_bytes": 1015808,
+    "mtime": 1785496597,
+    "wal": "absent",
+    "shm": "absent",
+    "modified": false
+  },
+  "network": {
+    "application_external_api_requests": 0,
+    "real_provider_requests": 0,
+    "dependency_registry_used_for_bootstrap": true
+  },
+  "credentials": {
+    "real_credentials_read": false,
+    "credentials_logged": false
+  },
+  "verification": {
+    "targeted_tests": "26 passed",
+    "full_pytest": "1710 passed, 7 skipped",
+    "dev_check": "PASS",
+    "release_safety": "PASS",
+    "git_diff_check": "PASS"
+  }
+}

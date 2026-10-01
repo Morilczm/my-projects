@@ -1,0 +1,28 @@
+{
+  "name": "signal-processing-smoke-v1",
+  "description": "Local smoke evaluation for evidence-based bilingual terminology alignment. This does not imply production model quality.",
+  "split": "smoke",
+  "items": [
+    {
+      "english_term": "Convolution",
+      "expected_chinese_term": "卷积",
+      "expected_alignment_status": "no_zh_evidence",
+      "english_context": "Convolution combines two signals to produce a third signal.",
+      "difficulty": "medium"
+    },
+    {
+      "english_term": "Fourier Transform",
+      "expected_chinese_term": "傅里叶变换",
+      "expected_alignment_status": "no_zh_evidence",
+      "english_context": "Fourier Transform converts a time-domain signal into a frequency-domain representation.",
+      "difficulty": "medium"
+    },
+    {
+      "english_term": "Angular frequency",
+      "expected_chinese_term": "角频率",
+      "expected_alignment_status": "no_zh_evidence",
+      "english_context": "Angular frequency is measured in radians per second.",
+      "difficulty": "easy"
+    }
+  ]
+}

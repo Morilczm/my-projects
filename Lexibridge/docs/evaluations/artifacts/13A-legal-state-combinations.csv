@@ -1,0 +1,9 @@
+content_kind,workspace_scope,visibility,authority,alignment_status,publication_status,valid,reason
+PERSONAL_LEARNING_RESULT,PERSONAL,PRIVATE,NON_OFFICIAL,READY,NOT_APPLICABLE,true,ordinary personal query
+PERSONAL_LEARNING_RESULT,PERSONAL,PRIVATE,NON_OFFICIAL,REVIEW_REQUIRED,NOT_APPLICABLE,true,uncertain personal query remains viewable
+PERSONAL_LEARNING_RESULT,MANAGED_COURSE,PRIVATE,NON_OFFICIAL,NOT_READY,NOT_APPLICABLE,true,managed course ordinary query remains non-official
+OFFICIAL_COURSE_CARD,MANAGED_COURSE,COURSE_SHARED,OFFICIAL,READY,DRAFT,true,reviewer-governed official draft
+OFFICIAL_COURSE_CARD,MANAGED_COURSE,COURSE_SHARED,OFFICIAL,READY,PUBLISHED,true,versioned official publication
+PERSONAL_LEARNING_RESULT,PERSONAL,COURSE_SHARED,NON_OFFICIAL,READY,NOT_APPLICABLE,false,personal content cannot be course shared
+OFFICIAL_COURSE_CARD,PERSONAL,COURSE_SHARED,OFFICIAL,READY,PUBLISHED,false,official card requires managed course
+PERSONAL_LEARNING_RESULT,MANAGED_COURSE,PRIVATE,NON_OFFICIAL,READY,PUBLISHED,false,personal result is not a publication object

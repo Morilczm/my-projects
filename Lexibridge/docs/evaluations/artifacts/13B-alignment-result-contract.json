@@ -1,0 +1,24 @@
+{
+  "contract_id": "student-alignment-result@1.1.0",
+  "dimensions": {
+    "visibility": "PRIVATE",
+    "authority": "NON_OFFICIAL",
+    "publication_status": "NOT_APPLICABLE"
+  },
+  "qualification_mapping": {
+    "QUALIFIED": "READY",
+    "REVIEW_REQUIRED": "REVIEW_REQUIRED",
+    "REJECTED_OR_UNKNOWN": "NOT_READY"
+  },
+  "display_modes": {
+    "READY": "EVIDENCE_BACKED_RECOMMENDATION",
+    "REVIEW_REQUIRED": "EVIDENCE_BACKED_ALTERNATIVES",
+    "NOT_READY": "NO_RELIABLE_ALIGNMENT"
+  },
+  "not_ready_canonical_term_allowed": false,
+  "generated_hint_is_evidence": false,
+  "student_explanation_required": true,
+  "raw_risk_labels_exposed": false,
+  "raw_reason_codes_exposed": false,
+  "requires_human_review_before_view": false
+}

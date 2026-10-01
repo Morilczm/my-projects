@@ -1,0 +1,24 @@
+{
+  "benchmark_id": "cross-corpus-v2",
+  "version": "2.0.0",
+  "domain": "controlled physics",
+  "concept_count": 25,
+  "english_sources": [
+    {"source_id":"en-s04","path":"english/source-d.txt","language":"en","source_role":"english_course_material"},
+    {"source_id":"en-s01","path":"english/source-a.txt","language":"en","source_role":"english_course_material"},
+    {"source_id":"en-s03","path":"english/source-c.txt","language":"en","source_role":"english_course_material"},
+    {"source_id":"en-s02","path":"english/source-b.txt","language":"en","source_role":"english_course_material"}
+  ],
+  "chinese_sources": [
+    {"source_id":"zh-s13","path":"chinese/source-q.txt","language":"zh","source_role":"chinese_reference_material"},
+    {"source_id":"zh-s11","path":"chinese/source-k.txt","language":"zh","source_role":"chinese_reference_material"},
+    {"source_id":"zh-s14","path":"chinese/source-r.txt","language":"zh","source_role":"chinese_reference_material"},
+    {"source_id":"zh-s12","path":"chinese/source-m.txt","language":"zh","source_role":"chinese_reference_material"}
+  ],
+  "gold_path": "gold.json",
+  "production_core_path_represented": true,
+  "contains_inline_bilingual_leakage": false,
+  "gold_used_by_production": false,
+  "texts_are_original_short_evaluation_material": true,
+  "distractor_count": 15
+}

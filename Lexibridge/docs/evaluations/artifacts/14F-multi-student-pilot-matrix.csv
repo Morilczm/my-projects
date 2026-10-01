@@ -1,0 +1,6 @@
+persona_uid,consent_recorded,session_started,session_completed,duration_ms,alignment_status,evidence_complete,saved,note_present,understanding_state,cross_account_access_blocked
+persona-01,True,True,True,0,READY,True,True,True,UNDERSTOOD,True
+persona-02,True,True,True,0,READY,True,True,True,UNDERSTOOD,True
+persona-03,True,True,True,0,READY,True,True,True,UNDERSTOOD,True
+persona-04,True,True,True,0,READY,True,True,True,UNDERSTOOD,True
+persona-05,True,True,True,0,READY,True,True,True,UNDERSTOOD,True

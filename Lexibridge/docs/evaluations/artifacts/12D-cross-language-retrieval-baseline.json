@@ -1,0 +1,80 @@
+{
+  "technical_status": "CROSS_LANGUAGE_RETRIEVAL_CONTRACT_CLOSED",
+  "quality_status": "CROSS_LANGUAGE_RETRIEVAL_QUALITY_BASELINE_ESTABLISHED",
+  "metrics": {
+    "coverage": 25,
+    "english_matched": 18,
+    "english_missing": 3,
+    "english_ambiguous": 4,
+    "retrieval_eligible": 18,
+    "chinese_evidence_retrieved": 18,
+    "hit_at_1": 0.7222,
+    "hit_at_3": 0.8333,
+    "mrr": 0.7778,
+    "average_gold_rank": 1.1333,
+    "median_gold_rank": 1,
+    "no_result_count": 0,
+    "exact_chinese_candidate_generated": 0,
+    "pair_accuracy": 0.0,
+    "evidence_qualified": 0,
+    "provider_ready": 0
+  },
+  "confusion_groups": [
+    {
+      "group": "electric field / electric field strength",
+      "query_id": "cx-7f22",
+      "correct_rank": "",
+      "top1_correct": false,
+      "top3_correct": false,
+      "primary_error_chunk": "zh-s14-p01",
+      "score_margin": "",
+      "concept_scope_confusion": true,
+      "requires_reranker": true
+    },
+    {
+      "group": "electric potential / electric potential energy",
+      "query_id": "cx-7f23",
+      "correct_rank": 1,
+      "top1_correct": true,
+      "top3_correct": true,
+      "primary_error_chunk": "zh-s14-p04",
+      "score_margin": 0.00476284,
+      "concept_scope_confusion": false,
+      "requires_reranker": false
+    },
+    {
+      "group": "angular velocity / angular acceleration",
+      "query_id": "cx-7f18",
+      "correct_rank": 1,
+      "top1_correct": true,
+      "top3_correct": true,
+      "primary_error_chunk": "zh-s12-p02",
+      "score_margin": 0.00998848,
+      "concept_scope_confusion": false,
+      "requires_reranker": false
+    },
+    {
+      "group": "momentum / angular momentum",
+      "query_id": "cx-7f07",
+      "correct_rank": "",
+      "top1_correct": false,
+      "top3_correct": false,
+      "primary_error_chunk": "",
+      "score_margin": "",
+      "concept_scope_confusion": true,
+      "requires_reranker": true
+    },
+    {
+      "group": "mass / weight",
+      "query_id": "cx-7f05",
+      "correct_rank": 1,
+      "top1_correct": true,
+      "top3_correct": true,
+      "primary_error_chunk": "",
+      "score_margin": "",
+      "concept_scope_confusion": false,
+      "requires_reranker": false
+    }
+  ],
+  "real_provider_requests": 0
+}

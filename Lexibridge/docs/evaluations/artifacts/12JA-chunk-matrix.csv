@@ -1,0 +1,21 @@
+source_uid,chunk_uid,language,page_range,heading_path,block_types,character_count,content_hash,provenance_complete
+synthetic-en-a,4b8e280e-761a-533b-9c75-5230c4c9befe,en,1,Electric field,title|formula|list|table,114,f49e62ef9a4ce6c5b961166f7d89a5d5a3330aa19d3ec9b896aff4a0db0d7284,True
+synthetic-en-a,515ef81c-e4f2-5651-b061-c18ef352e278,en,2,Electric field strength,title|formula|list,107,ba8f861bd29dbae9391a8f99aaa3db478fe402757d4c3752e3414d37fffeb8fc,True
+synthetic-en-a,b715da4a-38d1-53d4-af8a-2af622a4a58b,en,3,Electric potential,title|formula|list,96,16392c3abc54dcf8b4109bb317a16b6c9dc7c73bb5be795d60853f47a021ab3c,True
+synthetic-en-a,be40c002-9e01-5431-89a9-4c055497009d,en,4,Electric potential energy,title|formula|list,117,f6b8c1767d4c02bbb96792f8f7cad786ec8c366a39f00dd25a9bc3f085f5b6ee,True
+synthetic-en-a,f0d76763-2917-583a-bb37-a9511b043dbf,en,5,Angular velocity,title|formula|list,114,a6504f3771a4092faebea19ea661adbe101432b3294ffdc1ebfea2782d7fb0c2,True
+synthetic-en-b,51a5f9d4-63a6-584d-8a6a-78d971027937,en,1,Angular acceleration,title|formula|list|table,137,c70e96e7484dd5b6eac0f5d4d54ec69d228409560ec13f14becfee3c8970c68e,True
+synthetic-en-b,06840019-a7fe-5261-823d-55ed6d96bf23,en,2,Mass,title|formula|list,96,b2e0ebf575142187d875d4830f1ca8be594c77bcb518e8f484831afec26e2100,True
+synthetic-en-b,e13e83ef-d370-545d-be83-80ebd84a32f0,en,3,Weight,title|formula|list,81,071315303d8aeb7bb86f3f4655281725f6fa531054d3a718df07164d67eba3d0,True
+synthetic-en-b,4af109eb-d1e2-516d-9e5e-fc361e0fb044,en,4,Momentum,title|formula|list,83,a3c38883801965eed040dcdbd57820060f14e8a4bdc5974e1893abe40a281308,True
+synthetic-en-b,1d573793-e96c-56fa-8ded-75eec274dcd2,en,5,Angular momentum,title|formula|list,96,2b3612304c0e23ded46916b77b958ad160a21e2d2c000050cfa1b6ab0fcf610b,True
+synthetic-zh-a,65fcfada-f79b-5324-bca8-ea9c4487a449,zh,1,电场,title|formula|list|table,47,888c0931bbc650fa69b2f200a9c38335115f2f37da146e172e1cff95bce7dbc2,True
+synthetic-zh-a,0b0e9efc-d604-51a9-b016-cb2a0b5ac9f3,zh,2,电场强度,title|formula|list,38,bb772d2a5fdd1ae30748d585282b46a331f00bc4b6ecb61144d3f03aed9b7fb3,True
+synthetic-zh-a,00dc2d2d-7804-5493-804f-14bd39cf51f0,zh,3,电势,title|formula|list,33,ed01c813a11d42b34a5139ad1e78213db2a3ff29bf7af33726c8f49766de3112,True
+synthetic-zh-a,c369b6ca-612f-5e0f-ac71-ea1833ec0a83,zh,4,电势能,title|formula|list,38,b7f463a88d017b8984e900604cffbcc40400c1fd4c54c451cf7e14a5c50bcd97,True
+synthetic-zh-a,88e705bf-516d-5241-9eb1-e24faeeda7ac,zh,5,角速度,title|formula|list,48,047c8b2411b53c0c58ce600057114226425d0500e0dd6c072d603abcedfc1682,True
+synthetic-zh-b,0abe1067-2297-5c8f-b31d-aa7394f2c9aa,zh,1,角加速度,title|formula|list|table,57,ea1b5ea983d32af0de1e9da25399567ed39973cabf196959a2f9dc344d3fceca,True
+synthetic-zh-b,5a8fbcc2-fb27-54e0-8d79-dbf73e581e83,zh,2,质量,title|formula|list,41,2a3c4a896690f70f6410711200e4244954a5fd65c75e15deda446d02741bbcac,True
+synthetic-zh-b,cb58a735-1820-586c-aa96-f56bc7fd1131,zh,3,重量,title|formula|list,34,3bea6684ecf1599e2fe5c730bae449bdd65684c0a828771f7cff40f5112fc8eb,True
+synthetic-zh-b,7e652ad8-3000-5987-94fb-c5b951b91484,zh,4,动量,title|formula|list,33,d4f77a9a1b243acc755495341c919caef5f9f88e0ee81fd3d9136134f4d1ac05,True
+synthetic-zh-b,87ce0d80-34aa-50f1-902f-13689519a483,zh,5,角动量,title|formula|list,35,180f31fd2c8631d7c5b84fbe9ecbdb680654e8de8a1392ac1291bc03db5caf52,True

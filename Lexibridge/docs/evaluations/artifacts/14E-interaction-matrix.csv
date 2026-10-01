@@ -1,0 +1,16 @@
+flow,workspace,status,interaction,evidence_exposed_by_default,private_record,expected_result
+new_query,PERSONAL,READY,show_card,false,available,student_facing_evidence_backed_recommendation
+new_query,PERSONAL,REVIEW_REQUIRED,show_card,false,available,student_facing_bounded_alternatives
+new_query,PERSONAL,NOT_READY,show_card,false,available,no_reliable_alignment
+new_query,MANAGED_COURSE,READY,show_card,false,available,private_non_official_result
+new_query,MANAGED_COURSE,REVIEW_REQUIRED,show_card,false,available,private_non_official_result
+new_query,MANAGED_COURSE,NOT_READY,show_card,false,available,private_non_official_result
+card,PERSONAL,any,expand_evidence,true,unchanged,bounded_dual_evidence
+card,MANAGED_COURSE,any,expand_evidence,true,unchanged,bounded_dual_evidence
+card,PERSONAL,saved,start_active_recall,false,unchanged,answer_hidden_until_reveal
+card,MANAGED_COURSE,saved,start_active_recall,false,unchanged,answer_hidden_until_reveal
+notebook,PERSONAL,saved,revisit,false,reused,active_recall_card
+notebook,MANAGED_COURSE,saved,revisit,false,reused,active_recall_card
+role,STUDENT,any,reviewer_route,not_applicable,not_applicable,blocked
+role,INSTRUCTOR,any,reviewer_navigation,not_applicable,not_applicable,hidden
+role,REVIEWER,any,review_console,not_applicable,not_applicable,available

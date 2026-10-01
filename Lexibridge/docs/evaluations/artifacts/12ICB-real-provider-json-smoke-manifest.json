@@ -1,0 +1,46 @@
+{
+  "artifact_schema_version": "12ICB-real-provider-json-smoke-manifest-v1",
+  "previous_evaluation_id": "12I-B-controlled-real-provider-smoke",
+  "evaluation_run_id": "12ICB-bd6b9fc34f944d2fa28dfb6f11f18866",
+  "audit_correlation_id": "12ICB-audit-8c34ce753cf544f4a6853576eb99bc4e",
+  "selected_opaque_item_id": "6f6945108e85f8ec6a1f",
+  "selection_algorithm": "READY rows by stable opaque evaluation UID ascending; first row",
+  "selection_matches_12ib": true,
+  "ready_population": 3,
+  "selected_item_count": 1,
+  "provider_id": "deepseek-alignment-v1",
+  "requested_model_id": "deepseek-chat",
+  "prompt_registry_id": "formal_alignment",
+  "prompt_version": "alignment-json-v2",
+  "response_format": {
+    "type": "json_object"
+  },
+  "max_tokens": 1000,
+  "request_hash": "253141757aa06b5c6013dcae4e3ad331c36b13969fbd028548c814e7c0a00f44",
+  "idempotency_key_hash": "4040ce92342a9137c0ebd49ce9aa04f838aebcfb707f36ff458785ab05a6259c",
+  "previous_idempotency_key_hash_reused": false,
+  "prompt_chars": 3522,
+  "estimated_input_tokens": 881,
+  "english_context_chars": 151,
+  "chinese_context_chars": 46,
+  "english_provenance": [
+    "en-s04",
+    "en-s04-p04"
+  ],
+  "chinese_provenance": [
+    "zh-s12",
+    "zh-s12-p01"
+  ],
+  "qualification_result_id": "evidence-qualification:dbbafabe4c011317b19f04bd1d529162eb1b4169deaf0a5cf7b0e9aa203d0546",
+  "readiness_result_id": "provider-readiness:fb6f8c7797cf7a4e4e433f25e97594080615e9288dfada0ecd1195eba696df27",
+  "request_budget": 1,
+  "billable_attempt_budget": 1,
+  "retry_budget": 0,
+  "concurrency": 1,
+  "cost_ceiling": 0.05,
+  "timeout_seconds": 30,
+  "gold_included_in_request": false,
+  "stores_request_content": false,
+  "stores_prompt_content": false,
+  "credential_stored": false
+}

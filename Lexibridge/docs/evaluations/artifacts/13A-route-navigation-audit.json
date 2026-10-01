@@ -1,0 +1,32 @@
+{
+  "before": {
+    "review_route_roles": ["teacher", "admin"],
+    "instructor_primary_navigation_included_review": true,
+    "review_page_product_label": "Teacher review",
+    "five_dimension_serializer": false
+  },
+  "after": {
+    "review_route_roles": ["reviewer", "teacher", "admin"],
+    "teacher_access": "transitional compatibility",
+    "reviewer_course_permission_required": true,
+    "instructor_primary_navigation_included_review": false,
+    "instructor_initial_reviewer_prefetch": false,
+    "review_page_product_label": "Reviewer Console",
+    "browser_flows": {
+      "student": "PASS",
+      "instructor": "PASS",
+      "reviewer": "PASS",
+      "teacher_flow": "instructor compatibility alias"
+    },
+    "student_review_access": false,
+    "student_unpublished_draft_access": false,
+    "five_dimension_serializer": true
+  },
+  "routes_reused": [
+    "GET /api/concept-cards/review-queue",
+    "GET /api/concept-cards/{card_uid}/review-case",
+    "POST /api/concept-cards/{card_uid}/review",
+    "POST /api/concept-cards/{card_uid}/generate-draft",
+    "GET|PUT /api/concept-cards/{card_uid}/draft"
+  ]
+}

@@ -1,0 +1,2623 @@
+openapi: 3.0.3
+info:
+  title: LexiBridge AI Local MVP API
+  version: 0.8.12-task13b
+  description: >
+    OpenAPI contract for LexiBridge AI Local MVP, an AI-powered bilingual
+    course knowledge alignment platform. This contract documents the local
+    Flask + SQLite demo API and its security/error behavior.
+servers:
+  - url: http://127.0.0.1:5000
+security:
+  - bearerAuth: []
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: opaque
+  schemas:
+    ApiSuccess:
+      type: object
+      required: [status, data]
+      properties:
+        status:
+          type: string
+          enum: [success]
+        message:
+          type: string
+        request_id:
+          type: string
+        data:
+          type: object
+    ApiError:
+      type: object
+      required: [status, error_code, message]
+      properties:
+        status:
+          type: string
+          enum: [error]
+        error_code:
+          type: string
+          enum:
+            - AUTH_REQUIRED
+            - TOKEN_EXPIRED
+            - PERMISSION_DENIED
+            - RESOURCE_NOT_FOUND
+            - VALIDATION_ERROR
+            - FILE_TOO_LARGE
+            - UNSUPPORTED_FILE_TYPE
+            - OCR_UNAVAILABLE
+            - FORMULA_OCR_UNAVAILABLE
+            - PARSING_FAILED
+            - QUOTA_EXCEEDED
+            - AI_PROVIDER_FAILED
+            - AI_PROVIDER_NOT_CONFIGURED
+            - LEGACY_ALIGNMENT_EXTERNAL_EXECUTION_DISABLED
+            - LEGACY_ALIGNMENT_ADMISSION_DISABLED
+            - AI_INVALID_RESPONSE
+            - PDF_FONT_UNAVAILABLE
+            - TOO_MANY_REQUESTS
+            - INTERNAL_ERROR
+            - DOCUMENT_ALIGNMENT_INVALID_REQUEST
+            - DOCUMENT_ALIGNMENT_UNSUPPORTED_MEDIA_TYPE
+            - DOCUMENT_ALIGNMENT_SOURCE_NOT_AVAILABLE
+            - DOCUMENT_ALIGNMENT_SOURCE_NOT_GOVERNED
+            - DOCUMENT_ALIGNMENT_PARSE_BLOCKED
+            - DOCUMENT_ALIGNMENT_NO_USABLE_CHUNKS
+            - DOCUMENT_ALIGNMENT_IDEMPOTENCY_CONFLICT
+            - DOCUMENT_ALIGNMENT_PERSISTENCE_ERROR
+            - DOCUMENT_ALIGNMENT_QUERY_INVALID_REQUEST
+            - DOCUMENT_ALIGNMENT_WORKFLOW_NOT_FOUND
+            - DOCUMENT_ALIGNMENT_QUERY_PERSISTENCE_ERROR
+        message:
+          type: string
+        request_id:
+          type: string
+        details:
+          type: object
+          description: Error details may include audit_error_code for review policy, permission, and validation failures.
+    DocumentAlignmentWorkflowRun:
+      type: object
+      required: [run_uid, workflow_version, status, stage, source_uid, progress_percent, is_terminal]
+      properties:
+        run_uid: {type: string, maxLength: 64}
+        workflow_version: {type: string, enum: [formal-document-alignment-v1]}
+        status:
+          type: string
+          enum: [queued, validating, processing, ready_for_review, completed_with_warnings, blocked, failed]
+        stage:
+          type: string
+          enum: [queued, source_validation, term_extraction, evidence_retrieval, draft_creation, verification, finalization, terminal]
+        source_uid: {type: string, maxLength: 64}
+        source_title: {type: string}
+        source_filename: {type: string}
+        course: {type: string}
+        chapter: {type: string}
+        requested_by: {type: string}
+        created_at: {type: string}
+        started_at: {type: string}
+        finished_at: {type: string}
+        total_items: {type: integer, minimum: 0}
+        ready_for_review_items: {type: integer, minimum: 0}
+        blocked_items: {type: integer, minimum: 0}
+        failed_items: {type: integer, minimum: 0}
+        warning_count: {type: integer, minimum: 0}
+        progress_percent: {type: integer, minimum: 0, maximum: 100}
+        safe_error_code: {type: string}
+        safe_error_message: {type: string, maxLength: 500}
+        consistency_warnings:
+          type: array
+          items: {type: string}
+        is_terminal: {type: boolean}
+        can_view_items: {type: boolean}
+        can_review_results: {type: boolean}
+    DocumentAlignmentWorkflowItem:
+      type: object
+      required: [item_uid, candidate_term, normalized_term, status, stage, source_chunk_count, risk_labels, retry_count, is_terminal, is_reviewable]
+      properties:
+        item_uid: {type: string, maxLength: 64}
+        candidate_term: {type: string}
+        normalized_term: {type: string}
+        status:
+          type: string
+          enum: [candidate, evidence_ready, draft_created, verification_completed, needs_review, blocked, failed]
+        stage: {type: string}
+        source_chunk_count: {type: integer, minimum: 0}
+        risk_labels:
+          type: array
+          items: {type: string}
+        draft_card_uid: {type: string, nullable: true}
+        verification_run_uid: {type: string, nullable: true}
+        confidence_score: {type: number, nullable: true}
+        confidence_summary: {type: object, nullable: true}
+        recommendation: {type: string, nullable: true}
+        safe_error_code: {type: string}
+        safe_error_message: {type: string, maxLength: 500}
+        retry_count: {type: integer, minimum: 0}
+        created_at: {type: string}
+        updated_at: {type: string}
+        consistency_warnings:
+          type: array
+          items: {type: string}
+        is_terminal: {type: boolean}
+        is_reviewable: {type: boolean}
+    DocumentAlignmentWorkflowItemPage:
+      type: object
+      required: [workflow_run_uid, items, pagination]
+      properties:
+        workflow_run_uid: {type: string, maxLength: 64}
+        items:
+          type: array
+          items: {$ref: "#/components/schemas/DocumentAlignmentWorkflowItem"}
+        pagination:
+          type: object
+          required: [page, page_size, total_items, total_pages, has_next, has_previous]
+          properties:
+            page: {type: integer, minimum: 1}
+            page_size: {type: integer, minimum: 1, maximum: 100}
+            total_items: {type: integer, minimum: 0}
+            total_pages: {type: integer, minimum: 0}
+            has_next: {type: boolean}
+            has_previous: {type: boolean}
+    Pagination:
+      type: object
+      required: [page, page_size, total, has_next]
+      properties:
+        page:
+          type: integer
+        page_size:
+          type: integer
+        total:
+          type: integer
+        has_next:
+          type: boolean
+    User:
+      type: object
+      properties:
+        id: {type: integer}
+        username: {type: string}
+        email: {type: string}
+        role: {type: string, enum: [student, teacher, admin]}
+        is_verified: {type: boolean}
+    Course:
+      type: object
+      properties:
+        id: {type: integer}
+        name: {type: string}
+        course_name: {type: string}
+        course_code: {type: string}
+        semester: {type: string}
+        teacher_id: {type: integer}
+    Document:
+      type: object
+      properties:
+        id: {type: integer}
+        owner_user_id: {type: integer}
+        course_id: {type: integer, nullable: true}
+        scope_type: {type: string, enum: [global, course, personal]}
+        filename: {type: string}
+        file_type: {type: string}
+        parsing_status: {type: string}
+        ocr_status: {type: string}
+        ocr_provider: {type: string}
+        file_sha256: {type: string}
+        storage_object_id: {type: integer, nullable: true}
+        storage_backend: {type: string}
+        storage_key: {type: string}
+        original_filename: {type: string}
+        content_type: {type: string}
+        size_bytes: {type: integer}
+        sha256: {type: string}
+    StorageObject:
+      type: object
+      properties:
+        id: {type: integer}
+        storage_backend: {type: string}
+        bucket: {type: string}
+        storage_key: {type: string}
+        original_filename: {type: string}
+        content_type: {type: string}
+        size_bytes: {type: integer}
+        sha256: {type: string}
+        owner_user_id: {type: integer, nullable: true}
+        course_id: {type: integer, nullable: true}
+        document_id: {type: integer, nullable: true}
+        visibility: {type: string, enum: [private, course, admin, public_demo]}
+        purpose: {type: string}
+        status: {type: string}
+    AIProviderConfig:
+      type: object
+      properties:
+        id: {type: integer}
+        provider_name: {type: string}
+        provider_mode: {type: string, enum: [none, mock, local_heuristic, live]}
+        default_model: {type: string}
+        is_enabled: {type: boolean}
+        is_default: {type: boolean}
+        health_status: {type: string, enum: [healthy, degraded, unhealthy, unknown]}
+        last_healthcheck_at: {type: string}
+    AIModelRegistry:
+      type: object
+      properties:
+        id: {type: integer}
+        provider_name: {type: string}
+        model_name: {type: string}
+        model_version: {type: string}
+        provider_mode: {type: string}
+        is_enabled: {type: boolean}
+        is_default_for_provider: {type: boolean}
+        last_evaluation_run_id: {type: integer, nullable: true}
+        last_evaluation_score: {type: number}
+    PromptTemplate:
+      type: object
+      properties:
+        id: {type: integer}
+        prompt_key: {type: string}
+        prompt_version: {type: string}
+        task_type: {type: string}
+        language: {type: string}
+        json_schema: {type: object}
+        is_active: {type: boolean}
+        is_default: {type: boolean}
+    AICallLog:
+      type: object
+      properties:
+        id: {type: integer}
+        task_type: {type: string}
+        provider_name: {type: string}
+        provider_mode: {type: string}
+        model_name: {type: string}
+        prompt_key: {type: string}
+        prompt_version: {type: string}
+        request_hash: {type: string}
+        response_hash: {type: string}
+        input_token_count: {type: integer}
+        output_token_count: {type: integer}
+        estimated_cost: {type: number}
+        latency_ms: {type: integer}
+        status: {type: string}
+        error_code: {type: string}
+        redacted_prompt_preview: {type: string}
+        redacted_response_preview: {type: string}
+    DocumentChunk:
+      type: object
+      properties:
+        id: {type: integer}
+        document_id: {type: integer}
+        content: {type: string}
+        language: {type: string}
+        page_number: {type: integer, nullable: true}
+        slide_number: {type: integer, nullable: true}
+        ocr_confidence: {type: number}
+    Evidence:
+      type: object
+      properties:
+        chunk_id: {type: integer}
+        source_title: {type: string}
+        language: {type: string}
+        course_id: {type: integer, nullable: true}
+        knowledge_base_type: {type: string}
+        visibility: {type: string}
+        content_excerpt: {type: string}
+        source_citation: {type: string}
+        page_number: {type: integer, nullable: true}
+        evidence_score: {type: number}
+        evidence_strength: {type: string}
+        score_breakdown: {type: object}
+        risk_flags:
+          type: array
+          items: {type: string}
+        retrieval_backend: {type: string}
+        retrieval_version: {type: string}
+        index_version: {type: string}
+        lexical_score: {type: number, nullable: true}
+        vector_score: {type: number, nullable: true}
+        hybrid_score: {type: number, nullable: true}
+        rerank_score: {type: number, nullable: true}
+    AlignmentRun:
+      type: object
+      properties:
+        id: {type: integer}
+        document_id: {type: integer, nullable: true}
+        course_id: {type: integer, nullable: true}
+        status: {type: string}
+        term_count: {type: integer}
+        card_created_count: {type: integer}
+        auto_approved_count: {type: integer}
+        qc_count: {type: integer}
+        needs_evidence_count: {type: integer}
+        failed_count: {type: integer}
+        started_at: {type: string}
+        finished_at: {type: string}
+    TerminologyCard:
+      type: object
+      properties:
+        id: {type: integer}
+        scope_type: {type: string, enum: [course, personal]}
+        course_id: {type: integer, nullable: true}
+        owner_user_id: {type: integer, nullable: true}
+        english_term: {type: string}
+        final_chinese_term: {type: string}
+        alignment_status: {type: string}
+        status: {type: string}
+        confidence_score: {type: integer}
+        english_evidence_snapshot: {type: array, items: {type: object}}
+        chinese_evidence_snapshot: {type: array, items: {type: object}}
+        score_breakdown: {type: object}
+        quality_flags: {type: array, items: {type: string}}
+        ai_provider: {type: string}
+        ai_model: {type: string}
+        prompt_version: {type: string}
+        retrieval_version: {type: string}
+        source_alignment_run_id: {type: integer, nullable: true}
+    EvaluationRun:
+      type: object
+      properties:
+        id: {type: integer}
+        evaluation_set_id: {type: integer}
+        status: {type: string}
+        metrics: {type: object}
+        report_json: {type: object}
+        report_markdown: {type: string}
+    PilotFeedback:
+      type: object
+      properties:
+        id: {type: integer}
+        feedback_type: {type: string}
+        feedback_source: {type: string}
+        severity: {type: string, enum: [low, medium, high, critical]}
+        status: {type: string}
+        priority: {type: string}
+        course_id: {type: integer, nullable: true}
+        terminology_card_id: {type: integer, nullable: true}
+        english_term: {type: string}
+        chinese_term: {type: string}
+        reported_issue: {type: string}
+        expected_result: {type: string}
+        actual_result: {type: string}
+        evidence_comment: {type: string}
+        classification: {type: string}
+        root_cause: {type: string}
+        resolution_action: {type: string}
+        resolution_note: {type: string}
+        student_display: {type: string}
+        converted_to_evaluation_item_id: {type: integer, nullable: true}
+        linked_backlog_item_id: {type: integer, nullable: true}
+        created_at: {type: string}
+        updated_at: {type: string}
+        resolved_at: {type: string, nullable: true}
+    IterationBacklogItem:
+      type: object
+      properties:
+        id: {type: integer}
+        title: {type: string}
+        description: {type: string}
+        source_type: {type: string}
+        source_feedback_id: {type: integer, nullable: true}
+        course_id: {type: integer, nullable: true}
+        severity: {type: string}
+        priority: {type: string, enum: [P0, P1, P2, P3]}
+        category: {type: string}
+        status: {type: string}
+        owner: {type: string}
+        target_pr: {type: string}
+        acceptance_criteria: {type: string}
+        created_at: {type: string}
+        updated_at: {type: string}
+        closed_at: {type: string, nullable: true}
+    BackgroundJob:
+      type: object
+      properties:
+        id: {type: integer}
+        job_type: {type: string, enum: [document_ingestion, alignment_run, evaluation_run]}
+        status: {type: string, enum: [queued, running, completed, failed, canceled, retrying]}
+        priority: {type: integer}
+        created_by: {type: integer}
+        course_id: {type: integer, nullable: true}
+        document_id: {type: integer, nullable: true}
+        alignment_run_id: {type: integer, nullable: true}
+        evaluation_run_id: {type: integer, nullable: true}
+        scope_type: {type: string}
+        owner_user_id: {type: integer, nullable: true}
+        progress_current: {type: integer}
+        progress_total: {type: integer}
+        progress_percent: {type: integer}
+        progress_message: {type: string}
+        error_code: {type: string}
+        error_message: {type: string}
+        attempt_count: {type: integer}
+        max_attempts: {type: integer}
+        created_at: {type: string}
+        started_at: {type: string}
+        finished_at: {type: string}
+    BackgroundJobEvent:
+      type: object
+      properties:
+        id: {type: integer}
+        job_id: {type: integer}
+        event_type: {type: string}
+        message: {type: string}
+        progress_current: {type: integer}
+        progress_total: {type: integer}
+        metadata: {type: object}
+        created_at: {type: string}
+  parameters:
+    Page:
+      name: page
+      in: query
+      schema: {type: integer, default: 1}
+    PageSize:
+      name: page_size
+      in: query
+      schema: {type: integer, default: 20}
+  responses:
+    Error400:
+      description: Validation error
+      content:
+        application/json:
+          schema: {$ref: "#/components/schemas/ApiError"}
+    Error401:
+      description: Authentication required or token expired
+      content:
+        application/json:
+          schema: {$ref: "#/components/schemas/ApiError"}
+    Error403:
+      description: Permission denied
+      content:
+        application/json:
+          schema: {$ref: "#/components/schemas/ApiError"}
+    Error404:
+      description: Resource not found
+      content:
+        application/json:
+          schema: {$ref: "#/components/schemas/ApiError"}
+    Error422:
+      description: Unprocessable document or local dependency unavailable
+      content:
+        application/json:
+          schema: {$ref: "#/components/schemas/ApiError"}
+    Error409:
+      description: Idempotency or state conflict
+      content:
+        application/json:
+          schema: {$ref: "#/components/schemas/ApiError"}
+    Error415:
+      description: JSON content type required
+      content:
+        application/json:
+          schema: {$ref: "#/components/schemas/ApiError"}
+    Error500:
+      description: Safe internal or persistence failure
+      content:
+        application/json:
+          schema: {$ref: "#/components/schemas/ApiError"}
+paths:
+  /api/document-alignment-runs:
+    post:
+      operationId: create_document_alignment_run
+      summary: Start an asynchronous formal document alignment workflow
+      description: Teachers and administrators may start a workflow from a governed source. Students are denied. Processing occurs asynchronously.
+      security: [{bearerAuth: []}]
+      parameters:
+        - name: Idempotency-Key
+          in: header
+          required: true
+          schema: {type: string, minLength: 1, maxLength: 128}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [source_uid]
+              properties:
+                source_uid: {type: string, minLength: 1, maxLength: 64}
+            example: {source_uid: source-uid}
+      responses:
+        "202":
+          description: Workflow accepted or idempotently reused
+          headers:
+            Location:
+              description: Canonical workflow status URL
+              schema: {type: string}
+            Retry-After:
+              description: Suggested polling interval in seconds
+              schema: {type: integer, enum: [2]}
+            X-Request-ID:
+              description: Safe request correlation identifier
+              schema: {type: string}
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - {$ref: "#/components/schemas/ApiSuccess"}
+                  - type: object
+                    properties:
+                      data:
+                        allOf:
+                          - {$ref: "#/components/schemas/DocumentAlignmentWorkflowRun"}
+                          - type: object
+                            required: [reused, status_url, items_url]
+                            properties:
+                              reused: {type: boolean}
+                              status_url: {type: string}
+                              items_url: {type: string}
+        "400": {$ref: "#/components/responses/Error400"}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+        "409": {$ref: "#/components/responses/Error409"}
+        "415": {$ref: "#/components/responses/Error415"}
+        "422": {$ref: "#/components/responses/Error422"}
+        "500": {$ref: "#/components/responses/Error500"}
+  /api/document-alignment-runs/{run_uid}:
+    get:
+      operationId: get_document_alignment_run
+      summary: Get a formal document alignment workflow business status
+      description: Available to administrators and authorized teachers. Students are denied. Transport ownership details are not returned.
+      security: [{bearerAuth: []}]
+      parameters:
+        - name: run_uid
+          in: path
+          required: true
+          schema: {type: string, minLength: 1, maxLength: 64}
+      responses:
+        "200":
+          description: Safe workflow status
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - {$ref: "#/components/schemas/ApiSuccess"}
+                  - type: object
+                    properties:
+                      data: {$ref: "#/components/schemas/DocumentAlignmentWorkflowRun"}
+        "400": {$ref: "#/components/responses/Error400"}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+        "500": {$ref: "#/components/responses/Error500"}
+  /api/document-alignment-runs/{run_uid}/items:
+    get:
+      operationId: list_document_alignment_run_items
+      summary: List a formal workflow's safe item summaries
+      description: Results are database-paginated and visible only to administrators and authorized teachers. Students are denied.
+      security: [{bearerAuth: []}]
+      parameters:
+        - name: run_uid
+          in: path
+          required: true
+          schema: {type: string, minLength: 1, maxLength: 64}
+        - name: page
+          in: query
+          schema: {type: integer, minimum: 1, default: 1}
+        - name: page_size
+          in: query
+          schema: {type: integer, minimum: 1, maximum: 100, default: 20}
+        - name: status
+          in: query
+          schema:
+            type: string
+            enum: [candidate, evidence_ready, draft_created, verification_completed, needs_review, blocked, failed]
+        - name: reviewable_only
+          in: query
+          schema: {type: boolean, default: false}
+      responses:
+        "200":
+          description: Safe paginated workflow item summaries
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - {$ref: "#/components/schemas/ApiSuccess"}
+                  - type: object
+                    properties:
+                      data: {$ref: "#/components/schemas/DocumentAlignmentWorkflowItemPage"}
+        "400": {$ref: "#/components/responses/Error400"}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+        "500": {$ref: "#/components/responses/Error500"}
+  /api/auth/register:
+    post:
+      security: []
+      summary: Register a student account
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [username, email, password]
+              properties:
+                username: {type: string}
+                email: {type: string}
+                password: {type: string}
+      responses:
+        "200": {description: Registered, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+  /api/auth/login:
+    post:
+      security: []
+      summary: Login and receive bearer token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                email: {type: string}
+                password: {type: string}
+      responses:
+        "200": {description: Token and user, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+  /api/auth/logout:
+    post:
+      summary: Revoke current bearer token
+      responses:
+        "200": {description: Logged out, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+  /api/auth/verify-email:
+    post:
+      security: []
+      summary: Verify account email with local mock code or token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [token]
+              properties:
+                token: {type: string}
+      responses:
+        "200": {description: Email verified, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+  /api/auth/password-reset/request:
+    post:
+      security: []
+      summary: Request a local mock password reset code
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email]
+              properties:
+                email: {type: string}
+      responses:
+        "200": {description: Reset code generated, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+  /api/auth/password-reset/confirm:
+    post:
+      security: []
+      summary: Confirm password reset with local mock code or token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [token, password]
+              properties:
+                token: {type: string}
+                password: {type: string}
+      responses:
+        "200": {description: Password reset completed, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+  /api/auth/me:
+    get:
+      summary: Return current user
+      parameters:
+        - {$ref: "#/components/parameters/Page"}
+      responses:
+        "200": {description: Current user, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+  /api/courses:
+    get:
+      summary: List courses
+      parameters:
+        - {$ref: "#/components/parameters/Page"}
+        - {$ref: "#/components/parameters/PageSize"}
+      responses:
+        "200": {description: Course list, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+    post:
+      summary: Create course
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [course_name]
+              properties:
+                course_name: {type: string}
+                course_code: {type: string}
+                semester: {type: string}
+                description: {type: string}
+      responses:
+        "200": {description: Created course, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/courses/mine:
+    get:
+      summary: List current user's courses
+      parameters:
+        - {$ref: "#/components/parameters/Page"}
+      responses:
+        "200": {description: My courses, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+  /api/courses/{course_id}/join:
+    post:
+      summary: Join course
+      parameters:
+        - name: course_id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        "200": {description: Joined, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/documents/upload:
+    post:
+      summary: Upload course, global, or personal document
+      description: Saves files through StorageService and returns storage metadata, not server absolute paths.
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [file]
+              properties:
+                file: {type: string, format: binary}
+                scope_type: {type: string, enum: [global, course, personal]}
+                course_id: {type: integer}
+                language: {type: string}
+                discipline: {type: string}
+      responses:
+        "200": {description: Parsed document, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "402": {description: Quota exceeded, content: {application/json: {schema: {$ref: "#/components/schemas/ApiError"}}}}
+        "413": {description: File too large, content: {application/json: {schema: {$ref: "#/components/schemas/ApiError"}}}}
+        "415": {description: Unsupported file type, content: {application/json: {schema: {$ref: "#/components/schemas/ApiError"}}}}
+        "422": {$ref: "#/components/responses/Error422"}
+  /api/documents:
+    get:
+      summary: List visible documents
+      parameters:
+        - name: scope_type
+          in: query
+          schema: {type: string}
+      responses:
+        "200": {description: Documents, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+  /api/documents/{document_id}/chunks:
+    get:
+      summary: List document chunks
+      parameters:
+        - name: document_id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        "200": {description: Chunks, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/knowledge/search:
+    get:
+      summary: Search evidence chunks with scope filters
+      parameters:
+        - name: q
+          in: query
+          required: true
+          schema: {type: string}
+        - name: course_id
+          in: query
+          schema: {type: integer}
+        - name: language
+          in: query
+          schema: {type: string}
+        - name: knowledge_base_type
+          in: query
+          schema: {type: string}
+        - name: scope_type
+          in: query
+          schema: {type: string, enum: [course, personal, global]}
+        - name: retrieval_backend
+          in: query
+          schema: {type: string, enum: [lexical, vector, hybrid, hybrid_rerank]}
+        - name: kb_version_id
+          in: query
+          schema: {type: integer}
+        - name: include_score_breakdown
+          in: query
+          schema: {type: boolean}
+        - name: include_debug
+          in: query
+          schema: {type: boolean}
+      responses:
+        "200": {description: Evidence results, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/knowledge/sources:
+    get:
+      summary: List visible knowledge sources
+      parameters:
+        - {$ref: "#/components/parameters/Page"}
+      responses:
+        "200": {description: Knowledge sources, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+    post:
+      summary: Create a knowledge source registry entry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name]
+              properties:
+                name: {type: string}
+                language: {type: string}
+                discipline: {type: string}
+                source_type: {type: string}
+                access_method: {type: string}
+                license_status: {type: string}
+                allow_full_text_indexing: {type: boolean}
+                allow_student_search: {type: boolean}
+                allow_derivative_cards: {type: boolean}
+      responses:
+        "200": {description: Created source, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/knowledge/versions:
+    get:
+      summary: List knowledge base versions
+      parameters:
+        - {$ref: "#/components/parameters/Page"}
+      responses:
+        "200": {description: Knowledge base versions, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+    post:
+      summary: Create a draft knowledge base version
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                course_id: {type: integer}
+                scope_type: {type: string, enum: [course, personal, global]}
+                description: {type: string}
+                parent_version_id: {type: integer}
+      responses:
+        "200": {description: Created KB version, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/knowledge/versions/{version_id}:
+    get:
+      summary: Get knowledge base version detail and manifest
+      parameters:
+        - name: version_id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        "200": {description: KB version detail, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/knowledge/versions/{version_id}/publish:
+    post:
+      summary: Publish a ready knowledge base version
+      parameters:
+        - name: version_id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        "200": {description: Publish result, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/knowledge/versions/{version_id}/rollback:
+    post:
+      summary: Roll back a course KB to this version
+      parameters:
+        - name: version_id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        "200": {description: Rollback result, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/knowledge/versions/{version_id}/rebuild:
+    post:
+      summary: Rebuild a KB version from active documents
+      parameters:
+        - name: version_id
+          in: path
+          required: true
+          schema: {type: integer}
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                dry_run: {type: boolean}
+      responses:
+        "200": {description: Rebuild report, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/knowledge/versions/{version_id}/manifest:
+    get:
+      summary: Export KB version manifest
+      parameters:
+        - name: version_id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        "200": {description: KB manifest, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/knowledge/health:
+    get:
+      summary: Run knowledge base health check
+      parameters:
+        - name: course_id
+          in: query
+          schema: {type: integer}
+        - name: kb_version_id
+          in: query
+          schema: {type: integer}
+      responses:
+        "200": {description: Health result, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/knowledge/retrieval-regression:
+    post:
+      summary: Run retrieval regression for a KB version
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                course_id: {type: integer}
+                kb_version_id: {type: integer}
+      responses:
+        "200": {description: Regression result, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/evidence/search:
+    post:
+      summary: Retrieve governed evidence for a term or query
+      description: Evidence retrieval is lexical and evidence-constrained. It does not call external models, translation APIs, embeddings, vector databases, or rerankers.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [query]
+              properties:
+                query: {type: string}
+                english_term: {type: string}
+                course: {type: string}
+                chapter: {type: string}
+                language: {type: string}
+                limit: {type: integer}
+                filters: {type: object}
+      responses:
+        "200": {description: Evidence candidates, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/evidence/bilingual:
+    post:
+      summary: Build bilingual evidence package for Concept Card drafting
+      description: Combines English evidence, Chinese evidence, and optionally generated Chinese-term candidates without making final alignment decisions or approving cards.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [english_term]
+              properties:
+                english_term: {type: string}
+                chinese_term: {type: string}
+                course: {type: string}
+                chapter: {type: string}
+                auto_generate_chinese_candidates: {type: boolean}
+                limit: {type: integer}
+      responses:
+        "200": {description: Bilingual evidence package, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/terms/chinese-candidates:
+    post:
+      summary: Generate evidence-constrained Chinese term candidates
+      description: Extracts Chinese-term candidates only from approved cards, legacy terms, existing ConceptAlignmentCards, and bilingual KnowledgeChunks. It never translates or fabricates terms.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [english_term]
+              properties:
+                english_term: {type: string}
+                course: {type: string}
+                chapter: {type: string}
+                limit: {type: integer}
+                filters: {type: object}
+      responses:
+        "200": {description: Chinese candidate terms, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/alignment/run:
+    post:
+      summary: Run terminology alignment for a document or direct term
+      deprecated: true
+      description: >
+        Legacy active compatibility endpoint. Under the API root, the
+        supported replacement is POST document-alignment-runs, followed by
+        GET document-alignment-runs/{run_uid} and
+        GET document-alignment-runs/{run_uid}/items. The production teacher
+        workflow uses that formal API and does not fall back to this operation.
+        External/live execution is disabled in this path and returns
+        LEGACY_ALIGNMENT_EXTERNAL_EXECUTION_DISABLED. Only explicitly
+        allowlisted local deterministic compatibility modes may continue.
+        This endpoint is not HTTP 410 until the external-consumer observation
+        window, legacy queue drain, worker shutdown procedure, migration
+        notice, and rollback ownership are complete. A later approved
+        zero-caller phase will use LEGACY_ALIGNMENT_RUN_DEPRECATED. Operators
+        may disable new compatibility admission with
+        LEGACY_ALIGNMENT_ROUTE_ADMISSION_ENABLED=false; that maintenance state
+        returns 503 LEGACY_ALIGNMENT_ADMISSION_DISABLED without creating a run
+        or job and is reversible independently of the formal workflow. The
+        server runtime states ACTIVE, FREEZE, DRAINING, and DISABLED preserve
+        history reads while separating creation, controlled queue drain, and
+        worker shutdown. FREEZE deployment starts observation preparation; it
+        is not HTTP 410 and does not remove this operation. The required
+        target-environment observation window remains pending until at least
+        14 continuous days, five operating days, zero new Legacy creation, and
+        external-consumer evidence are recorded.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                document_id: {type: integer}
+                english_term: {type: string}
+                course_id: {type: integer}
+                scope_type: {type: string}
+      responses:
+        "200": {description: Alignment result and card, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+        "503": {description: Legacy alignment admission is disabled for maintenance, content: {application/json: {schema: {$ref: "#/components/schemas/ApiError"}}}}
+  /api/alignment/runs:
+    get:
+      summary: List visible alignment runs
+      parameters:
+        - {$ref: "#/components/parameters/Page"}
+        - {$ref: "#/components/parameters/PageSize"}
+      responses:
+        "200": {description: Alignment runs, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+  /api/alignment/runs/{run_id}:
+    get:
+      summary: Get alignment run detail
+      parameters:
+        - name: run_id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        "200": {description: AlignmentRun, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/alignment/verify:
+    post:
+      summary: Run alignment verification through governed providers
+      description: >
+        Runs mock, fake, replay, or disabled external alignment providers
+        through the provider contract, governance gate, parser, and audit
+        chain. Provider output never auto-approves ConceptAlignmentCards and
+        never writes ConceptAlignmentCard.confidence_score.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                card_uid: {type: string}
+                provider: {type: string}
+                attach_to_card: {type: boolean}
+                english_term: {type: string}
+                chinese_term: {type: string}
+                course: {type: string}
+                chapter: {type: string}
+                english_evidence: {type: array, items: {type: object}}
+                chinese_evidence: {type: array, items: {type: object}}
+                fake_response_type: {type: string}
+                replay_response_type: {type: string}
+      responses:
+        "200": {description: Verification run result, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/alignment/providers:
+    get:
+      summary: List registered alignment providers and policy summaries
+      responses:
+        "200": {description: Provider registry and governance summaries, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/alignment/providers/{provider_name}/policy:
+    get:
+      summary: Get provider governance policy
+      parameters: [{name: provider_name, in: path, required: true, schema: {type: string}}]
+      responses:
+        "200": {description: Provider policy, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "404": {$ref: "#/components/responses/Error404"}
+    post:
+      summary: Create or update provider governance policy
+      parameters: [{name: provider_name, in: path, required: true, schema: {type: string}}]
+      requestBody: {required: true, content: {application/json: {schema: {type: object}}}}
+      responses:
+        "200": {description: Provider policy saved, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/alignment/providers/{provider_name}/usage:
+    get:
+      summary: List provider usage records
+      parameters:
+        - {name: provider_name, in: path, required: true, schema: {type: string}}
+        - {name: course, in: query, schema: {type: string}}
+        - {name: date_from, in: query, schema: {type: string}}
+        - {name: date_to, in: query, schema: {type: string}}
+        - {$ref: "#/components/parameters/Page"}
+        - {$ref: "#/components/parameters/PageSize"}
+      responses:
+        "200": {description: Provider usage records, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/alignment/providers/{provider_name}/preflight:
+    get:
+      summary: List read-only provider preflight runs
+      parameters:
+        - {name: provider_name, in: path, required: true, schema: {type: string}}
+        - {$ref: "#/components/parameters/Page"}
+        - {$ref: "#/components/parameters/PageSize"}
+      responses:
+        "200": {description: Preflight history, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "404": {$ref: "#/components/responses/Error404"}
+    post:
+      summary: Run read-only provider preflight
+      description: Checks configuration, policy, budget, human-review gates, and replay dry-run readiness without enabling or calling a real external provider.
+      parameters: [{name: provider_name, in: path, required: true, schema: {type: string}}]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                course: {type: string}
+                include_replay_dry_run: {type: boolean}
+      responses:
+        "200": {description: Preflight result, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/alignment/providers/preflight/{preflight_uid}:
+    get:
+      summary: Get provider preflight run detail
+      parameters: [{name: preflight_uid, in: path, required: true, schema: {type: string}}]
+      responses:
+        "200": {description: Preflight run detail, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/jobs:
+    get:
+      summary: List visible background jobs
+      parameters:
+        - {$ref: "#/components/parameters/Page"}
+        - {$ref: "#/components/parameters/PageSize"}
+        - name: status
+          in: query
+          schema: {type: string, enum: [queued, running, completed, failed, canceled, retrying]}
+        - name: job_type
+          in: query
+          schema: {type: string, enum: [document_ingestion, alignment_run, evaluation_run]}
+      responses:
+        "200": {description: Background jobs, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/jobs/{job_id}:
+    get:
+      summary: Get background job detail
+      parameters:
+        - name: job_id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        "200": {description: BackgroundJob, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/jobs/{job_id}/events:
+    get:
+      summary: List background job events
+      parameters:
+        - name: job_id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        "200": {description: BackgroundJob events, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/jobs/{job_id}/cancel:
+    post:
+      summary: Cancel a queued or running background job
+      parameters:
+        - name: job_id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        "200": {description: Canceled job, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/jobs/{job_id}/retry:
+    post:
+      summary: Retry a failed background job
+      parameters:
+        - name: job_id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        "200": {description: Retry queued job, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/terminology/cards:
+    get:
+      summary: List visible terminology cards
+      parameters:
+        - {$ref: "#/components/parameters/Page"}
+        - {$ref: "#/components/parameters/PageSize"}
+        - name: scope_type
+          in: query
+          schema: {type: string}
+        - name: status
+          in: query
+          schema: {type: string}
+      responses:
+        "200": {description: Terminology cards with pagination, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+  /api/terminology/cards/{card_id}:
+    get:
+      summary: Get terminology card detail
+      parameters:
+        - name: card_id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        "200": {description: Terminology card, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/terminology/cards/{card_id}/favorite:
+    post:
+      summary: Toggle favorite for current user
+      parameters:
+        - name: card_id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        "200": {description: Favorite state, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/terminology/cards/{card_id}/mastered:
+    post:
+      summary: Toggle mastered state for current user
+      parameters:
+        - name: card_id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        "200": {description: Mastered state, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/terminology/cards/{card_id}/feedback:
+    post:
+      summary: Submit pilot feedback for a visible terminology card
+      parameters:
+        - name: card_id
+          in: path
+          required: true
+          schema: {type: integer}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                feedback_content: {type: string}
+                reported_issue: {type: string}
+                expected_result: {type: string}
+                actual_result: {type: string}
+                evidence_comment: {type: string}
+                feedback_type: {type: string}
+                feedback_source: {type: string}
+                severity: {type: string, enum: [low, medium, high, critical]}
+      responses:
+        "200": {description: Feedback created, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/terminology/cards/export:
+    get:
+      summary: Export visible cards to PDF
+      parameters:
+        - name: course_id
+          in: query
+          schema: {type: integer}
+      responses:
+        "200":
+          description: PDF file
+          content:
+            application/pdf:
+              schema:
+                type: string
+                format: binary
+        "402": {description: Export quota or plan restriction, content: {application/json: {schema: {$ref: "#/components/schemas/ApiError"}}}}
+        "422": {$ref: "#/components/responses/Error422"}
+  /api/student/courses:
+    get:
+      summary: List courses visible in the student Concept Card view
+      description: Returns courses the current user can see under StudentCourseMembership and CourseStudentVisibilityPolicy. It never exposes cards from unauthorized courses.
+      responses:
+        "200": {description: Visible student courses, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/student/course-memberships:
+    get:
+      summary: List student course memberships
+      description: Students, teachers, and admins can list their own memberships. Admins may query by user_id. Active memberships are used by the student Concept Card visibility gate.
+      parameters:
+        - {name: user_id, in: query, schema: {type: integer}}
+        - {name: course, in: query, schema: {type: string}}
+        - {name: status, in: query, schema: {type: string, enum: [active, inactive, revoked]}}
+        - {$ref: "#/components/parameters/Page"}
+        - {$ref: "#/components/parameters/PageSize"}
+      responses:
+        "200": {description: Course membership summaries, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+    post:
+      summary: Create or update a student course membership
+      description: Admin-only minimal backend API for membership seeding and governance. It does not provide a frontend management UI.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [user_id, course]
+              properties:
+                user_id: {type: integer}
+                course: {type: string}
+                role_in_course: {type: string, enum: [student, teaching_assistant, auditor, teacher, admin]}
+                status: {type: string, enum: [active, inactive, revoked]}
+      responses:
+        "200": {description: Membership created or updated, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/student/course-memberships/{membership_uid}/revoke:
+    post:
+      summary: Revoke a student course membership
+      description: Admin-only endpoint that marks a membership revoked. Revoked memberships do not grant student Concept Card visibility.
+      parameters: [{name: membership_uid, in: path, required: true, schema: {type: string}}]
+      responses:
+        "200": {description: Membership revoked, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/course-student-visibility-policies:
+    get:
+      summary: List course student visibility policies
+      description: Teacher/admin backend API for inspecting CourseStudentVisibilityPolicy rows. This task does not add an admin policy UI.
+      parameters:
+        - {name: course, in: query, schema: {type: string}}
+        - {name: status, in: query, schema: {type: string, enum: [active, disabled]}}
+        - {$ref: "#/components/parameters/Page"}
+        - {$ref: "#/components/parameters/PageSize"}
+      responses:
+        "200": {description: Visibility policy summaries, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+    post:
+      summary: Create or update a course student visibility policy
+      description: >
+        Admin-only minimal backend API. Default policy semantics are
+        conservative: enrolled_only, no auditor view, teacher preview enabled,
+        and cross-course search disabled.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [course]
+              properties:
+                course: {type: string}
+                visibility: {type: string, enum: [public, enrolled_only, private, disabled]}
+                allow_auditor_view: {type: boolean}
+                allow_teacher_preview: {type: boolean}
+                allow_cross_course_search: {type: boolean}
+                status: {type: string, enum: [active, disabled]}
+      responses:
+        "200": {description: Visibility policy created or updated, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/student/progress:
+    get:
+      summary: Get student learning progress over visible approved Concept Cards
+      description: >
+        Computes progress only from ConceptAlignmentCards that are both
+        status=approved and visible to the current user under course membership
+        and CourseStudentVisibilityPolicy. Hidden courses, draft cards,
+        needs_review cards, rejected cards, and deprecated cards are excluded.
+      parameters:
+        - {name: course, in: query, schema: {type: string}}
+        - {name: chapter, in: query, schema: {type: string}}
+        - {name: include_recent, in: query, schema: {type: boolean}}
+      responses:
+        "200": {description: Student progress summary, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/student/concept-cards:
+    get:
+      summary: List approved ConceptAlignmentCards for student learning
+      description: >
+        Student-facing Concept Card list. This endpoint is approved-only:
+        draft, needs_review, rejected, and deprecated cards are never returned.
+        Approved cards are then filtered by StudentCourseMembership and
+        CourseStudentVisibilityPolicy, so students only see cards in courses
+        they can access or courses explicitly marked public.
+        List rows contain summaries, learning state, feedback state, evidence
+        counts, and bounded source summaries rather than full evidence text.
+      parameters:
+        - {name: course, in: query, schema: {type: string}}
+        - {name: chapter, in: query, schema: {type: string}}
+        - {name: q, in: query, schema: {type: string}}
+        - {name: mastered, in: query, schema: {type: boolean}}
+        - {name: favorited, in: query, schema: {type: boolean}}
+        - {name: has_feedback, in: query, schema: {type: boolean}}
+        - {$ref: "#/components/parameters/Page"}
+        - {$ref: "#/components/parameters/PageSize"}
+      responses:
+        "200": {description: Approved Concept Card summaries, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/student/concept-cards/{card_uid}:
+    get:
+      summary: Get approved ConceptAlignmentCard detail for student learning
+      description: Returns bilingual explanations, bounded structured evidence summaries, source information, and the caller's learning state. Non-approved cards or cards from unauthorized courses return 404.
+      parameters: [{name: card_uid, in: path, required: true, schema: {type: string}}]
+      responses:
+        "200": {description: Approved Concept Card detail, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/student/concept-cards/{card_uid}/state:
+    post:
+      summary: Update current user's learning state for an approved Concept Card
+      description: Updates only StudentConceptCardState for the current user. It cannot modify ConceptAlignmentCard review status.
+      parameters: [{name: card_uid, in: path, required: true, schema: {type: string}}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                favorited: {type: boolean}
+                mastered: {type: boolean}
+                personal_note: {type: string}
+      responses:
+        "200": {description: Learning state updated, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/student/concept-cards/{card_uid}/feedback:
+    post:
+      summary: Submit student feedback for an approved Concept Card
+      description: Creates Feedback linked to the Concept Card UID. Feedback cannot modify the ConceptAlignmentCard status.
+      parameters: [{name: card_uid, in: path, required: true, schema: {type: string}}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [message]
+              properties:
+                feedback_type: {type: string, enum: [translation_issue, evidence_issue, explanation_unclear, duplicate, other]}
+                message: {type: string}
+                suggested_chinese_term: {type: string}
+      responses:
+        "200": {description: Feedback submitted, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/student/concept-cards/export:
+    get:
+      summary: Export approved student Concept Cards
+      description: Exports only approved cards visible to the current user under course membership and visibility policy. The export excludes internal AuditRecord, provider raw output, review override reasons, and secrets.
+      parameters:
+        - {name: course, in: query, schema: {type: string}}
+        - {name: chapter, in: query, schema: {type: string}}
+        - {name: scope, in: query, schema: {type: string, enum: [all, favorited, mastered, unmastered]}}
+        - {name: format, in: query, schema: {type: string, enum: [json, csv]}}
+      responses:
+        "200": {description: JSON export or CSV file, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}, text/csv: {schema: {type: string}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/student/concept-materials:
+    get:
+      summary: List governed English materials available for student concept queries
+      description: Returns only personal sources owned by the caller and managed-course sources for active memberships.
+      responses:
+        "200": {description: Accessible material summaries, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/student/concept-materials/{source_uid}/chunks:
+    get:
+      summary: Read bounded parsed English chunks for concept selection
+      parameters: [{name: source_uid, in: path, required: true, schema: {type: string}}]
+      responses:
+        "200": {description: Authorized bounded chunks and provenance, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/student/concept-queries:
+    post:
+      summary: Create or replay a private student ConceptQuery
+      description: Validates the selection against the server-side chunk, resolves a workspace-scoped Chinese evidence allow-list, and composes the existing governed Task 12 alignment chain. It never searches published ConceptCards as a substitute.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [workspace_scope, source_uid, chunk_uid, selected_text, selection_start, selection_end]
+              properties:
+                workspace_scope: {type: string, enum: [PERSONAL, MANAGED_COURSE]}
+                source_uid: {type: string}
+                chunk_uid: {type: string}
+                selected_text: {type: string, maxLength: 180}
+                selection_start: {type: integer, minimum: 0}
+                selection_end: {type: integer, minimum: 1}
+                request_id: {type: string}
+      responses:
+        "200": {description: Private non-official student AlignmentResult, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "401": {$ref: "#/components/responses/Error401"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/student/concept-queries/{query_uid}:
+    get:
+      summary: Read the caller's private student AlignmentResult
+      parameters: [{name: query_uid, in: path, required: true, schema: {type: string}}]
+      responses:
+        "200": {description: Student-owned AlignmentResult, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/student/concept-queries/{query_uid}/personal-record:
+    get:
+      summary: Read private learning state for a student AlignmentResult
+      parameters: [{name: query_uid, in: path, required: true, schema: {type: string}}]
+      responses:
+        "200": {description: Caller-owned private learning state, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "404": {$ref: "#/components/responses/Error404"}
+    put:
+      summary: Save private learning state for a student AlignmentResult
+      parameters: [{name: query_uid, in: path, required: true, schema: {type: string}}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [expected_version]
+              properties:
+                saved: {type: boolean}
+                note: {type: string, maxLength: 4000}
+                understanding_state: {type: string, enum: ["", UNDERSTOOD, STILL_CONFUSED]}
+                expected_version: {type: integer, minimum: 0}
+      responses:
+        "200": {description: Private learning state updated, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "401": {$ref: "#/components/responses/Error401"}
+        "404": {$ref: "#/components/responses/Error404"}
+        "409": {$ref: "#/components/responses/Error409"}
+  /api/student/pilot:
+    get:
+      summary: Read the optional Personal Workspace pilot contract and caller state
+      description: Participation is optional and never required for normal product use. No private learning content is returned.
+      responses:
+        "200": {description: Pilot contract and caller-owned status, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/student/pilot/enrollment:
+    post:
+      summary: Explicitly consent to the optional Personal Workspace pilot
+      parameters: [{name: Idempotency-Key, in: header, required: true, schema: {type: string, maxLength: 120}}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [pilot_id, consent_version, consent, eligibility_attested]
+              properties:
+                pilot_id: {type: string}
+                consent_version: {type: string}
+                consent: {type: boolean}
+                eligibility_attested: {type: boolean}
+      responses:
+        "200": {description: Versioned consent recorded, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+    delete:
+      summary: Withdraw consent and erase study sessions and surveys
+      description: Withdrawal preserves normal materials, queries and PersonalLearningRecord data.
+      parameters: [{name: Idempotency-Key, in: header, required: true, schema: {type: string, maxLength: 120}}]
+      responses:
+        "200": {description: Pilot records withdrawn and study sessions erased, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/student/pilot/sessions:
+    post:
+      summary: Start one consented Personal Workspace pilot session
+      parameters: [{name: Idempotency-Key, in: header, required: true, schema: {type: string, maxLength: 120}}]
+      responses:
+        "200": {description: Pilot session started, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+        "409": {$ref: "#/components/responses/Error409"}
+  /api/student/pilot/sessions/{session_uid}/complete:
+    put:
+      summary: Derive content-free task metrics from an owned completed Personal query
+      parameters:
+        - {name: session_uid, in: path, required: true, schema: {type: string}}
+        - {name: Idempotency-Key, in: header, required: true, schema: {type: string, maxLength: 120}}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [query_uid, expected_version]
+              properties:
+                query_uid: {type: string}
+                expected_version: {type: integer, minimum: 1}
+      responses:
+        "200": {description: Content-free pilot metrics recorded, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "401": {$ref: "#/components/responses/Error401"}
+        "404": {$ref: "#/components/responses/Error404"}
+        "409": {$ref: "#/components/responses/Error409"}
+  /api/student/pilot/sessions/{session_uid}/survey:
+    put:
+      summary: Submit the bounded caller-owned post-task survey
+      parameters:
+        - {name: session_uid, in: path, required: true, schema: {type: string}}
+        - {name: Idempotency-Key, in: header, required: true, schema: {type: string, maxLength: 120}}
+      responses:
+        "200": {description: Survey recorded, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "401": {$ref: "#/components/responses/Error401"}
+        "409": {$ref: "#/components/responses/Error409"}
+  /api/admin/student-pilot/aggregate:
+    get:
+      summary: Read small-cell-suppressed deidentified Personal Workspace pilot metrics
+      responses:
+        "200": {description: Aggregate-only metrics, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/concept-cards:
+    get:
+      summary: List Concept Alignment Cards
+      parameters:
+        - {name: status, in: query, schema: {type: string}}
+        - {name: course, in: query, schema: {type: string}}
+        - {name: chapter, in: query, schema: {type: string}}
+        - {name: q, in: query, schema: {type: string}}
+        - {$ref: "#/components/parameters/Page"}
+        - {$ref: "#/components/parameters/PageSize"}
+      responses:
+        "200": {description: Concept card summaries, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+    post:
+      summary: Create a Concept Alignment Card draft manually
+      description: Creates a ConceptAlignmentCard draft/needs_review record. It does not auto-approve and does not fabricate confidence_score or final alignment_reason.
+      requestBody: {required: true, content: {application/json: {schema: {type: object}}}}
+      responses:
+        "200": {description: Concept card created, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/concept-cards/draft-from-evidence:
+    post:
+      summary: Create Concept Alignment Card draft from bilingual evidence
+      description: Creates a needs_review ConceptAlignmentCard from evidence. Candidate Chinese terms remain unverified; the endpoint never approves the card or writes confidence_score.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [english_term]
+              properties:
+                english_term: {type: string}
+                chinese_term: {type: string}
+                course: {type: string}
+                chapter: {type: string}
+                auto_generate_chinese_candidates: {type: boolean}
+                evidence_package: {type: object}
+      responses:
+        "200": {description: Draft Concept Card, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/concept-cards/review-queue:
+    get:
+      summary: List Concept Alignment Cards available for teacher/admin review
+      description: >
+        Returns reviewable ConceptAlignmentCard summaries for the caller's
+        course-scoped review permissions. Items include card_uid, bilingual
+        terms, course/chapter, status, risk_labels, evidence_summary,
+        latest_review_summary, assignment_summary, and verification_summary
+        when available.
+      parameters:
+        - {name: status, in: query, schema: {type: string}}
+        - {name: course, in: query, schema: {type: string}}
+        - {name: chapter, in: query, schema: {type: string}}
+        - {name: risk_label, in: query, schema: {type: string}}
+        - {name: q, in: query, schema: {type: string}}
+        - {$ref: "#/components/parameters/Page"}
+        - {$ref: "#/components/parameters/PageSize"}
+      responses:
+        "200": {description: Review queue cards, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/concept-cards/student-feedback-queue:
+    get:
+      summary: List student feedback linked to Concept Cards for teacher triage
+      description: >
+        Teacher/admin queue for student Concept Card feedback. Teachers see
+        only feedback for courses where they have review permission. Triage
+        actions never run automatically from student submissions.
+      parameters:
+        - {name: course, in: query, schema: {type: string}}
+        - {name: chapter, in: query, schema: {type: string}}
+        - {name: feedback_type, in: query, schema: {type: string}}
+        - {name: status, in: query, schema: {type: string, enum: [submitted, triaged, linked_to_review, resolved, rejected, duplicate, closed]}}
+        - {name: priority, in: query, schema: {type: string}}
+        - {name: q, in: query, schema: {type: string}}
+        - {$ref: "#/components/parameters/Page"}
+        - {$ref: "#/components/parameters/PageSize"}
+      responses:
+        "200": {description: Student feedback queue, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/review-policies:
+    get:
+      summary: List course review policies
+      parameters:
+        - {name: course, in: query, schema: {type: string}}
+        - {name: status, in: query, schema: {type: string}}
+        - {$ref: "#/components/parameters/Page"}
+        - {$ref: "#/components/parameters/PageSize"}
+      responses:
+        "200": {description: Course review policies, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+    post:
+      summary: Create or update a course review policy
+      description: Admin-only backend API for configuring course-level review gates. It does not add an admin policy UI.
+      requestBody: {required: true, content: {application/json: {schema: {type: object}}}}
+      responses:
+        "200": {description: Course review policy saved, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/review-policies/{policy_uid}:
+    get:
+      summary: Get a course review policy
+      parameters: [{name: policy_uid, in: path, required: true, schema: {type: string}}]
+      responses:
+        "200": {description: Course review policy, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/review-permissions:
+    get:
+      summary: List course review permissions
+      parameters:
+        - {name: course, in: query, schema: {type: string}}
+        - {name: reviewer_id, in: query, schema: {type: string}}
+        - {name: reviewer_role, in: query, schema: {type: string}}
+        - {name: status, in: query, schema: {type: string}}
+        - {$ref: "#/components/parameters/Page"}
+        - {$ref: "#/components/parameters/PageSize"}
+      responses:
+        "200": {description: Course review permissions, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+    post:
+      summary: Grant course review permission
+      description: Admin-only backend API for course review permissions. Teachers cannot use this to widen their own authority.
+      requestBody: {required: true, content: {application/json: {schema: {type: object}}}}
+      responses:
+        "200": {description: Course review permission granted, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/review-permissions/{permission_uid}/revoke:
+    post:
+      summary: Revoke course review permission
+      parameters: [{name: permission_uid, in: path, required: true, schema: {type: string}}]
+      responses:
+        "200": {description: Course review permission revoked, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/concept-cards/student-feedback/{feedback_uid}/triage:
+    post:
+      summary: Triage student feedback linked to a Concept Card
+      description: >
+        Teacher/admin endpoint for acknowledging, resolving, rejecting,
+        marking duplicate, requesting revision, or reopening a Concept Card
+        from student feedback. request_card_revision and reopen_card_for_review
+        reuse the Concept Card review workflow and course permission gates.
+      parameters: [{name: feedback_uid, in: path, required: true, schema: {type: string}}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [action]
+              properties:
+                action:
+                  type: string
+                  enum: [acknowledge, mark_resolved, mark_duplicate, reject_feedback, request_card_revision, reopen_card_for_review, link_to_existing_review, add_teacher_note]
+                reason_code: {type: string}
+                teacher_note: {type: string}
+                required_changes: {type: array, items: {type: string}}
+                linked_review_uid: {type: string}
+      responses:
+        "200": {description: Feedback triaged, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/teacher/learning-analytics:
+    get:
+      summary: Get aggregate teacher learning analytics
+      description: >
+        Aggregates approved ConceptAlignmentCards, student learning states,
+        and student feedback for courses the teacher/admin is allowed to
+        review. Draft, needs_review, rejected, and deprecated cards are
+        excluded. The response is aggregate-only and does not include student
+        personal identifiers, AuditRecord payloads, provider raw output, or
+        review override reasons.
+      parameters:
+        - {name: course, in: query, schema: {type: string}}
+        - {name: chapter, in: query, schema: {type: string}}
+        - {name: include_cards, in: query, schema: {type: boolean}}
+        - {name: include_feedback_hotspots, in: query, schema: {type: boolean}}
+        - {name: limit, in: query, schema: {type: integer, minimum: 1, maximum: 100}}
+      responses:
+        "200": {description: Course learning analytics, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/teacher/learning-analytics/cards:
+    get:
+      summary: List card-level teacher learning analytics
+      description: >
+        Returns card-level aggregate metrics for approved cards in courses
+        the current teacher/admin may review. priority_hint is a deterministic
+        rule-based hint, not an AI judgment.
+      parameters:
+        - {name: course, in: query, schema: {type: string}}
+        - {name: chapter, in: query, schema: {type: string}}
+        - {name: sort, in: query, schema: {type: string, enum: [feedback_count, mastery_rate, unmastered, updated_at]}}
+        - {name: q, in: query, schema: {type: string}}
+        - {$ref: "#/components/parameters/Page"}
+        - {$ref: "#/components/parameters/PageSize"}
+      responses:
+        "200": {description: Card analytics rows, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/teacher/learning-analytics/export:
+    get:
+      summary: Export teacher learning analytics report
+      description: >
+        Exports aggregate card-level analytics as csv or json. The report
+        excludes student personal data, AuditRecord, provider raw output,
+        review override reasons, Authorization, Cookie, and API keys.
+      parameters:
+        - {name: course, in: query, schema: {type: string}}
+        - {name: chapter, in: query, schema: {type: string}}
+        - {name: q, in: query, schema: {type: string}}
+        - {name: sort, in: query, schema: {type: string, enum: [feedback_count, mastery_rate, unmastered, updated_at]}}
+        - {name: format, in: query, schema: {type: string, enum: [csv, json]}}
+      responses:
+        "200": {description: JSON export or CSV file, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}, text/csv: {schema: {type: string}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/concept-cards/{card_uid}:
+    get:
+      summary: Get a Concept Alignment Card
+      parameters: [{name: card_uid, in: path, required: true, schema: {type: string}}]
+      responses:
+        "200": {description: Concept card detail, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/concept-cards/{card_uid}/student-feedback:
+    get:
+      summary: List student feedback for a Concept Card
+      description: Teacher/admin endpoint. Teachers must have course review permission for the card's course.
+      parameters: [{name: card_uid, in: path, required: true, schema: {type: string}}]
+      responses:
+        "200": {description: Student feedback for card, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/concept-cards/{card_uid}/reviews:
+    get:
+      summary: List Concept Card review history
+      description: Returns ReviewRecord history for a card. Errors include request_id and may include details.audit_error_code.
+      parameters:
+        - {name: card_uid, in: path, required: true, schema: {type: string}}
+        - {$ref: "#/components/parameters/Page"}
+        - {$ref: "#/components/parameters/PageSize"}
+      responses:
+        "200": {description: Review history, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/concept-cards/{card_uid}/review:
+    post:
+      summary: Submit a teacher/admin Concept Card review action
+      description: >
+        Records approve/reject/revision/more-evidence/reopen/deprecate review
+        actions through the backend policy and permission gate. Blocking-risk
+        or course-policy failures return stable JSON with request_id and
+        details.audit_error_code.
+      parameters: [{name: card_uid, in: path, required: true, schema: {type: string}}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [action]
+              properties:
+                action: {type: string}
+                reason_code: {type: string}
+                review_comment: {type: string}
+                required_changes: {type: array, items: {type: string}}
+                resolved_risk_labels: {type: array, items: {type: string}}
+                allow_risk_override: {type: boolean}
+                override_reason: {type: string}
+      responses:
+        "200": {description: Review action recorded, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/concept-cards/{card_uid}/assign-reviewer:
+    post:
+      summary: Assign a reviewer to a Concept Card
+      description: Assigns a reviewer through the same course permission gate and returns request_id.
+      parameters: [{name: card_uid, in: path, required: true, schema: {type: string}}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [assigned_to]
+              properties:
+                assigned_to: {type: string}
+                due_at: {type: string}
+      responses:
+        "200": {description: Reviewer assigned, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "401": {$ref: "#/components/responses/Error401"}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/quality-control:
+    get:
+      summary: List quality-control terminology cards
+      parameters:
+        - name: status
+          in: query
+          schema: {type: string}
+      responses:
+        "200": {description: QC queue, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/quality-control/{card_id}/approve:
+    post:
+      summary: Approve a QC card
+      parameters: [{name: card_id, in: path, required: true, schema: {type: integer}}]
+      requestBody: {required: false, content: {application/json: {schema: {type: object}}}}
+      responses:
+        "200": {description: Approved, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/quality-control/{card_id}/reject:
+    post:
+      summary: Reject a QC card
+      parameters: [{name: card_id, in: path, required: true, schema: {type: integer}}]
+      requestBody: {required: false, content: {application/json: {schema: {type: object}}}}
+      responses:
+        "200": {description: Rejected, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/quality-control/{card_id}/edit:
+    post:
+      summary: Edit and approve a QC card
+      parameters: [{name: card_id, in: path, required: true, schema: {type: integer}}]
+      requestBody: {required: true, content: {application/json: {schema: {type: object}}}}
+      responses:
+        "200": {description: Edited, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/quality-control/{card_id}/needs-more-evidence:
+    post:
+      summary: Mark a QC card as needing more evidence
+      parameters: [{name: card_id, in: path, required: true, schema: {type: integer}}]
+      requestBody: {required: false, content: {application/json: {schema: {type: object}}}}
+      responses:
+        "200": {description: Updated, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/subscription/plans:
+    get:
+      security: []
+      summary: List active subscription plans
+      responses:
+        "200": {description: Plans, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+  /api/subscription/me:
+    get:
+      summary: Return current user's subscription and quota
+      parameters:
+        - {$ref: "#/components/parameters/Page"}
+      responses:
+        "200": {description: Subscription and usage, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "401": {$ref: "#/components/responses/Error401"}
+  /api/subscription/mock-payment:
+    post:
+      summary: Activate a plan through local mock payment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                plan_id: {type: integer}
+                plan_name: {type: string}
+      responses:
+        "200": {description: Subscription activated, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "402": {description: Payment or quota restriction, content: {application/json: {schema: {$ref: "#/components/schemas/ApiError"}}}}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/feedback:
+    get:
+      summary: List pilot feedback visible to teacher or admin
+      parameters:
+        - {$ref: "#/components/parameters/Page"}
+        - name: status
+          in: query
+          schema: {type: string}
+        - name: feedback_type
+          in: query
+          schema: {type: string}
+        - name: severity
+          in: query
+          schema: {type: string}
+        - name: course_id
+          in: query
+          schema: {type: integer}
+      responses:
+        "200": {description: Feedback list, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+    post:
+      summary: Submit pilot feedback for a visible terminology card or legacy term
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                terminology_card_id: {type: integer}
+                english_term: {type: string}
+                chinese_term: {type: string}
+                feedback_type: {type: string}
+                severity: {type: string}
+                feedback_source: {type: string}
+                feedback_content: {type: string}
+                reported_issue: {type: string}
+                expected_result: {type: string}
+                evidence_comment: {type: string}
+      responses:
+        "200": {description: Feedback submitted, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/feedback/{feedback_id}:
+    get:
+      summary: Get one pilot feedback record
+      parameters:
+        - name: feedback_id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        "200": {description: Feedback detail, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/feedback/{feedback_id}/triage:
+    post:
+      summary: Triage pilot feedback
+      parameters:
+        - name: feedback_id
+          in: path
+          required: true
+          schema: {type: integer}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status: {type: string, enum: [triaged, in_review, needs_more_evidence]}
+                classification: {type: string}
+                root_cause: {type: string}
+      responses:
+        "200": {description: Feedback triaged, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/feedback/{feedback_id}/resolve:
+    post:
+      summary: Mark feedback resolved
+      parameters:
+        - name: feedback_id
+          in: path
+          required: true
+          schema: {type: integer}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [resolution_note]
+              properties:
+                resolution_action: {type: string}
+                resolution_note: {type: string}
+                card_status: {type: string}
+      responses:
+        "200": {description: Feedback resolved, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/feedback/{feedback_id}/reject:
+    post:
+      summary: Reject pilot feedback
+      parameters:
+        - name: feedback_id
+          in: path
+          required: true
+          schema: {type: integer}
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                resolution_note: {type: string}
+                reason: {type: string}
+      responses:
+        "200": {description: Feedback rejected, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/feedback/{feedback_id}/convert-to-evaluation:
+    post:
+      summary: Convert pilot feedback into an EvaluationItem
+      parameters:
+        - name: feedback_id
+          in: path
+          required: true
+          schema: {type: integer}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [evaluation_set_id]
+              properties:
+                evaluation_set_id: {type: integer}
+      responses:
+        "200": {description: Converted to EvaluationItem, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/feedback/{feedback_id}/convert-to-backlog:
+    post:
+      summary: Convert pilot feedback into an IterationBacklogItem
+      parameters:
+        - name: feedback_id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        "200": {description: Converted to backlog, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/backlog:
+    get:
+      summary: List iteration backlog items
+      parameters:
+        - name: priority
+          in: query
+          schema: {type: string}
+        - name: status
+          in: query
+          schema: {type: string}
+      responses:
+        "200": {description: Backlog items, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/backlog/{item_id}:
+    get:
+      summary: Get an iteration backlog item
+      parameters:
+        - name: item_id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        "200": {description: Backlog item detail, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/backlog/{item_id}/update-status:
+    post:
+      summary: Update an iteration backlog item status
+      parameters:
+        - name: item_id
+          in: path
+          required: true
+          schema: {type: integer}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [status]
+              properties:
+                status: {type: string, enum: [open, planned, in_progress, done, wont_fix, duplicate]}
+      responses:
+        "200": {description: Backlog status updated, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/pilot/report:
+    get:
+      summary: Generate a redacted pilot report
+      parameters:
+        - name: course_id
+          in: query
+          schema: {type: integer}
+      responses:
+        "200": {description: Pilot report markdown, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/evaluation/sets:
+    get:
+      summary: List evaluation sets
+      parameters:
+        - {$ref: "#/components/parameters/Page"}
+      responses:
+        "200": {description: Evaluation sets, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+    post:
+      summary: Create evaluation set
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name]
+              properties:
+                name: {type: string}
+                course_id: {type: integer, nullable: true}
+                discipline: {type: string}
+                description: {type: string}
+      responses:
+        "200": {description: Created, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/evaluation/items/import:
+    post:
+      summary: Import evaluation JSONL file
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [evaluation_set_id, file_path]
+              properties:
+                evaluation_set_id: {type: integer}
+                file_path: {type: string}
+      responses:
+        "200": {description: Import result, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/evaluation/items:
+    get:
+      summary: List evaluation items
+      parameters:
+        - name: evaluation_set_id
+          in: query
+          schema: {type: integer}
+        - name: split
+          in: query
+          schema: {type: string}
+      responses:
+        "200": {description: Evaluation items, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/evaluation/run:
+    post:
+      summary: Run evaluation set
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [evaluation_set_id]
+              properties:
+                evaluation_set_id: {type: integer}
+                split: {type: string, enum: [train, dev, test]}
+                model_version: {type: string}
+                prompt_version: {type: string}
+                retrieval_version: {type: string}
+      responses:
+        "200": {description: Evaluation metrics and run id, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/evaluation/runs:
+    get:
+      summary: List evaluation runs
+      parameters:
+        - {$ref: "#/components/parameters/Page"}
+      responses:
+        "200": {description: Evaluation runs, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/evaluation/runs/{run_id}:
+    get:
+      summary: Get evaluation run detail
+      parameters:
+        - name: run_id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        "200": {description: EvaluationRun detail, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/admin/users:
+    get:
+      summary: Admin user management list
+      parameters:
+        - {$ref: "#/components/parameters/Page"}
+      responses:
+        "200": {description: Users, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/admin/users/{user_id}/role:
+    post:
+      summary: Update a user's role
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          schema: {type: integer}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [role]
+              properties:
+                role: {type: string, enum: [student, teacher, admin]}
+      responses:
+        "200": {description: Role updated, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/admin/usage:
+    get:
+      summary: Admin usage records
+      parameters: [{$ref: "#/components/parameters/Page"}]
+      responses:
+        "200": {description: Usage, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/admin/billing:
+    get:
+      summary: Admin billing records
+      parameters: [{$ref: "#/components/parameters/Page"}]
+      responses:
+        "200": {description: Billing, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/admin/logs:
+    get:
+      summary: Admin system logs
+      parameters: [{$ref: "#/components/parameters/Page"}]
+      responses:
+        "200": {description: Logs, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/admin/ingestion-jobs:
+    get:
+      summary: Admin ingestion job list
+      parameters: [{$ref: "#/components/parameters/Page"}]
+      responses:
+        "200": {description: Jobs, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/admin/ai/providers:
+    get:
+      summary: List AI provider registry entries
+      responses:
+        "200": {description: AI providers, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/admin/ai/models:
+    get:
+      summary: List AI model registry entries
+      responses:
+        "200": {description: AI models, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/admin/ai/prompts:
+    get:
+      summary: List AI prompt templates
+      responses:
+        "200": {description: Prompt templates, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+    post:
+      summary: Create or update an AI prompt template
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [prompt_key, prompt_version, task_type, template_text]
+              properties:
+                prompt_key: {type: string}
+                prompt_version: {type: string}
+                task_type: {type: string}
+                language: {type: string}
+                template_text: {type: string}
+                json_schema: {type: object}
+                is_active: {type: boolean}
+                is_default: {type: boolean}
+                notes: {type: string}
+      responses:
+        "200": {description: Prompt saved, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/admin/ai/calls:
+    get:
+      summary: List redacted AI call logs
+      responses:
+        "200": {description: AI call logs, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/admin/ai/usage:
+    get:
+      summary: AI usage and estimated cost summary
+      responses:
+        "200": {description: AI usage summary, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/admin/ai/health:
+    get:
+      summary: AI provider health state
+      responses:
+        "200": {description: AI health state, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/admin/ai/healthcheck:
+    post:
+      summary: Run AI provider healthcheck
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                live_probe: {type: boolean, description: "Legacy parameter. Current pilot builds disable live provider transport probing and return a safe disabled result."}
+      responses:
+        "200": {description: Healthcheck result, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/admin/retrieval/vector-index/build:
+    post:
+      summary: Build or dry-run a vector index for a KB version
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [kb_version_id]
+              properties:
+                kb_version_id: {type: integer}
+                apply: {type: boolean}
+                embedding_provider: {type: string}
+                vector_index_backend: {type: string}
+      responses:
+        "200": {description: Vector index build result, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/admin/retrieval/experiments/run:
+    post:
+      summary: Run lexical/vector/hybrid/reranker retrieval experiment
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                course_id: {type: integer}
+                evaluation_set_id: {type: integer}
+                kb_version_id: {type: integer}
+      responses:
+        "200": {description: Retrieval experiment result, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "400": {$ref: "#/components/responses/Error400"}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/admin/retrieval/experiments:
+    get:
+      summary: List retrieval experiment runs
+      responses:
+        "200": {description: Retrieval experiments, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+  /api/admin/retrieval/experiments/{id}:
+    get:
+      summary: Get retrieval experiment run
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: {type: integer}
+      responses:
+        "200": {description: Retrieval experiment detail, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}
+        "404": {$ref: "#/components/responses/Error404"}
+  /api/admin/retrieval/health:
+    get:
+      summary: Retrieval backend and vector index health
+      parameters:
+        - name: kb_version_id
+          in: query
+          schema: {type: integer}
+      responses:
+        "200": {description: Retrieval health, content: {application/json: {schema: {$ref: "#/components/schemas/ApiSuccess"}}}}
+        "403": {$ref: "#/components/responses/Error403"}

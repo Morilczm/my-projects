@@ -1,0 +1,9 @@
+{
+  "aggregate_metrics_available": false,
+  "completed_sessions": 0,
+  "consented_participants": 0,
+  "quality_status": "REAL_STUDENT_PILOT_NOT_EXECUTED",
+  "reason": "No real participant session is executed or fabricated by automated validation.",
+  "synthetic_validation_is_real_pilot_evidence": false,
+  "target_completed_sessions_before_conclusion": 5
+}

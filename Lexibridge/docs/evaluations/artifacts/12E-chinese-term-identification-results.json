@@ -1,0 +1,121 @@
+{
+  "technical_status": "CHINESE_STANDARD_TERM_IDENTIFICATION_CONTRACT_CLOSED",
+  "quality_status": "CHINESE_STANDARD_TERM_IDENTIFICATION_QUALITY_BASELINE_ESTABLISHED",
+  "metrics": {
+    "coverage": 25,
+    "english_matched": 18,
+    "english_missing": 3,
+    "english_ambiguous": 4,
+    "retrieval_eligible": 18,
+    "identification_eligible": 15,
+    "retrieval_hit_at_1": 0.7222,
+    "retrieval_hit_at_3": 0.8333,
+    "retrieval_mrr": 0.7778,
+    "chinese_evidence_retrieved": 18,
+    "exact_candidate_generated": 14,
+    "exact_candidate_top1": 7,
+    "exact_candidate_top3": 12,
+    "candidate_mrr": 0.6378,
+    "no_candidate_count": 0,
+    "generic_false_positive_count": 0,
+    "definition_fragment_count": 0,
+    "pair_top1": 0,
+    "pair_top3": 0,
+    "evidence_qualified": 0,
+    "provider_ready": 0
+  },
+  "confusion_groups": [
+    {
+      "group": "电场 / 电场强度",
+      "concept_id": "cx-7f22",
+      "retrieved_chunk_ids": "zh-s14-p01|zh-s14-p04|zh-s13-p01",
+      "generated_candidates": [
+        "功",
+        "功率",
+        "力",
+        "压强",
+        "电势",
+        "电势差",
+        "电势能"
+      ],
+      "correct_term_rank": "",
+      "score_margin": "",
+      "generic_interference": false,
+      "definition_fragment_interference": false,
+      "requires_semantic_pairing": false,
+      "upstream_status": "UPSTREAM_CROSS_LANGUAGE_RETRIEVAL_MISS"
+    },
+    {
+      "group": "电势 / 电势能",
+      "concept_id": "cx-7f23",
+      "retrieved_chunk_ids": "zh-s13-p01|zh-s14-p04|zh-s13-p02",
+      "generated_candidates": [
+        "电势",
+        "电势差",
+        "电势能",
+        "力",
+        "压强",
+        "电容"
+      ],
+      "correct_term_rank": 1,
+      "score_margin": 0.0,
+      "generic_interference": false,
+      "definition_fragment_interference": false,
+      "requires_semantic_pairing": true,
+      "upstream_status": ""
+    },
+    {
+      "group": "角速度 / 角加速度",
+      "concept_id": "cx-7f18",
+      "retrieved_chunk_ids": "zh-s11-p03|zh-s12-p02|zh-s11-p01",
+      "generated_candidates": [
+        "向心加速度",
+        "角速度",
+        "加速度",
+        "惯性",
+        "质量",
+        "力矩",
+        "转动惯量"
+      ],
+      "correct_term_rank": 2,
+      "score_margin": 0.0,
+      "generic_interference": false,
+      "definition_fragment_interference": false,
+      "requires_semantic_pairing": true,
+      "upstream_status": ""
+    },
+    {
+      "group": "动量 / 角动量",
+      "concept_id": "cx-7f07",
+      "retrieved_chunk_ids": "",
+      "generated_candidates": [],
+      "correct_term_rank": "",
+      "score_margin": "",
+      "generic_interference": false,
+      "definition_fragment_interference": false,
+      "requires_semantic_pairing": false,
+      "upstream_status": "UPSTREAM_ENGLISH_BINDING_AMBIGUOUS"
+    },
+    {
+      "group": "质量 / 重量",
+      "concept_id": "cx-7f05",
+      "retrieved_chunk_ids": "zh-s12-p03|zh-s12-p02|zh-s12-p04",
+      "generated_candidates": [
+        "冲量",
+        "动量",
+        "加速度",
+        "惯性",
+        "质量",
+        "重量"
+      ],
+      "correct_term_rank": 5,
+      "score_margin": -0.04,
+      "generic_interference": false,
+      "definition_fragment_interference": false,
+      "requires_semantic_pairing": true,
+      "upstream_status": ""
+    }
+  ],
+  "real_provider_requests": 0,
+  "external_api_requests": 0
+}

@@ -1,0 +1,7 @@
+# Optional Task 12D.0 runtime. Not installed by ordinary development or CI.
+# Python 3.9 / macOS arm64 qualification path: Sentence Transformers + PyTorch CPU.
+# The companion .lock.txt freezes the complete resolved dependency graph.
+sentence-transformers==3.4.1
+torch==2.5.1
+transformers==4.48.3
+numpy==2.0.2

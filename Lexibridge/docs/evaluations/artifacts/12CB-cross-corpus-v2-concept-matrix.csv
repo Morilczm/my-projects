@@ -1,0 +1,26 @@
+concept_id,english_term,english_binding,chinese_source_term_present,chinese_retrieval_rank,exact_chinese_candidate_generated,chinese_candidate_rank,bilingual_pair_correct,evidence_qualified,provider_ready,primary_attribution,included_in_denominator
+cx-7f01,displacement,matched,True,,False,,False,False,False,CROSS_LANGUAGE_RETRIEVAL_MISS,True
+cx-7f02,velocity,ambiguous,True,,False,,False,False,False,AMBIGUOUS,True
+cx-7f03,acceleration,ambiguous,True,,False,,False,False,False,AMBIGUOUS,True
+cx-7f04,force,missing,True,,False,,False,False,False,ENGLISH_EXTRACTION_MISSING,True
+cx-7f05,mass,matched,True,,False,,False,False,False,CROSS_LANGUAGE_RETRIEVAL_MISS,True
+cx-7f06,inertia,ambiguous,True,,False,,False,False,False,AMBIGUOUS,True
+cx-7f07,momentum,ambiguous,True,,False,,False,False,False,AMBIGUOUS,True
+cx-7f08,impulse,missing,True,,False,,False,False,False,ENGLISH_EXTRACTION_MISSING,True
+cx-7f09,kinetic energy,matched,True,,False,,False,False,False,CROSS_LANGUAGE_RETRIEVAL_MISS,True
+cx-7f10,gravitational potential energy,matched,True,,False,,False,False,False,CROSS_LANGUAGE_RETRIEVAL_MISS,True
+cx-7f11,work,matched,True,,False,,False,False,False,CROSS_LANGUAGE_RETRIEVAL_MISS,True
+cx-7f12,power,matched,True,,False,,False,False,False,CROSS_LANGUAGE_RETRIEVAL_MISS,True
+cx-7f13,mechanical energy,matched,True,,False,,False,False,False,CROSS_LANGUAGE_RETRIEVAL_MISS,True
+cx-7f14,conservation of momentum,matched,True,,False,,False,False,False,CROSS_LANGUAGE_RETRIEVAL_MISS,True
+cx-7f15,conservation of mechanical energy,matched,True,,False,,False,False,False,CROSS_LANGUAGE_RETRIEVAL_MISS,True
+cx-7f16,uniform circular motion,missing,True,,False,,False,False,False,ENGLISH_EXTRACTION_MISSING,True
+cx-7f17,centripetal force,matched,True,,False,,False,False,False,CROSS_LANGUAGE_RETRIEVAL_MISS,True
+cx-7f18,angular velocity,matched,True,,False,,False,False,False,CROSS_LANGUAGE_RETRIEVAL_MISS,True
+cx-7f19,angular momentum,matched,True,,False,,False,False,False,CROSS_LANGUAGE_RETRIEVAL_MISS,True
+cx-7f20,torque,matched,True,,False,,False,False,False,CROSS_LANGUAGE_RETRIEVAL_MISS,True
+cx-7f21,electric charge,matched,True,,False,,False,False,False,CROSS_LANGUAGE_RETRIEVAL_MISS,True
+cx-7f22,electric field,matched,True,,False,,False,False,False,CROSS_LANGUAGE_RETRIEVAL_MISS,True
+cx-7f23,electric potential,matched,True,,False,,False,False,False,CROSS_LANGUAGE_RETRIEVAL_MISS,True
+cx-7f24,potential difference,matched,True,,False,,False,False,False,CROSS_LANGUAGE_RETRIEVAL_MISS,True
+cx-7f25,capacitance,matched,True,,False,,False,False,False,CROSS_LANGUAGE_RETRIEVAL_MISS,True

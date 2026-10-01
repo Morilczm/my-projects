@@ -1,0 +1,9 @@
+Rotational Motion Notes
+
+Angular velocity gives the time rate of change of angular position. Angular acceleration describes how angular velocity itself changes.
+
+Torque measures the turning action of a force about an axis. Moment of inertia characterizes rotational resistance and is a useful nearby concept.
+
+Angular momentum describes rotational motion and depends on rotational inertia and angular velocity. Conservation of momentum states that total momentum remains fixed for an isolated system.
+
+Centripetal force points inward during curved motion. Centripetal acceleration is a related kinematic quantity, while uniform circular motion keeps speed constant along a circular path.

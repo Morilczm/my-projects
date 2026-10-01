@@ -1,0 +1,9 @@
+actor,workspace,operation,result,reason
+owner_student,PERSONAL,list_detail_update,ALLOW,exact student ownership
+other_student,PERSONAL,list_foreign_rows,DENY,owner isolation
+owner_student,MANAGED_COURSE,list_detail_update,ALLOW,active course membership
+former_member,MANAGED_COURSE,list_detail_update,DENY,membership rechecked
+instructor,PERSONAL_OR_MANAGED,notebook_api,DENY,student-only private route
+reviewer,PERSONAL_OR_MANAGED,notebook_api,DENY,ordinary query excluded from Reviewer Console
+admin,PERSONAL_OR_MANAGED,notebook_api,DENY,ordinary student API is not an admin export
+owner_student,PERSONAL,deleted_source_history,ALLOW_WITH_UNAVAILABLE_EVIDENCE,historical learning retained

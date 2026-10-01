@@ -1,0 +1,10 @@
+case,input_surface,expected,result,reason
+unique_exact,PDF.js text layer,governed chunk/span mapped,PASS,
+normalized_whitespace,PDF.js text layer,original governed offsets preserved,PASS,
+omitted_layout_whitespace,PDF.js text layer,unique governed compact match required,PASS,
+repeated_text_with_page_ordinal,PDF.js text layer,unique occurrence mapped,PASS,
+ambiguous_across_chunks,PDF.js text layer,blocked,PASS,PDF_SELECTION_AMBIGUOUS
+missing_from_governed_text,PDF.js text layer,blocked,PASS,PDF_SELECTION_NOT_MAPPED
+over_180_characters,PDF.js text layer,blocked,PASS,PDF_SELECTION_TOO_LONG
+outside_text_layer,browser selection,blocked,PASS,PDF_SELECTION_OUTSIDE_TEXT_LAYER
+reader_not_ready,browser selection,blocked,PASS,PDF_SELECTION_READER_NOT_READY

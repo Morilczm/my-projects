@@ -1,0 +1,7 @@
+alignment_status,learning_support_status,recommendation_claim,candidate_evidence,concept_comparison,student_access
+READY,EVIDENCE_GROUNDED,EVIDENCE_BACKED_RECOMMENDATION,bounded allowed candidates,EVIDENCE_SIDE_BY_SIDE with UNRESOLVED boundary,view and save
+READY,GROUNDING_INCOMPLETE,NONE,empty or incomplete,none,view fail-closed result
+REVIEW_REQUIRED,ALTERNATIVES_UNRESOLVED,TENTATIVE,bounded evidence-backed alternatives,EVIDENCE_SIDE_BY_SIDE with UNRESOLVED boundary,view and save with uncertainty
+REVIEW_REQUIRED,GROUNDING_INCOMPLETE,NONE,empty or incomplete,none,view fail-closed result
+NOT_READY,NO_RELIABLE_ALIGNMENT,NONE,none,none,view and save without canonical claim
+ANY,SOURCE_UNAVAILABLE,HISTORICAL_RESULT_ONLY,none,none,view historical record without evidence

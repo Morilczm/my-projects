@@ -1,0 +1,6 @@
+[
+  {"username": "admin", "email": "admin@lexibridge.local", "password": "Admin1234", "role": "admin"},
+  {"username": "teacher", "email": "teacher@lexibridge.local", "password": "Teacher1234", "role": "teacher"},
+  {"username": "student", "email": "student@lexibridge.local", "password": "Student1234", "role": "student"},
+  {"username": "student2", "email": "student2@lexibridge.local", "password": "Student2234", "role": "student"}
+]

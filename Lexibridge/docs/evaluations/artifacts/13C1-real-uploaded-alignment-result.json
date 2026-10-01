@@ -1,0 +1,38 @@
+{
+  "alignment_status": "NOT_READY",
+  "chinese_candidate_count": 1,
+  "chinese_evidence_count": 1,
+  "contract_id": "real-uploaded-student-alignment-13c1@1.0.0",
+  "english_evidence_count": 1,
+  "environment": "synthetic-local-offline-real-model",
+  "external_api_used_during_acceptance": false,
+  "model": {
+    "backend_id": "local_multilingual_e5_pytorch_cpu_v1",
+    "model_id": "intfloat/multilingual-e5-small",
+    "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "offline": true
+  },
+  "personal_record_saved": true,
+  "private_source_text_in_artifact": false,
+  "processing_status": "completed",
+  "qualification_decision": "REJECTED",
+  "qualification_reason_codes": [
+    "EVIDENCE_SOURCE_NOT_ELIGIBLE"
+  ],
+  "query_latency_ms": 2755.05,
+  "real_provider_requests": 0,
+  "reranker_mode": "deterministic-fixed-contract-replay",
+  "risk_labels": [
+    "bilingual_alignment_not_verified",
+    "candidate_not_alignment_verified",
+    "evidence_from_low_trust_source",
+    "evidence_from_needs_review_source",
+    "missing_chinese_term"
+  ],
+  "same_uploaded_english_source": true,
+  "source_provenance_retained": true,
+  "status": "PASS",
+  "student_alignment_runner_injected": false,
+  "total_latency_ms": 2864.32,
+  "uploaded_chinese_source_only": true
+}

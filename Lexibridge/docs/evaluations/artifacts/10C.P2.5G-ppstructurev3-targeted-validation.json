@@ -1,0 +1,127 @@
+{
+  "baseline_commit": "1ac7955009b8885a6444db3ee817652afc001968",
+  "branch": "eval/ppstructurev3-targeted-validation-10c-p25g",
+  "created_at": "2026-08-01T15:41:48.686721Z",
+  "database": {
+    "accepted_as_normal_baseline": false,
+    "database_accessed": false,
+    "incident_freeze_sha256_after": "9e6fb68ab13dff2763e2fff18d2aee531486360c557f058eb8a471d9209a9eaa",
+    "incident_freeze_sha256_before": "9e6fb68ab13dff2763e2fff18d2aee531486360c557f058eb8a471d9209a9eaa",
+    "mtime_epoch_after": 1785496597,
+    "mtime_epoch_before": 1785496597,
+    "shm_present_after": false,
+    "shm_present_before": false,
+    "size_bytes_after": 1015808,
+    "size_bytes_before": 1015808,
+    "wal_present_after": false,
+    "wal_present_before": false
+  },
+  "decision": {
+    "reason": "PP-StructureV3 isolated runtime did not reach import/initialization because the local inference engine was unavailable.",
+    "selected_for_adapter_design": false
+  },
+  "docling_comparison": {
+    "comparison_completed": false,
+    "docling_known_failure": "two-column reading order L2 DOCLING_ASSEMBLY_DEFECT",
+    "reason": "No PP-StructureV3 structured output was available; Docling comparison remains limited to P2.5F evidence."
+  },
+  "documentation_sources": [
+    "PaddleOCR official installation documentation, version 3.x",
+    "PaddleOCR official PP-StructureV3 API documentation, version 3.x",
+    "Installed paddleocr 3.7.0 source: paddleocr/_pipelines/pp_structurev3.py",
+    "Installed paddlex 3.7.2 source: paddlex/utils/cache.py"
+  ],
+  "environment": {
+    "architecture": "arm64",
+    "conda": "25.9.1",
+    "environment_name": "lexibridge-eval-ppstructurev3",
+    "environment_path_policy": "<CONDA_ROOT>/envs/lexibridge-eval-ppstructurev3",
+    "os": "macOS 26.5.2",
+    "pip": "26.2",
+    "python": "3.11.15",
+    "rosetta_used": false
+  },
+  "network": {
+    "document_egress": 0,
+    "external_document_api_requests": 0,
+    "model_download_requests": 0,
+    "offline_rerun_network_requests": 0,
+    "package_download_requests": "pypi_and_conda_only",
+    "provider_requests": 0
+  },
+  "package_manifest": {
+    "huggingface_hub": "1.26.0",
+    "modelscope": "1.39.0",
+    "numpy": "2.3.5",
+    "onnxruntime": "NOT_INSTALLED",
+    "opencv-contrib-python": "4.10.0.84",
+    "paddleocr": "3.7.0",
+    "paddlepaddle": "NOT_INSTALLED",
+    "paddlex": "3.7.2",
+    "pypdfium2": "5.12.1",
+    "transformers": "NOT_INSTALLED"
+  },
+  "performance": {
+    "cold_import_time_ms": null,
+    "cold_initialization_time_ms": null,
+    "environment_size": "865M",
+    "first_parse_time_ms": null,
+    "median_warm_parse_ms": null,
+    "model_cache_size": "0B",
+    "peak_rss_kb": null,
+    "warm_initialization_time_ms": null,
+    "warm_parse_time_ms": null
+  },
+  "production": {
+    "candidate_governance_changed": false,
+    "database_schema_changed": false,
+    "formal_workflow_changed": false,
+    "production_parser_changed": false
+  },
+  "runtime": {
+    "api_parameters_observed_from_installed_source": [
+      "use_doc_orientation_classify",
+      "use_doc_unwarping",
+      "use_textline_orientation",
+      "use_seal_recognition",
+      "use_table_recognition",
+      "use_formula_recognition",
+      "use_chart_recognition",
+      "use_region_detection",
+      "lang",
+      "ocr_version"
+    ],
+    "blocked_reason": "Local PP-StructureV3 import/initialization cannot be validated because the Paddle inference engine is unavailable in the isolated arm64 environment.",
+    "cache_env_var": "PADDLE_PDX_CACHE_HOME",
+    "cache_path": "<LOCAL_PRIVATE_TMP>/lexibridge-10cp25g/paddlex-cache",
+    "cache_size": "0B",
+    "first_parse_status": "not_attempted_runtime_blocked",
+    "import_status": "PPSTRUCTUREV3_IMPORT_TIMEOUT",
+    "import_timeout_seconds": 60,
+    "initialization_status": "not_attempted_import_not_ready",
+    "loaded_models": [],
+    "model_cache_manifest": [],
+    "offline_rerun_status": "not_attempted_runtime_blocked",
+    "paddleocr_install_status": "installed",
+    "paddlepaddle_install_status": "interrupted_after_no_progress_output",
+    "paddlepaddle_install_wait_seconds_before_interrupt": 300,
+    "version_combo": "paddleocr[doc-parser]==3.7.0 + paddlex==3.7.2 + paddlepaddle==3.2.2 attempt"
+  },
+  "schema_version": "10C.P2.5G-ppstructurev3-targeted-validation-v1",
+  "status": "PPSTRUCTUREV3_RUNTIME_BLOCKED",
+  "targeted_quality": {
+    "fixtures_evaluated": [],
+    "quality_evaluation_completed": false,
+    "reason": "Runtime did not reach import/initialization; no PDF or raster fixture was parsed by PP-StructureV3.",
+    "required_fixtures_if_runtime_ready": [
+      "two_column_born_digital_pdf",
+      "two_column_born_digital_page_raster",
+      "mixed_layout_blocker",
+      "scanned_bilingual",
+      "simple_table",
+      "raster_formula",
+      "plain_raster_image"
+    ]
+  },
+  "task": "10C.P2.5G"
+}

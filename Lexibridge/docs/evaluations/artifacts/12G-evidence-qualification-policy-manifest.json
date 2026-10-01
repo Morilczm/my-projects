@@ -1,0 +1,37 @@
+{
+  "policy_id": "governed-bilingual-evidence-qualification",
+  "policy_version": "1.0.0",
+  "thresholds": {
+    "minimum_evidence_score": 0.35,
+    "minimum_pair_semantic_score": 0.35,
+    "minimum_pair_margin": 0.05,
+    "minimum_qualification_score": 0.65,
+    "minimum_context_chars": 12
+  },
+  "existing_evidence_threshold_changed": false,
+  "score_weights": {
+    "english_span_validity": 0.1,
+    "chinese_span_validity": 0.1,
+    "provenance_completeness": 0.15,
+    "source_governance": 0.15,
+    "pair_semantic_score": 0.25,
+    "pair_margin_score": 0.1,
+    "retrieval_support": 0.075,
+    "extraction_support": 0.075
+  },
+  "hard_governance_gates": [
+    "EVIDENCE_PROVENANCE_INCOMPLETE",
+    "EVIDENCE_SOURCE_NOT_ELIGIBLE",
+    "EVIDENCE_LANGUAGE_SCOPE_INVALID",
+    "EVIDENCE_PAIR_NOT_TOP1",
+    "EVIDENCE_PAIR_SCORE_INSUFFICIENT",
+    "EVIDENCE_CONTEXT_INSUFFICIENT"
+  ],
+  "decision_mapping": {
+    "QUALIFIED": "all hard gates pass, margin passes, aggregate score passes",
+    "REVIEW_REQUIRED": "hard gates pass but pair margin is insufficient",
+    "REJECTED": "one or more hard gates fail or aggregate score is insufficient"
+  },
+  "unknown_decision_fails_closed": true,
+  "qualification_score_is_probability": false
+}

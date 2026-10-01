@@ -1,0 +1,38 @@
+{
+  "technical_status": "LAYOUT_AWARE_INGESTION_RETRIEVAL_CONTRACT_CLOSED",
+  "quality_status": "LAYOUT_AWARE_INGESTION_RETRIEVAL_BASELINE_ESTABLISHED",
+  "fixture_corpus": {
+    "english_pdfs": 2,
+    "chinese_pdfs": 2,
+    "concepts": 10,
+    "confusion_groups": 5,
+    "private_material_used": false,
+    "inline_bilingual_term_leakage": false
+  },
+  "parsing": {
+    "sources_succeeded": 4,
+    "sources_failed": 0,
+    "page_count": 20,
+    "layout_block_count": 64,
+    "parsers": [
+      "pymupdf_layout_rule_based"
+    ],
+    "layout_fallback_count": 0
+  },
+  "chunking": {
+    "chunk_count": 20,
+    "average_length": 72.25,
+    "median_length": 69.0,
+    "heading_definition_integrity_rate": 1.0,
+    "cross_section_contamination_count": 0,
+    "duplicate_chunk_count": 0,
+    "provenance_completeness": 1.0,
+    "list_retained": true,
+    "table_retained": true,
+    "formula_retained": true,
+    "max_chars": 1200,
+    "overlap_chars": 120
+  },
+  "external_api_used": false,
+  "real_provider_requests": 0
+}

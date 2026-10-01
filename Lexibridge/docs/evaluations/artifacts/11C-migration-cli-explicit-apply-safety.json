@@ -1,0 +1,145 @@
+{
+  "task": "11C",
+  "status": "MIGRATION_CLI_EXPLICIT_APPLY_SAFETY_CLOSED",
+  "baseline_commit": "a1aaa8b3eb6ed15d7161ae3dfdfe608e4a7b2384",
+  "branch": "fix/migration-cli-explicit-apply-11c",
+  "cli_contract": {
+    "help": {
+      "command": "python scripts/migrate_db.py --help",
+      "exit_code": 0,
+      "app_import": false,
+      "db_access": false,
+      "migration": false,
+      "seed": false
+    },
+    "no_args": {
+      "command": "python scripts/migrate_db.py",
+      "exit_code": 2,
+      "app_import": false,
+      "db_access": false,
+      "migration": false,
+      "seed": false
+    },
+    "unknown_args": {
+      "command": "python scripts/migrate_db.py --unknown",
+      "exit_code": 2,
+      "app_import": false,
+      "db_access": false,
+      "migration": false,
+      "seed": false
+    },
+    "apply_unknown_args": {
+      "command": "python scripts/migrate_db.py --apply --unknown",
+      "exit_code": 2,
+      "app_import": false,
+      "db_access": false,
+      "migration": false,
+      "seed": false
+    },
+    "apply": {
+      "command": "python scripts/migrate_db.py --apply",
+      "exit_code": 0,
+      "app_import": true,
+      "db_access": "isolated_temp_database",
+      "migration": true,
+      "seed": true,
+      "repeatable": true
+    }
+  },
+  "import_safety": {
+    "argparse_before_backend_import": true,
+    "backend_app_import_delayed_until_apply": true,
+    "unknown_args_rejected_before_backend_import": true,
+    "empty_args_rejected_before_backend_import": true
+  },
+  "caller_audit": [
+    {
+      "caller": "scripts/dev_check.py",
+      "decision": "add --apply",
+      "reason": "Explicit temporary database initialization step"
+    },
+    {
+      "caller": "scripts/run_backend.sh",
+      "decision": "add --apply",
+      "reason": "Startup script intentionally migrates before backend launch"
+    },
+    {
+      "caller": "scripts/run_browser_e2e.py",
+      "decision": "add --apply",
+      "reason": "Uses isolated browser E2E database"
+    },
+    {
+      "caller": "scripts/pilot_readiness_check.py",
+      "decision": "add --apply",
+      "reason": "Fresh readiness database migration phase"
+    },
+    {
+      "caller": "migration and seed tests",
+      "decision": "add --apply",
+      "reason": "Tests intentionally execute migration against pytest temp databases"
+    },
+    {
+      "caller": "scripts/build_final_release.py",
+      "decision": "unchanged",
+      "reason": "Only compiles migration script"
+    }
+  ],
+  "migration_semantics": {
+    "create_all_order_kept": true,
+    "ensure_schema_columns_order_kept": true,
+    "seed_order_kept": true,
+    "error_propagation_kept": true,
+    "business_seed_logic_changed": false
+  },
+  "dev_check": {
+    "executed": true,
+    "database": "<DEV_CHECK_TEMP>/lexibridge_dev_check.db",
+    "migration_command": "python scripts/migrate_db.py --apply",
+    "isolated": true,
+    "result": "All local pre-release checks passed."
+  },
+  "tests": [
+    {
+      "command": "backend/.venv-macos/bin/python -m pytest tests/test_migrate_db_cli.py -q",
+      "result": "5 passed"
+    },
+    {
+      "command": "migration/dev_check/release-safety focused suite",
+      "result": "40 passed"
+    },
+    {
+      "command": "LEXIBRIDGE_TESSERACT_CMD=<verified local tesseract> backend/.venv-macos/bin/python scripts/dev_check.py",
+      "result": "All local pre-release checks passed."
+    },
+    {
+      "command": "LEXIBRIDGE_TESSERACT_CMD=<verified local tesseract> backend/.venv-macos/bin/python -m pytest -q",
+      "result": "1213 passed, 6 warnings"
+    },
+    {
+      "command": "backend/.venv-macos/bin/python scripts/check_release_safety.py",
+      "result": "Release safety check passed."
+    }
+  ],
+  "database_protection": {
+    "incident_database": "backend/lexibridge.db",
+    "incident_sha256": "9e6fb68ab13dff2763e2fff18d2aee531486360c557f058eb8a471d9209a9eaa",
+    "accepted_as_new_normal_baseline": false,
+    "incident_database_apply_executed": false,
+    "tests_use_isolated_database": true,
+    "wal_created": false,
+    "shm_created": false
+  },
+  "privacy_network": {
+    "provider_requests": 0,
+    "external_document_api_requests": 0,
+    "document_egress": 0,
+    "private_data_usage": 0,
+    "model_downloads": 0,
+    "external_network_requests": 0
+  },
+  "remaining_limitations": [
+    "The additive migration mechanism remains unchanged and is not replaced by Alembic.",
+    "Migration and seed business content are not changed.",
+    "Historical documents can still mention pre-11C commands as historical records."
+  ]
+}

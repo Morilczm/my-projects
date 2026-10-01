@@ -1,0 +1,28 @@
+{
+  "knowledge_base_version_id": 3,
+  "course_id": 1,
+  "scope_type": "course",
+  "version_name": "course-1-kb-v3",
+  "status": "published",
+  "source_count": 2,
+  "chunk_count": 42,
+  "deduped_chunk_count": 4,
+  "index_backend": "local_lexical",
+  "index_version": "local_lexical_v1",
+  "retrieval_version": "local_lexical_v1",
+  "sources": [
+    {
+      "source_title": "Signal Processing Notes",
+      "language": "en",
+      "source_type": "teacher_upload",
+      "authorization_status": "allowed_for_course_use",
+      "status": "active",
+      "chunk_count": 20
+    }
+  ],
+  "quality": {
+    "duplicate_ratio": 0.1,
+    "unknown_authorization_count": 0,
+    "health_status": "PASS"
+  }
+}

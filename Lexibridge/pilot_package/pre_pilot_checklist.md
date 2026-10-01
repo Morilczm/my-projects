@@ -1,0 +1,24 @@
+# Pre-Pilot Checklist
+
+- [ ] Environment configuration check passed.
+- [ ] Database migration script passed.
+- [ ] Storage integrity check passed.
+- [ ] OpenAPI contract tests passed.
+- [ ] Permission tests passed.
+- [ ] Personal knowledge base isolation tests passed.
+- [ ] OCR provider state confirmed.
+- [ ] Formula OCR provider state confirmed.
+- [ ] AI provider state confirmed.
+- [ ] KnowledgeBaseVersion published or candidate version reviewed.
+- [ ] Retrieval regression completed.
+- [ ] Evaluation smoke set completed.
+- [ ] Demo flow completed.
+- [ ] Backup completed.
+- [ ] Teacher accounts created.
+- [ ] Student accounts created.
+- [ ] Pilot course created.
+- [ ] Material authorization confirmed.
+- [ ] Privacy and risk notice prepared.
+- [ ] Teacher manual shared.
+- [ ] Student manual shared.
+- [ ] Pilot owner assigned.

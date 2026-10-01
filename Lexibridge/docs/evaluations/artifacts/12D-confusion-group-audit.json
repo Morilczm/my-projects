@@ -1,0 +1,57 @@
+[
+  {
+    "group": "electric field / electric field strength",
+    "query_id": "cx-7f22",
+    "correct_rank": "",
+    "top1_correct": false,
+    "top3_correct": false,
+    "primary_error_chunk": "zh-s14-p01",
+    "score_margin": "",
+    "concept_scope_confusion": true,
+    "requires_reranker": true
+  },
+  {
+    "group": "electric potential / electric potential energy",
+    "query_id": "cx-7f23",
+    "correct_rank": 1,
+    "top1_correct": true,
+    "top3_correct": true,
+    "primary_error_chunk": "zh-s14-p04",
+    "score_margin": 0.00476284,
+    "concept_scope_confusion": false,
+    "requires_reranker": false
+  },
+  {
+    "group": "angular velocity / angular acceleration",
+    "query_id": "cx-7f18",
+    "correct_rank": 1,
+    "top1_correct": true,
+    "top3_correct": true,
+    "primary_error_chunk": "zh-s12-p02",
+    "score_margin": 0.00998848,
+    "concept_scope_confusion": false,
+    "requires_reranker": false
+  },
+  {
+    "group": "momentum / angular momentum",
+    "query_id": "cx-7f07",
+    "correct_rank": "",
+    "top1_correct": false,
+    "top3_correct": false,
+    "primary_error_chunk": "",
+    "score_margin": "",
+    "concept_scope_confusion": true,
+    "requires_reranker": true
+  },
+  {
+    "group": "mass / weight",
+    "query_id": "cx-7f05",
+    "correct_rank": 1,
+    "top1_correct": true,
+    "top3_correct": true,
+    "primary_error_chunk": "",
+    "score_margin": "",
+    "concept_scope_confusion": false,
+    "requires_reranker": false
+  }
+]

@@ -1,0 +1,1542 @@
+{
+  "attribution_counts": {
+    "CHINESE_CANDIDATE_BOUNDARY_DEFECT": 25
+  },
+  "cross_corpus_alignment_validated": false,
+  "diagnostic_scope": "inline_bilingual_fixture_path",
+  "dominant_root_cause": "INLINE_BILINGUAL_CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+  "candidate_morphology": {
+    "accepted_alias_concept_count": 0,
+    "average_candidate_length": 15.8333,
+    "candidate_count_per_concept": {
+      "physics-01": 1,
+      "physics-02": 2,
+      "physics-03": 1,
+      "physics-04": 2,
+      "physics-05": 1,
+      "physics-06": 1,
+      "physics-07": 3,
+      "physics-08": 1,
+      "physics-09": 1,
+      "physics-10": 1,
+      "physics-11": 1,
+      "physics-12": 1,
+      "physics-13": 2,
+      "physics-14": 1,
+      "physics-15": 1,
+      "physics-16": 1,
+      "physics-17": 1,
+      "physics-18": 1,
+      "physics-19": 1,
+      "physics-20": 1,
+      "physics-21": 1,
+      "physics-22": 1,
+      "physics-23": 1,
+      "physics-24": 1,
+      "physics-25": 1
+    },
+    "contains_definition_predicate_count": 30,
+    "definition_fragment_count": 30,
+    "definition_fragment_ratio": 1.0,
+    "duplicate_count": 0,
+    "duplicate_ratio": 0.0,
+    "equal_score_competition_concept_count": 4,
+    "fullwidth_ascii_count": 0,
+    "generic_candidate_count": 0,
+    "generic_candidate_ratio": 0.0,
+    "mixed_language_count": 0,
+    "overgenerated_concept_count": 4,
+    "overlong_explanation_count": 25,
+    "parenthesized_english_count": 0,
+    "ranking_inversion_count": 0,
+    "single_character_count": 0,
+    "symbol_or_unit_count": 0,
+    "top1_precision_proxy": 0.0,
+    "top3_precision_proxy": 0.0,
+    "total_candidates": 30,
+    "traditional_variant_observed": false,
+    "unicode_punctuation_count": 0
+  },
+  "frozen_hashes": {
+    "corpus_sha256": "33715999c16a74610091b1e40896ee41921570a3740ebc2815565cf0ab7202dc",
+    "gold_sha256": "199baed9a8cb6deb68ae3480c3a67679b2daf273d3733e909d4e861685d45302"
+  },
+  "metrics": {
+    "benchmark_coverage": "25/25",
+    "bilingual_pair_top1_accuracy": 0.0,
+    "bilingual_pair_top3_accuracy": 0.0,
+    "candidate_source_retrieval_hit_at_1": 0.6,
+    "candidate_source_retrieval_hit_at_3": 1.0,
+    "candidate_source_retrieval_mrr": 0.8,
+    "chinese_alias_candidate_generated": 0,
+    "chinese_candidate_generated": 25,
+    "chinese_candidate_mrr": 0.0,
+    "chinese_candidate_top1_accuracy": 0.0,
+    "chinese_candidate_top3_accuracy": 0.0,
+    "chinese_exact_candidate_generated": 0,
+    "chinese_gold_chunk_present": 25,
+    "chinese_gold_parsed_text_present": 25,
+    "chinese_gold_source_present": 25,
+    "english_exact_matched": 25,
+    "evidence_qualified_count": 5,
+    "provider_ready_count": 5,
+    "selected_term_evidence_hit_at_1": 1.0,
+    "selected_term_evidence_hit_at_3": 1.0,
+    "selected_term_evidence_mrr": 1.0
+  },
+  "production_core_path_represented": false,
+  "production_quality_modified": false,
+  "real_provider_requests": 0,
+  "recommended_next_task": "English-to-Chinese cross-corpus alignment architecture audit",
+  "rows": [
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-01",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "1798d57364bd48318981f93b7d394e1d",
+      "english_normalized_term": "displacement",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "94c97257-55f3-495e-a576-3791b61d8ccb"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "位移是从初位置指向末位置的位置变化量"
+      ],
+      "generated_chinese_candidate_ids": [
+        "fcc8db09be88c937c8a90e8a"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 1,
+      "gold_chinese_term": "位移",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "94c97257-55f3-495e-a576-3791b61d8ccb"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "位移是从初位置指向末位置的位置变化量"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81,
+        0.81
+      ],
+      "candidate_count": 2,
+      "candidate_ranks": [
+        1,
+        2
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-02",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "a67733995f4b4fa0a0fc0663cd0be2bf",
+      "english_normalized_term": "velocity",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "62b83b11-4048-4827-bea1-3c3f4518ea1e",
+        "b8cc85b2-e92a-4c00-93a3-0214db622642"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1",
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "角速度是角位置随时间变化的率",
+        "速度描述位移随时间变化的快慢和方向"
+      ],
+      "generated_chinese_candidate_ids": [
+        "a5eac44b249a6982aca3d14f",
+        "33ad6421620b8d3ce6fbc6cb"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 2,
+      "gold_chinese_term": "速度",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "bcbd9280-1c14-4cab-807c-f186acb3999c",
+        "62b83b11-4048-4827-bea1-3c3f4518ea1e",
+        "b8cc85b2-e92a-4c00-93a3-0214db622642"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "multiple_equal_score_candidates",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "速度描述位移随时间变化的快慢和方向"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-03",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "d23bbb21cd93411297c8c4b4c8ea4017",
+      "english_normalized_term": "acceleration",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "f0f7433d-879b-4c40-9a64-ecfb9bf72c78"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "加速度是速度随时间变化的率"
+      ],
+      "generated_chinese_candidate_ids": [
+        "93e5f9839e7252812b1e2cd5"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 1,
+      "gold_chinese_term": "加速度",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "f0f7433d-879b-4c40-9a64-ecfb9bf72c78"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "加速度是速度随时间变化的率"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81,
+        0.81
+      ],
+      "candidate_count": 2,
+      "candidate_ranks": [
+        1,
+        2
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-04",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "20e2a18ecd584a359c266cb4779ac2db",
+      "english_normalized_term": "force",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "7c6c87eb-0cb8-47a0-8f59-7cb5e2af5c8e",
+        "f8271e83-beae-4981-af0a-e1dd2a59c999"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1",
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "向心力是维持圆周运动所需的指向圆心的合力",
+        "力是能够改变物体运动状态的相互作用"
+      ],
+      "generated_chinese_candidate_ids": [
+        "1345ef69f3d68e5db7ec4d7d",
+        "fd614f6689ddffbed3c0afb9"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 1,
+      "gold_chinese_term": "力",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "7c6c87eb-0cb8-47a0-8f59-7cb5e2af5c8e",
+        "f8271e83-beae-4981-af0a-e1dd2a59c999"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "multiple_equal_score_candidates",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "向心力是维持圆周运动所需的指向圆心的合力"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-05",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "ed6788c08b3d4163ab9ed98e794a7272",
+      "english_normalized_term": "mass",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "62da353f-d6af-49d5-b2ba-acd0ca3b8553"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "质量表示物体所含物质多少"
+      ],
+      "generated_chinese_candidate_ids": [
+        "cb1fd83539873bff0a527526"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 1,
+      "gold_chinese_term": "质量",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "62da353f-d6af-49d5-b2ba-acd0ca3b8553"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "质量表示物体所含物质多少"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-06",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "5bde5405e2974890bf1761868d9a443b",
+      "english_normalized_term": "inertia",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "bef44bb4-634f-488b-a39c-9ba11b54bd56"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "惯性是物体保持原有运动状态的性质"
+      ],
+      "generated_chinese_candidate_ids": [
+        "95b1eb3a9571fd2ae798431a"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 1,
+      "gold_chinese_term": "惯性",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "bef44bb4-634f-488b-a39c-9ba11b54bd56"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "惯性是物体保持原有运动状态的性质"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81,
+        0.81,
+        0.81
+      ],
+      "candidate_count": 3,
+      "candidate_ranks": [
+        1,
+        2,
+        3
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-07",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "0eb4b09b9e674383b7e06171f809a4c9",
+      "english_normalized_term": "momentum",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "d825824f-49f7-4368-90b4-09b60005b9ff",
+        "81913ef7-de44-4a44-9786-96c3d5230057",
+        "3c4bd66f-66fa-49c9-973a-b7f7cd80aa8a"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1",
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1",
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "角动量描述转动运动",
+        "动量守恒定律说明孤立系统总动量保持不变",
+        "动量是物体质量与速度的乘积"
+      ],
+      "generated_chinese_candidate_ids": [
+        "e85551db8a3d941b01d550c1",
+        "f567b0cb70dc43ccd022e25b",
+        "6d2b00dbbcdb9392eeca80b6"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 2,
+      "gold_chinese_term": "动量",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "bcbd9280-1c14-4cab-807c-f186acb3999c",
+        "d825824f-49f7-4368-90b4-09b60005b9ff",
+        "81913ef7-de44-4a44-9786-96c3d5230057",
+        "3c4bd66f-66fa-49c9-973a-b7f7cd80aa8a"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "multiple_equal_score_candidates",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "动量是物体质量与速度的乘积"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-08",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "dd4515d36bd44ed2afc59836d0ba2518",
+      "english_normalized_term": "impulse",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "a9340902-8170-4dde-8be4-c581dfcfbadf"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "冲量是力与作用时间间隔的乘积"
+      ],
+      "generated_chinese_candidate_ids": [
+        "4d01e81a15145591035bf315"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 2,
+      "gold_chinese_term": "冲量",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "bcbd9280-1c14-4cab-807c-f186acb3999c",
+        "a9340902-8170-4dde-8be4-c581dfcfbadf"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "冲量是力与作用时间间隔的乘积"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-09",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "afcb0beeb3f64a38b3572b1ed00976d3",
+      "english_normalized_term": "kinetic energy",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "73d1177f-babc-4b37-94b8-23ca4389717d"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "动能是物体由于运动而具有的能量"
+      ],
+      "generated_chinese_candidate_ids": [
+        "18232cb2bb88a63d62a54044"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 1,
+      "gold_chinese_term": "动能",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "73d1177f-babc-4b37-94b8-23ca4389717d",
+        "bcbd9280-1c14-4cab-807c-f186acb3999c",
+        "6b9f498e-9302-4b4c-b532-8fd3ccfe8716",
+        "d1aefbcb-1bfe-429a-9897-0ff525d7dc7c",
+        "4731a2f5-8d7e-4a4c-827d-9cbe19e51a2c"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "动能是物体由于运动而具有的能量"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-10",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "036c261532eb4e54a62dca20ddedf875",
+      "english_normalized_term": "gravitational potential energy",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "4731a2f5-8d7e-4a4c-827d-9cbe19e51a2c"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "重力势能是物体因高度和重力场而具有的势能"
+      ],
+      "generated_chinese_candidate_ids": [
+        "2d39550a285af22d7b5fa912"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 1,
+      "gold_chinese_term": "重力势能",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "4731a2f5-8d7e-4a4c-827d-9cbe19e51a2c",
+        "bfb5c14d-ced3-4856-bd77-6c313c381fb9",
+        "651339ac-5afe-4e4e-b27d-dbe9cb749562",
+        "6092d509-0d73-4805-a22a-e293255797cd",
+        "bcbd9280-1c14-4cab-807c-f186acb3999c",
+        "6b9f498e-9302-4b4c-b532-8fd3ccfe8716",
+        "d1aefbcb-1bfe-429a-9897-0ff525d7dc7c",
+        "73d1177f-babc-4b37-94b8-23ca4389717d"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "重力势能是物体因高度和重力场而具有的势能"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-11",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "9b5396869ac04dd3943bea58f4342227",
+      "english_normalized_term": "work",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "0e9370bd-17bc-4540-b1fb-be41c1ca86b0"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "功是力在位移方向上转移能量的量"
+      ],
+      "generated_chinese_candidate_ids": [
+        "c76a7b0a58544feecc7295fe"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 2,
+      "gold_chinese_term": "功",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "bcbd9280-1c14-4cab-807c-f186acb3999c",
+        "0e9370bd-17bc-4540-b1fb-be41c1ca86b0"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "功是力在位移方向上转移能量的量"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-12",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "c7387b4285f1478ea2862f4156a957b0",
+      "english_normalized_term": "power",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "fd3034c5-f47d-4e1d-9eaf-ba089d19f878"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "功率是做功或能量转移的快慢"
+      ],
+      "generated_chinese_candidate_ids": [
+        "e26e502b979166607a50dfbc"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 1,
+      "gold_chinese_term": "功率",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "fd3034c5-f47d-4e1d-9eaf-ba089d19f878"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "功率是做功或能量转移的快慢"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81,
+        0.81
+      ],
+      "candidate_count": 2,
+      "candidate_ranks": [
+        1,
+        2
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-13",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "e34d8e7cd08b446488a83041be10a5dc",
+      "english_normalized_term": "mechanical energy",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "6b9f498e-9302-4b4c-b532-8fd3ccfe8716",
+        "d1aefbcb-1bfe-429a-9897-0ff525d7dc7c"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1",
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "机械能守恒定律适用于只有保守力做功的情形",
+        "机械能是动能和势能的总和"
+      ],
+      "generated_chinese_candidate_ids": [
+        "3f7b10f06a215eaa81987051",
+        "ccadb416db21cad2363b22b4"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 1,
+      "gold_chinese_term": "机械能",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "6b9f498e-9302-4b4c-b532-8fd3ccfe8716",
+        "d1aefbcb-1bfe-429a-9897-0ff525d7dc7c",
+        "bcbd9280-1c14-4cab-807c-f186acb3999c",
+        "4731a2f5-8d7e-4a4c-827d-9cbe19e51a2c",
+        "73d1177f-babc-4b37-94b8-23ca4389717d"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "multiple_equal_score_candidates",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "机械能守恒定律适用于只有保守力做功的情形"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-14",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "c7135750740e4002bbfe8a99c770e851",
+      "english_normalized_term": "conservation of momentum",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "81913ef7-de44-4a44-9786-96c3d5230057"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "动量守恒定律说明孤立系统总动量保持不变"
+      ],
+      "generated_chinese_candidate_ids": [
+        "626e461bc37cdb1cf78ec802"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 1,
+      "gold_chinese_term": "动量守恒定律",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "81913ef7-de44-4a44-9786-96c3d5230057",
+        "6b9f498e-9302-4b4c-b532-8fd3ccfe8716",
+        "bcbd9280-1c14-4cab-807c-f186acb3999c",
+        "d825824f-49f7-4368-90b4-09b60005b9ff",
+        "3c4bd66f-66fa-49c9-973a-b7f7cd80aa8a"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "动量守恒定律说明孤立系统总动量保持不变"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-15",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "3ceb0673d78d4982a579b7d086cb4ddb",
+      "english_normalized_term": "conservation of mechanical energy",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "6b9f498e-9302-4b4c-b532-8fd3ccfe8716"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "机械能守恒定律适用于只有保守力做功的情形"
+      ],
+      "generated_chinese_candidate_ids": [
+        "b6d8384480e8ad8146c460b8"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 1,
+      "gold_chinese_term": "机械能守恒定律",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "6b9f498e-9302-4b4c-b532-8fd3ccfe8716",
+        "81913ef7-de44-4a44-9786-96c3d5230057",
+        "d1aefbcb-1bfe-429a-9897-0ff525d7dc7c",
+        "bcbd9280-1c14-4cab-807c-f186acb3999c",
+        "4731a2f5-8d7e-4a4c-827d-9cbe19e51a2c",
+        "73d1177f-babc-4b37-94b8-23ca4389717d"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "机械能守恒定律适用于只有保守力做功的情形"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-16",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "062349091ab749bab7306dfca7e01530",
+      "english_normalized_term": "uniform circular motion",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "fc60fffc-9cf2-4be9-af96-25e9fce4497c"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "匀速圆周运动是在圆周上速率不变但速度方向不断改变的运动"
+      ],
+      "generated_chinese_candidate_ids": [
+        "53b2262cd53f9d97c75a9201"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 1,
+      "gold_chinese_term": "匀速圆周运动",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "fc60fffc-9cf2-4be9-af96-25e9fce4497c"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "匀速圆周运动是在圆周上速率不变但速度方向不断改变的运动"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-17",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "f12ecac251624041bf298ae49006cc60",
+      "english_normalized_term": "centripetal force",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "7c6c87eb-0cb8-47a0-8f59-7cb5e2af5c8e"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "向心力是维持圆周运动所需的指向圆心的合力"
+      ],
+      "generated_chinese_candidate_ids": [
+        "777eaa14d78c7866896fca1a"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 1,
+      "gold_chinese_term": "向心力",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "7c6c87eb-0cb8-47a0-8f59-7cb5e2af5c8e",
+        "f8271e83-beae-4981-af0a-e1dd2a59c999"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "向心力是维持圆周运动所需的指向圆心的合力"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-18",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "808a847c364b4f918d4b4c4cd7229efb",
+      "english_normalized_term": "angular velocity",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "62b83b11-4048-4827-bea1-3c3f4518ea1e"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "角速度是角位置随时间变化的率"
+      ],
+      "generated_chinese_candidate_ids": [
+        "2881a0442120266daf454871"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 1,
+      "gold_chinese_term": "角速度",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "62b83b11-4048-4827-bea1-3c3f4518ea1e",
+        "bcbd9280-1c14-4cab-807c-f186acb3999c",
+        "d825824f-49f7-4368-90b4-09b60005b9ff",
+        "b8cc85b2-e92a-4c00-93a3-0214db622642"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "角速度是角位置随时间变化的率"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-19",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "730b8a11b2ed4aef873ee92b9e386732",
+      "english_normalized_term": "angular momentum",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "d825824f-49f7-4368-90b4-09b60005b9ff"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "角动量描述转动运动"
+      ],
+      "generated_chinese_candidate_ids": [
+        "88980240bd8be9bca118fbe3"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 2,
+      "gold_chinese_term": "角动量",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "bcbd9280-1c14-4cab-807c-f186acb3999c",
+        "d825824f-49f7-4368-90b4-09b60005b9ff",
+        "62b83b11-4048-4827-bea1-3c3f4518ea1e",
+        "81913ef7-de44-4a44-9786-96c3d5230057",
+        "3c4bd66f-66fa-49c9-973a-b7f7cd80aa8a"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "角动量描述转动运动"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-mechanics",
+      "concept_id": "physics-20",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "604e1e36182d4b1090578637a467529d",
+      "english_normalized_term": "torque",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": false,
+      "evidence_readiness_status": "evidence_insufficient",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "dd9b9e6f-c9ec-405b-8e84-f45a2007c549"
+      ],
+      "generated_candidate_source_ids": [
+        "beba57f0-d986-4418-a0a6-e3146f5a8af1"
+      ],
+      "generated_candidate_summaries": [
+        "力矩是力使物体绕轴转动的效应"
+      ],
+      "generated_chinese_candidate_ids": [
+        "b1e8715b1e59ad5dd953eff5"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 2,
+      "gold_chinese_term": "力矩",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": false,
+      "retrieved_chunk_ids": [
+        "bcbd9280-1c14-4cab-807c-f186acb3999c",
+        "dd9b9e6f-c9ec-405b-8e84-f45a2007c549"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "力矩是力使物体绕轴转动的效应"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-electricity",
+      "concept_id": "physics-21",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "8244f55cad9e4c57a8269d2b18f09c54",
+      "english_normalized_term": "electric charge",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": true,
+      "evidence_readiness_status": "prepared",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "9ba23379-bd38-4d2f-8702-f5ebc38e818c"
+      ],
+      "generated_candidate_source_ids": [
+        "316e66bb-29a8-42d1-a4d5-1a6c541e2291"
+      ],
+      "generated_candidate_summaries": [
+        "电荷是物质产生电相互作用的属性"
+      ],
+      "generated_chinese_candidate_ids": [
+        "a76c83aa473dbd1fe8e8df7a"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 2,
+      "gold_chinese_term": "电荷",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": true,
+      "retrieved_chunk_ids": [
+        "bfb5c14d-ced3-4856-bd77-6c313c381fb9",
+        "9ba23379-bd38-4d2f-8702-f5ebc38e818c",
+        "6092d509-0d73-4805-a22a-e293255797cd",
+        "e17610d1-e55b-40fd-b032-aa0a72dbaf9b",
+        "9fa724d9-67c6-4ed0-b298-b5f28c1b519d"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "电荷是物质产生电相互作用的属性"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-electricity",
+      "concept_id": "physics-22",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "91b872069ca04560b3714f6ea0ec0271",
+      "english_normalized_term": "electric field",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": true,
+      "evidence_readiness_status": "prepared",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "e17610d1-e55b-40fd-b032-aa0a72dbaf9b"
+      ],
+      "generated_candidate_source_ids": [
+        "316e66bb-29a8-42d1-a4d5-1a6c541e2291"
+      ],
+      "generated_candidate_summaries": [
+        "电场表示单位正试探电荷在某点受到的力"
+      ],
+      "generated_chinese_candidate_ids": [
+        "addea66ecc2abad470429083"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 2,
+      "gold_chinese_term": "电场",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": true,
+      "retrieved_chunk_ids": [
+        "bfb5c14d-ced3-4856-bd77-6c313c381fb9",
+        "e17610d1-e55b-40fd-b032-aa0a72dbaf9b",
+        "6092d509-0d73-4805-a22a-e293255797cd",
+        "9ba23379-bd38-4d2f-8702-f5ebc38e818c",
+        "9fa724d9-67c6-4ed0-b298-b5f28c1b519d"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "电场表示单位正试探电荷在某点受到的力"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-electricity",
+      "concept_id": "physics-23",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "e17a7b2c11ad43baad2d897ec762e206",
+      "english_normalized_term": "electric potential",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": true,
+      "evidence_readiness_status": "prepared",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "6092d509-0d73-4805-a22a-e293255797cd"
+      ],
+      "generated_candidate_source_ids": [
+        "316e66bb-29a8-42d1-a4d5-1a6c541e2291"
+      ],
+      "generated_candidate_summaries": [
+        "电势是单位电荷在某点具有的电势能"
+      ],
+      "generated_chinese_candidate_ids": [
+        "90aa4fa634c2c3e1b5a70c54"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 2,
+      "gold_chinese_term": "电势",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": true,
+      "retrieved_chunk_ids": [
+        "bfb5c14d-ced3-4856-bd77-6c313c381fb9",
+        "6092d509-0d73-4805-a22a-e293255797cd",
+        "651339ac-5afe-4e4e-b27d-dbe9cb749562",
+        "e17610d1-e55b-40fd-b032-aa0a72dbaf9b",
+        "9ba23379-bd38-4d2f-8702-f5ebc38e818c",
+        "9fa724d9-67c6-4ed0-b298-b5f28c1b519d",
+        "4731a2f5-8d7e-4a4c-827d-9cbe19e51a2c"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "电势是单位电荷在某点具有的电势能"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-electricity",
+      "concept_id": "physics-24",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "a00a176864f24539865e54c68220860e",
+      "english_normalized_term": "potential difference",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": true,
+      "evidence_readiness_status": "prepared",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "651339ac-5afe-4e4e-b27d-dbe9cb749562"
+      ],
+      "generated_candidate_source_ids": [
+        "316e66bb-29a8-42d1-a4d5-1a6c541e2291"
+      ],
+      "generated_candidate_summaries": [
+        "电势差是两点电势的差值"
+      ],
+      "generated_chinese_candidate_ids": [
+        "4934b7d2e9635339c6fad52a"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 2,
+      "gold_chinese_term": "电势差",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": true,
+      "retrieved_chunk_ids": [
+        "bfb5c14d-ced3-4856-bd77-6c313c381fb9",
+        "651339ac-5afe-4e4e-b27d-dbe9cb749562",
+        "6092d509-0d73-4805-a22a-e293255797cd",
+        "4731a2f5-8d7e-4a4c-827d-9cbe19e51a2c"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "电势差是两点电势的差值"
+    },
+    {
+      "accepted_chinese_aliases": [],
+      "alias_candidate_rank": null,
+      "bilingual_pair_status": "incorrect",
+      "bilingual_pair_top3": false,
+      "candidate_confidences": [
+        0.81
+      ],
+      "candidate_count": 1,
+      "candidate_ranks": [
+        1
+      ],
+      "chinese_source_id": "chinese-electricity",
+      "concept_id": "physics-25",
+      "earliest_failure_stage": "chinese_candidate_boundary",
+      "english_candidate_id": "867870db9e514ed0be7c3dbb46365e38",
+      "english_normalized_term": "capacitance",
+      "english_pairing_input_correct": true,
+      "evidence_gold_bearing_chunk_rank": 1,
+      "evidence_qualified": true,
+      "evidence_readiness_status": "prepared",
+      "exact_candidate_rank": null,
+      "generated_candidate_chunk_ids": [
+        "efd628e1-8330-4f77-bba6-48fcc1157cbd"
+      ],
+      "generated_candidate_source_ids": [
+        "316e66bb-29a8-42d1-a4d5-1a6c541e2291"
+      ],
+      "generated_candidate_summaries": [
+        "电容是单位电势差下储存的电荷量"
+      ],
+      "generated_chinese_candidate_ids": [
+        "5a65ddec6f0ed7ceefca2073"
+      ],
+      "gold_alias_in_source": false,
+      "gold_bearing_chunk_retrieval_rank": 1,
+      "gold_chinese_term": "电容",
+      "gold_term_in_chunk": true,
+      "gold_term_in_parsed_text": true,
+      "gold_term_in_source": true,
+      "included_in_denominator": true,
+      "primary_attribution": "CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+      "provider_ready": true,
+      "retrieved_chunk_ids": [
+        "efd628e1-8330-4f77-bba6-48fcc1157cbd"
+      ],
+      "secondary_observations": [
+        "definition_predicate_or_explanation_in_candidate",
+        "evidence_retrieval_can_succeed_for_wrong_boundary_candidate"
+      ],
+      "selected_candidate_confidence": 0.81,
+      "selected_chinese_candidate": "电容是单位电势差下储存的电荷量"
+    }
+  ],
+  "status": "INLINE_BILINGUAL_CHINESE_CANDIDATE_DIAGNOSIS_COMPLETED",
+  "survivor_subsets": {
+    "all_25": {
+      "count": 25,
+      "denominator": 25
+    },
+    "correctly_paired": {
+      "count": 0,
+      "denominator": 25
+    },
+    "evidence_qualified": {
+      "count": 5,
+      "denominator": 25
+    },
+    "exact_chinese_candidate_generated": {
+      "count": 0,
+      "denominator": 25
+    },
+    "gold_bearing_chunk_retrieved": {
+      "count": 25,
+      "denominator": 25
+    },
+    "provider_ready": {
+      "count": 5,
+      "denominator": 25
+    },
+    "top3_chinese_candidate": {
+      "count": 0,
+      "denominator": 25
+    }
+  },
+  "task": "12C.1"
+}

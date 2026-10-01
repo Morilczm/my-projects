@@ -1,0 +1,20 @@
+{
+  "backend_ready": true,
+  "backend_id": "local_multilingual_e5_pytorch_cpu_v1",
+  "model_id": "intfloat/multilingual-e5-small",
+  "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "pairing_eligible": 14,
+  "candidate_pairs_scored": 119,
+  "query_embedding_seconds": 2.721397,
+  "passage_embedding_seconds": 2.294704,
+  "pairing_total_seconds": 0.571273,
+  "cache_contract": "repository_external_model_cache; request-local representations",
+  "failure_reasons": {
+    "BILINGUAL_SEMANTIC_PAIRING_MISS": 8,
+    "EVIDENCE_QUALIFICATION_MISSING": 6,
+    "UPSTREAM_CHINESE_TERM_IDENTIFICATION_MISSING": 1,
+    "UPSTREAM_CROSS_LANGUAGE_RETRIEVAL_MISS": 3,
+    "UPSTREAM_ENGLISH_BINDING_AMBIGUOUS": 4,
+    "UPSTREAM_ENGLISH_EXTRACTION_MISSING": 3
+  }
+}

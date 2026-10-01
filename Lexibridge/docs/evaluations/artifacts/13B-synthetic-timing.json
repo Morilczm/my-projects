@@ -1,0 +1,30 @@
+{
+  "baseline_type": "synthetic_local_fake_alignment",
+  "sample_count": 5,
+  "concept_query_total_ms": {
+    "samples": [
+      9.871,
+      2.973,
+      3.005,
+      2.83,
+      2.775
+    ],
+    "median": 2.973,
+    "max": 9.871
+  },
+  "microbench_sample_count": 1000,
+  "selection_validation_ms": {
+    "median": 0.002667,
+    "max": 0.057833
+  },
+  "evidence_scope_resolution_ms": {
+    "median": 0.003166,
+    "max": 0.011958
+  },
+  "serialization_ms": {
+    "median": 0.016209,
+    "max": 0.059083
+  },
+  "retrieval_and_alignment": "deterministic injected Task 12 contract; included in total",
+  "production_latency_claim": false
+}

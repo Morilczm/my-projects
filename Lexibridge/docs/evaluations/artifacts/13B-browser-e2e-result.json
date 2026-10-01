@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "browser": "system Chrome via Playwright",
+  "student_regression": "PASS",
+  "personal_workspace_flow": "PASS",
+  "managed_course_flow": "PASS",
+  "personal_record_save_note_understanding": "PASS",
+  "private_non_official_assertions": "PASS",
+  "cross_student_query_and_record_access_blocked": "PASS",
+  "student_steps": 34,
+  "instructor_flow": "PASS",
+  "instructor_steps": 7,
+  "reviewer_flow": "PASS",
+  "reviewer_steps": 15,
+  "external_dependency_requests": 0,
+  "real_provider_requests": 0
+}

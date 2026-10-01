@@ -1,0 +1,5 @@
+# Optional local layout analysis runtime (DocLayout-YOLO ONNX).
+# Not installed by ordinary development or CI; install explicitly only when
+# running with LAYOUT_PROVIDER=doclayout_yolo_onnx.
+onnxruntime
+numpy

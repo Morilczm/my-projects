@@ -1,0 +1,14 @@
+{
+  "external_dependency_requests": 0,
+  "pilot_contract": {
+    "consent_recorded": true,
+    "content_telemetry_recorded": false,
+    "personal_session_completed": true,
+    "survey_submitted": true,
+    "synthetic_only": true
+  },
+  "real_provider_requests": 0,
+  "real_credentials_read": false,
+  "student_steps_passed": 71,
+  "student_flow": "PASS"
+}

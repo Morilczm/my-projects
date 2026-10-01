@@ -1,0 +1,39 @@
+{
+  "policy": "governed-provider-execution@1.0.0",
+  "admission": {
+    "ready_seen": 3,
+    "ready_executed": 3,
+    "review_required_seen": 15,
+    "review_required_executed": 0,
+    "not_ready_seen": 7,
+    "not_ready_executed": 0,
+    "false_execution_count": 0
+  },
+  "fake_transport": {
+    "success_mode": "passed",
+    "malformed_json": "failed_closed",
+    "missing_fields": "failed_closed",
+    "natural_language": "failed_closed",
+    "timeout": "bounded_retry_then_failed_closed",
+    "retryable_error": "bounded_retry_then_failed_closed",
+    "non_retryable_error": "single_attempt_failed_closed",
+    "network_calls": 0,
+    "credential_reads": 0
+  },
+  "budget": {
+    "transport_before_budget_check": false,
+    "over_token_ceiling": "blocked",
+    "invalid_cost_ceiling": "blocked",
+    "retry_budget_max": 3,
+    "timeout_seconds_max": 120
+  },
+  "idempotency": {
+    "same_key_same_payload": "reused_without_second_transport_call",
+    "same_key_different_payload": "PROVIDER_EXECUTION_IDEMPOTENCY_CONFLICT"
+  },
+  "parser": {
+    "term_alignment": "prompt_registry TERM_ALIGNMENT_SCHEMA",
+    "formal_alignment": "alignment-output-v1 strict parser",
+    "arbitrary_natural_language_accepted": false
+  }
+}

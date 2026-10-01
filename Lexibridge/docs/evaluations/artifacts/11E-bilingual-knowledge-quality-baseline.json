@@ -1,0 +1,4046 @@
+{
+  "baseline_commit": "0ff4f22ac3b2060629b779bdfb1c37ae36838b62",
+  "blocker": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+  "branch": "eval/bilingual-knowledge-quality-baseline-11e",
+  "concept_outputs": [
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "位移是从初位置指向末位置的位置变化量"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "419bf5b1-b97f-4dc4-845d-635bb6ebdf1d",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_DISPLACEMENT"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "9ebd8eeb-dc8f-4eee-99a4-750f97d97e25",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "displacement 即 位移是从初位置指向末位置的位置变化量，具有方向。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_DISPLACEMENT"
+      ],
+      "chinese_term": "位移是从初位置指向末位置的位置变化量",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-01",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [],
+      "english_evidence_ids": [],
+      "english_term": "displacement",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "419bf5b1-b97f-4dc4-845d-635bb6ebdf1d"
+        ],
+        "english_chunk_uids": [],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified",
+          "no_english_evidence",
+          "cross_language_evidence_missing"
+        ]
+      },
+      "retrieval_error": "bilingual_evidence_incomplete",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81,
+        0.81
+      ],
+      "chinese_candidates": [
+        "角速度是角位置随时间变化的率",
+        "速度描述位移随时间变化的快慢和方向"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "37f43d9a-bdd7-4c37-9ecc-52b591cf5ac0",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_ANGULAR_VELOCITY",
+            "EVIDENCE_ZH_MECH_VELOCITY"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "36e968e5-e17b-4340-b509-870418cd52bd",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "angular velocity 即 角速度是角位置随时间变化的率。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_ANGULAR_VELOCITY",
+        "EVIDENCE_ZH_MECH_VELOCITY"
+      ],
+      "chinese_term": "角速度是角位置随时间变化的率",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-02",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [],
+      "english_evidence_ids": [],
+      "english_term": "velocity",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "37f43d9a-bdd7-4c37-9ecc-52b591cf5ac0"
+        ],
+        "english_chunk_uids": [],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 2,
+        "risk_labels": [
+          "bilingual_alignment_not_verified",
+          "no_english_evidence",
+          "cross_language_evidence_missing"
+        ]
+      },
+      "retrieval_error": "bilingual_evidence_incomplete",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "加速度是速度随时间变化的率"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "b3f66726-5c04-4ddf-ad9f-f2b28997fe05",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_ACCELERATION"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "b893e0db-db51-41c5-91ae-9b2d96d4c1a6",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "acceleration 即 加速度是速度随时间变化的率。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_ACCELERATION"
+      ],
+      "chinese_term": "加速度是速度随时间变化的率",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-03",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [],
+      "english_evidence_ids": [],
+      "english_term": "acceleration",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "b3f66726-5c04-4ddf-ad9f-f2b28997fe05"
+        ],
+        "english_chunk_uids": [],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified",
+          "no_english_evidence",
+          "cross_language_evidence_missing"
+        ]
+      },
+      "retrieval_error": "bilingual_evidence_incomplete",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81,
+        0.81
+      ],
+      "chinese_candidates": [
+        "向心力是维持圆周运动所需的指向圆心的合力",
+        "力是能够改变物体运动状态的相互作用"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "bc9cc67c-88da-4480-ac85-daebbbaf8e2a",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_CENTRIPETAL_FORCE",
+            "EVIDENCE_ZH_MECH_FORCE"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "f7862037-829f-444a-a6ca-6f8fdc6d2b97",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "centripetal force 即 向心力是维持圆周运动所需的指向圆心的合力。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_CENTRIPETAL_FORCE",
+        "EVIDENCE_ZH_MECH_FORCE"
+      ],
+      "chinese_term": "向心力是维持圆周运动所需的指向圆心的合力",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-04",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "1c4345b4-fe87-4b3f-8ce3-3f75197d210d",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_FIELD",
+            "EVIDENCE_EN_MECH_FORCE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "262c8d5d-9412-49c6-bdcb-379553c09293",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "Electric field is force per unit positive test charge at a point.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        }
+      ],
+      "english_evidence_ids": [
+        "EVIDENCE_EN_ELEC_ELECTRIC_FIELD",
+        "EVIDENCE_EN_MECH_FORCE"
+      ],
+      "english_term": "force",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "bc9cc67c-88da-4480-ac85-daebbbaf8e2a"
+        ],
+        "english_chunk_uids": [
+          "1c4345b4-fe87-4b3f-8ce3-3f75197d210d"
+        ],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 2,
+        "risk_labels": [
+          "bilingual_alignment_not_verified"
+        ]
+      },
+      "retrieval_error": "",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "质量表示物体所含物质多少"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "09f23f56-3d00-4b78-9c38-5902162313ca",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_MASS"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "edf2f8e4-28a6-4c47-b52a-0f9a64774349",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "mass 即 质量表示物体所含物质多少，并出现在牛顿第二定律中。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_MASS"
+      ],
+      "chinese_term": "质量表示物体所含物质多少",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-05",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [],
+      "english_evidence_ids": [],
+      "english_term": "mass",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "09f23f56-3d00-4b78-9c38-5902162313ca"
+        ],
+        "english_chunk_uids": [],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified",
+          "no_english_evidence",
+          "cross_language_evidence_missing"
+        ]
+      },
+      "retrieval_error": "bilingual_evidence_incomplete",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "惯性是物体保持原有运动状态的性质"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "21c28333-5d84-45ff-b08f-91f8008c8769",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_INERTIA"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "2a72b81c-2abc-4494-9f56-fbc8850bb9a9",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "inertia 即 惯性是物体保持原有运动状态的性质，不等同于质量本身。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_INERTIA"
+      ],
+      "chinese_term": "惯性是物体保持原有运动状态的性质",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-06",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [],
+      "english_evidence_ids": [],
+      "english_term": "inertia",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "21c28333-5d84-45ff-b08f-91f8008c8769"
+        ],
+        "english_chunk_uids": [],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified",
+          "no_english_evidence",
+          "cross_language_evidence_missing"
+        ]
+      },
+      "retrieval_error": "bilingual_evidence_incomplete",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81,
+        0.81,
+        0.81
+      ],
+      "chinese_candidates": [
+        "角动量描述转动运动",
+        "动量守恒定律说明孤立系统总动量保持不变",
+        "动量是物体质量与速度的乘积"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "07591428-ba45-4e6f-babe-ab890b561725",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_ANGULAR_MOMENTUM",
+            "EVIDENCE_ZH_MECH_MOMENTUM"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "cefae290-c8a2-4c91-99e6-dfc794cfa047",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "angular momentum 即 角动量描述转动运动，与转动惯量和角速度有关。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_ANGULAR_MOMENTUM",
+        "EVIDENCE_ZH_MECH_MOMENTUM"
+      ],
+      "chinese_term": "角动量描述转动运动",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-07",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [],
+      "english_evidence_ids": [],
+      "english_term": "momentum",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "07591428-ba45-4e6f-babe-ab890b561725"
+        ],
+        "english_chunk_uids": [],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 3,
+        "risk_labels": [
+          "bilingual_alignment_not_verified",
+          "no_english_evidence",
+          "cross_language_evidence_missing"
+        ]
+      },
+      "retrieval_error": "bilingual_evidence_incomplete",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "冲量是力与作用时间间隔的乘积"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "f1ab855e-d7e1-4292-9e4e-d8a7e92278e3",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_IMPULSE"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "1b4caee9-9798-4c12-b82d-bb5e612d279a",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "impulse 即 冲量是力与作用时间间隔的乘积。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_IMPULSE"
+      ],
+      "chinese_term": "冲量是力与作用时间间隔的乘积",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-08",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [],
+      "english_evidence_ids": [],
+      "english_term": "impulse",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "f1ab855e-d7e1-4292-9e4e-d8a7e92278e3"
+        ],
+        "english_chunk_uids": [],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified",
+          "no_english_evidence",
+          "cross_language_evidence_missing"
+        ]
+      },
+      "retrieval_error": "bilingual_evidence_incomplete",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "动能是物体由于运动而具有的能量"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "fd4c9a78-9947-4869-afc0-a7bddf950921",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_KINETIC_ENERGY"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "1759f7c2-f163-46ff-b753-ee1c816f9480",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "kinetic energy 即 动能是物体由于运动而具有的能量。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_KINETIC_ENERGY"
+      ],
+      "chinese_term": "动能是物体由于运动而具有的能量",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-09",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "7ba8ebf1-c785-4af0-bb31-ba2cda6caf18",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "cf03232b-1cb3-46d5-bd7c-5aa1a76d541c",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.34,
+          "snippet": "Electric potential is electric potential energy per unit charge at a point.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        }
+      ],
+      "english_evidence_ids": [
+        "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL"
+      ],
+      "english_term": "kinetic energy",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "fd4c9a78-9947-4869-afc0-a7bddf950921"
+        ],
+        "english_chunk_uids": [
+          "7ba8ebf1-c785-4af0-bb31-ba2cda6caf18"
+        ],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified",
+          "low_english_evidence_score"
+        ]
+      },
+      "retrieval_error": "",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "重力势能是物体因高度和重力场而具有的势能"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "da4dc209-1b16-4241-a26a-e2f3bf16f6f1",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_GRAVITATIONAL_POTENTIAL_ENERGY"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "6ce02fac-a514-49bb-978e-d8a576b45c21",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "gravitational potential energy 即 重力势能是物体因高度和重力场而具有的势能。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_GRAVITATIONAL_POTENTIAL_ENERGY"
+      ],
+      "chinese_term": "重力势能是物体因高度和重力场而具有的势能",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-10",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "7ba8ebf1-c785-4af0-bb31-ba2cda6caf18",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "cf03232b-1cb3-46d5-bd7c-5aa1a76d541c",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.41,
+          "snippet": "Electric potential is electric potential energy per unit charge at a point.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        },
+        {
+          "bbox": null,
+          "chunk_uid": "9badb7cc-e754-4d7f-8994-44e4e22d2935",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_CHARGE",
+            "EVIDENCE_EN_ELEC_ELECTRIC_FIELD",
+            "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL",
+            "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "43765f63-1155-4bb4-a68b-8fa7616df2ac",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.3,
+          "snippet": "Confusion checks: electric potential is a point quantity, while potential difference compares two points. Electric field is not the same as electric charge.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        },
+        {
+          "bbox": null,
+          "chunk_uid": "c13f2bc3-7849-403c-b1fc-fd11f7fc7af2",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL",
+            "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "65c86eba-6424-490c-ae51-6a34a27adcb9",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.3,
+          "snippet": "Potential difference is the difference in electric potential between two points.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        },
+        {
+          "bbox": null,
+          "chunk_uid": "30353830-f481-46c2-b463-b363e08d9b88",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_CAPACITANCE",
+            "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "5248080a-625a-40f5-8727-55fe7ea6fc24",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.29,
+          "snippet": "Capacitance is the charge stored per unit potential difference.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        }
+      ],
+      "english_evidence_ids": [
+        "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL",
+        "EVIDENCE_EN_ELEC_ELECTRIC_CHARGE",
+        "EVIDENCE_EN_ELEC_ELECTRIC_FIELD",
+        "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE",
+        "EVIDENCE_EN_ELEC_CAPACITANCE"
+      ],
+      "english_term": "gravitational potential energy",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "da4dc209-1b16-4241-a26a-e2f3bf16f6f1"
+        ],
+        "english_chunk_uids": [
+          "7ba8ebf1-c785-4af0-bb31-ba2cda6caf18",
+          "9badb7cc-e754-4d7f-8994-44e4e22d2935",
+          "c13f2bc3-7849-403c-b1fc-fd11f7fc7af2",
+          "30353830-f481-46c2-b463-b363e08d9b88"
+        ],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified"
+        ]
+      },
+      "retrieval_error": "",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "功是力在位移方向上转移能量的量"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "dbde9e7b-f4a6-479f-b35f-b54cbbf77d7c",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_WORK"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "17787a88-f28e-446d-84b2-f5a9a069f9c1",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "work 即 功是力在位移方向上转移能量的量。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_WORK"
+      ],
+      "chinese_term": "功是力在位移方向上转移能量的量",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-11",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [],
+      "english_evidence_ids": [],
+      "english_term": "work",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "dbde9e7b-f4a6-479f-b35f-b54cbbf77d7c"
+        ],
+        "english_chunk_uids": [],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified",
+          "no_english_evidence",
+          "cross_language_evidence_missing"
+        ]
+      },
+      "retrieval_error": "bilingual_evidence_incomplete",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "功率是做功或能量转移的快慢"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "0e87e23f-64fc-43f8-bd4f-60d370a4712b",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_POWER"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "801a46ff-7fcb-4cc6-863e-ea24073dd2a0",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "power 即 功率是做功或能量转移的快慢。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_POWER"
+      ],
+      "chinese_term": "功率是做功或能量转移的快慢",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-12",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [],
+      "english_evidence_ids": [],
+      "english_term": "power",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "0e87e23f-64fc-43f8-bd4f-60d370a4712b"
+        ],
+        "english_chunk_uids": [],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified",
+          "no_english_evidence",
+          "cross_language_evidence_missing"
+        ]
+      },
+      "retrieval_error": "bilingual_evidence_incomplete",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81,
+        0.81
+      ],
+      "chinese_candidates": [
+        "机械能守恒定律适用于只有保守力做功的情形",
+        "机械能是动能和势能的总和"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "877e9053-1859-4efc-b397-8676db9b7b9c",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_CONSERVATION_OF_MECHANICAL_ENERGY",
+            "EVIDENCE_ZH_MECH_MECHANICAL_ENERGY"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "9545db87-4f0d-4548-8091-724d41d9a0e9",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "conservation of mechanical energy 即 机械能守恒定律适用于只有保守力做功的情形。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_CONSERVATION_OF_MECHANICAL_ENERGY",
+        "EVIDENCE_ZH_MECH_MECHANICAL_ENERGY"
+      ],
+      "chinese_term": "机械能守恒定律适用于只有保守力做功的情形",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-13",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "7ba8ebf1-c785-4af0-bb31-ba2cda6caf18",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "cf03232b-1cb3-46d5-bd7c-5aa1a76d541c",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.34,
+          "snippet": "Electric potential is electric potential energy per unit charge at a point.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        }
+      ],
+      "english_evidence_ids": [
+        "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL"
+      ],
+      "english_term": "mechanical energy",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "877e9053-1859-4efc-b397-8676db9b7b9c"
+        ],
+        "english_chunk_uids": [
+          "7ba8ebf1-c785-4af0-bb31-ba2cda6caf18"
+        ],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 2,
+        "risk_labels": [
+          "bilingual_alignment_not_verified",
+          "low_english_evidence_score"
+        ]
+      },
+      "retrieval_error": "",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "动量守恒定律说明孤立系统总动量保持不变"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "96234e0d-2df3-4e04-ad33-d772b691142f",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_CONSERVATION_OF_MOMENTUM",
+            "EVIDENCE_ZH_MECH_MOMENTUM"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "6f425b9f-46f2-4e26-a2ea-ff6f7538289f",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "conservation of momentum 即 动量守恒定律说明孤立系统总动量保持不变。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_CONSERVATION_OF_MOMENTUM",
+        "EVIDENCE_ZH_MECH_MOMENTUM"
+      ],
+      "chinese_term": "动量守恒定律说明孤立系统总动量保持不变",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-14",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "5f0e58db-3be9-46f2-b6bc-fffcaf195a82",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_CHARGE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "c8d98a4d-7555-44ff-9e5d-d40c1974f27b",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.29,
+          "snippet": "Electric charge is a property of matter that causes electric interactions.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        }
+      ],
+      "english_evidence_ids": [
+        "EVIDENCE_EN_ELEC_ELECTRIC_CHARGE"
+      ],
+      "english_term": "conservation of momentum",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "96234e0d-2df3-4e04-ad33-d772b691142f"
+        ],
+        "english_chunk_uids": [
+          "5f0e58db-3be9-46f2-b6bc-fffcaf195a82"
+        ],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified",
+          "low_english_evidence_score"
+        ]
+      },
+      "retrieval_error": "",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "机械能守恒定律适用于只有保守力做功的情形"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "877e9053-1859-4efc-b397-8676db9b7b9c",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_CONSERVATION_OF_MECHANICAL_ENERGY",
+            "EVIDENCE_ZH_MECH_MECHANICAL_ENERGY"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "9545db87-4f0d-4548-8091-724d41d9a0e9",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "conservation of mechanical energy 即 机械能守恒定律适用于只有保守力做功的情形。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_CONSERVATION_OF_MECHANICAL_ENERGY",
+        "EVIDENCE_ZH_MECH_MECHANICAL_ENERGY"
+      ],
+      "chinese_term": "机械能守恒定律适用于只有保守力做功的情形",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-15",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "7ba8ebf1-c785-4af0-bb31-ba2cda6caf18",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "cf03232b-1cb3-46d5-bd7c-5aa1a76d541c",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.265,
+          "snippet": "Electric potential is electric potential energy per unit charge at a point.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        },
+        {
+          "bbox": null,
+          "chunk_uid": "5f0e58db-3be9-46f2-b6bc-fffcaf195a82",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_CHARGE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "c8d98a4d-7555-44ff-9e5d-d40c1974f27b",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.265,
+          "snippet": "Electric charge is a property of matter that causes electric interactions.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        }
+      ],
+      "english_evidence_ids": [
+        "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL",
+        "EVIDENCE_EN_ELEC_ELECTRIC_CHARGE"
+      ],
+      "english_term": "conservation of mechanical energy",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "877e9053-1859-4efc-b397-8676db9b7b9c"
+        ],
+        "english_chunk_uids": [
+          "7ba8ebf1-c785-4af0-bb31-ba2cda6caf18",
+          "5f0e58db-3be9-46f2-b6bc-fffcaf195a82"
+        ],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified",
+          "low_english_evidence_score"
+        ]
+      },
+      "retrieval_error": "",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "匀速圆周运动是在圆周上速率不变但速度方向不断改变的运动"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "4d251ef1-4eb4-4aca-9ac9-f614f573d09f",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_UNIFORM_CIRCULAR_MOTION"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "7ace7e51-5b89-408c-8909-356a9fe520cd",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "uniform circular motion 即 匀速圆周运动是在圆周上速率不变但速度方向不断改变的运动。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_UNIFORM_CIRCULAR_MOTION"
+      ],
+      "chinese_term": "匀速圆周运动是在圆周上速率不变但速度方向不断改变的运动",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-16",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [],
+      "english_evidence_ids": [],
+      "english_term": "uniform circular motion",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "4d251ef1-4eb4-4aca-9ac9-f614f573d09f"
+        ],
+        "english_chunk_uids": [],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified",
+          "no_english_evidence",
+          "cross_language_evidence_missing"
+        ]
+      },
+      "retrieval_error": "bilingual_evidence_incomplete",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "向心力是维持圆周运动所需的指向圆心的合力"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "bc9cc67c-88da-4480-ac85-daebbbaf8e2a",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_CENTRIPETAL_FORCE",
+            "EVIDENCE_ZH_MECH_FORCE"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "f7862037-829f-444a-a6ca-6f8fdc6d2b97",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "centripetal force 即 向心力是维持圆周运动所需的指向圆心的合力。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_CENTRIPETAL_FORCE",
+        "EVIDENCE_ZH_MECH_FORCE"
+      ],
+      "chinese_term": "向心力是维持圆周运动所需的指向圆心的合力",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-17",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "1c4345b4-fe87-4b3f-8ce3-3f75197d210d",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_FIELD",
+            "EVIDENCE_EN_MECH_FORCE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "262c8d5d-9412-49c6-bdcb-379553c09293",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.34,
+          "snippet": "Electric field is force per unit positive test charge at a point.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        }
+      ],
+      "english_evidence_ids": [
+        "EVIDENCE_EN_ELEC_ELECTRIC_FIELD",
+        "EVIDENCE_EN_MECH_FORCE"
+      ],
+      "english_term": "centripetal force",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "bc9cc67c-88da-4480-ac85-daebbbaf8e2a"
+        ],
+        "english_chunk_uids": [
+          "1c4345b4-fe87-4b3f-8ce3-3f75197d210d"
+        ],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified",
+          "low_english_evidence_score"
+        ]
+      },
+      "retrieval_error": "",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "角速度是角位置随时间变化的率"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "37f43d9a-bdd7-4c37-9ecc-52b591cf5ac0",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_ANGULAR_VELOCITY",
+            "EVIDENCE_ZH_MECH_VELOCITY"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "36e968e5-e17b-4340-b509-870418cd52bd",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "angular velocity 即 角速度是角位置随时间变化的率。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_ANGULAR_VELOCITY",
+        "EVIDENCE_ZH_MECH_VELOCITY"
+      ],
+      "chinese_term": "角速度是角位置随时间变化的率",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-18",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [],
+      "english_evidence_ids": [],
+      "english_term": "angular velocity",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "37f43d9a-bdd7-4c37-9ecc-52b591cf5ac0"
+        ],
+        "english_chunk_uids": [],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified",
+          "no_english_evidence",
+          "cross_language_evidence_missing"
+        ]
+      },
+      "retrieval_error": "bilingual_evidence_incomplete",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "角动量描述转动运动"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "07591428-ba45-4e6f-babe-ab890b561725",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_ANGULAR_MOMENTUM",
+            "EVIDENCE_ZH_MECH_MOMENTUM"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "cefae290-c8a2-4c91-99e6-dfc794cfa047",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "angular momentum 即 角动量描述转动运动，与转动惯量和角速度有关。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_ANGULAR_MOMENTUM",
+        "EVIDENCE_ZH_MECH_MOMENTUM"
+      ],
+      "chinese_term": "角动量描述转动运动",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-19",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [],
+      "english_evidence_ids": [],
+      "english_term": "angular momentum",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "07591428-ba45-4e6f-babe-ab890b561725"
+        ],
+        "english_chunk_uids": [],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified",
+          "no_english_evidence",
+          "cross_language_evidence_missing"
+        ]
+      },
+      "retrieval_error": "bilingual_evidence_incomplete",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "力矩是力使物体绕轴转动的效应"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "f73103ec-3389-4abc-8d71-fd1b56e7dc01",
+          "evidence_ids": [
+            "EVIDENCE_ZH_MECH_TORQUE"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "411cfb9b-ddfa-4460-96b5-f82a894459e5",
+          "parse_uid": "90be7006-0048-44f8-aca6-edbe2c28d354",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "torque 即 力矩是力使物体绕轴转动的效应。",
+          "source_title": "Chinese Mechanics",
+          "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_MECH_TORQUE"
+      ],
+      "chinese_term": "力矩是力使物体绕轴转动的效应",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-20",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [],
+      "english_evidence_ids": [],
+      "english_term": "torque",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "f73103ec-3389-4abc-8d71-fd1b56e7dc01"
+        ],
+        "english_chunk_uids": [],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified",
+          "no_english_evidence",
+          "cross_language_evidence_missing"
+        ]
+      },
+      "retrieval_error": "bilingual_evidence_incomplete",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "电荷是物质产生电相互作用的属性"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "2a04b264-b3be-4897-9719-a77dd3b200a4",
+          "evidence_ids": [
+            "EVIDENCE_ZH_ELEC_ELECTRIC_CHARGE"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "04952181-74c5-419d-a3b0-0c6fa6cf6d0f",
+          "parse_uid": "fe1507ce-276d-46f7-9a4c-86838bee75af",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "electric charge 即 电荷是物质产生电相互作用的属性。",
+          "source_title": "Chinese Electricity",
+          "source_uid": "97bde899-47f7-41ae-89b7-9dc0f8cf542e"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_ELEC_ELECTRIC_CHARGE"
+      ],
+      "chinese_term": "电荷是物质产生电相互作用的属性",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-21",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "9badb7cc-e754-4d7f-8994-44e4e22d2935",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_CHARGE",
+            "EVIDENCE_EN_ELEC_ELECTRIC_FIELD",
+            "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL",
+            "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "43765f63-1155-4bb4-a68b-8fa7616df2ac",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.98,
+          "snippet": "Confusion checks: electric potential is a point quantity, while potential difference compares two points. Electric field is not the same as electric charge.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        },
+        {
+          "bbox": null,
+          "chunk_uid": "5f0e58db-3be9-46f2-b6bc-fffcaf195a82",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_CHARGE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "c8d98a4d-7555-44ff-9e5d-d40c1974f27b",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.97,
+          "snippet": "Electric charge is a property of matter that causes electric interactions.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        },
+        {
+          "bbox": null,
+          "chunk_uid": "7ba8ebf1-c785-4af0-bb31-ba2cda6caf18",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "cf03232b-1cb3-46d5-bd7c-5aa1a76d541c",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.51,
+          "snippet": "Electric potential is electric potential energy per unit charge at a point.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        },
+        {
+          "bbox": null,
+          "chunk_uid": "1c4345b4-fe87-4b3f-8ce3-3f75197d210d",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_FIELD",
+            "EVIDENCE_EN_MECH_FORCE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "262c8d5d-9412-49c6-bdcb-379553c09293",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.5,
+          "snippet": "Electric field is force per unit positive test charge at a point.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        },
+        {
+          "bbox": null,
+          "chunk_uid": "30353830-f481-46c2-b463-b363e08d9b88",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_CAPACITANCE",
+            "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "5248080a-625a-40f5-8727-55fe7ea6fc24",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.34,
+          "snippet": "Capacitance is the charge stored per unit potential difference.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        }
+      ],
+      "english_evidence_ids": [
+        "EVIDENCE_EN_ELEC_ELECTRIC_CHARGE",
+        "EVIDENCE_EN_ELEC_ELECTRIC_FIELD",
+        "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL",
+        "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE",
+        "EVIDENCE_EN_MECH_FORCE",
+        "EVIDENCE_EN_ELEC_CAPACITANCE"
+      ],
+      "english_term": "electric charge",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "2a04b264-b3be-4897-9719-a77dd3b200a4"
+        ],
+        "english_chunk_uids": [
+          "9badb7cc-e754-4d7f-8994-44e4e22d2935",
+          "5f0e58db-3be9-46f2-b6bc-fffcaf195a82",
+          "7ba8ebf1-c785-4af0-bb31-ba2cda6caf18",
+          "1c4345b4-fe87-4b3f-8ce3-3f75197d210d",
+          "30353830-f481-46c2-b463-b363e08d9b88"
+        ],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified"
+        ]
+      },
+      "retrieval_error": "",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "电场表示单位正试探电荷在某点受到的力"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "9a448a46-0866-44b2-aaaa-9becea9674c8",
+          "evidence_ids": [
+            "EVIDENCE_ZH_ELEC_ELECTRIC_FIELD"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "faf070f1-889a-4f00-b741-d023d06dcc9c",
+          "parse_uid": "fe1507ce-276d-46f7-9a4c-86838bee75af",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "electric field 即 电场表示单位正试探电荷在某点受到的力。",
+          "source_title": "Chinese Electricity",
+          "source_uid": "97bde899-47f7-41ae-89b7-9dc0f8cf542e"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_ELEC_ELECTRIC_FIELD"
+      ],
+      "chinese_term": "电场表示单位正试探电荷在某点受到的力",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-22",
+      "confidence": null,
+      "contradiction_count": 0,
+      "english_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "9badb7cc-e754-4d7f-8994-44e4e22d2935",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_CHARGE",
+            "EVIDENCE_EN_ELEC_ELECTRIC_FIELD",
+            "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL",
+            "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "43765f63-1155-4bb4-a68b-8fa7616df2ac",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.98,
+          "snippet": "Confusion checks: electric potential is a point quantity, while potential difference compares two points. Electric field is not the same as electric charge.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        },
+        {
+          "bbox": null,
+          "chunk_uid": "1c4345b4-fe87-4b3f-8ce3-3f75197d210d",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_FIELD",
+            "EVIDENCE_EN_MECH_FORCE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "262c8d5d-9412-49c6-bdcb-379553c09293",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.96,
+          "snippet": "Electric field is force per unit positive test charge at a point.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        },
+        {
+          "bbox": null,
+          "chunk_uid": "7ba8ebf1-c785-4af0-bb31-ba2cda6caf18",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "cf03232b-1cb3-46d5-bd7c-5aa1a76d541c",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.35,
+          "snippet": "Electric potential is electric potential energy per unit charge at a point.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        },
+        {
+          "bbox": null,
+          "chunk_uid": "5f0e58db-3be9-46f2-b6bc-fffcaf195a82",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_CHARGE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "c8d98a4d-7555-44ff-9e5d-d40c1974f27b",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.35,
+          "snippet": "Electric charge is a property of matter that causes electric interactions.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        },
+        {
+          "bbox": null,
+          "chunk_uid": "c13f2bc3-7849-403c-b1fc-fd11f7fc7af2",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL",
+            "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "65c86eba-6424-490c-ae51-6a34a27adcb9",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.34,
+          "snippet": "Potential difference is the difference in electric potential between two points.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        }
+      ],
+      "english_evidence_ids": [
+        "EVIDENCE_EN_ELEC_ELECTRIC_CHARGE",
+        "EVIDENCE_EN_ELEC_ELECTRIC_FIELD",
+        "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL",
+        "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE",
+        "EVIDENCE_EN_MECH_FORCE"
+      ],
+      "english_term": "electric field",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "9a448a46-0866-44b2-aaaa-9becea9674c8"
+        ],
+        "english_chunk_uids": [
+          "9badb7cc-e754-4d7f-8994-44e4e22d2935",
+          "1c4345b4-fe87-4b3f-8ce3-3f75197d210d",
+          "7ba8ebf1-c785-4af0-bb31-ba2cda6caf18",
+          "5f0e58db-3be9-46f2-b6bc-fffcaf195a82",
+          "c13f2bc3-7849-403c-b1fc-fd11f7fc7af2"
+        ],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified"
+        ]
+      },
+      "retrieval_error": "",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": ""
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "电势是单位电荷在某点具有的电势能"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "6d078e8e-12d8-4fcb-84bd-a0de24f830c4",
+          "evidence_ids": [
+            "EVIDENCE_ZH_ELEC_ELECTRIC_POTENTIAL"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "b560a5ec-ca65-41dd-90e6-1eb458e6761a",
+          "parse_uid": "fe1507ce-276d-46f7-9a4c-86838bee75af",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "electric potential 即 电势是单位电荷在某点具有的电势能。",
+          "source_title": "Chinese Electricity",
+          "source_uid": "97bde899-47f7-41ae-89b7-9dc0f8cf542e"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_ELEC_ELECTRIC_POTENTIAL"
+      ],
+      "chinese_term": "电势是单位电荷在某点具有的电势能",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-23",
+      "confidence": null,
+      "contradiction_count": 0,
+      "draft_card_uid": "d771d0cd-72fa-4842-ad60-cac92c632dda",
+      "english_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "9badb7cc-e754-4d7f-8994-44e4e22d2935",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_CHARGE",
+            "EVIDENCE_EN_ELEC_ELECTRIC_FIELD",
+            "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL",
+            "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "43765f63-1155-4bb4-a68b-8fa7616df2ac",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.98,
+          "snippet": "Confusion checks: electric potential is a point quantity, while potential difference compares two points. Electric field is not the same as electric charge.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        },
+        {
+          "bbox": null,
+          "chunk_uid": "7ba8ebf1-c785-4af0-bb31-ba2cda6caf18",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "cf03232b-1cb3-46d5-bd7c-5aa1a76d541c",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.98,
+          "snippet": "Electric potential is electric potential energy per unit charge at a point.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        },
+        {
+          "bbox": null,
+          "chunk_uid": "c13f2bc3-7849-403c-b1fc-fd11f7fc7af2",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL",
+            "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "65c86eba-6424-490c-ae51-6a34a27adcb9",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.97,
+          "snippet": "Potential difference is the difference in electric potential between two points.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        },
+        {
+          "bbox": null,
+          "chunk_uid": "5f0e58db-3be9-46f2-b6bc-fffcaf195a82",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_CHARGE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "c8d98a4d-7555-44ff-9e5d-d40c1974f27b",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.35,
+          "snippet": "Electric charge is a property of matter that causes electric interactions.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        },
+        {
+          "bbox": null,
+          "chunk_uid": "30353830-f481-46c2-b463-b363e08d9b88",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_CAPACITANCE",
+            "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "5248080a-625a-40f5-8727-55fe7ea6fc24",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.34,
+          "snippet": "Capacitance is the charge stored per unit potential difference.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        }
+      ],
+      "english_evidence_ids": [
+        "EVIDENCE_EN_ELEC_ELECTRIC_CHARGE",
+        "EVIDENCE_EN_ELEC_ELECTRIC_FIELD",
+        "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL",
+        "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE",
+        "EVIDENCE_EN_ELEC_CAPACITANCE"
+      ],
+      "english_term": "electric potential",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "6d078e8e-12d8-4fcb-84bd-a0de24f830c4"
+        ],
+        "english_chunk_uids": [
+          "9badb7cc-e754-4d7f-8994-44e4e22d2935",
+          "7ba8ebf1-c785-4af0-bb31-ba2cda6caf18",
+          "c13f2bc3-7849-403c-b1fc-fd11f7fc7af2",
+          "5f0e58db-3be9-46f2-b6bc-fffcaf195a82",
+          "30353830-f481-46c2-b463-b363e08d9b88"
+        ],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified"
+        ]
+      },
+      "retrieval_error": "",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": "",
+      "workflow_status": "needs_review"
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "电势差是两点电势的差值"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "64f37b6d-b22b-49c5-b425-caf388170c1d",
+          "evidence_ids": [
+            "EVIDENCE_ZH_ELEC_POTENTIAL_DIFFERENCE"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "19e6d719-241c-4d0e-9a27-c19df963ef76",
+          "parse_uid": "fe1507ce-276d-46f7-9a4c-86838bee75af",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "potential difference 即 电势差是两点电势的差值，也称电压。",
+          "source_title": "Chinese Electricity",
+          "source_uid": "97bde899-47f7-41ae-89b7-9dc0f8cf542e"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_ELEC_POTENTIAL_DIFFERENCE"
+      ],
+      "chinese_term": "电势差是两点电势的差值",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-24",
+      "confidence": null,
+      "contradiction_count": 0,
+      "draft_card_uid": "eb3cf513-45e0-4497-be18-5528ebe8de75",
+      "english_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "c13f2bc3-7849-403c-b1fc-fd11f7fc7af2",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL",
+            "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "65c86eba-6424-490c-ae51-6a34a27adcb9",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.98,
+          "snippet": "Potential difference is the difference in electric potential between two points.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        },
+        {
+          "bbox": null,
+          "chunk_uid": "9badb7cc-e754-4d7f-8994-44e4e22d2935",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_CHARGE",
+            "EVIDENCE_EN_ELEC_ELECTRIC_FIELD",
+            "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL",
+            "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "43765f63-1155-4bb4-a68b-8fa7616df2ac",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.97,
+          "snippet": "Confusion checks: electric potential is a point quantity, while potential difference compares two points. Electric field is not the same as electric charge.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        },
+        {
+          "bbox": null,
+          "chunk_uid": "30353830-f481-46c2-b463-b363e08d9b88",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_CAPACITANCE",
+            "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "5248080a-625a-40f5-8727-55fe7ea6fc24",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.96,
+          "snippet": "Capacitance is the charge stored per unit potential difference.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        },
+        {
+          "bbox": null,
+          "chunk_uid": "7ba8ebf1-c785-4af0-bb31-ba2cda6caf18",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "cf03232b-1cb3-46d5-bd7c-5aa1a76d541c",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.35,
+          "snippet": "Electric potential is electric potential energy per unit charge at a point.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        }
+      ],
+      "english_evidence_ids": [
+        "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL",
+        "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE",
+        "EVIDENCE_EN_ELEC_ELECTRIC_CHARGE",
+        "EVIDENCE_EN_ELEC_ELECTRIC_FIELD",
+        "EVIDENCE_EN_ELEC_CAPACITANCE"
+      ],
+      "english_term": "potential difference",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "64f37b6d-b22b-49c5-b425-caf388170c1d"
+        ],
+        "english_chunk_uids": [
+          "c13f2bc3-7849-403c-b1fc-fd11f7fc7af2",
+          "9badb7cc-e754-4d7f-8994-44e4e22d2935",
+          "30353830-f481-46c2-b463-b363e08d9b88",
+          "7ba8ebf1-c785-4af0-bb31-ba2cda6caf18"
+        ],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified"
+        ]
+      },
+      "retrieval_error": "",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": "",
+      "workflow_status": "needs_review"
+    },
+    {
+      "candidate_error": "",
+      "candidate_scores": [
+        0.81
+      ],
+      "chinese_candidates": [
+        "电容是单位电势差下储存的电荷量"
+      ],
+      "chinese_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "c08cfbe8-46a1-4db0-a102-9199bb045788",
+          "evidence_ids": [
+            "EVIDENCE_ZH_ELEC_CAPACITANCE"
+          ],
+          "language": "zh",
+          "page_number": null,
+          "parse_block_uid": "05c8b0f7-2f6b-465a-bcc0-2f8621b7674a",
+          "parse_uid": "fe1507ce-276d-46f7-9a4c-86838bee75af",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "capacitance 即 电容是单位电势差下储存的电荷量。",
+          "source_title": "Chinese Electricity",
+          "source_uid": "97bde899-47f7-41ae-89b7-9dc0f8cf542e"
+        }
+      ],
+      "chinese_evidence_ids": [
+        "EVIDENCE_ZH_ELEC_CAPACITANCE"
+      ],
+      "chinese_term": "电容是单位电势差下储存的电荷量",
+      "chunk_reference_complete": true,
+      "concept_id": "physics-25",
+      "confidence": null,
+      "contradiction_count": 0,
+      "draft_card_uid": "dd85f5eb-98e7-43b3-a247-8a55e3037686",
+      "english_evidence": [
+        {
+          "bbox": null,
+          "chunk_uid": "30353830-f481-46c2-b463-b363e08d9b88",
+          "evidence_ids": [
+            "EVIDENCE_EN_ELEC_CAPACITANCE",
+            "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE"
+          ],
+          "language": "en",
+          "page_number": null,
+          "parse_block_uid": "5248080a-625a-40f5-8727-55fe7ea6fc24",
+          "parse_uid": "304ed179-dfb4-4eed-854c-e34db0bf3a9e",
+          "quality_status": "native_text_ok",
+          "score": 0.94,
+          "snippet": "Capacitance is the charge stored per unit potential difference.",
+          "source_title": "English Electricity",
+          "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+        }
+      ],
+      "english_evidence_ids": [
+        "EVIDENCE_EN_ELEC_CAPACITANCE",
+        "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE"
+      ],
+      "english_term": "capacitance",
+      "explanation": "",
+      "explanation_score": 0,
+      "page_bbox_complete_when_available": null,
+      "parse_reference_complete_when_available": true,
+      "provenance": {
+        "chinese_chunk_uids": [
+          "c08cfbe8-46a1-4db0-a102-9199bb045788"
+        ],
+        "english_chunk_uids": [
+          "30353830-f481-46c2-b463-b363e08d9b88"
+        ],
+        "location_available": false
+      },
+      "provenance_error": "",
+      "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+      "raw": {
+        "candidate_count": 1,
+        "risk_labels": [
+          "bilingual_alignment_not_verified"
+        ]
+      },
+      "retrieval_error": "",
+      "source_reference_complete": true,
+      "unsupported_claim_count": 1,
+      "workflow_error": "",
+      "workflow_status": "needs_review"
+    }
+  ],
+  "corpus": {
+    "corpus_sha256": "33715999c16a74610091b1e40896ee41921570a3740ebc2815565cf0ab7202dc",
+    "course": "Synthetic Physics Quality Pilot 11E",
+    "frozen_before_run": true,
+    "gold_sha256": "199baed9a8cb6deb68ae3480c3a67679b2daf273d3733e909d4e861685d45302",
+    "random_seed": 1105,
+    "sources": [
+      {
+        "chapter": "Mechanics",
+        "domain": "mechanics",
+        "filename": "english-mechanics.txt",
+        "language": "en",
+        "source_id": "english-mechanics",
+        "text_chars": 1754,
+        "text_sha256": "173debf11d2c10d6a7a535adfef0a085bd22113790eefb3ac6a953a7c2be4b62",
+        "title": "English Mechanics"
+      },
+      {
+        "chapter": "Mechanics",
+        "domain": "mechanics",
+        "filename": "chinese-mechanics.txt",
+        "language": "zh",
+        "source_id": "chinese-mechanics",
+        "text_chars": 1069,
+        "text_sha256": "4aac19c7a7c2cee454511667c8cab9cb09e9d77097a1a29260ea9012c7538477",
+        "title": "Chinese Mechanics"
+      },
+      {
+        "chapter": "Electricity",
+        "domain": "electricity",
+        "filename": "english-electricity.txt",
+        "language": "en",
+        "source_id": "english-electricity",
+        "text_chars": 607,
+        "text_sha256": "6700e2d9731a32672ef29cd0a139acdcb9cbcc02c5662b188b59cb565996fffb",
+        "title": "English Electricity"
+      },
+      {
+        "chapter": "Electricity",
+        "domain": "electricity",
+        "filename": "chinese-electricity.txt",
+        "language": "zh",
+        "source_id": "chinese-electricity",
+        "text_chars": 435,
+        "text_sha256": "5005414a69251683c2fcb3519605976fd71e1d2fac745aa82a01c3710556e9b5",
+        "title": "Chinese Electricity"
+      }
+    ]
+  },
+  "created_at": "2026-08-02T16:08:19.233050Z",
+  "database_protection": {
+    "accident_database_used": false,
+    "after_mtime_epoch": 1785496597,
+    "after_sha256": "9e6fb68ab13dff2763e2fff18d2aee531486360c557f058eb8a471d9209a9eaa",
+    "after_shm_exists": false,
+    "after_size": 1015808,
+    "after_wal_exists": false,
+    "before_mtime_epoch": 1785496597,
+    "before_sha256": "9e6fb68ab13dff2763e2fff18d2aee531486360c557f058eb8a471d9209a9eaa",
+    "before_shm_exists": false,
+    "before_size": 1015808,
+    "before_wal_exists": false,
+    "database_used_for_evaluation": "/var/folders/7q/_0ffnnxj2wb8hvm0b77w647m0000gn/T/lexibridge-11e-lozzuq1u/11e-evaluation.sqlite",
+    "expected_frozen_sha256": "9e6fb68ab13dff2763e2fff18d2aee531486360c557f058eb8a471d9209a9eaa",
+    "temporary_database_path": "/var/folders/7q/_0ffnnxj2wb8hvm0b77w647m0000gn/T/lexibridge-11e-lozzuq1u/11e-evaluation.sqlite",
+    "unchanged": true
+  },
+  "dominant_failure_stage": "PROVIDER_FAILURE",
+  "gold": {
+    "concept_count": 25,
+    "concepts": [
+      {
+        "accepted_chinese_terms": [
+          "位移"
+        ],
+        "concept_id": "physics-01",
+        "domain": "mechanics",
+        "english_term": "displacement",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "距离"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_DISPLACEMENT"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_DISPLACEMENT"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "速度"
+        ],
+        "concept_id": "physics-02",
+        "domain": "mechanics",
+        "english_term": "velocity",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "速率"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_VELOCITY"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_VELOCITY"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "加速度"
+        ],
+        "concept_id": "physics-03",
+        "domain": "mechanics",
+        "english_term": "acceleration",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "速度"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_ACCELERATION"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_ACCELERATION"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "力"
+        ],
+        "concept_id": "physics-04",
+        "domain": "mechanics",
+        "english_term": "force",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "功率"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_FORCE"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_FORCE"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "质量"
+        ],
+        "concept_id": "physics-05",
+        "domain": "mechanics",
+        "english_term": "mass",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "惯性"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_MASS"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_MASS"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "惯性"
+        ],
+        "concept_id": "physics-06",
+        "domain": "mechanics",
+        "english_term": "inertia",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "质量"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_INERTIA"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_INERTIA"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "动量"
+        ],
+        "concept_id": "physics-07",
+        "domain": "mechanics",
+        "english_term": "momentum",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "冲量"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_MOMENTUM"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_MOMENTUM"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "冲量"
+        ],
+        "concept_id": "physics-08",
+        "domain": "mechanics",
+        "english_term": "impulse",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "动量"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_IMPULSE"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_IMPULSE"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "动能"
+        ],
+        "concept_id": "physics-09",
+        "domain": "mechanics",
+        "english_term": "kinetic energy",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "功"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_KINETIC_ENERGY"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_KINETIC_ENERGY"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "重力势能"
+        ],
+        "concept_id": "physics-10",
+        "domain": "mechanics",
+        "english_term": "gravitational potential energy",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "电势"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_GRAVITATIONAL_POTENTIAL_ENERGY"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_GRAVITATIONAL_POTENTIAL_ENERGY"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "功"
+        ],
+        "concept_id": "physics-11",
+        "domain": "mechanics",
+        "english_term": "work",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "能量"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_WORK"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_WORK"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "功率"
+        ],
+        "concept_id": "physics-12",
+        "domain": "mechanics",
+        "english_term": "power",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "力"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_POWER"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_POWER"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "机械能"
+        ],
+        "concept_id": "physics-13",
+        "domain": "mechanics",
+        "english_term": "mechanical energy",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "动能"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_MECHANICAL_ENERGY"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_MECHANICAL_ENERGY"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "动量守恒定律"
+        ],
+        "concept_id": "physics-14",
+        "domain": "mechanics",
+        "english_term": "conservation of momentum",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "机械能守恒定律"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_CONSERVATION_OF_MOMENTUM"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_CONSERVATION_OF_MOMENTUM"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "机械能守恒定律"
+        ],
+        "concept_id": "physics-15",
+        "domain": "mechanics",
+        "english_term": "conservation of mechanical energy",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "动量守恒定律"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_CONSERVATION_OF_MECHANICAL_ENERGY"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_CONSERVATION_OF_MECHANICAL_ENERGY"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "匀速圆周运动"
+        ],
+        "concept_id": "physics-16",
+        "domain": "mechanics",
+        "english_term": "uniform circular motion",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "直线运动"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_UNIFORM_CIRCULAR_MOTION"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_UNIFORM_CIRCULAR_MOTION"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "向心力"
+        ],
+        "concept_id": "physics-17",
+        "domain": "mechanics",
+        "english_term": "centripetal force",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "离心力"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_CENTRIPETAL_FORCE"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_CENTRIPETAL_FORCE"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "角速度"
+        ],
+        "concept_id": "physics-18",
+        "domain": "mechanics",
+        "english_term": "angular velocity",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "速度"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_ANGULAR_VELOCITY"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_ANGULAR_VELOCITY"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "角动量"
+        ],
+        "concept_id": "physics-19",
+        "domain": "mechanics",
+        "english_term": "angular momentum",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "力矩"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_ANGULAR_MOMENTUM"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_ANGULAR_MOMENTUM"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "力矩"
+        ],
+        "concept_id": "physics-20",
+        "domain": "mechanics",
+        "english_term": "torque",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "角动量"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_MECH_TORQUE"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_MECH_TORQUE"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "电荷"
+        ],
+        "concept_id": "physics-21",
+        "domain": "electricity",
+        "english_term": "electric charge",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "电场"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_ELEC_ELECTRIC_CHARGE"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_ELEC_ELECTRIC_CHARGE"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "电场"
+        ],
+        "concept_id": "physics-22",
+        "domain": "electricity",
+        "english_term": "electric field",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "电荷"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_ELEC_ELECTRIC_FIELD"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_ELEC_ELECTRIC_FIELD"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "电势"
+        ],
+        "concept_id": "physics-23",
+        "domain": "electricity",
+        "english_term": "electric potential",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "电势差"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_ELEC_ELECTRIC_POTENTIAL"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_ELEC_ELECTRIC_POTENTIAL"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "电势差"
+        ],
+        "concept_id": "physics-24",
+        "domain": "electricity",
+        "english_term": "potential difference",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "电势"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_ELEC_POTENTIAL_DIFFERENCE"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_ELEC_POTENTIAL_DIFFERENCE"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      },
+      {
+        "accepted_chinese_terms": [
+          "电容"
+        ],
+        "concept_id": "physics-25",
+        "domain": "electricity",
+        "english_term": "capacitance",
+        "forbidden_claims": [
+          "unsupported formula derivation",
+          "unsupported synonym claim"
+        ],
+        "rejected_confusions": [
+          "电荷"
+        ],
+        "required_chinese_evidence_ids": [
+          "EVIDENCE_ZH_ELEC_CAPACITANCE"
+        ],
+        "required_english_evidence_ids": [
+          "EVIDENCE_EN_ELEC_CAPACITANCE"
+        ],
+        "required_propositions": [
+          "definition"
+        ]
+      }
+    ]
+  },
+  "pipeline": {
+    "alignment_provider_policy_blocked_real_quality": true,
+    "concept_card_count": 5,
+    "course": "Synthetic Physics Quality Pilot 11E",
+    "course_id": 1,
+    "formal_runs": [
+      "f4631990-a7f3-45d5-b239-dc160a5bf4eb",
+      "fb49dcc7-bade-4bae-ab8b-e5df31152274"
+    ],
+    "formal_worker_outcomes": [
+      "completed",
+      "completed",
+      "no_job_available"
+    ],
+    "knowledge_chunk_count": 58,
+    "knowledge_source_count": 4,
+    "pipeline_completed": true,
+    "retrieval_only": true,
+    "semantic_quality_completed": false,
+    "teacher_id": 1,
+    "uploads": [
+      {
+        "chapter": "Mechanics",
+        "chunk_uids": [
+          "d814ffb4-a4fe-43d7-942f-8f904f5ec12c",
+          "2c4e778f-5674-4a67-bd9a-645a6c80253d",
+          "b06827bb-f14c-4f38-ad75-ae115b8b4de1",
+          "2451e676-9177-49be-864f-29fbbefef96b",
+          "c747811d-3168-4568-87e6-6c53c7d73d75",
+          "8a482d45-2d83-4b41-a33d-54a3cea3aa87",
+          "87872026-8310-4475-bfc1-0bb27038328f",
+          "94f0ec6e-8f02-422f-a228-d8d4d38b7591",
+          "c9cfed5f-28f1-451c-ba67-0fafdebf526c",
+          "d1209537-cbc7-4ebc-a8b6-fb844e5997b4",
+          "a6eb4686-0514-4baa-be1b-96726e7c30e1",
+          "eff22b6c-1551-4bec-b864-9d443abf01bf",
+          "d3aa3976-b67d-49fd-8bcc-478434597e4d",
+          "a36fc789-ddb6-4e9a-bd2a-190eb0901864",
+          "95dac618-d32e-483d-9ee6-5fccebae3a50",
+          "10efd731-07b7-4c94-9145-7f721b7fc35c",
+          "86118fb0-d980-4709-8706-1e8cd54922cd",
+          "75b11237-7875-4be8-a313-c0cb048f8389",
+          "59f5c341-7688-48c6-aaa1-14af264a7ef5",
+          "a88572f9-e2a0-47b7-afc5-567e34dd5def"
+        ],
+        "language": "en",
+        "source_id": "english-mechanics",
+        "source_uid": "9b1741c2-8587-4ed1-b0b2-fb792e7b37d1"
+      },
+      {
+        "chapter": "Mechanics",
+        "chunk_uids": [
+          "9e7c3583-5d82-4a2b-bc65-c802d72674a1",
+          "419bf5b1-b97f-4dc4-845d-635bb6ebdf1d",
+          "8d540a8f-c4d0-4ae1-b672-8294e4b3ae9e",
+          "b3f66726-5c04-4ddf-ad9f-f2b28997fe05",
+          "95abddf2-55d6-4d63-88eb-85d98be80735",
+          "09f23f56-3d00-4b78-9c38-5902162313ca",
+          "21c28333-5d84-45ff-b08f-91f8008c8769",
+          "3a233773-32e8-4738-8889-35991ef443e9",
+          "f1ab855e-d7e1-4292-9e4e-d8a7e92278e3",
+          "fd4c9a78-9947-4869-afc0-a7bddf950921",
+          "da4dc209-1b16-4241-a26a-e2f3bf16f6f1",
+          "dbde9e7b-f4a6-479f-b35f-b54cbbf77d7c",
+          "0e87e23f-64fc-43f8-bd4f-60d370a4712b",
+          "f5d05085-0668-4316-a36b-038df6fd3f63",
+          "96234e0d-2df3-4e04-ad33-d772b691142f",
+          "877e9053-1859-4efc-b397-8676db9b7b9c",
+          "4d251ef1-4eb4-4aca-9ac9-f614f573d09f",
+          "bc9cc67c-88da-4480-ac85-daebbbaf8e2a",
+          "37f43d9a-bdd7-4c37-9ecc-52b591cf5ac0",
+          "07591428-ba45-4e6f-babe-ab890b561725"
+        ],
+        "language": "zh",
+        "source_id": "chinese-mechanics",
+        "source_uid": "88153f25-1468-4e03-9af9-c7a8f04ef380"
+      },
+      {
+        "chapter": "Electricity",
+        "chunk_uids": [
+          "0e2e66ac-f628-4e24-bf53-94e1572e2142",
+          "5f0e58db-3be9-46f2-b6bc-fffcaf195a82",
+          "1c4345b4-fe87-4b3f-8ce3-3f75197d210d",
+          "7ba8ebf1-c785-4af0-bb31-ba2cda6caf18",
+          "c13f2bc3-7849-403c-b1fc-fd11f7fc7af2",
+          "30353830-f481-46c2-b463-b363e08d9b88",
+          "9badb7cc-e754-4d7f-8994-44e4e22d2935"
+        ],
+        "language": "en",
+        "source_id": "english-electricity",
+        "source_uid": "6eeda0f3-3a2e-45a5-835a-31f9b7217d34"
+      },
+      {
+        "chapter": "Electricity",
+        "chunk_uids": [
+          "937acd87-59ae-4db4-b341-b7bcc7e42312",
+          "2a04b264-b3be-4897-9719-a77dd3b200a4",
+          "9a448a46-0866-44b2-aaaa-9becea9674c8",
+          "6d078e8e-12d8-4fcb-84bd-a0de24f830c4",
+          "64f37b6d-b22b-49c5-b425-caf388170c1d",
+          "c08cfbe8-46a1-4db0-a102-9199bb045788",
+          "1a269010-3dc6-48aa-ba92-7cb3ba43c78a"
+        ],
+        "language": "zh",
+        "source_id": "chinese-electricity",
+        "source_uid": "97bde899-47f7-41ae-89b7-9dc0f8cf542e"
+      }
+    ]
+  },
+  "privacy_network": {
+    "ai_provider_requests": 0,
+    "external_document_api_requests": 0,
+    "external_network_requests": 0,
+    "model_downloads": 0,
+    "private_data_egress": 0,
+    "private_pdf_usage": 0,
+    "provider_model": "mock-rule-v1:v1",
+    "secret_exposure": 0,
+    "synthetic_text_egress": 0
+  },
+  "provider": {
+    "blocker": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+    "failure_count": 0,
+    "input_tokens": null,
+    "is_production_provider": false,
+    "model_identity": "mock-rule-v1:v1",
+    "output_tokens": null,
+    "preflight_status": "REAL_PROVIDER_UNAVAILABLE",
+    "prompt_version": "alignment-v1",
+    "provider_name": "mock-rule-v1",
+    "provider_type": "mock",
+    "real_provider_available": false,
+    "requests": 0,
+    "retry_count": 0,
+    "success_count": 0,
+    "supports_external_calls": false
+  },
+  "quality_metrics": {
+    "accepted_alias_accuracy": 0.0,
+    "approve_proxy_rate": 0.0,
+    "bilingual_evidence_completeness": 0.24,
+    "candidate_precision": 0.0,
+    "candidate_recall": 0.0,
+    "chinese_hit_at_1": 0.84,
+    "chinese_hit_at_3": 1.0,
+    "chinese_irrelevant_evidence_rate": 0.0,
+    "chinese_recall_at_3": 1.0,
+    "chinese_term_top1_accuracy": 0.0,
+    "chinese_term_top3_accuracy": 0.0,
+    "chunk_reference_completeness": 1.0,
+    "concept_results": {
+      "physics-01": {
+        "accepted_chinese_terms": [
+          "位移"
+        ],
+        "bilingual_evidence_complete": false,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-01",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": false,
+        "english_recall_at_3": 0.0,
+        "english_term": "displacement",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "ENGLISH_RETRIEVAL_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "位移是从初位置指向末位置的位置变化量",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-02": {
+        "accepted_chinese_terms": [
+          "速度"
+        ],
+        "bilingual_evidence_complete": false,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": false,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-02",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": false,
+        "english_recall_at_3": 0.0,
+        "english_term": "velocity",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "ENGLISH_RETRIEVAL_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "角速度是角位置随时间变化的率",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-03": {
+        "accepted_chinese_terms": [
+          "加速度"
+        ],
+        "bilingual_evidence_complete": false,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-03",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": false,
+        "english_recall_at_3": 0.0,
+        "english_term": "acceleration",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "ENGLISH_RETRIEVAL_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "加速度是速度随时间变化的率",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-04": {
+        "accepted_chinese_terms": [
+          "力"
+        ],
+        "bilingual_evidence_complete": true,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": false,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-04",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": true,
+        "english_recall_at_3": 1.0,
+        "english_term": "force",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "向心力是维持圆周运动所需的指向圆心的合力",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-05": {
+        "accepted_chinese_terms": [
+          "质量"
+        ],
+        "bilingual_evidence_complete": false,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-05",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": false,
+        "english_recall_at_3": 0.0,
+        "english_term": "mass",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "ENGLISH_RETRIEVAL_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "质量表示物体所含物质多少",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-06": {
+        "accepted_chinese_terms": [
+          "惯性"
+        ],
+        "bilingual_evidence_complete": false,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-06",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": false,
+        "english_recall_at_3": 0.0,
+        "english_term": "inertia",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "ENGLISH_RETRIEVAL_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "惯性是物体保持原有运动状态的性质",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-07": {
+        "accepted_chinese_terms": [
+          "动量"
+        ],
+        "bilingual_evidence_complete": false,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": false,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-07",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": false,
+        "english_recall_at_3": 0.0,
+        "english_term": "momentum",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "ENGLISH_RETRIEVAL_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "角动量描述转动运动",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-08": {
+        "accepted_chinese_terms": [
+          "冲量"
+        ],
+        "bilingual_evidence_complete": false,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-08",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": false,
+        "english_recall_at_3": 0.0,
+        "english_term": "impulse",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "ENGLISH_RETRIEVAL_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "冲量是力与作用时间间隔的乘积",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-09": {
+        "accepted_chinese_terms": [
+          "动能"
+        ],
+        "bilingual_evidence_complete": false,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-09",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": false,
+        "english_recall_at_3": 0.0,
+        "english_term": "kinetic energy",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "ENGLISH_RETRIEVAL_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "动能是物体由于运动而具有的能量",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-10": {
+        "accepted_chinese_terms": [
+          "重力势能"
+        ],
+        "bilingual_evidence_complete": false,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-10",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": false,
+        "english_recall_at_3": 0.0,
+        "english_term": "gravitational potential energy",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "ENGLISH_RETRIEVAL_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "重力势能是物体因高度和重力场而具有的势能",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-11": {
+        "accepted_chinese_terms": [
+          "功"
+        ],
+        "bilingual_evidence_complete": false,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-11",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": false,
+        "english_recall_at_3": 0.0,
+        "english_term": "work",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "ENGLISH_RETRIEVAL_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "功是力在位移方向上转移能量的量",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-12": {
+        "accepted_chinese_terms": [
+          "功率"
+        ],
+        "bilingual_evidence_complete": false,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-12",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": false,
+        "english_recall_at_3": 0.0,
+        "english_term": "power",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "ENGLISH_RETRIEVAL_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "功率是做功或能量转移的快慢",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-13": {
+        "accepted_chinese_terms": [
+          "机械能"
+        ],
+        "bilingual_evidence_complete": false,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": false,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-13",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": false,
+        "english_recall_at_3": 0.0,
+        "english_term": "mechanical energy",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "ENGLISH_RETRIEVAL_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "机械能守恒定律适用于只有保守力做功的情形",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-14": {
+        "accepted_chinese_terms": [
+          "动量守恒定律"
+        ],
+        "bilingual_evidence_complete": false,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-14",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": false,
+        "english_recall_at_3": 0.0,
+        "english_term": "conservation of momentum",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "ENGLISH_RETRIEVAL_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "动量守恒定律说明孤立系统总动量保持不变",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-15": {
+        "accepted_chinese_terms": [
+          "机械能守恒定律"
+        ],
+        "bilingual_evidence_complete": false,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-15",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": false,
+        "english_recall_at_3": 0.0,
+        "english_term": "conservation of mechanical energy",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "ENGLISH_RETRIEVAL_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "机械能守恒定律适用于只有保守力做功的情形",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-16": {
+        "accepted_chinese_terms": [
+          "匀速圆周运动"
+        ],
+        "bilingual_evidence_complete": false,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-16",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": false,
+        "english_recall_at_3": 0.0,
+        "english_term": "uniform circular motion",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "ENGLISH_RETRIEVAL_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "匀速圆周运动是在圆周上速率不变但速度方向不断改变的运动",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-17": {
+        "accepted_chinese_terms": [
+          "向心力"
+        ],
+        "bilingual_evidence_complete": false,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-17",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": false,
+        "english_recall_at_3": 0.0,
+        "english_term": "centripetal force",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "ENGLISH_RETRIEVAL_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "向心力是维持圆周运动所需的指向圆心的合力",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-18": {
+        "accepted_chinese_terms": [
+          "角速度"
+        ],
+        "bilingual_evidence_complete": false,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-18",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": false,
+        "english_recall_at_3": 0.0,
+        "english_term": "angular velocity",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "ENGLISH_RETRIEVAL_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "角速度是角位置随时间变化的率",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-19": {
+        "accepted_chinese_terms": [
+          "角动量"
+        ],
+        "bilingual_evidence_complete": false,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-19",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": false,
+        "english_recall_at_3": 0.0,
+        "english_term": "angular momentum",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "ENGLISH_RETRIEVAL_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "角动量描述转动运动",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-20": {
+        "accepted_chinese_terms": [
+          "力矩"
+        ],
+        "bilingual_evidence_complete": false,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-20",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": false,
+        "english_recall_at_3": 0.0,
+        "english_term": "torque",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "ENGLISH_RETRIEVAL_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "力矩是力使物体绕轴转动的效应",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-21": {
+        "accepted_chinese_terms": [
+          "电荷"
+        ],
+        "bilingual_evidence_complete": true,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-21",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": true,
+        "english_evidence_hit_at_3": true,
+        "english_recall_at_3": 1.0,
+        "english_term": "electric charge",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "电荷是物质产生电相互作用的属性",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-22": {
+        "accepted_chinese_terms": [
+          "电场"
+        ],
+        "bilingual_evidence_complete": true,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-22",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": true,
+        "english_recall_at_3": 1.0,
+        "english_term": "electric field",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "电场表示单位正试探电荷在某点受到的力",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-23": {
+        "accepted_chinese_terms": [
+          "电势"
+        ],
+        "bilingual_evidence_complete": true,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-23",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": true,
+        "english_recall_at_3": 1.0,
+        "english_term": "electric potential",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "电势是单位电荷在某点具有的电势能",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-24": {
+        "accepted_chinese_terms": [
+          "电势差"
+        ],
+        "bilingual_evidence_complete": true,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-24",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": false,
+        "english_evidence_hit_at_3": true,
+        "english_recall_at_3": 1.0,
+        "english_term": "potential difference",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "电势差是两点电势的差值",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      },
+      "physics-25": {
+        "accepted_chinese_terms": [
+          "电容"
+        ],
+        "bilingual_evidence_complete": true,
+        "candidate_recalled": false,
+        "chinese_evidence_hit_at_1": true,
+        "chinese_evidence_hit_at_3": true,
+        "chinese_recall_at_3": 1.0,
+        "chunk_reference_complete": true,
+        "concept_id": "physics-25",
+        "contradiction_count": 0,
+        "critical_confusion": false,
+        "english_evidence_hit_at_1": true,
+        "english_evidence_hit_at_3": true,
+        "english_recall_at_3": 1.0,
+        "english_term": "capacitance",
+        "exact_term_pair_correct": false,
+        "explanation_score": 0,
+        "page_bbox_complete_when_available": null,
+        "parse_reference_complete_when_available": true,
+        "primary_failure_attribution": "PROVIDER_FAILURE",
+        "provider_error": "FORMAL_WORKFLOW_PROVIDER_POLICY_ONLY_ALLOWS_MOCK_RULE_V1",
+        "review_proxy_decision": "reject",
+        "secondary_failure_attributions": [
+          "CHINESE_CANDIDATE_DEFECT",
+          "EXPLANATION_GENERATION_DEFECT"
+        ],
+        "source_reference_complete": true,
+        "system_chinese_term": "电容是单位电势差下储存的电荷量",
+        "term_pair_correct": false,
+        "top1_chinese_term_correct": false,
+        "top3_chinese_term_correct": false,
+        "unsupported_claim_count": 1,
+        "workflow_error": ""
+      }
+    },
+    "confusion_rate": 0.0,
+    "contradiction_count": 0,
+    "critical_confusion_count": 0,
+    "duplicate_candidate_count": 0,
+    "edit_proxy_rate": 0.0,
+    "english_hit_at_1": 0.08,
+    "english_hit_at_3": 0.24,
+    "english_irrelevant_evidence_rate": 0.76,
+    "english_recall_at_3": 0.24,
+    "evaluated_concept_count": 25,
+    "exact_term_pair_accuracy": 0.0,
+    "failure_attribution_counts": {
+      "PROVIDER_FAILURE": 25
+    },
+    "language_label_completeness": 1.0,
+    "missing_concept_count": 25,
+    "missing_result_count": 0,
+    "missing_term_rate": 0.0,
+    "overall_quality_pass": false,
+    "page_bbox_completeness_when_available": null,
+    "parse_reference_completeness_when_available": 1.0,
+    "reject_proxy_rate": 1.0,
+    "result_count": 25,
+    "source_reference_completeness": 1.0,
+    "term_pair_accuracy": 0.0,
+    "threshold_pass": {
+      "approve_proxy_rate": false,
+      "bilingual_evidence_completeness": false,
+      "candidate_recall": false,
+      "chinese_hit_at_3": true,
+      "chinese_term_top1_accuracy": false,
+      "chinese_term_top3_accuracy": false,
+      "chunk_reference_completeness": true,
+      "critical_confusion_count": true,
+      "english_hit_at_3": false,
+      "reject_proxy_rate": false,
+      "source_reference_completeness": true,
+      "term_pair_accuracy": false,
+      "unsupported_claim_rate": false
+    },
+    "thresholds": {
+      "approve_proxy_rate": 0.6,
+      "bilingual_evidence_completeness": 0.8,
+      "candidate_recall": 0.88,
+      "chinese_hit_at_3": 0.85,
+      "chinese_term_top1_accuracy": 0.8,
+      "chinese_term_top3_accuracy": 0.92,
+      "chunk_reference_completeness": 1.0,
+      "critical_confusion_count": 0,
+      "english_hit_at_3": 0.9,
+      "reject_proxy_rate": 0.15,
+      "source_reference_completeness": 1.0,
+      "term_pair_accuracy": 0.8,
+      "unsupported_claim_rate": 0.1
+    },
+    "unsupported_claim_count": 25,
+    "unsupported_claim_rate": 1.0,
+    "wrong_term_rate": 1.0
+  },
+  "remaining_limitations": [
+    "Synthetic corpus only; no real teacher blind review.",
+    "Real semantic quality is blocked unless a production allowlisted Provider is available through the Formal Workflow policy.",
+    "Complex PDF parsing is outside Task 11E.",
+    "Production embedding/vector retrieval is not implemented in this task.",
+    "Formula structure recognition, LaTeX, and MathML are outside this task."
+  ],
+  "runtime": {
+    "backend_imported_after_temp_db_env": true,
+    "corpus_gold_frozen_before_run": true,
+    "python": "3.9.6",
+    "temporary_database_path": "/var/folders/7q/_0ffnnxj2wb8hvm0b77w647m0000gn/T/lexibridge-11e-lozzuq1u/11e-evaluation.sqlite",
+    "upload_dir": "/var/folders/7q/_0ffnnxj2wb8hvm0b77w647m0000gn/T/lexibridge-11e-lozzuq1u/uploads",
+    "work_dir": "/var/folders/7q/_0ffnnxj2wb8hvm0b77w647m0000gn/T/lexibridge-11e-lozzuq1u"
+  },
+  "schema_version": "11E-bilingual-knowledge-quality-v1",
+  "status": "BILINGUAL_KNOWLEDGE_QUALITY_VALIDATION_BLOCKED",
+  "task": "11E"
+}

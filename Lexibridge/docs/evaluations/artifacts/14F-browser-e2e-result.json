@@ -1,0 +1,29 @@
+{
+  "task": "14F",
+  "mode": "synthetic_browser_regression",
+  "student_flow": {
+    "status": "PASS",
+    "steps": 80,
+    "console_errors": 0,
+    "page_errors": 0
+  },
+  "instructor_flow": {
+    "status": "PASS",
+    "steps": 7,
+    "console_errors": 0,
+    "page_errors": 0,
+    "reviewer_prefetch": 0
+  },
+  "reviewer_flow": {
+    "status": "PASS",
+    "steps": 15,
+    "console_errors": 0,
+    "page_errors": 0
+  },
+  "external_dependency_requests": 0,
+  "expected_blocked_probe_count": 3,
+  "real_provider_requests": 0,
+  "real_credentials_read": false,
+  "private_materials": false,
+  "real_student_claim": false
+}

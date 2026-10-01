@@ -1,0 +1,26 @@
+{
+  "contract_id": "student-concept-query@1.0.0",
+  "client_writable": [
+    "workspace_scope",
+    "source_uid",
+    "chunk_uid",
+    "selected_text",
+    "selection_start",
+    "selection_end",
+    "request_id"
+  ],
+  "server_derived": [
+    "student_uid",
+    "workspace_uid",
+    "source_version",
+    "bounded_context",
+    "source_provenance",
+    "evidence_scope_id",
+    "query_fingerprint",
+    "alignment_policy_version"
+  ],
+  "max_selection_chars": 180,
+  "max_context_chars": 800,
+  "published_card_lookup_used": false,
+  "provider_required": false
+}

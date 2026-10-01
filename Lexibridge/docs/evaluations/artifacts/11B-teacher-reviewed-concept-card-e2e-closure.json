@@ -1,0 +1,129 @@
+{
+  "task": "11B",
+  "status": "TEACHER_REVIEWED_CONCEPT_CARD_E2E_CLOSED",
+  "baseline_commit": "74fb3d34f8de6dc66e1cb74a9cefafb94725281b",
+  "branch": "feature/teacher-reviewed-concept-card-e2e-11b",
+  "synthetic_course": {
+    "title": "Introductory Physics 11B",
+    "english_source_language": "en",
+    "chinese_source_language": "zh",
+    "privacy_classification": "SYNTHETIC"
+  },
+  "workflow": {
+    "upload": {
+      "english_source": "POST /api/documents/upload",
+      "chinese_source": "POST /api/documents/upload",
+      "status": "verified"
+    },
+    "ingestion": {
+      "worker": "run_background_job",
+      "knowledge_source": "active",
+      "knowledge_chunk": "created",
+      "status": "verified"
+    },
+    "formal_run": {
+      "endpoint": "POST /api/document-alignment-runs",
+      "worker": "run_formal_worker_once",
+      "item_status": "needs_review",
+      "status": "verified"
+    },
+    "review": {
+      "edit_endpoint": "PATCH /api/concept-cards/<card_uid>",
+      "review_endpoint": "POST /api/concept-cards/<card_uid>/review",
+      "approve": "verified",
+      "reject": "verified"
+    },
+    "publication": {
+      "student_list_endpoint": "GET /api/student/concept-cards",
+      "student_detail_endpoint": "GET /api/student/concept-cards/<card_uid>",
+      "approved_only": true,
+      "status": "verified"
+    },
+    "feedback": {
+      "student_endpoint": "POST /api/student/concept-cards/<card_uid>/feedback",
+      "teacher_queue_endpoint": "GET /api/concept-cards/student-feedback-queue",
+      "status": "verified"
+    }
+  },
+  "authorization": {
+    "student_cannot_review": true,
+    "other_teacher_cannot_review_without_course_permission": true,
+    "non_enrolled_student_cannot_view": true,
+    "draft_student_visible": false,
+    "rejected_student_visible": false,
+    "feedback_requires_enrolled_approved_card": true,
+    "teacher_feedback_queue_course_scoped": true
+  },
+  "evidence_provenance": {
+    "english_evidence_present": true,
+    "chinese_evidence_present": true,
+    "language_separated": true,
+    "chunk_uid_present": true,
+    "source_uid_present": true,
+    "bounded_snippet_present": true,
+    "page_bbox_fabricated": false
+  },
+  "frontend": {
+    "teacher_review_uses_real_api": true,
+    "student_publication_uses_real_api": true,
+    "student_feedback_uses_real_api": true,
+    "teacher_feedback_queue_uses_real_api": true,
+    "frontend_files_modified": false,
+    "contract_test": "tests/test_frontend_contract.py"
+  },
+  "test_doubles": [
+    {
+      "boundary": "Formal provider",
+      "kind": "existing deterministic local/mock provider",
+      "reason": "11B verifies workflow closure, not external AI semantic quality"
+    },
+    {
+      "boundary": "Async queue transport",
+      "kind": "direct invocation of real worker functions",
+      "reason": "pytest runs the same worker logic without starting a separate daemon"
+    }
+  ],
+  "tests": [
+    {
+      "command": "backend/.venv-macos/bin/python -m pytest tests/test_teacher_reviewed_concept_card_publication_e2e.py -q",
+      "result": "1 passed"
+    },
+    {
+      "command": "related API/service/frontend contract regression suite",
+      "result": "151 passed",
+      "notes": "Included Concept Card review, student Concept Cards, feedback, Formal API, knowledge ingestion, bilingual evidence workflow, pilot feedback, pilot E2E, frontend contract, and 11B E2E tests."
+    },
+    {
+      "command": "backend/.venv-macos/bin/python -m pytest -q",
+      "result": "1207 passed, 6 warnings",
+      "notes": "Run with the verified local OCR runtime configured. Warnings were SQLAlchemy LegacyAPIWarning and PyMuPDF/SWIG deprecation warnings."
+    },
+    {
+      "command": "backend/.venv-macos/bin/python scripts/check_release_safety.py",
+      "result": "Release safety check passed."
+    }
+  ],
+  "database_protection": {
+    "incident_database": "backend/lexibridge.db",
+    "incident_sha256": "9e6fb68ab13dff2763e2fff18d2aee531486360c557f058eb8a471d9209a9eaa",
+    "accepted_as_new_normal_baseline": false,
+    "tests_use_isolated_database": true,
+    "migrate_db_executed": false,
+    "dev_check_executed": false
+  },
+  "privacy_network": {
+    "provider_requests": 0,
+    "external_document_api_requests": 0,
+    "document_egress": 0,
+    "private_course_data": 0,
+    "model_downloads": 0
+  },
+  "remaining_limitations": [
+    "Workflow closure does not validate real AI semantic quality.",
+    "Production embedding/vector retrieval remains incomplete.",
+    "Complex PDF parser routing remains outside 11B.",
+    "Formula structure recognition, LaTeX, and MathML remain incomplete.",
+    "Simple text upload path does not prove page/bbox provenance.",
+    "migrate_db CLI help safety remains a separate task."
+  ]
+}

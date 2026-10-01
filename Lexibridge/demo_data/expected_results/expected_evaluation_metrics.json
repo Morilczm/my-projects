@@ -1,0 +1,17 @@
+{
+  "version": "demo_v1",
+  "smoke_gate": {
+    "extraction_precision_min": 0.75,
+    "extraction_recall_min": 0.60,
+    "evidence_accuracy_min": 0.70,
+    "alignment_accuracy_min": 0.70,
+    "false_positive_rate_max": 0.10,
+    "auto_approval_error_rate_max": 0.05,
+    "no_evidence_forced_alignment_rate": 0
+  },
+  "notes": [
+    "These are release-gate expectations, not guaranteed production accuracy.",
+    "The Local MVP uses lexical retrieval and local/mock alignment unless a live AI provider is configured.",
+    "Formula-related samples may intentionally fall into formula_evidence_missing when FORMULA_OCR_PROVIDER is not configured."
+  ]
+}

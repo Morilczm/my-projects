@@ -1,0 +1,141 @@
+{
+  "capabilities": [
+    {
+      "capability": "ENGLISH_TERM_EXTRACTION",
+      "evidence": "Frozen English exact binding is 25/25.",
+      "limitation": "Validated only on synthetic physics text.",
+      "next_step": "Retain contract while rebuilding cross-corpus benchmark.",
+      "production": "backend/services/document_alignment_term_candidates.py::extract_chunk_scoped_term_candidates",
+      "status": "IMPLEMENTED_AND_VALIDATED",
+      "tests": [
+        "tests/test_document_alignment_term_candidates.py"
+      ]
+    },
+    {
+      "capability": "INDEPENDENT_CHINESE_SOURCE_INGESTION",
+      "evidence": "KnowledgeSource/KnowledgeChunk persist language and source role independently.",
+      "limitation": "Frozen benchmark sources are synthetic mirror fixtures, not independent textbooks.",
+      "next_step": "Add a governed monolingual Chinese reference fixture.",
+      "production": "backend/app.py::upload_knowledge_document and process_document_ingestion_job",
+      "status": "IMPLEMENTED_NOT_VALIDATED",
+      "tests": [
+        "tests/test_knowledge_ingestion.py",
+        "tests/test_knowledge_governance.py"
+      ]
+    },
+    {
+      "capability": "CROSS_LANGUAGE_QUERY_CONSTRUCTION",
+      "evidence": "English term is passed unchanged to lexical Chinese-source search.",
+      "limitation": "No translation, bilingual lexicon, embedding, or English-context query.",
+      "next_step": "Define a provider-free cross-language query contract after benchmark repair.",
+      "production": "backend/services/chinese_term_candidates.py::find_candidates_from_bilingual_chunks",
+      "status": "MISSING",
+      "tests": [
+        "tests/test_chinese_term_candidates.py"
+      ]
+    },
+    {
+      "capability": "CHINESE_SOURCE_FILTERING",
+      "evidence": "language=zh and source_role=chinese_reference_material filters are applied.",
+      "limitation": "Correct filtering cannot compensate for an English-only lexical query.",
+      "next_step": "Keep filters mandatory in future cross-language retrieval.",
+      "production": "backend/services/evidence_retrieval.py::should_include_chunk_as_evidence",
+      "status": "IMPLEMENTED_AND_VALIDATED",
+      "tests": [
+        "tests/test_evidence_retrieval.py",
+        "tests/test_bilingual_evidence_workflow.py"
+      ]
+    },
+    {
+      "capability": "CHINESE_EVIDENCE_RETRIEVAL",
+      "evidence": "Lexical retrieval works once a Chinese term is already available.",
+      "limitation": "Discovery search uses English keyword overlap; no semantic cross-language retrieval.",
+      "next_step": "Validate on independent monolingual Chinese material.",
+      "production": "backend/services/bilingual_evidence_workflow.py::retrieve_chinese_evidence",
+      "status": "PARTIALLY_IMPLEMENTED",
+      "tests": [
+        "tests/test_bilingual_evidence_workflow.py"
+      ]
+    },
+    {
+      "capability": "CHINESE_STANDARD_TERM_IDENTIFICATION",
+      "evidence": "Only existing exact mappings or inline bilingual regex produce candidates.",
+      "limitation": "No monolingual Chinese title/definition-subject term identifier.",
+      "next_step": "Specify standard-term identification after benchmark reconstruction.",
+      "production": "backend/services/chinese_term_candidates.py::generate_chinese_term_candidates",
+      "status": "MISSING",
+      "tests": [
+        "tests/test_chinese_term_candidates.py"
+      ]
+    },
+    {
+      "capability": "BILINGUAL_SEMANTIC_PAIRING",
+      "evidence": "Selection sorts candidate score/UID/text and does not compare concept meanings.",
+      "limitation": "Cannot distinguish neighboring concepts without later Provider verification.",
+      "next_step": "Define unsupported-pair fail-closed and semantic comparison signals.",
+      "production": "backend/services/document_alignment_item_preparation.py::select_primary_chinese_candidate",
+      "status": "MISSING",
+      "tests": [
+        "tests/test_bilingual_candidate_pairing_diagnosis.py"
+      ]
+    },
+    {
+      "capability": "EVIDENCE_QUALIFICATION",
+      "evidence": "Requires governed English and Chinese evidence refs before provider execution.",
+      "limitation": "Readiness is structural and does not prove semantic alignment.",
+      "next_step": "Separate evidence presence from semantic pair qualification.",
+      "production": "backend/services/document_alignment_item_preparation.py::prepare_document_alignment_item",
+      "status": "PARTIALLY_IMPLEMENTED",
+      "tests": [
+        "tests/test_formal_real_provider_evaluation_readiness.py"
+      ]
+    },
+    {
+      "capability": "PROVENANCE_PERSISTENCE",
+      "evidence": "Card evidence records source_uid/chunk_uid/language/parse/location.",
+      "limitation": "Provenance can faithfully persist an incorrect selected term.",
+      "next_step": "Retain provenance when semantic alignment is added.",
+      "production": "backend/services/concept_card_drafts.py::_evidence_payload_from_chunk_refs",
+      "status": "IMPLEMENTED_AND_VALIDATED",
+      "tests": [
+        "tests/test_concept_alignment_card.py",
+        "tests/test_concept_card_drafts.py"
+      ]
+    },
+    {
+      "capability": "INLINE_BILINGUAL_FALLBACK",
+      "evidence": "Frozen fixture exercises English term 即 Chinese definition.",
+      "limitation": "Not representative of English-only courseware plus independent Chinese sources.",
+      "next_step": "Treat as an optional fallback, not the core alignment architecture.",
+      "production": "backend/services/chinese_term_candidates.py::extract_chinese_candidates_from_text_around_english_term",
+      "status": "FIXTURE_ONLY",
+      "tests": [
+        "tests/test_chinese_term_candidates.py",
+        "tests/test_chinese_candidate_precision_diagnosis.py"
+      ]
+    }
+  ],
+  "capability_status_counts": {
+    "FIXTURE_ONLY": 1,
+    "IMPLEMENTED_AND_VALIDATED": 3,
+    "IMPLEMENTED_NOT_VALIDATED": 1,
+    "MISSING": 3,
+    "PARTIALLY_IMPLEMENTED": 2
+  },
+  "chinese_standard_term_identification_mechanism": "existing exact mappings or inline bilingual regex only; independent monolingual Chinese identification is missing",
+  "cross_corpus_alignment_validated": false,
+  "cross_language_retrieval_mechanism": "missing for discovery; current path is unchanged English-term lexical search over zh/mixed chunks",
+  "dominant_missing_capability": "CROSS_CORPUS_CHINESE_TERM_IDENTIFICATION_MISSING",
+  "english_only_input_supported": false,
+  "frozen_hashes": {
+    "corpus_sha256": "33715999c16a74610091b1e40896ee41921570a3740ebc2815565cf0ab7202dc",
+    "gold_sha256": "199baed9a8cb6deb68ae3480c3a67679b2daf273d3733e909d4e861685d45302"
+  },
+  "independent_chinese_sources_supported": true,
+  "production_quality_modified": false,
+  "real_provider_requests": 0,
+  "recommended_next_task": "Rebuild the benchmark with English-only course material and an independent monolingual Chinese knowledge source before production repair.",
+  "semantic_pairing_mechanism": "missing before Provider verification; deterministic candidate score/UID/text selection only",
+  "status": "CROSS_CORPUS_ALIGNMENT_ARCHITECTURE_AUDIT_COMPLETED",
+  "task": "12C-R"
+}

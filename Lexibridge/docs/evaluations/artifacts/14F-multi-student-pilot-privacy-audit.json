@@ -1,0 +1,18 @@
+{
+  "admin_aggregate": {
+    "individual_rows_returned": false,
+    "metrics_suppressed": false,
+    "sessions_completed": 5
+  },
+  "content_collected": false,
+  "contract_id": "controlled-multi-student-pilot@1.0.0",
+  "individual_rows_returned": false,
+  "isolation": {
+    "cross_account_access_blocked": true,
+    "external_requests": 0,
+    "incident_count": 0,
+    "real_provider_requests": 0,
+    "unique_personas": 5
+  },
+  "participant_mode": "self_simulated"
+}

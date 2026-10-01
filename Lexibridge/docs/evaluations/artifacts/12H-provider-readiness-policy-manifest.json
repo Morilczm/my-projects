@@ -1,0 +1,17 @@
+{
+  "policy_id": "governed-provider-readiness",
+  "policy_version": "1.0.0",
+  "active_qualification_policy": "governed-bilingual-evidence-qualification@1.1.0",
+  "decisions": ["READY", "REVIEW_REQUIRED", "NOT_READY"],
+  "prompt_registry_id": "term_alignment",
+  "prompt_version": "v1",
+  "request_token_budget_max": 32000,
+  "cost_ceiling_max": 25.0,
+  "retry_budget_max": 3,
+  "timeout_seconds_max": 120,
+  "score_is_probability": false,
+  "ordinary_api_can_override_decision": false,
+  "ordinary_api_can_disable_gates": false,
+  "credential_values_read": false,
+  "network_calls": 0
+}

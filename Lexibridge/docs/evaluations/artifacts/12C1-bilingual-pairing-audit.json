@@ -1,0 +1,47 @@
+{
+  "bilingual_pair_top1_accuracy": 0.0,
+  "bilingual_pair_top3_accuracy": 0.0,
+  "cross_corpus_alignment_validated": false,
+  "diagnostic_scope": "inline_bilingual_fixture_path",
+  "dominant_root_cause": "INLINE_BILINGUAL_CHINESE_CANDIDATE_BOUNDARY_DEFECT",
+  "frozen_hashes": {
+    "corpus_sha256": "33715999c16a74610091b1e40896ee41921570a3740ebc2815565cf0ab7202dc",
+    "gold_sha256": "199baed9a8cb6deb68ae3480c3a67679b2daf273d3733e909d4e861685d45302"
+  },
+  "pairing_audit": {
+    "candidate_precision_failure_count": 25,
+    "correct_chinese_input_count": 0,
+    "correct_english_input_count": 25,
+    "correct_pair_count": 0,
+    "explicit_pair_failure_reason_code": false,
+    "features": {
+      "abbreviation_mapping": false,
+      "candidate_confidence": true,
+      "course_chapter_match": true,
+      "definition_similarity": false,
+      "exact_english_match": true,
+      "lexical_overlap_cross_language": false,
+      "retrieval_rank": false,
+      "source_proximity": true,
+      "trust_and_source_role": true
+    },
+    "input_truncation_loss_count": 0,
+    "pairing_defect_count": 0,
+    "provenance_retained": true,
+    "selection_identity_depends_on_source_and_chunk_ids": true,
+    "selection_is_deterministic_within_persisted_run": true,
+    "selection_order": [
+      "descending candidate score",
+      "candidate_uid",
+      "casefolded Chinese term"
+    ],
+    "surface_similarity_dependency": false
+  },
+  "production_core_path_represented": false,
+  "production_quality_modified": false,
+  "provider_ready_count": 5,
+  "real_provider_requests": 0,
+  "recommended_next_task": "English-to-Chinese cross-corpus alignment architecture audit",
+  "status": "INLINE_BILINGUAL_CHINESE_CANDIDATE_DIAGNOSIS_COMPLETED",
+  "task": "12C.1"
+}

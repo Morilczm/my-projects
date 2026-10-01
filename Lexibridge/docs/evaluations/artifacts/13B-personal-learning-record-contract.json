@@ -1,0 +1,22 @@
+{
+  "contract_id": "personal-learning-record@1.0.0",
+  "owner": "single Student",
+  "binding": "StudentConceptQuery.result_uid",
+  "actions": [
+    "SAVE",
+    "UNSAVE",
+    "UPDATE_NOTE",
+    "MARK_UNDERSTOOD",
+    "MARK_STILL_CONFUSED",
+    "CLEAR_UNDERSTANDING_STATE"
+  ],
+  "visibility": "PRIVATE",
+  "authority": "NON_OFFICIAL",
+  "publication_status": "NOT_APPLICABLE",
+  "optimistic_lock": "version",
+  "unique_key": [
+    "student_id",
+    "result_uid"
+  ],
+  "audit_contains_note_body": false
+}

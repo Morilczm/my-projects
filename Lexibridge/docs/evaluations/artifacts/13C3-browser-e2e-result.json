@@ -1,0 +1,28 @@
+{
+  "browser": {
+    "name": "chromium",
+    "version": "148.0.7778.96"
+  },
+  "external_dependency_requests": 0,
+  "flows": {
+    "instructor": {
+      "status": "PASS",
+      "steps": 7
+    },
+    "reviewer": {
+      "status": "PASS",
+      "steps": 15
+    },
+    "student": {
+      "managed_course_reader": "PASS",
+      "page_navigation": "PASS",
+      "personal_pdf_blob_preview": "PASS",
+      "personal_record": "PASS",
+      "privacy_probe": "PASS",
+      "status": "PASS",
+      "steps": 47
+    }
+  },
+  "real_provider_requests": 0,
+  "status": "PASS"
+}

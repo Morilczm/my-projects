@@ -1,0 +1,27 @@
+{
+  "external_dependency_requests": 0,
+  "flows": {
+    "instructor": {
+      "console_or_page_errors": 0,
+      "status": "PASS",
+      "steps_passed": 7
+    },
+    "reviewer": {
+      "console_or_page_errors": 0,
+      "status": "PASS",
+      "steps_passed": 15
+    },
+    "student": {
+      "console_or_page_errors": 0,
+      "managed_course_saved": true,
+      "notebook_filter_verified": true,
+      "personal_saved": true,
+      "revisit_preserved_note_and_state": true,
+      "status": "PASS",
+      "steps_passed": 55
+    }
+  },
+  "expected_blocked_external_probes": 3,
+  "real_provider_requests": 0,
+  "status": "PASS"
+}

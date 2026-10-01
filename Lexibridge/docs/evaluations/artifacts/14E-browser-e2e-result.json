@@ -1,0 +1,31 @@
+{
+  "artifact": "14E-browser-e2e-result",
+  "artifact_version": "1.0.0",
+  "runner": "scripts/run_browser_e2e.py",
+  "browser": "Chromium",
+  "status": "PASS",
+  "flows": {
+    "student": {"status": "PASS", "steps": 80},
+    "instructor": {"status": "PASS", "steps": 7},
+    "reviewer": {"status": "PASS", "steps": 15}
+  },
+  "asserted_behaviors": [
+    "Personal PDF direct selection and alignment card",
+    "Managed Course direct selection and alignment card",
+    "private notebook save and note",
+    "active recall answer reveal",
+    "Student 2 privacy denial",
+    "Instructor Reviewer navigation hidden",
+    "Instructor Reviewer-only prefetch absent",
+    "Reviewer queue, review case and unpublished fake draft"
+  ],
+  "diagnostics": {
+    "console_errors": 0,
+    "page_errors": 0,
+    "external_dependency_requests": 0,
+    "real_provider_requests": 0,
+    "blocked_expected_probe_requests": 3,
+    "complete_request_or_response_body_tracked": false,
+    "private_course_material_used": false
+  }
+}

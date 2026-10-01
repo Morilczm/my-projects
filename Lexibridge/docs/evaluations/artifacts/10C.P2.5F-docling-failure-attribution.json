@@ -1,0 +1,2585 @@
+{
+  "after_normalization": {
+    "acceptance": {
+      "docling_content_bbox_average": 1.0,
+      "gates": {
+        "all_target_samples_completed": true,
+        "content_bbox_95": true,
+        "control_sample_no_degradation": true,
+        "external_requests_zero": true,
+        "formula_region_distinguished": true,
+        "mixed_layout_improves_baseline": true,
+        "mixed_layout_order_ok": true,
+        "mixed_layout_structured_blocks": true,
+        "negative_no_hallucinated_terms": true,
+        "scanned_bilingual_recall_90": true,
+        "simple_table_structure": true,
+        "two_column_order_ok": false
+      }
+    },
+    "median_warm_parse_ms": 2052.94,
+    "peak_memory_kb_max": 2359504,
+    "scores": [
+      {
+        "anchor_recall": {
+          "matched": 4,
+          "missing": [],
+          "recall": 1.0,
+          "total": 4
+        },
+        "bbox_completeness": 1.0,
+        "block_count": 2,
+        "block_types": [
+          "heading",
+          "paragraph"
+        ],
+        "content_block_count": 2,
+        "duplicate_text_count": 0,
+        "errors": [],
+        "fixture_id": "single_column_born_digital",
+        "formula_format": "unavailable",
+        "formula_region_detected": false,
+        "formula_structure_recognized": false,
+        "hallucinated_terms": [],
+        "ocr_executed": false,
+        "page_count": 1,
+        "page_ref_completeness": 1.0,
+        "parse_success": true,
+        "parser_id": "docling",
+        "peak_memory_kb": 1474800,
+        "reading_order_errors": 0,
+        "table_cols": 0,
+        "table_detected": false,
+        "table_rows": 0,
+        "table_structure_present": false,
+        "text_error_count": 0,
+        "unicode_chinese_preserved": false,
+        "warm_parse_duration_ms": 3452.09,
+        "warnings": []
+      },
+      {
+        "anchor_recall": {
+          "matched": 4,
+          "missing": [],
+          "recall": 1.0,
+          "total": 4
+        },
+        "bbox_completeness": 1.0,
+        "block_count": 6,
+        "block_types": [
+          "heading",
+          "paragraph"
+        ],
+        "content_block_count": 6,
+        "duplicate_text_count": 0,
+        "errors": [],
+        "fixture_id": "mixed_layout_blocker",
+        "formula_format": "unavailable",
+        "formula_region_detected": false,
+        "formula_structure_recognized": false,
+        "hallucinated_terms": [],
+        "ocr_executed": false,
+        "page_count": 1,
+        "page_ref_completeness": 1.0,
+        "parse_success": true,
+        "parser_id": "docling",
+        "peak_memory_kb": 1493968,
+        "reading_order_errors": 0,
+        "table_cols": 0,
+        "table_detected": false,
+        "table_rows": 0,
+        "table_structure_present": false,
+        "text_error_count": 0,
+        "unicode_chinese_preserved": false,
+        "warm_parse_duration_ms": 1756.28,
+        "warnings": []
+      },
+      {
+        "anchor_recall": {
+          "matched": 8,
+          "missing": [],
+          "recall": 1.0,
+          "total": 8
+        },
+        "bbox_completeness": 1.0,
+        "block_count": 7,
+        "block_types": [
+          "heading",
+          "paragraph"
+        ],
+        "content_block_count": 7,
+        "duplicate_text_count": 0,
+        "errors": [],
+        "fixture_id": "two_column_born_digital",
+        "formula_format": "unavailable",
+        "formula_region_detected": false,
+        "formula_structure_recognized": false,
+        "hallucinated_terms": [],
+        "ocr_executed": false,
+        "page_count": 1,
+        "page_ref_completeness": 1.0,
+        "parse_success": true,
+        "parser_id": "docling",
+        "peak_memory_kb": 1500912,
+        "reading_order_errors": 1,
+        "table_cols": 0,
+        "table_detected": false,
+        "table_rows": 0,
+        "table_structure_present": false,
+        "text_error_count": 0,
+        "unicode_chinese_preserved": false,
+        "warm_parse_duration_ms": 1800.7,
+        "warnings": []
+      },
+      {
+        "anchor_recall": {
+          "matched": 6,
+          "missing": [],
+          "recall": 1.0,
+          "total": 6
+        },
+        "bbox_completeness": 1.0,
+        "block_count": 2,
+        "block_types": [
+          "heading",
+          "paragraph"
+        ],
+        "content_block_count": 2,
+        "duplicate_text_count": 0,
+        "errors": [],
+        "fixture_id": "scanned_bilingual",
+        "formula_format": "unavailable",
+        "formula_region_detected": false,
+        "formula_structure_recognized": false,
+        "hallucinated_terms": [],
+        "ocr_executed": false,
+        "page_count": 1,
+        "page_ref_completeness": 1.0,
+        "parse_success": true,
+        "parser_id": "docling",
+        "peak_memory_kb": 1808944,
+        "reading_order_errors": 0,
+        "table_cols": 0,
+        "table_detected": false,
+        "table_rows": 0,
+        "table_structure_present": false,
+        "text_error_count": 0,
+        "unicode_chinese_preserved": true,
+        "warm_parse_duration_ms": 3074.09,
+        "warnings": []
+      },
+      {
+        "anchor_recall": {
+          "matched": 3,
+          "missing": [],
+          "recall": 1.0,
+          "total": 3
+        },
+        "bbox_completeness": 1.0,
+        "block_count": 2,
+        "block_types": [
+          "header",
+          "table"
+        ],
+        "content_block_count": 2,
+        "duplicate_text_count": 0,
+        "errors": [],
+        "fixture_id": "simple_table",
+        "formula_format": "unavailable",
+        "formula_region_detected": false,
+        "formula_structure_recognized": false,
+        "hallucinated_terms": [],
+        "ocr_executed": false,
+        "page_count": 1,
+        "page_ref_completeness": 1.0,
+        "parse_success": true,
+        "parser_id": "docling",
+        "peak_memory_kb": 1503168,
+        "reading_order_errors": 0,
+        "table_cols": 3,
+        "table_detected": true,
+        "table_rows": 4,
+        "table_structure_present": true,
+        "text_error_count": 0,
+        "unicode_chinese_preserved": false,
+        "warm_parse_duration_ms": 2052.94,
+        "warnings": []
+      },
+      {
+        "anchor_recall": {
+          "matched": 1,
+          "missing": [],
+          "recall": 1.0,
+          "total": 1
+        },
+        "bbox_completeness": 1.0,
+        "block_count": 3,
+        "block_types": [
+          "formula",
+          "heading",
+          "paragraph"
+        ],
+        "content_block_count": 3,
+        "duplicate_text_count": 0,
+        "errors": [],
+        "fixture_id": "raster_formula",
+        "formula_format": "unavailable",
+        "formula_region_detected": true,
+        "formula_structure_recognized": false,
+        "hallucinated_terms": [],
+        "ocr_executed": false,
+        "page_count": 1,
+        "page_ref_completeness": 1.0,
+        "parse_success": true,
+        "parser_id": "docling",
+        "peak_memory_kb": 2359504,
+        "reading_order_errors": 0,
+        "table_cols": 0,
+        "table_detected": false,
+        "table_rows": 0,
+        "table_structure_present": false,
+        "text_error_count": 0,
+        "unicode_chinese_preserved": false,
+        "warm_parse_duration_ms": 3537.37,
+        "warnings": []
+      },
+      {
+        "anchor_recall": {
+          "matched": 0,
+          "missing": [],
+          "recall": null,
+          "total": 0
+        },
+        "bbox_completeness": 1.0,
+        "block_count": 2,
+        "block_types": [
+          "heading",
+          "paragraph"
+        ],
+        "content_block_count": 2,
+        "duplicate_text_count": 0,
+        "errors": [],
+        "fixture_id": "negative_no_terms",
+        "formula_format": "unavailable",
+        "formula_region_detected": false,
+        "formula_structure_recognized": false,
+        "hallucinated_terms": [],
+        "ocr_executed": false,
+        "page_count": 1,
+        "page_ref_completeness": 1.0,
+        "parse_success": true,
+        "parser_id": "docling",
+        "peak_memory_kb": 1491728,
+        "reading_order_errors": 0,
+        "table_cols": 0,
+        "table_detected": false,
+        "table_rows": 0,
+        "table_structure_present": false,
+        "text_error_count": 0,
+        "unicode_chinese_preserved": false,
+        "warm_parse_duration_ms": 1850.55,
+        "warnings": []
+      }
+    ]
+  },
+  "baseline_commit": "01bddaa47b5e8d84feb929e7445b24d2f02b8f18",
+  "branch": "eval/docling-failure-attribution-10c-p25f",
+  "created_at": "2026-08-01T13:53:07.793281Z",
+  "database_integrity": {
+    "accepted_as_new_normal_baseline": false,
+    "database_used_for_final_tests": false,
+    "incident_conclusion": "DATABASE_CHANGE_SEMANTICALLY_IDENTIFIED",
+    "incident_hash_unchanged_during_finalization": true,
+    "incident_investigation_status": "DATABASE_INTEGRITY_INCIDENT_INVESTIGATED",
+    "incident_sha256": "9e6fb68ab13dff2763e2fff18d2aee531486360c557f058eb8a471d9209a9eaa",
+    "isolated_test_database_used": true,
+    "migrate_db_cli_fix_deferred": true,
+    "original_expected_sha256": "e4081f8fb5fb9157c99e9d72e9f9afa30263e354633938d636854f4308816cee",
+    "original_hash_restored": false
+  },
+  "decision": {
+    "reason": "Content bbox and raster formula routing are repairable in evaluation, while two-column reading order remains a Docling assembly limitation in this evidence set.",
+    "status": "DOCLING_PARTIAL_CAPABILITY_ATTRIBUTED"
+  },
+  "docling": {
+    "cache_location": "<LOCAL_PRIVATE_TMP>/lexibridge-10cp25d/runtime-cache/docling",
+    "environment": "lexibridge-eval-docling",
+    "offline_mode": true,
+    "version": "2.117.0"
+  },
+  "docling_version": "2.117.0",
+  "failures": {
+    "content_bbox": {
+      "attribution": "LEXIBRIDGE_NORMALIZATION_DEFECT",
+      "evidence_refs": [
+        "artifact:simple_table:L2:table_provenance",
+        "artifact:simple_table:L3:canonical_visual_bbox"
+      ],
+      "first_incorrect_layer": "L3",
+      "repairable_in_evaluation_normalizer": true
+    },
+    "raster_formula_classification": {
+      "attribution": "COMPOSITE_FORMULA_ROUTE_REQUIRED",
+      "evidence_refs": [
+        "artifact:raster_formula:L2:docling_body",
+        "artifact:raster_formula:L3:formula_region_route"
+      ],
+      "first_incorrect_layer": "L2",
+      "repairable_in_evaluation_normalizer": true
+    },
+    "two_column_reading_order": {
+      "attribution": "DOCLING_ASSEMBLY_DEFECT",
+      "evidence_refs": [
+        "artifact:two_column_born_digital:L0:gold_order",
+        "artifact:two_column_born_digital:L2:body_traversal"
+      ],
+      "first_incorrect_layer": "L2",
+      "repairable_in_evaluation_normalizer": false
+    }
+  },
+  "fixtures": [
+    {
+      "errors": [],
+      "fixture_id": "single_column_born_digital",
+      "formula_region_count": 0,
+      "formula_regions": [],
+      "l0": {
+        "body_vs_furniture": "Expected anchors are body content; generated headers/footers are not evidence for specialist terms.",
+        "expected_formula_count": 0,
+        "expected_images": 0,
+        "expected_raster_formula_count": 0,
+        "expected_table_cols": 0,
+        "expected_table_rows": 0,
+        "fixture_id": "single_column_born_digital",
+        "gold_blocks": [
+          {
+            "block_type": "paragraph",
+            "reading_order": 1,
+            "text": "Fourier Transform"
+          },
+          {
+            "block_type": "paragraph",
+            "reading_order": 2,
+            "text": "Impulse Response"
+          },
+          {
+            "block_type": "paragraph",
+            "reading_order": 3,
+            "text": "Convolution"
+          },
+          {
+            "block_type": "paragraph",
+            "reading_order": 4,
+            "text": "Voltage Divider"
+          }
+        ],
+        "page_count": 1,
+        "source_hash": "7c31ed338ad0a6ce820e24cc007747f1bd9fe399d063d45948ec3d3c9f5767f9"
+      },
+      "l1": {
+        "available": false,
+        "reason": "Docling 2.117.0 public export path used here did not expose separate page backend cells/layout predictions through this probe."
+      },
+      "l2": {
+        "available_fields": [
+          "body",
+          "furniture",
+          "groups",
+          "pages",
+          "pictures",
+          "tables",
+          "texts"
+        ],
+        "body_traversal": [
+          {
+            "child_refs": [],
+            "label": "section_header",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 734.6406256,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 54.0,
+                  "r": 294.14061600000014,
+                  "t": 749.6484368
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/0",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "Single Column Engineering Notes"
+          },
+          {
+            "child_refs": [],
+            "label": "text",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 647.6904301,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 54.0,
+                  "r": 287.57811179999993,
+                  "t": 712.0083003
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/1",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "Fourier Transform: synthetic paragraph anchor. Impulse Response: synthetic paragraph anchor. Convolution: synthetic paragraph anchor. Voltage Divider: synthetic paragraph anchor."
+          }
+        ],
+        "collections": {
+          "groups": 0,
+          "pictures": 0,
+          "tables": 0,
+          "texts": 2
+        },
+        "furniture_traversal": [],
+        "sequence_metrics": {
+          "anchor_positions": {
+            "Convolution": 125,
+            "Fourier Transform": 32,
+            "Impulse Response": 79,
+            "Voltage Divider": 166
+          },
+          "column_metrics": {},
+          "exact_sequence_match": true,
+          "expected_order": [
+            "Fourier Transform",
+            "Impulse Response",
+            "Convolution",
+            "Voltage Divider"
+          ],
+          "observed_order": [
+            "Fourier Transform",
+            "Impulse Response",
+            "Convolution",
+            "Voltage Divider"
+          ],
+          "pairwise_correct": 6,
+          "pairwise_ordering_accuracy": 1.0,
+          "pairwise_total": 6,
+          "reading_order_errors": 0
+        }
+      },
+      "l3": {
+        "block_count": 2,
+        "block_summary": [
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/0",
+            "block_type": "heading",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "heading",
+            "page_number": 1,
+            "source_ref": "#/texts/0",
+            "text": "Single Column Engineering Notes"
+          },
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/1",
+            "block_type": "paragraph",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "paragraph",
+            "page_number": 1,
+            "source_ref": "#/texts/1",
+            "text": "Fourier Transform: synthetic paragraph anchor. Impulse Response: synthetic paragraph anchor. Convolution: synthetic paragraph anchor. Voltage Divider: synthetic paragraph anchor."
+          }
+        ],
+        "score": {
+          "anchor_recall": {
+            "matched": 4,
+            "missing": [],
+            "recall": 1.0,
+            "total": 4
+          },
+          "bbox_completeness": 1.0,
+          "block_count": 2,
+          "block_types": [
+            "heading",
+            "paragraph"
+          ],
+          "content_block_count": 2,
+          "duplicate_text_count": 0,
+          "errors": [],
+          "fixture_id": "single_column_born_digital",
+          "formula_format": "unavailable",
+          "formula_region_detected": false,
+          "formula_structure_recognized": false,
+          "hallucinated_terms": [],
+          "ocr_executed": false,
+          "page_count": 1,
+          "page_ref_completeness": 1.0,
+          "parse_success": true,
+          "parser_id": "docling",
+          "peak_memory_kb": 1474800,
+          "reading_order_errors": 0,
+          "table_cols": 0,
+          "table_detected": false,
+          "table_rows": 0,
+          "table_structure_present": false,
+          "text_error_count": 0,
+          "unicode_chinese_preserved": false,
+          "warm_parse_duration_ms": 3452.09,
+          "warnings": []
+        },
+        "sequence_metrics": {
+          "anchor_positions": {
+            "Convolution": 125,
+            "Fourier Transform": 32,
+            "Impulse Response": 79,
+            "Voltage Divider": 166
+          },
+          "column_metrics": {},
+          "exact_sequence_match": true,
+          "expected_order": [
+            "Fourier Transform",
+            "Impulse Response",
+            "Convolution",
+            "Voltage Divider"
+          ],
+          "observed_order": [
+            "Fourier Transform",
+            "Impulse Response",
+            "Convolution",
+            "Voltage Divider"
+          ],
+          "pairwise_correct": 6,
+          "pairwise_ordering_accuracy": 1.0,
+          "pairwise_total": 6,
+          "reading_order_errors": 0
+        }
+      },
+      "p2e_score": {
+        "anchor_recall": {
+          "matched": 4,
+          "missing": [],
+          "recall": 1.0,
+          "total": 4
+        },
+        "bbox_completeness": 1.0,
+        "block_count": 2,
+        "block_types": [
+          "heading",
+          "paragraph"
+        ],
+        "content_block_count": 2,
+        "duplicate_text_count": 0,
+        "errors": [],
+        "fixture_id": "single_column_born_digital",
+        "formula_format": "unavailable",
+        "formula_region_detected": false,
+        "formula_structure_recognized": false,
+        "hallucinated_terms": [],
+        "ocr_executed": false,
+        "page_count": 1,
+        "page_ref_completeness": 1.0,
+        "parse_success": true,
+        "parser_id": "docling",
+        "peak_memory_kb": 1016224,
+        "reading_order_errors": 0,
+        "table_cols": 0,
+        "table_detected": false,
+        "table_rows": 0,
+        "table_structure_present": false,
+        "text_error_count": 0,
+        "unicode_chinese_preserved": false,
+        "warm_parse_duration_ms": 1946.75,
+        "warnings": []
+      },
+      "warnings": []
+    },
+    {
+      "errors": [],
+      "fixture_id": "mixed_layout_blocker",
+      "formula_region_count": 0,
+      "formula_regions": [],
+      "l0": {
+        "body_vs_furniture": "Expected anchors are body content; generated headers/footers are not evidence for specialist terms.",
+        "expected_formula_count": 0,
+        "expected_images": 0,
+        "expected_raster_formula_count": 0,
+        "expected_table_cols": 3,
+        "expected_table_rows": 2,
+        "fixture_id": "mixed_layout_blocker",
+        "gold_blocks": [
+          {
+            "block_type": "table",
+            "reading_order": 1,
+            "text": "Impulse Response"
+          },
+          {
+            "block_type": "table",
+            "reading_order": 2,
+            "text": "Operational Amplifier"
+          },
+          {
+            "block_type": "paragraph",
+            "reading_order": 3,
+            "text": "Voltage Divider"
+          },
+          {
+            "block_type": "paragraph",
+            "reading_order": 4,
+            "text": "Equivalent Resistance"
+          }
+        ],
+        "page_count": 1,
+        "source_hash": "5b8a8c53c926b8a5441301079eb2f718b58bab2a0af522a9cbca0609f94f36a6"
+      },
+      "l1": {
+        "available": false,
+        "reason": "Docling 2.117.0 public export path used here did not expose separate page backend cells/layout predictions through this probe."
+      },
+      "l2": {
+        "available_fields": [
+          "body",
+          "furniture",
+          "groups",
+          "pages",
+          "pictures",
+          "tables",
+          "texts"
+        ],
+        "body_traversal": [
+          {
+            "child_refs": [],
+            "label": "section_header",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 734.6406256,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 54.0,
+                  "r": 202.50780480000003,
+                  "t": 749.6484368
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/0",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "Mixed Layout Fixture"
+          },
+          {
+            "child_refs": [],
+            "label": "text",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 701.6904301,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 54.0,
+                  "r": 263.134266,
+                  "t": 712.0083003
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/1",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "Header: LexiBridge parser evaluation page"
+          },
+          {
+            "child_refs": [],
+            "label": "text",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 683.6904301,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 54.0,
+                  "r": 376.2172689999997,
+                  "t": 694.0083003
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/2",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "Table row | Signal | Impulse Response | system output for impulse"
+          },
+          {
+            "child_refs": [],
+            "label": "text",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 665.6904301,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 54.0,
+                  "r": 337.69041689999983,
+                  "t": 676.0083003
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/3",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "Table row | Circuit | Operational Amplifier | differential gain"
+          },
+          {
+            "child_refs": [],
+            "label": "text",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 647.6904301,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 54.0,
+                  "r": 383.5864087999996,
+                  "t": 658.0083003
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/4",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "The Voltage Divider and Equivalent Resistance appear in body text."
+          },
+          {
+            "child_refs": [],
+            "label": "text",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 629.6904301,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 54.0,
+                  "r": 258.8481325,
+                  "t": 640.0083003
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/5",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "Footer: LexiBridge parser evaluation page"
+          }
+        ],
+        "collections": {
+          "groups": 1,
+          "pictures": 0,
+          "tables": 0,
+          "texts": 6
+        },
+        "furniture_traversal": [],
+        "sequence_metrics": {
+          "anchor_positions": {
+            "Equivalent Resistance": 217,
+            "Impulse Response": 84,
+            "Operational Amplifier": 151,
+            "Voltage Divider": 197
+          },
+          "column_metrics": {},
+          "exact_sequence_match": true,
+          "expected_order": [
+            "Impulse Response",
+            "Operational Amplifier",
+            "Voltage Divider",
+            "Equivalent Resistance"
+          ],
+          "observed_order": [
+            "Impulse Response",
+            "Operational Amplifier",
+            "Voltage Divider",
+            "Equivalent Resistance"
+          ],
+          "pairwise_correct": 6,
+          "pairwise_ordering_accuracy": 1.0,
+          "pairwise_total": 6,
+          "reading_order_errors": 0
+        }
+      },
+      "l3": {
+        "block_count": 6,
+        "block_summary": [
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/0",
+            "block_type": "heading",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "heading",
+            "page_number": 1,
+            "source_ref": "#/texts/0",
+            "text": "Mixed Layout Fixture"
+          },
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/1",
+            "block_type": "paragraph",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "paragraph",
+            "page_number": 1,
+            "source_ref": "#/texts/1",
+            "text": "Header: LexiBridge parser evaluation page"
+          },
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/2",
+            "block_type": "paragraph",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "paragraph",
+            "page_number": 1,
+            "source_ref": "#/texts/2",
+            "text": "Table row | Signal | Impulse Response | system output for impulse"
+          },
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/3",
+            "block_type": "paragraph",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "paragraph",
+            "page_number": 1,
+            "source_ref": "#/texts/3",
+            "text": "Table row | Circuit | Operational Amplifier | differential gain"
+          },
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/4",
+            "block_type": "paragraph",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "paragraph",
+            "page_number": 1,
+            "source_ref": "#/texts/4",
+            "text": "The Voltage Divider and Equivalent Resistance appear in body text."
+          },
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/5",
+            "block_type": "paragraph",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "paragraph",
+            "page_number": 1,
+            "source_ref": "#/texts/5",
+            "text": "Footer: LexiBridge parser evaluation page"
+          }
+        ],
+        "score": {
+          "anchor_recall": {
+            "matched": 4,
+            "missing": [],
+            "recall": 1.0,
+            "total": 4
+          },
+          "bbox_completeness": 1.0,
+          "block_count": 6,
+          "block_types": [
+            "heading",
+            "paragraph"
+          ],
+          "content_block_count": 6,
+          "duplicate_text_count": 0,
+          "errors": [],
+          "fixture_id": "mixed_layout_blocker",
+          "formula_format": "unavailable",
+          "formula_region_detected": false,
+          "formula_structure_recognized": false,
+          "hallucinated_terms": [],
+          "ocr_executed": false,
+          "page_count": 1,
+          "page_ref_completeness": 1.0,
+          "parse_success": true,
+          "parser_id": "docling",
+          "peak_memory_kb": 1493968,
+          "reading_order_errors": 0,
+          "table_cols": 0,
+          "table_detected": false,
+          "table_rows": 0,
+          "table_structure_present": false,
+          "text_error_count": 0,
+          "unicode_chinese_preserved": false,
+          "warm_parse_duration_ms": 1756.28,
+          "warnings": []
+        },
+        "sequence_metrics": {
+          "anchor_positions": {
+            "Equivalent Resistance": 217,
+            "Impulse Response": 84,
+            "Operational Amplifier": 151,
+            "Voltage Divider": 197
+          },
+          "column_metrics": {},
+          "exact_sequence_match": true,
+          "expected_order": [
+            "Impulse Response",
+            "Operational Amplifier",
+            "Voltage Divider",
+            "Equivalent Resistance"
+          ],
+          "observed_order": [
+            "Impulse Response",
+            "Operational Amplifier",
+            "Voltage Divider",
+            "Equivalent Resistance"
+          ],
+          "pairwise_correct": 6,
+          "pairwise_ordering_accuracy": 1.0,
+          "pairwise_total": 6,
+          "reading_order_errors": 0
+        }
+      },
+      "p2e_score": {
+        "anchor_recall": {
+          "matched": 4,
+          "missing": [],
+          "recall": 1.0,
+          "total": 4
+        },
+        "bbox_completeness": 1.0,
+        "block_count": 6,
+        "block_types": [
+          "heading",
+          "paragraph"
+        ],
+        "content_block_count": 6,
+        "duplicate_text_count": 0,
+        "errors": [],
+        "fixture_id": "mixed_layout_blocker",
+        "formula_format": "unavailable",
+        "formula_region_detected": false,
+        "formula_structure_recognized": false,
+        "hallucinated_terms": [],
+        "ocr_executed": false,
+        "page_count": 1,
+        "page_ref_completeness": 1.0,
+        "parse_success": true,
+        "parser_id": "docling",
+        "peak_memory_kb": 1031872,
+        "reading_order_errors": 0,
+        "table_cols": 0,
+        "table_detected": false,
+        "table_rows": 0,
+        "table_structure_present": false,
+        "text_error_count": 0,
+        "unicode_chinese_preserved": false,
+        "warm_parse_duration_ms": 1986.69,
+        "warnings": []
+      },
+      "warnings": []
+    },
+    {
+      "errors": [],
+      "fixture_id": "two_column_born_digital",
+      "formula_region_count": 0,
+      "formula_regions": [],
+      "l0": {
+        "body_vs_furniture": "Expected anchors are body content; generated headers/footers are not evidence for specialist terms.",
+        "expected_formula_count": 0,
+        "expected_images": 0,
+        "expected_raster_formula_count": 0,
+        "expected_table_cols": 0,
+        "expected_table_rows": 0,
+        "fixture_id": "two_column_born_digital",
+        "gold_blocks": [
+          {
+            "block_type": "paragraph",
+            "reading_order": 1,
+            "text": "Fourier Transform"
+          },
+          {
+            "block_type": "paragraph",
+            "reading_order": 2,
+            "text": "Impulse Response"
+          },
+          {
+            "block_type": "paragraph",
+            "reading_order": 3,
+            "text": "Convolution"
+          },
+          {
+            "block_type": "paragraph",
+            "reading_order": 4,
+            "text": "Transfer Function"
+          },
+          {
+            "block_type": "paragraph",
+            "reading_order": 5,
+            "text": "Voltage Divider"
+          },
+          {
+            "block_type": "paragraph",
+            "reading_order": 6,
+            "text": "Operational Amplifier"
+          },
+          {
+            "block_type": "paragraph",
+            "reading_order": 7,
+            "text": "Equivalent Resistance"
+          },
+          {
+            "block_type": "paragraph",
+            "reading_order": 8,
+            "text": "Boundary Condition"
+          }
+        ],
+        "page_count": 1,
+        "source_hash": "13d53a8e04ee0e554f00756902d80df6bbba1ee87d9fa4ac21542e86fae4094e",
+        "two_column_gold": {
+          "expected_visual_reading_order": "left_column_complete_then_right_column",
+          "fixture_object_order": "title_then_left_column_lines_then_right_column_lines",
+          "left_column_order": [
+            "Fourier Transform",
+            "Impulse Response",
+            "Convolution",
+            "Transfer Function"
+          ],
+          "right_column_order": [
+            "Voltage Divider",
+            "Operational Amplifier",
+            "Equivalent Resistance",
+            "Boundary Condition"
+          ],
+          "title_crosses_columns": true
+        }
+      },
+      "l1": {
+        "available": false,
+        "reason": "Docling 2.117.0 public export path used here did not expose separate page backend cells/layout predictions through this probe."
+      },
+      "l2": {
+        "available_fields": [
+          "body",
+          "furniture",
+          "groups",
+          "pages",
+          "pictures",
+          "tables",
+          "texts"
+        ],
+        "body_traversal": [
+          {
+            "child_refs": [],
+            "label": "section_header",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 734.8505865,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 54.0,
+                  "r": 265.77245250000004,
+                  "t": 748.9204095
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/0",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "Two Column Engineering Notes"
+          },
+          {
+            "child_refs": [],
+            "label": "text",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 693.900391,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 54.0,
+                  "r": 568.9003780000003,
+                  "t": 703.280273
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/1",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "Fourier Transform explains frequency-domain representation. Voltage Divider relates resistor ratios to output voltage."
+          },
+          {
+            "child_refs": [],
+            "label": "text",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 661.900391,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 54.0,
+                  "r": 533.3388570000004,
+                  "t": 671.280273
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/2",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "Impulse Response describes system output to a unit impulse. Operational Amplifier has high differential gain."
+          },
+          {
+            "child_refs": [],
+            "label": "text",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 629.900391,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 54.0,
+                  "r": 280.24510599999996,
+                  "t": 639.280273
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/3",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "Convolution combines input and impulse response."
+          },
+          {
+            "child_refs": [],
+            "label": "text",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 597.900391,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 54.0,
+                  "r": 299.6835780000001,
+                  "t": 607.280273
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/4",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "Transfer Function maps input to output in the s-domain."
+          },
+          {
+            "child_refs": [],
+            "label": "text",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 629.900391,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 326.0,
+                  "r": 543.3046810000002,
+                  "t": 639.280273
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/5",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "Equivalent Resistance simplifies circuit networks."
+          },
+          {
+            "child_refs": [],
+            "label": "text",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 597.900391,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 326.0,
+                  "r": 560.0331910000002,
+                  "t": 607.280273
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/6",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "Boundary Condition constrains differential equations."
+          }
+        ],
+        "collections": {
+          "groups": 0,
+          "pictures": 0,
+          "tables": 0,
+          "texts": 7
+        },
+        "furniture_traversal": [],
+        "sequence_metrics": {
+          "anchor_positions": {
+            "Boundary Condition": 414,
+            "Convolution": 258,
+            "Equivalent Resistance": 363,
+            "Fourier Transform": 29,
+            "Impulse Response": 148,
+            "Operational Amplifier": 208,
+            "Transfer Function": 307,
+            "Voltage Divider": 89
+          },
+          "column_metrics": {
+            "left_internal_order_accuracy": 1.0,
+            "left_positions": [
+              29,
+              148,
+              258,
+              307
+            ],
+            "right_column_starts_before_left_column_complete": true,
+            "right_internal_order_accuracy": 1.0,
+            "right_positions": [
+              89,
+              208,
+              363,
+              414
+            ]
+          },
+          "exact_sequence_match": false,
+          "expected_order": [
+            "Fourier Transform",
+            "Impulse Response",
+            "Convolution",
+            "Transfer Function",
+            "Voltage Divider",
+            "Operational Amplifier",
+            "Equivalent Resistance",
+            "Boundary Condition"
+          ],
+          "observed_order": [
+            "Fourier Transform",
+            "Voltage Divider",
+            "Impulse Response",
+            "Operational Amplifier",
+            "Convolution",
+            "Transfer Function",
+            "Equivalent Resistance",
+            "Boundary Condition"
+          ],
+          "pairwise_correct": 23,
+          "pairwise_ordering_accuracy": 0.8214,
+          "pairwise_total": 28,
+          "reading_order_errors": 1
+        }
+      },
+      "l3": {
+        "block_count": 7,
+        "block_summary": [
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/0",
+            "block_type": "heading",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "heading",
+            "page_number": 1,
+            "source_ref": "#/texts/0",
+            "text": "Two Column Engineering Notes"
+          },
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/1",
+            "block_type": "paragraph",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "paragraph",
+            "page_number": 1,
+            "source_ref": "#/texts/1",
+            "text": "Fourier Transform explains frequency-domain representation. Voltage Divider relates resistor ratios to output voltage."
+          },
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/2",
+            "block_type": "paragraph",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "paragraph",
+            "page_number": 1,
+            "source_ref": "#/texts/2",
+            "text": "Impulse Response describes system output to a unit impulse. Operational Amplifier has high differential gain."
+          },
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/3",
+            "block_type": "paragraph",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "paragraph",
+            "page_number": 1,
+            "source_ref": "#/texts/3",
+            "text": "Convolution combines input and impulse response."
+          },
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/4",
+            "block_type": "paragraph",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "paragraph",
+            "page_number": 1,
+            "source_ref": "#/texts/4",
+            "text": "Transfer Function maps input to output in the s-domain."
+          },
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/5",
+            "block_type": "paragraph",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "paragraph",
+            "page_number": 1,
+            "source_ref": "#/texts/5",
+            "text": "Equivalent Resistance simplifies circuit networks."
+          },
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/6",
+            "block_type": "paragraph",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "paragraph",
+            "page_number": 1,
+            "source_ref": "#/texts/6",
+            "text": "Boundary Condition constrains differential equations."
+          }
+        ],
+        "score": {
+          "anchor_recall": {
+            "matched": 8,
+            "missing": [],
+            "recall": 1.0,
+            "total": 8
+          },
+          "bbox_completeness": 1.0,
+          "block_count": 7,
+          "block_types": [
+            "heading",
+            "paragraph"
+          ],
+          "content_block_count": 7,
+          "duplicate_text_count": 0,
+          "errors": [],
+          "fixture_id": "two_column_born_digital",
+          "formula_format": "unavailable",
+          "formula_region_detected": false,
+          "formula_structure_recognized": false,
+          "hallucinated_terms": [],
+          "ocr_executed": false,
+          "page_count": 1,
+          "page_ref_completeness": 1.0,
+          "parse_success": true,
+          "parser_id": "docling",
+          "peak_memory_kb": 1500912,
+          "reading_order_errors": 1,
+          "table_cols": 0,
+          "table_detected": false,
+          "table_rows": 0,
+          "table_structure_present": false,
+          "text_error_count": 0,
+          "unicode_chinese_preserved": false,
+          "warm_parse_duration_ms": 1800.7,
+          "warnings": []
+        },
+        "sequence_metrics": {
+          "anchor_positions": {
+            "Boundary Condition": 414,
+            "Convolution": 258,
+            "Equivalent Resistance": 363,
+            "Fourier Transform": 29,
+            "Impulse Response": 148,
+            "Operational Amplifier": 208,
+            "Transfer Function": 307,
+            "Voltage Divider": 89
+          },
+          "column_metrics": {
+            "left_internal_order_accuracy": 1.0,
+            "left_positions": [
+              29,
+              148,
+              258,
+              307
+            ],
+            "right_column_starts_before_left_column_complete": true,
+            "right_internal_order_accuracy": 1.0,
+            "right_positions": [
+              89,
+              208,
+              363,
+              414
+            ]
+          },
+          "exact_sequence_match": false,
+          "expected_order": [
+            "Fourier Transform",
+            "Impulse Response",
+            "Convolution",
+            "Transfer Function",
+            "Voltage Divider",
+            "Operational Amplifier",
+            "Equivalent Resistance",
+            "Boundary Condition"
+          ],
+          "observed_order": [
+            "Fourier Transform",
+            "Voltage Divider",
+            "Impulse Response",
+            "Operational Amplifier",
+            "Convolution",
+            "Transfer Function",
+            "Equivalent Resistance",
+            "Boundary Condition"
+          ],
+          "pairwise_correct": 23,
+          "pairwise_ordering_accuracy": 0.8214,
+          "pairwise_total": 28,
+          "reading_order_errors": 1
+        }
+      },
+      "p2e_score": {
+        "anchor_recall": {
+          "matched": 8,
+          "missing": [],
+          "recall": 1.0,
+          "total": 8
+        },
+        "bbox_completeness": 1.0,
+        "block_count": 7,
+        "block_types": [
+          "heading",
+          "paragraph"
+        ],
+        "content_block_count": 7,
+        "duplicate_text_count": 0,
+        "errors": [],
+        "fixture_id": "two_column_born_digital",
+        "formula_format": "unavailable",
+        "formula_region_detected": false,
+        "formula_structure_recognized": false,
+        "hallucinated_terms": [],
+        "ocr_executed": false,
+        "page_count": 1,
+        "page_ref_completeness": 1.0,
+        "parse_success": true,
+        "parser_id": "docling",
+        "peak_memory_kb": 1024448,
+        "reading_order_errors": 1,
+        "table_cols": 0,
+        "table_detected": false,
+        "table_rows": 0,
+        "table_structure_present": false,
+        "text_error_count": 0,
+        "unicode_chinese_preserved": false,
+        "warm_parse_duration_ms": 1927.4,
+        "warnings": []
+      },
+      "warnings": []
+    },
+    {
+      "errors": [],
+      "fixture_id": "scanned_bilingual",
+      "formula_region_count": 0,
+      "formula_regions": [],
+      "l0": {
+        "body_vs_furniture": "Expected anchors are body content; generated headers/footers are not evidence for specialist terms.",
+        "expected_formula_count": 0,
+        "expected_images": 0,
+        "expected_raster_formula_count": 0,
+        "expected_table_cols": 0,
+        "expected_table_rows": 0,
+        "fixture_id": "scanned_bilingual",
+        "gold_blocks": [
+          {
+            "block_type": "paragraph",
+            "reading_order": 1,
+            "text": "Fourier Transform"
+          },
+          {
+            "block_type": "paragraph",
+            "reading_order": 2,
+            "text": "傅里叶变换"
+          },
+          {
+            "block_type": "paragraph",
+            "reading_order": 3,
+            "text": "Convolution"
+          },
+          {
+            "block_type": "paragraph",
+            "reading_order": 4,
+            "text": "卷积"
+          },
+          {
+            "block_type": "paragraph",
+            "reading_order": 5,
+            "text": "Voltage Divider"
+          },
+          {
+            "block_type": "paragraph",
+            "reading_order": 6,
+            "text": "分压器"
+          }
+        ],
+        "page_count": 1,
+        "source_hash": "9b8a5bbfe332c42fe722479262132d2cf2eac2313b6289f1d0b2ee9685edfb3e"
+      },
+      "l1": {
+        "available": false,
+        "reason": "Docling 2.117.0 public export path used here did not expose separate page backend cells/layout predictions through this probe."
+      },
+      "l2": {
+        "available_fields": [
+          "body",
+          "furniture",
+          "groups",
+          "pages",
+          "pictures",
+          "tables",
+          "texts"
+        ],
+        "body_traversal": [
+          {
+            "child_refs": [],
+            "label": "text",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 678.0,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 33.666666666666664,
+                  "r": 272.66666666666663,
+                  "t": 756.6666666666666
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/0",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "LexiBridge Parser Evaluation Scan Fourier Transform－傅里叶变换 Convolution－ 卷积"
+          },
+          {
+            "child_refs": [],
+            "label": "section_header",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 649.3333333333333,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 41.33333333333333,
+                  "r": 206.33333333333334,
+                  "t": 666.6666666666666
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/1",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "Voltage Divider-分压器"
+          }
+        ],
+        "collections": {
+          "groups": 0,
+          "pictures": 0,
+          "tables": 0,
+          "texts": 2
+        },
+        "furniture_traversal": [],
+        "sequence_metrics": {
+          "anchor_positions": {
+            "Convolution": 58,
+            "Fourier Transform": 34,
+            "Voltage Divider": 74,
+            "傅里叶变换": 52,
+            "分压器": 90,
+            "卷积": 71
+          },
+          "column_metrics": {},
+          "exact_sequence_match": true,
+          "expected_order": [
+            "Fourier Transform",
+            "傅里叶变换",
+            "Convolution",
+            "卷积",
+            "Voltage Divider",
+            "分压器"
+          ],
+          "observed_order": [
+            "Fourier Transform",
+            "傅里叶变换",
+            "Convolution",
+            "卷积",
+            "Voltage Divider",
+            "分压器"
+          ],
+          "pairwise_correct": 15,
+          "pairwise_ordering_accuracy": 1.0,
+          "pairwise_total": 15,
+          "reading_order_errors": 0
+        }
+      },
+      "l3": {
+        "block_count": 2,
+        "block_summary": [
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/0",
+            "block_type": "paragraph",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "paragraph",
+            "page_number": 1,
+            "source_ref": "#/texts/0",
+            "text": "LexiBridge Parser Evaluation Scan Fourier Transform－傅里叶变换 Convolution－ 卷积"
+          },
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/1",
+            "block_type": "heading",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "heading",
+            "page_number": 1,
+            "source_ref": "#/texts/1",
+            "text": "Voltage Divider-分压器"
+          }
+        ],
+        "score": {
+          "anchor_recall": {
+            "matched": 6,
+            "missing": [],
+            "recall": 1.0,
+            "total": 6
+          },
+          "bbox_completeness": 1.0,
+          "block_count": 2,
+          "block_types": [
+            "heading",
+            "paragraph"
+          ],
+          "content_block_count": 2,
+          "duplicate_text_count": 0,
+          "errors": [],
+          "fixture_id": "scanned_bilingual",
+          "formula_format": "unavailable",
+          "formula_region_detected": false,
+          "formula_structure_recognized": false,
+          "hallucinated_terms": [],
+          "ocr_executed": false,
+          "page_count": 1,
+          "page_ref_completeness": 1.0,
+          "parse_success": true,
+          "parser_id": "docling",
+          "peak_memory_kb": 1808944,
+          "reading_order_errors": 0,
+          "table_cols": 0,
+          "table_detected": false,
+          "table_rows": 0,
+          "table_structure_present": false,
+          "text_error_count": 0,
+          "unicode_chinese_preserved": true,
+          "warm_parse_duration_ms": 3074.09,
+          "warnings": []
+        },
+        "sequence_metrics": {
+          "anchor_positions": {
+            "Convolution": 58,
+            "Fourier Transform": 34,
+            "Voltage Divider": 74,
+            "傅里叶变换": 52,
+            "分压器": 90,
+            "卷积": 71
+          },
+          "column_metrics": {},
+          "exact_sequence_match": true,
+          "expected_order": [
+            "Fourier Transform",
+            "傅里叶变换",
+            "Convolution",
+            "卷积",
+            "Voltage Divider",
+            "分压器"
+          ],
+          "observed_order": [
+            "Fourier Transform",
+            "傅里叶变换",
+            "Convolution",
+            "卷积",
+            "Voltage Divider",
+            "分压器"
+          ],
+          "pairwise_correct": 15,
+          "pairwise_ordering_accuracy": 1.0,
+          "pairwise_total": 15,
+          "reading_order_errors": 0
+        }
+      },
+      "p2e_score": {
+        "anchor_recall": {
+          "matched": 6,
+          "missing": [],
+          "recall": 1.0,
+          "total": 6
+        },
+        "bbox_completeness": 1.0,
+        "block_count": 2,
+        "block_types": [
+          "heading",
+          "paragraph"
+        ],
+        "content_block_count": 2,
+        "duplicate_text_count": 0,
+        "errors": [],
+        "fixture_id": "scanned_bilingual",
+        "formula_format": "unavailable",
+        "formula_region_detected": false,
+        "formula_structure_recognized": false,
+        "hallucinated_terms": [],
+        "ocr_executed": false,
+        "page_count": 1,
+        "page_ref_completeness": 1.0,
+        "parse_success": true,
+        "parser_id": "docling",
+        "peak_memory_kb": 1687872,
+        "reading_order_errors": 0,
+        "table_cols": 0,
+        "table_detected": false,
+        "table_rows": 0,
+        "table_structure_present": false,
+        "text_error_count": 0,
+        "unicode_chinese_preserved": true,
+        "warm_parse_duration_ms": 3167.52,
+        "warnings": []
+      },
+      "warnings": []
+    },
+    {
+      "errors": [],
+      "fixture_id": "simple_table",
+      "formula_region_count": 0,
+      "formula_regions": [],
+      "l0": {
+        "body_vs_furniture": "Expected anchors are body content; generated headers/footers are not evidence for specialist terms.",
+        "expected_formula_count": 0,
+        "expected_images": 0,
+        "expected_raster_formula_count": 0,
+        "expected_table_cols": 3,
+        "expected_table_rows": 4,
+        "fixture_id": "simple_table",
+        "gold_blocks": [
+          {
+            "block_type": "table",
+            "reading_order": 1,
+            "text": "Impulse Response"
+          },
+          {
+            "block_type": "table",
+            "reading_order": 2,
+            "text": "Voltage Divider"
+          },
+          {
+            "block_type": "table",
+            "reading_order": 3,
+            "text": "Eigenvalue"
+          }
+        ],
+        "page_count": 1,
+        "source_hash": "0c83f1f9a4f81df46d5dcee1ecb66810f3050ccabc6854fb10d69321b7504018"
+      },
+      "l1": {
+        "available": false,
+        "reason": "Docling 2.117.0 public export path used here did not expose separate page backend cells/layout predictions through this probe."
+      },
+      "l2": {
+        "available_fields": [
+          "body",
+          "furniture",
+          "groups",
+          "pages",
+          "pictures",
+          "tables",
+          "texts"
+        ],
+        "body_traversal": [
+          {
+            "child_refs": [],
+            "label": "page_header",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 735.0605474,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 54.0,
+                  "r": 203.41307919999997,
+                  "t": 748.1923822
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/0",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "Parser Evaluation Table"
+          },
+          {
+            "child_refs": [],
+            "label": "table",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 589.3813781738281,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 52.346229553222656,
+                  "r": 504.9300842285156,
+                  "t": 703.4315185546875
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/tables/0",
+            "table_shape": {
+              "cell_count": 12,
+              "cols": 3,
+              "rows": 4
+            },
+            "text": ""
+          }
+        ],
+        "collections": {
+          "groups": 0,
+          "pictures": 0,
+          "tables": 1,
+          "texts": 1
+        },
+        "furniture_traversal": [],
+        "sequence_metrics": {
+          "anchor_positions": {
+            "Eigenvalue": -1,
+            "Impulse Response": -1,
+            "Voltage Divider": -1
+          },
+          "column_metrics": {},
+          "exact_sequence_match": false,
+          "expected_order": [
+            "Impulse Response",
+            "Voltage Divider",
+            "Eigenvalue"
+          ],
+          "observed_order": [],
+          "pairwise_correct": 0,
+          "pairwise_ordering_accuracy": null,
+          "pairwise_total": 0,
+          "reading_order_errors": 0
+        }
+      },
+      "l3": {
+        "block_count": 2,
+        "block_summary": [
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/0",
+            "block_type": "header",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "header",
+            "page_number": 1,
+            "source_ref": "#/texts/0",
+            "text": "Parser Evaluation Table"
+          },
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/tables/0",
+            "block_type": "table",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "table",
+            "page_number": 1,
+            "source_ref": "#/tables/0",
+            "text": "Domain | Term | Definition | Signals | Impulse Response | Output to impulse | Circuits | Voltage Divider | Resistor ratio | Math | Eigenvalue | Matrix scalar"
+          }
+        ],
+        "score": {
+          "anchor_recall": {
+            "matched": 3,
+            "missing": [],
+            "recall": 1.0,
+            "total": 3
+          },
+          "bbox_completeness": 1.0,
+          "block_count": 2,
+          "block_types": [
+            "header",
+            "table"
+          ],
+          "content_block_count": 2,
+          "duplicate_text_count": 0,
+          "errors": [],
+          "fixture_id": "simple_table",
+          "formula_format": "unavailable",
+          "formula_region_detected": false,
+          "formula_structure_recognized": false,
+          "hallucinated_terms": [],
+          "ocr_executed": false,
+          "page_count": 1,
+          "page_ref_completeness": 1.0,
+          "parse_success": true,
+          "parser_id": "docling",
+          "peak_memory_kb": 1503168,
+          "reading_order_errors": 0,
+          "table_cols": 3,
+          "table_detected": true,
+          "table_rows": 4,
+          "table_structure_present": true,
+          "text_error_count": 0,
+          "unicode_chinese_preserved": false,
+          "warm_parse_duration_ms": 2052.94,
+          "warnings": []
+        },
+        "sequence_metrics": {
+          "anchor_positions": {
+            "Eigenvalue": 155,
+            "Impulse Response": 63,
+            "Voltage Divider": 113
+          },
+          "column_metrics": {},
+          "exact_sequence_match": true,
+          "expected_order": [
+            "Impulse Response",
+            "Voltage Divider",
+            "Eigenvalue"
+          ],
+          "observed_order": [
+            "Impulse Response",
+            "Voltage Divider",
+            "Eigenvalue"
+          ],
+          "pairwise_correct": 3,
+          "pairwise_ordering_accuracy": 1.0,
+          "pairwise_total": 3,
+          "reading_order_errors": 0
+        }
+      },
+      "p2e_score": {
+        "anchor_recall": {
+          "matched": 3,
+          "missing": [],
+          "recall": 1.0,
+          "total": 3
+        },
+        "bbox_completeness": 0.0769,
+        "block_count": 26,
+        "block_types": [
+          "header",
+          "table",
+          "unknown"
+        ],
+        "content_block_count": 26,
+        "duplicate_text_count": 12,
+        "errors": [],
+        "fixture_id": "simple_table",
+        "formula_format": "unavailable",
+        "formula_region_detected": false,
+        "formula_structure_recognized": false,
+        "hallucinated_terms": [],
+        "ocr_executed": false,
+        "page_count": 1,
+        "page_ref_completeness": 0.0769,
+        "parse_success": true,
+        "parser_id": "docling",
+        "peak_memory_kb": 1135600,
+        "reading_order_errors": 0,
+        "table_cols": 3,
+        "table_detected": true,
+        "table_rows": 4,
+        "table_structure_present": true,
+        "text_error_count": 0,
+        "unicode_chinese_preserved": false,
+        "warm_parse_duration_ms": 2250.78,
+        "warnings": []
+      },
+      "warnings": []
+    },
+    {
+      "errors": [],
+      "fixture_id": "raster_formula",
+      "formula_region_count": 1,
+      "formula_regions": [
+        {
+          "bounding_box": {
+            "height": 110.0,
+            "width": 420.0,
+            "x": 72.0,
+            "y": 362.0
+          },
+          "formula_region_uid": "1ee4e610-41d9-448b-99c6-aad9ce76078b",
+          "page_number": 1,
+          "recognizer_status": "FORMULA_RECOGNIZER_UNAVAILABLE"
+        }
+      ],
+      "l0": {
+        "body_vs_furniture": "Expected anchors are body content; generated headers/footers are not evidence for specialist terms.",
+        "expected_formula_count": 1,
+        "expected_images": 0,
+        "expected_raster_formula_count": 1,
+        "expected_table_cols": 0,
+        "expected_table_rows": 0,
+        "fixture_id": "raster_formula",
+        "formula_gold": {
+          "formula_structure_recognition_expected": false,
+          "raster_formula_regions": 1,
+          "surrounding_text_anchor": "Transfer Function"
+        },
+        "gold_blocks": [
+          {
+            "block_type": "paragraph",
+            "reading_order": 1,
+            "text": "Transfer Function"
+          }
+        ],
+        "page_count": 1,
+        "source_hash": "f0a39854621cdb09696455c9ba888496a4ac92413e023d1cffdb090de5c05378"
+      },
+      "l1": {
+        "available": false,
+        "reason": "Docling 2.117.0 public export path used here did not expose separate page backend cells/layout predictions through this probe."
+      },
+      "l2": {
+        "available_fields": [
+          "body",
+          "furniture",
+          "groups",
+          "pages",
+          "pictures",
+          "tables",
+          "texts"
+        ],
+        "body_traversal": [
+          {
+            "child_refs": [],
+            "label": "section_header",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 734.8505865,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 54.0,
+                  "r": 231.575676,
+                  "t": 748.9204095
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/0",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "Formula Parser Evaluation"
+          },
+          {
+            "child_refs": [],
+            "label": "text",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 701.900391,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 54.0,
+                  "r": 280.23045399999995,
+                  "t": 711.280273
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/1",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "Transfer Function appears near the formula region."
+          },
+          {
+            "child_refs": [],
+            "label": "text",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 344.0,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 92.66666666666667,
+                  "r": 381.6666666666667,
+                  "t": 404.3333333333333
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/2",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "H(s) = int_O^infty h(t)e^{-st} dt = V_c out = V_in * R_2/(R_1 + F R_2)"
+          }
+        ],
+        "collections": {
+          "groups": 0,
+          "pictures": 0,
+          "tables": 0,
+          "texts": 3
+        },
+        "furniture_traversal": [],
+        "sequence_metrics": {
+          "anchor_positions": {
+            "Transfer Function": 26
+          },
+          "column_metrics": {},
+          "exact_sequence_match": true,
+          "expected_order": [
+            "Transfer Function"
+          ],
+          "observed_order": [
+            "Transfer Function"
+          ],
+          "pairwise_correct": 0,
+          "pairwise_ordering_accuracy": null,
+          "pairwise_total": 0,
+          "reading_order_errors": 0
+        }
+      },
+      "l3": {
+        "block_count": 3,
+        "block_summary": [
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/0",
+            "block_type": "heading",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "heading",
+            "page_number": 1,
+            "source_ref": "#/texts/0",
+            "text": "Formula Parser Evaluation"
+          },
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/1",
+            "block_type": "paragraph",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "paragraph",
+            "page_number": 1,
+            "source_ref": "#/texts/1",
+            "text": "Transfer Function appears near the formula region."
+          },
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/2",
+            "block_type": "formula",
+            "formula_route": {
+              "formula_region_uid": "1ee4e610-41d9-448b-99c6-aad9ce76078b",
+              "latex_candidate": "",
+              "mathml_candidate": "",
+              "overlap_iou": 0.3774,
+              "recognizer_status": "FORMULA_RECOGNIZER_UNAVAILABLE",
+              "routing": "docling_region_plus_formula_region_overlap"
+            },
+            "has_bbox": true,
+            "original_block_type": "paragraph",
+            "page_number": 1,
+            "source_ref": "#/texts/2",
+            "text": "H(s) = int_O^infty h(t)e^{-st} dt = V_c out = V_in * R_2/(R_1 + F R_2)"
+          }
+        ],
+        "score": {
+          "anchor_recall": {
+            "matched": 1,
+            "missing": [],
+            "recall": 1.0,
+            "total": 1
+          },
+          "bbox_completeness": 1.0,
+          "block_count": 3,
+          "block_types": [
+            "formula",
+            "heading",
+            "paragraph"
+          ],
+          "content_block_count": 3,
+          "duplicate_text_count": 0,
+          "errors": [],
+          "fixture_id": "raster_formula",
+          "formula_format": "unavailable",
+          "formula_region_detected": true,
+          "formula_structure_recognized": false,
+          "hallucinated_terms": [],
+          "ocr_executed": false,
+          "page_count": 1,
+          "page_ref_completeness": 1.0,
+          "parse_success": true,
+          "parser_id": "docling",
+          "peak_memory_kb": 2359504,
+          "reading_order_errors": 0,
+          "table_cols": 0,
+          "table_detected": false,
+          "table_rows": 0,
+          "table_structure_present": false,
+          "text_error_count": 0,
+          "unicode_chinese_preserved": false,
+          "warm_parse_duration_ms": 3537.37,
+          "warnings": []
+        },
+        "sequence_metrics": {
+          "anchor_positions": {
+            "Transfer Function": 26
+          },
+          "column_metrics": {},
+          "exact_sequence_match": true,
+          "expected_order": [
+            "Transfer Function"
+          ],
+          "observed_order": [
+            "Transfer Function"
+          ],
+          "pairwise_correct": 0,
+          "pairwise_ordering_accuracy": null,
+          "pairwise_total": 0,
+          "reading_order_errors": 0
+        }
+      },
+      "p2e_score": {
+        "anchor_recall": {
+          "matched": 1,
+          "missing": [],
+          "recall": 1.0,
+          "total": 1
+        },
+        "bbox_completeness": 1.0,
+        "block_count": 3,
+        "block_types": [
+          "heading",
+          "paragraph"
+        ],
+        "content_block_count": 3,
+        "duplicate_text_count": 0,
+        "errors": [],
+        "fixture_id": "raster_formula",
+        "formula_format": "unavailable",
+        "formula_region_detected": false,
+        "formula_structure_recognized": false,
+        "hallucinated_terms": [],
+        "ocr_executed": false,
+        "page_count": 1,
+        "page_ref_completeness": 1.0,
+        "parse_success": true,
+        "parser_id": "docling",
+        "peak_memory_kb": 2034384,
+        "reading_order_errors": 0,
+        "table_cols": 0,
+        "table_detected": false,
+        "table_rows": 0,
+        "table_structure_present": false,
+        "text_error_count": 0,
+        "unicode_chinese_preserved": false,
+        "warm_parse_duration_ms": 3702.15,
+        "warnings": []
+      },
+      "warnings": []
+    },
+    {
+      "errors": [],
+      "fixture_id": "negative_no_terms",
+      "formula_region_count": 0,
+      "formula_regions": [],
+      "l0": {
+        "body_vs_furniture": "Expected anchors are body content; generated headers/footers are not evidence for specialist terms.",
+        "expected_formula_count": 0,
+        "expected_images": 0,
+        "expected_raster_formula_count": 0,
+        "expected_table_cols": 0,
+        "expected_table_rows": 0,
+        "fixture_id": "negative_no_terms",
+        "gold_blocks": [],
+        "page_count": 1,
+        "source_hash": "04a957727e339479645a26b3857bae25e26e7049f28f1ebcdf1ecd6d1fa0ce21"
+      },
+      "l1": {
+        "available": false,
+        "reason": "Docling 2.117.0 public export path used here did not expose separate page backend cells/layout predictions through this probe."
+      },
+      "l2": {
+        "available_fields": [
+          "body",
+          "furniture",
+          "groups",
+          "pages",
+          "pictures",
+          "tables",
+          "texts"
+        ],
+        "body_traversal": [
+          {
+            "child_refs": [],
+            "label": "section_header",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 734.6406256,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 54.0,
+                  "r": 170.49218240000005,
+                  "t": 749.6484368
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/0",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "Negative Fixture"
+          },
+          {
+            "child_refs": [],
+            "label": "text",
+            "prov": [
+              {
+                "bbox": {
+                  "b": 701.6904301,
+                  "coord_origin": "BOTTOMLEFT",
+                  "l": 54.0,
+                  "r": 385.3964675999997,
+                  "t": 712.0083003
+                },
+                "page_no": 1
+              }
+            ],
+            "self_ref": "#/texts/1",
+            "table_shape": {
+              "cell_count": 0,
+              "cols": 0,
+              "rows": 0
+            },
+            "text": "This safe synthetic page contains no specialist terminology anchors."
+          }
+        ],
+        "collections": {
+          "groups": 0,
+          "pictures": 0,
+          "tables": 0,
+          "texts": 2
+        },
+        "furniture_traversal": [],
+        "sequence_metrics": {
+          "anchor_positions": {},
+          "column_metrics": {},
+          "exact_sequence_match": true,
+          "expected_order": [],
+          "observed_order": [],
+          "pairwise_correct": 0,
+          "pairwise_ordering_accuracy": null,
+          "pairwise_total": 0,
+          "reading_order_errors": 0
+        }
+      },
+      "l3": {
+        "block_count": 2,
+        "block_summary": [
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/0",
+            "block_type": "heading",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "heading",
+            "page_number": 1,
+            "source_ref": "#/texts/0",
+            "text": "Negative Fixture"
+          },
+          {
+            "bbox_is_derived": false,
+            "block_id": "#/texts/1",
+            "block_type": "paragraph",
+            "formula_route": {},
+            "has_bbox": true,
+            "original_block_type": "paragraph",
+            "page_number": 1,
+            "source_ref": "#/texts/1",
+            "text": "This safe synthetic page contains no specialist terminology anchors."
+          }
+        ],
+        "score": {
+          "anchor_recall": {
+            "matched": 0,
+            "missing": [],
+            "recall": null,
+            "total": 0
+          },
+          "bbox_completeness": 1.0,
+          "block_count": 2,
+          "block_types": [
+            "heading",
+            "paragraph"
+          ],
+          "content_block_count": 2,
+          "duplicate_text_count": 0,
+          "errors": [],
+          "fixture_id": "negative_no_terms",
+          "formula_format": "unavailable",
+          "formula_region_detected": false,
+          "formula_structure_recognized": false,
+          "hallucinated_terms": [],
+          "ocr_executed": false,
+          "page_count": 1,
+          "page_ref_completeness": 1.0,
+          "parse_success": true,
+          "parser_id": "docling",
+          "peak_memory_kb": 1491728,
+          "reading_order_errors": 0,
+          "table_cols": 0,
+          "table_detected": false,
+          "table_rows": 0,
+          "table_structure_present": false,
+          "text_error_count": 0,
+          "unicode_chinese_preserved": false,
+          "warm_parse_duration_ms": 1850.55,
+          "warnings": []
+        },
+        "sequence_metrics": {
+          "anchor_positions": {},
+          "column_metrics": {},
+          "exact_sequence_match": true,
+          "expected_order": [],
+          "observed_order": [],
+          "pairwise_correct": 0,
+          "pairwise_ordering_accuracy": null,
+          "pairwise_total": 0,
+          "reading_order_errors": 0
+        }
+      },
+      "p2e_score": {
+        "anchor_recall": {
+          "matched": 0,
+          "missing": [],
+          "recall": null,
+          "total": 0
+        },
+        "bbox_completeness": 1.0,
+        "block_count": 2,
+        "block_types": [
+          "heading",
+          "paragraph"
+        ],
+        "content_block_count": 2,
+        "duplicate_text_count": 0,
+        "errors": [],
+        "fixture_id": "negative_no_terms",
+        "formula_format": "unavailable",
+        "formula_region_detected": false,
+        "formula_structure_recognized": false,
+        "hallucinated_terms": [],
+        "ocr_executed": false,
+        "page_count": 1,
+        "page_ref_completeness": 1.0,
+        "parse_success": true,
+        "parser_id": "docling",
+        "peak_memory_kb": 1036544,
+        "reading_order_errors": 0,
+        "table_cols": 0,
+        "table_detected": false,
+        "table_rows": 0,
+        "table_structure_present": false,
+        "text_error_count": 0,
+        "unicode_chinese_preserved": false,
+        "warm_parse_duration_ms": 1978.88,
+        "warnings": []
+      },
+      "warnings": []
+    }
+  ],
+  "git_commit": "01bddaa47b5e8d84feb929e7445b24d2f02b8f18",
+  "network": {
+    "external_document_api_request_count": 0,
+    "external_document_upload_count": 0,
+    "private_course_external_send_count": 0,
+    "provider_request_count": 0
+  },
+  "platform": {
+    "machine": "arm64",
+    "python": "3.9.6",
+    "system": "Darwin"
+  },
+  "production": {
+    "candidate_governance_changed": false,
+    "database_schema_changed": false,
+    "formal_workflow_changed": false,
+    "production_parser_changed": false
+  },
+  "schema_version": "10C.P2.5F-attribution-v1",
+  "task": "10C.P2.5F"
+}

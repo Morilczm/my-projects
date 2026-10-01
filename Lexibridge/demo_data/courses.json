@@ -1,0 +1,23 @@
+[
+  {
+    "course_code": "DS101",
+    "course_name": "Data Structures and Algorithms",
+    "discipline": "data_structures",
+    "semester": "2026 Demo",
+    "description": "demo_seed=true; bilingual terminology alignment demo course for data structures."
+  },
+  {
+    "course_code": "SP101",
+    "course_name": "Signal Processing Basics",
+    "discipline": "signal_processing",
+    "semester": "2026 Demo",
+    "description": "demo_seed=true; bilingual terminology alignment demo course for signal processing."
+  },
+  {
+    "course_code": "MATH101",
+    "course_name": "Engineering Mathematics",
+    "discipline": "engineering_math",
+    "semester": "2026 Demo",
+    "description": "demo_seed=true; bilingual terminology alignment demo course for engineering mathematics."
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "chinese_source_contains_all_english_gold_terms": true,
+  "chinese_source_count": 2,
+  "cross_corpus_alignment_validated": false,
+  "cross_corpus_semantic_retrieval_validated": false,
+  "domain_source_id_hint": true,
+  "english_keyword_retrieval_leakage": true,
+  "english_source_contains_chinese_gold_terms": false,
+  "english_source_count": 2,
+  "fixed_order_mapping_used_by_production": false,
+  "frozen_hashes": {
+    "corpus_sha256": "33715999c16a74610091b1e40896ee41921570a3740ebc2815565cf0ab7202dc",
+    "gold_sha256": "199baed9a8cb6deb68ae3480c3a67679b2daf273d3733e909d4e861685d45302"
+  },
+  "historical_retrieval_hit_at_3_interpretation": "BILINGUAL_KEYWORD_TEMPLATE_SELF_MATCH_NOT_CROSS_LANGUAGE_VALIDATION",
+  "inline_bilingual_pattern_count": 25,
+  "parallel_template_mirror": true,
+  "physical_source_records_independent": true,
+  "production_quality_modified": false,
+  "real_provider_requests": 0,
+  "shared_generator_constants": true,
+  "simulates_english_slide_plus_independent_chinese_textbook": false,
+  "source_id_concept_leakage": false,
+  "status": "CROSS_CORPUS_ALIGNMENT_ARCHITECTURE_AUDIT_COMPLETED",
+  "supported_conclusions": [
+    "English candidate extraction coverage on synthetic physics definitions",
+    "Language/source-role filtering over separately persisted synthetic sources",
+    "Behavior of the inline bilingual regex fallback"
+  ],
+  "survivor_bias": {
+    "all_concepts": {
+      "count": 25,
+      "denominator": 25
+    },
+    "conclusion": "Provider-ready is a conditionally selected structural subset and must not be used as the semantic-alignment denominator.",
+    "provider_ready": {
+      "count": 5,
+      "denominator": 25
+    },
+    "retrieved_top3": {
+      "count": 25,
+      "denominator": 25
+    }
+  },
+  "task": "12C-R",
+  "unsupported_conclusions": [
+    "Cross-language semantic retrieval from an independent Chinese textbook",
+    "Chinese standard-term identification from monolingual Chinese prose",
+    "Semantic equivalence of the selected English and Chinese concepts",
+    "Generalization to real course slides or external knowledge bases"
+  ]
+}

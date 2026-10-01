@@ -1,0 +1,25 @@
+{
+  "alignment_result_contract": "student-alignment-result@1.2.0",
+  "candidate_admission": {
+    "generated": false,
+    "max_candidates": 4,
+    "requires_candidate_uid": true,
+    "requires_evidence_backed": true,
+    "requires_result_chinese_source_chunk_binding": true
+  },
+  "content_dimensions": {
+    "authority": "NON_OFFICIAL",
+    "publication_status": "NOT_APPLICABLE",
+    "visibility": "PRIVATE"
+  },
+  "grounding_mode": "DETERMINISTIC_EVIDENCE_TEMPLATE",
+  "learning_support_contract": "student-learning-support@1.0.0",
+  "max_evidence_items": 4,
+  "max_evidence_snippet_characters": 360,
+  "migration_required": false,
+  "provider_used": false,
+  "shared_workspaces": [
+    "PERSONAL",
+    "MANAGED_COURSE"
+  ]
+}

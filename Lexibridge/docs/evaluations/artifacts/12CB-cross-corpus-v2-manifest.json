@@ -1,0 +1,74 @@
+{
+  "hashes": {
+    "chinese_bundle_sha256": "cebd3274cb0802fa645948d9b641b1776c60ab99700bbf3cd4a80999bc45b5f7",
+    "english_bundle_sha256": "e84fc99a993c099628fe7d740c1e248fefe1e03cbece7b4df43d02cd7dfaddc5",
+    "gold_sha256": "3379bc1e6c589256dcec384a9f7435c96277f6754b7cb44cff69f86244a9b3f0",
+    "manifest_sha256": "a53a5152aa66189c954b703c42fb815a6a8c7f83933051f80f1538e78bdc3f88"
+  },
+  "manifest": {
+    "benchmark_id": "cross-corpus-v2",
+    "chinese_sources": [
+      {
+        "language": "zh",
+        "path": "chinese/source-q.txt",
+        "source_id": "zh-s13",
+        "source_role": "chinese_reference_material"
+      },
+      {
+        "language": "zh",
+        "path": "chinese/source-k.txt",
+        "source_id": "zh-s11",
+        "source_role": "chinese_reference_material"
+      },
+      {
+        "language": "zh",
+        "path": "chinese/source-r.txt",
+        "source_id": "zh-s14",
+        "source_role": "chinese_reference_material"
+      },
+      {
+        "language": "zh",
+        "path": "chinese/source-m.txt",
+        "source_id": "zh-s12",
+        "source_role": "chinese_reference_material"
+      }
+    ],
+    "concept_count": 25,
+    "contains_inline_bilingual_leakage": false,
+    "distractor_count": 15,
+    "domain": "controlled physics",
+    "english_sources": [
+      {
+        "language": "en",
+        "path": "english/source-d.txt",
+        "source_id": "en-s04",
+        "source_role": "english_course_material"
+      },
+      {
+        "language": "en",
+        "path": "english/source-a.txt",
+        "source_id": "en-s01",
+        "source_role": "english_course_material"
+      },
+      {
+        "language": "en",
+        "path": "english/source-c.txt",
+        "source_id": "en-s03",
+        "source_role": "english_course_material"
+      },
+      {
+        "language": "en",
+        "path": "english/source-b.txt",
+        "source_id": "en-s02",
+        "source_role": "english_course_material"
+      }
+    ],
+    "gold_path": "gold.json",
+    "gold_used_by_production": false,
+    "production_core_path_represented": true,
+    "texts_are_original_short_evaluation_material": true,
+    "version": "2.0.0"
+  },
+  "real_provider_requests": 0,
+  "status": "LEAKAGE_RESISTANT_CROSS_CORPUS_BENCHMARK_FROZEN"
+}

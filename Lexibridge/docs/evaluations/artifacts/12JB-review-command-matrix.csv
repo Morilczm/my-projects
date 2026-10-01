@@ -1,0 +1,9 @@
+command,input_candidate_scope,human_state,machine_state_overwritten,readiness_effect,published,idempotent,expected_version_required,result
+ACCEPT_RECOMMENDATION,production-selected evidence-backed candidate,ACCEPTED,false,re-evaluated before draft,false,true,true,PASS
+SELECT_ALTERNATIVE_CANDIDATE,bounded evidence-backed pool only,ALTERNATIVE_SELECTED,false,re-evaluated before draft,false,true,true,PASS
+REJECT_ALIGNMENT,none,REJECTED,false,execution blocked,false,true,true,PASS
+DEFER_REVIEW,none,DEFERRED,false,execution blocked,false,true,true,PASS
+GENERATE_DRAFT,approved selected candidate,DRAFT_GENERATED,false,READY required,false,true,true,PASS
+EDIT_DRAFT,previously generated governed draft,DRAFT_GENERATED,false,no bypass,false,false,true,PASS
+FATAL_UPSTREAM_APPROVAL,not applicable,UNREVIEWED,false,blocked,false,true,true,PASS
+GENERATED_HINT_SELECTION,generated hint,UNREVIEWED,false,blocked,false,true,true,PASS

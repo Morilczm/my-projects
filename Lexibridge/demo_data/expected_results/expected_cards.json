@@ -1,0 +1,38 @@
+{
+  "version": "demo_v1",
+  "description": "Representative expected TerminologyCard outcomes for the deterministic demo flow.",
+  "cards": [
+    {
+      "course_code": "SP101",
+      "english_term": "Fourier Transform",
+      "expected_chinese_term": "傅里叶变换",
+      "expected_status": "pending_quality_control",
+      "expected_alignment_status": "exact_match",
+      "reason": "Demo/local provider cannot auto-approve even when evidence is available."
+    },
+    {
+      "course_code": "SP101",
+      "english_term": "Convolution",
+      "expected_chinese_term": "卷积",
+      "expected_status": "pending_quality_control",
+      "expected_alignment_status": "exact_match",
+      "reason": "Formula-related concept remains reviewable without a configured formula OCR provider."
+    },
+    {
+      "course_code": "DS101",
+      "english_term": "Hash Table",
+      "expected_chinese_term": "哈希表",
+      "expected_status": "pending_quality_control",
+      "expected_alignment_status": "exact_match",
+      "reason": "Evidence is course-local and should not match signal-processing evidence."
+    },
+    {
+      "course_code": "MATH101",
+      "english_term": "Integral",
+      "expected_chinese_term": "积分",
+      "expected_status": "needs_more_evidence",
+      "expected_alignment_status": "formula_evidence_missing",
+      "reason": "Formula evidence is detected but no live formula OCR provider is configured."
+    }
+  ]
+}

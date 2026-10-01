@@ -1,0 +1,10 @@
+actor,workspace,reader_json,original_pdf,selection,required_provenance,result
+owner_student,PERSONAL,allow,allow,allow,source+page+block+span,PRIVATE_NON_OFFICIAL
+course_member_student,MANAGED_COURSE,allow,allow_if_retained,allow,source+page+block+span,PRIVATE_NON_OFFICIAL
+other_student,PERSONAL,deny_not_found,deny_not_found,deny,not_exposed,none
+non_member_student,MANAGED_COURSE,deny_not_found,deny_not_found,deny,not_exposed,none
+instructor,PERSONAL,deny,deny,deny,not_exposed,none
+reviewer,PERSONAL,deny,deny,deny,not_exposed,none
+admin,PERSONAL,deny,deny,deny,not_exposed,none
+owner_student,missing_page_or_block,fail_closed,deny,deny,incomplete,none
+owner_student,deleted_or_inactive,deny_not_found,deny_not_found,deny,unavailable,historical_result_only

@@ -1,0 +1,68 @@
+{
+  "alignment_status": "READY",
+  "chinese_candidate_count": 1,
+  "chinese_evidence_count": 1,
+  "chinese_source_admission": {
+    "allow_derivative_cards": false,
+    "allow_student_search": true,
+    "authorization_status": "allowed_for_private_use",
+    "language": "zh",
+    "license_attestation_recorded": true,
+    "license_status": "restricted",
+    "material_role": "CHINESE_REFERENCE_EVIDENCE",
+    "qualification_quality_status": "ready",
+    "quality_status": "native_text_ok",
+    "scope_type": "personal",
+    "source_role": "chinese_reference_material",
+    "trust_level": "student_uploaded",
+    "visibility": "private"
+  },
+  "contract_id": "personal-chinese-evidence-corpus-13c2@1.0.0",
+  "english_evidence_count": 1,
+  "english_source_admission": {
+    "allow_derivative_cards": false,
+    "allow_student_search": true,
+    "authorization_status": "allowed_for_private_use",
+    "language": "en",
+    "license_attestation_recorded": true,
+    "license_status": "restricted",
+    "material_role": "ENGLISH_COURSE_MATERIAL",
+    "qualification_quality_status": "ready",
+    "quality_status": "native_text_ok",
+    "scope_type": "personal",
+    "source_role": "english_course_material",
+    "trust_level": "student_uploaded",
+    "visibility": "private"
+  },
+  "environment": "synthetic-local-offline-real-model",
+  "evidence_scope": {
+    "platform_governed_included": false,
+    "scope_id": "7edeff93c2a371df8191d8f9",
+    "source_count": 1,
+    "tier": "PERSONAL_PRIVATE"
+  },
+  "external_api_used_during_acceptance": false,
+  "model": {
+    "backend_id": "local_multilingual_e5_pytorch_cpu_v1",
+    "model_id": "intfloat/multilingual-e5-small",
+    "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "offline": true
+  },
+  "personal_record_saved": true,
+  "private_source_text_in_artifact": false,
+  "processing_status": "completed",
+  "qualification_decision": "QUALIFIED",
+  "qualification_reason_codes": [],
+  "query_latency_ms": 2935.33,
+  "real_provider_requests": 0,
+  "reranker_mode": "deterministic-fixed-contract-replay",
+  "risk_labels": [
+    "evidence_from_low_trust_source"
+  ],
+  "same_uploaded_english_source": true,
+  "source_provenance_retained": true,
+  "status": "PASS",
+  "student_alignment_runner_injected": false,
+  "total_latency_ms": 3044.15,
+  "uploaded_chinese_source_only": true
+}

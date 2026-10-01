@@ -1,0 +1,13 @@
+{
+  "consent_version": "student-pilot-consent-zh@1.0.0",
+  "contract_id": "student-real-pilot@1.0.0",
+  "enabled_by_default": false,
+  "idempotency_required": true,
+  "normal_product_use_requires_participation": false,
+  "pilot_id": "personal-workspace-one-concept@1.0.0",
+  "real_completed_sessions": 0,
+  "real_participants": 0,
+  "scope": "PERSONAL",
+  "status": "READY_FOR_SEPARATELY_RUN_REAL_STUDENT_PILOT",
+  "version_guard_on_completion": true
+}

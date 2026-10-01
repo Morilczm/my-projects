@@ -1,0 +1,9 @@
+Electricity Seminar Handout
+
+Capacitance is the stored charge divided by the potential difference. Electric current and current density are useful distractors but are not the same quantity.
+
+An electric field assigns force per unit positive test charge at a location. Electric field strength is often discussed nearby.
+
+Electric charge is a property responsible for electrical interaction. Potential difference compares electric potential at two locations.
+
+Electric potential is potential energy per unit charge. Electric potential energy instead belongs to a charged object in a configuration.

@@ -1,0 +1,9 @@
+{
+  "audit_body_contains_note": false,
+  "conflicting_payload_same_key": "STUDENT_PERSONAL_RECORD_IDEMPOTENCY_CONFLICT",
+  "mutation_fingerprint": "HMAC-SHA-256",
+  "optimistic_versioning": true,
+  "revisit_requires_idempotency_key": true,
+  "same_payload_same_key": "IDEMPOTENT_REPLAY",
+  "stored_private_payload": false
+}

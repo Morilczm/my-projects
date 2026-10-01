@@ -1,0 +1,76 @@
+{
+  "contract_id": "personal-evidence-alignment-quality-repair@1.0.0",
+  "baseline_commit": "666a6ea77e67a93c742eca56c0dd9c541eacb44c",
+  "scope": "PERSONAL_PRIVATE_NON_OFFICIAL",
+  "technical_status": "PERSONAL_EVIDENCE_ALIGNMENT_QUALITY_REPAIR_CLOSED",
+  "quality_status": "PERSONAL_EVIDENCE_ALIGNMENT_REHEARSAL_BASELINE_ESTABLISHED",
+  "repair": {
+    "concept_local_passage_representation": true,
+    "repeated_edge_boilerplate_excluded": true,
+    "page_marker_excluded": true,
+    "heading_definition_preserved": true,
+    "page_block_provenance_retained": true,
+    "personal_formula_prose_false_positive_removed": true,
+    "actual_formula_fail_closed": true,
+    "evidence_scope_versioned_in_query_fingerprint": true,
+    "formal_qualification_thresholds_changed": false,
+    "provider_readiness_changed": false
+  },
+  "real_offline_model_rehearsal": {
+    "model_id": "intfloat/multilingual-e5-small",
+    "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "query": "Electric charge",
+    "before_candidate_order": [
+      "电势",
+      "电场",
+      "电荷"
+    ],
+    "after_retrieval": [
+      {
+        "rank": 1,
+        "concept_anchor": "电荷",
+        "page_number": 1,
+        "score": 0.79021312
+      },
+      {
+        "rank": 2,
+        "concept_anchor": "电势",
+        "page_number": 3,
+        "score": 0.78142981
+      },
+      {
+        "rank": 3,
+        "concept_anchor": "电场",
+        "page_number": 2,
+        "score": 0.77869149
+      }
+    ],
+    "after_candidate_order": [
+      "电荷",
+      "电场",
+      "电势"
+    ],
+    "student_alignment_status": "REVIEW_REQUIRED",
+    "recommended_chinese_concept": "电荷",
+    "formal_qualification_decision": "REJECTED",
+    "formula_context_risk": false,
+    "idempotent_stale_replay": false
+  },
+  "frozen_v2_metrics": {
+    "retrieval_eligible": 18,
+    "hit_at_1": 0.7222,
+    "hit_at_3": 0.8333,
+    "mrr": 0.7778,
+    "no_result_count": 0
+  },
+  "validation": {
+    "targeted_tests": "134 passed",
+    "full_pytest": "1698 passed, 5 skipped",
+    "browser_e2e": "PASS",
+    "dev_check": "PASS",
+    "release_safety": "PASS",
+    "external_api_used": false,
+    "real_provider_requests": 0,
+    "real_credentials_read": false
+  }
+}

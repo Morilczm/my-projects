@@ -1,0 +1,38 @@
+{
+  "contract_id": "personal-concept-notebook@1.0.0",
+  "content_dimensions": {
+    "authority": "NON_OFFICIAL",
+    "publication_status": "NOT_APPLICABLE",
+    "visibility": "PRIVATE"
+  },
+  "default_view": "SAVED",
+  "detail_contract": "student-alignment-result@1.1.0",
+  "filters": {
+    "alignment_status": [
+      "READY",
+      "REVIEW_REQUIRED",
+      "NOT_READY"
+    ],
+    "max_search_characters": 120,
+    "workspace_scope": [
+      "PERSONAL",
+      "MANAGED_COURSE"
+    ]
+  },
+  "list_note_preview_max_characters": 240,
+  "max_page_size": 50,
+  "migration_required": false,
+  "reused_objects": [
+    "StudentConceptQuery",
+    "PersonalLearningRecord",
+    "KnowledgeSource",
+    "CourseMember",
+    "AuditRecord"
+  ],
+  "views": [
+    "SAVED",
+    "HISTORY",
+    "UNDERSTOOD",
+    "STILL_CONFUSED"
+  ]
+}

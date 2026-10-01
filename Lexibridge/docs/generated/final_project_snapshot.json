@@ -1,0 +1,103 @@
+{
+  "project_name": "LexiBridge AI",
+  "version": "local-pilot-ready",
+  "core_capabilities": [
+    "multi-format document parsing",
+    "image OCR and formula OCR architecture",
+    "course knowledge base with evidence retrieval",
+    "alignment status state machine",
+    "confidence score and auto-approval gate",
+    "evaluation harness and retrieval regression",
+    "async background jobs",
+    "role-based student/teacher/admin workflows",
+    "pilot feedback loop and iteration backlog",
+    "knowledge base versioning",
+    "retrieval backend abstraction with hybrid/vector-ready interfaces"
+  ],
+  "demo_courses": [
+    {
+      "course_code": "DS101",
+      "course_name": "Data Structures and Algorithms",
+      "discipline": "data_structures"
+    },
+    {
+      "course_code": "SP101",
+      "course_name": "Signal Processing Basics",
+      "discipline": "signal_processing"
+    },
+    {
+      "course_code": "MATH101",
+      "course_name": "Engineering Mathematics",
+      "discipline": "engineering_math"
+    }
+  ],
+  "evaluation_metrics": {
+    "required_smoke_metrics": [
+      "extraction_precision",
+      "extraction_recall",
+      "evidence_accuracy",
+      "alignment_accuracy",
+      "false_positive_rate",
+      "auto_approval_error_rate",
+      "no_evidence_forced_alignment_rate"
+    ],
+    "critical_gate": "no_evidence_forced_alignment_rate must remain 0"
+  },
+  "knowledge_base_versions": {
+    "supported": true,
+    "scopes": [
+      "course",
+      "personal",
+      "global"
+    ],
+    "default_policy": "published versions only participate in default retrieval"
+  },
+  "retrieval_backend": {
+    "default": "lexical",
+    "supported_modes": [
+      "lexical",
+      "vector",
+      "hybrid",
+      "hybrid_rerank"
+    ],
+    "production_note": "vector/hybrid promotion requires retrieval experiment evidence"
+  },
+  "ai_provider": {
+    "governance_supported": true,
+    "provider_modes": [
+      "none",
+      "mock",
+      "local_heuristic",
+      "live"
+    ],
+    "auto_approval_policy": "mock/local results cannot auto-approve terminology cards"
+  },
+  "known_limitations": [
+    "not production-ready",
+    "SQLite and local storage are suitable only for local pilot use",
+    "mock payment and mock email are not production capabilities",
+    "demo data is synthetic and does not represent full real-course complexity",
+    "real course materials require teacher authorization and review",
+    "terminology output requires evidence, risk_note, and teacher review context"
+  ],
+  "pilot_package_files": [
+    "README.md",
+    "admin_manual.md",
+    "consent_notice_template.md",
+    "course_material_inventory_template.md",
+    "data_authorization_guide.md",
+    "demo_vs_real_pilot.md",
+    "during_pilot_log_template.md",
+    "final_presentation_materials_index.md",
+    "known_limitations.md",
+    "pilot_metrics.md",
+    "pilot_runbook.md",
+    "post_pilot_report_template.md",
+    "pre_pilot_checklist.md",
+    "privacy_and_risk_notice.md",
+    "student_feedback_form.md",
+    "student_manual.md",
+    "teacher_feedback_form.md",
+    "teacher_manual.md"
+  ]
+}

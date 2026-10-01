@@ -1,0 +1,31 @@
+{
+  "contract_id": "personal-material-permissions@1.0.0",
+  "resources": {
+    "personal_material": {
+      "owner_student": [
+        "LIST",
+        "READ",
+        "QUERY",
+        "DELETE"
+      ],
+      "other_student": [],
+      "instructor": [],
+      "reviewer": []
+    },
+    "personal_query": {
+      "owner_student": [
+        "READ",
+        "SAVE_PRIVATE_STATE"
+      ],
+      "other_student": [],
+      "instructor": [],
+      "reviewer": []
+    }
+  },
+  "privacy_invariants": [
+    "personal sources are owner-scoped",
+    "personal material is never course-shared",
+    "personal material never enters reviewer queue",
+    "personal learning records remain non-official"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "artifact_id": "12JB-review-case-contract",
+  "generated_at": "2026-08-06",
+  "status": "TEACHER_ALIGNMENT_REVIEW_VERTICAL_SLICE_CLOSED",
+  "read_model": {
+    "identity": [
+      "alignment_case_uid",
+      "alignment_item_uid",
+      "workflow_run_uid",
+      "course",
+      "source_document_uids",
+      "version",
+      "created_at",
+      "updated_at"
+    ],
+    "english": [
+      "canonical_term",
+      "bounded_context",
+      "source_uid",
+      "chunk_uid",
+      "page_number",
+      "parse_block_uid",
+      "span_start",
+      "span_end"
+    ],
+    "chinese_candidate": [
+      "candidate_uid",
+      "bounded_text",
+      "extraction_rank",
+      "extraction_score",
+      "retrieval_rank",
+      "retrieval_score",
+      "source_uid",
+      "chunk_uid",
+      "parse_block_uid",
+      "evidence_backed",
+      "generated"
+    ],
+    "machine_decision": [
+      "decision",
+      "status",
+      "selected_candidate",
+      "pair_components",
+      "qualification_decision",
+      "readiness_decision",
+      "risk_labels",
+      "reason_codes",
+      "policy_and_model_versions"
+    ],
+    "human_review": [
+      "decision",
+      "selected_candidate_uid",
+      "review_uid",
+      "reviewer_uid",
+      "rationale",
+      "reviewed_at",
+      "review_version"
+    ],
+    "draft": [
+      "draft_uid",
+      "draft_status",
+      "provider_execution_status",
+      "publication_status"
+    ]
+  },
+  "bounded_snippet_characters": 600,
+  "candidate_pool_limit": 20,
+  "generated_hint_evidence_allowed": false,
+  "student_unpublished_access_allowed": false,
+  "real_provider_requests": 0,
+  "external_api_requests": 0
+}

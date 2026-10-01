@@ -1,0 +1,1862 @@
+{
+  "benchmark_coverage": 25,
+  "rows": [
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        12,
+        17,
+        22,
+        20,
+        17
+      ],
+      "candidate_near_present": false,
+      "candidate_overlong_present": false,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "c46a194f-d994-4efa-b082-c00fe315349b",
+        "af28d3fa-1ca2-4944-95b7-6bce0d1c0d5e",
+        "83a02746-13ad-465b-b4e1-f8dc46529900"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-01",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": false,
+      "normalization_results": [
+        "displacement",
+        "english mechanics",
+        "authoritative teaching",
+        "synthetic evaluation",
+        "not authoritative"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "cb49a6cc89f0b87f",
+        "c8342650ea628b1b",
+        "022617df3b7dc15b",
+        "7c39a0b5b5941dbc",
+        "dbb5ad35113b66b9"
+      ],
+      "system_candidate_summaries": [
+        "Displacement",
+        "English Mechanics",
+        "authoritative teaching",
+        "synthetic evaluation",
+        "not authoritative"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        8,
+        16,
+        16,
+        17,
+        14
+      ],
+      "candidate_near_present": true,
+      "candidate_overlong_present": true,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "af28d3fa-1ca2-4944-95b7-6bce0d1c0d5e",
+        "7d149295-5120-46c1-bb9f-16f3a4a3c483",
+        "cb1a72e2-a410-4c61-a5c6-febd66d9bded",
+        "13602b9d-da34-4702-8d39-bf82c018f366",
+        "0957eccb-3468-4501-9f30-e6b546ec7d3e"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-02",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": true,
+      "normalization_results": [
+        "velocity",
+        "angular velocity",
+        "angular velocity",
+        "velocity includes",
+        "while velocity"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": true,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "d1e19baca335f644",
+        "0031a4410cd04e99",
+        "36c5b302ba986778",
+        "bf8348069b81fc80",
+        "2d357d01e0f00a00"
+      ],
+      "system_candidate_summaries": [
+        "Velocity",
+        "Angular velocity",
+        "angular velocity",
+        "velocity includes",
+        "while velocity"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        12,
+        17,
+        22,
+        20,
+        17
+      ],
+      "candidate_near_present": false,
+      "candidate_overlong_present": false,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "7d149295-5120-46c1-bb9f-16f3a4a3c483"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-03",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": false,
+      "normalization_results": [
+        "acceleration",
+        "english mechanics",
+        "authoritative teaching",
+        "synthetic evaluation",
+        "not authoritative"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "0852b0eb0598564e",
+        "c8342650ea628b1b",
+        "022617df3b7dc15b",
+        "7c39a0b5b5941dbc",
+        "dbb5ad35113b66b9"
+      ],
+      "system_candidate_summaries": [
+        "Acceleration",
+        "English Mechanics",
+        "authoritative teaching",
+        "synthetic evaluation",
+        "not authoritative"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        17,
+        17,
+        22,
+        20,
+        17
+      ],
+      "candidate_near_present": true,
+      "candidate_overlong_present": true,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "849fa158-eb9e-4f95-9554-35ccfe593588",
+        "3402a759-91f6-4207-b442-59cae5ff99b9",
+        "83a02746-13ad-465b-b4e1-f8dc46529900",
+        "c8089a87-a7e8-4a91-9935-ff9593ea9e84",
+        "e4ea96e3-4e62-4a0c-9b22-13917b03872a"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-04",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": true,
+      "normalization_results": [
+        "centripetal force",
+        "english mechanics",
+        "authoritative teaching",
+        "synthetic evaluation",
+        "not authoritative"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": true,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "b278ff90b49a4594",
+        "c8342650ea628b1b",
+        "022617df3b7dc15b",
+        "7c39a0b5b5941dbc",
+        "dbb5ad35113b66b9"
+      ],
+      "system_candidate_summaries": [
+        "Centripetal force",
+        "English Mechanics",
+        "authoritative teaching",
+        "synthetic evaluation",
+        "not authoritative"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        24,
+        17,
+        22,
+        20,
+        17
+      ],
+      "candidate_near_present": true,
+      "candidate_overlong_present": true,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "4ef5c9a7-2ca0-4465-946d-a4637e914eb9",
+        "cb1a72e2-a410-4c61-a5c6-febd66d9bded"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-05",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": true,
+      "normalization_results": [
+        "mass measures the amount",
+        "english mechanics",
+        "authoritative teaching",
+        "synthetic evaluation",
+        "not authoritative"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": true,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "677bb9a2f7406c0e",
+        "c8342650ea628b1b",
+        "022617df3b7dc15b",
+        "7c39a0b5b5941dbc",
+        "dbb5ad35113b66b9"
+      ],
+      "system_candidate_summaries": [
+        "Mass measures the amount",
+        "English Mechanics",
+        "authoritative teaching",
+        "synthetic evaluation",
+        "not authoritative"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        17,
+        22,
+        20,
+        17,
+        17
+      ],
+      "candidate_near_present": false,
+      "candidate_overlong_present": false,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "4f3ff7c6-aa90-4de7-8f1a-1ae247cf2c1f",
+        "0957eccb-3468-4501-9f30-e6b546ec7d3e"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-06",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": false,
+      "normalization_results": [
+        "english mechanics",
+        "authoritative teaching",
+        "synthetic evaluation",
+        "not authoritative",
+        "teaching material"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "c8342650ea628b1b",
+        "022617df3b7dc15b",
+        "7c39a0b5b5941dbc",
+        "dbb5ad35113b66b9",
+        "9a7f27c6eda03108"
+      ],
+      "system_candidate_summaries": [
+        "English Mechanics",
+        "authoritative teaching",
+        "synthetic evaluation",
+        "not authoritative",
+        "teaching material"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        8,
+        8,
+        14,
+        24,
+        26
+      ],
+      "candidate_near_present": true,
+      "candidate_overlong_present": true,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "cb1a72e2-a410-4c61-a5c6-febd66d9bded",
+        "d0fd6b31-ceb3-421a-90ff-8e60fd053f56",
+        "0957eccb-3468-4501-9f30-e6b546ec7d3e",
+        "940af662-6d8c-4512-b3f3-e97dba08a538"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-07",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": true,
+      "normalization_results": [
+        "momentum",
+        "momentum",
+        "total momentum",
+        "conservation of momentum",
+        "angular momentum describes"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": true,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "f7c383bc52bd4590",
+        "9e83c99918f7359d",
+        "673cb85133777117",
+        "d010d77fbe7e4940",
+        "1df222a8df40e13b"
+      ],
+      "system_candidate_summaries": [
+        "momentum",
+        "Momentum",
+        "total momentum",
+        "Conservation of momentum",
+        "Angular momentum describes"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        20,
+        17,
+        22,
+        20,
+        17
+      ],
+      "candidate_near_present": true,
+      "candidate_overlong_present": true,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "3402a759-91f6-4207-b442-59cae5ff99b9",
+        "940af662-6d8c-4512-b3f3-e97dba08a538"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-08",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": true,
+      "normalization_results": [
+        "momentum and impulse",
+        "english mechanics",
+        "authoritative teaching",
+        "synthetic evaluation",
+        "not authoritative"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": true,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "38c4b6a5352b72f0",
+        "c8342650ea628b1b",
+        "022617df3b7dc15b",
+        "7c39a0b5b5941dbc",
+        "dbb5ad35113b66b9"
+      ],
+      "system_candidate_summaries": [
+        "Momentum and impulse",
+        "English Mechanics",
+        "authoritative teaching",
+        "synthetic evaluation",
+        "not authoritative"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        16,
+        17,
+        16,
+        17,
+        30
+      ],
+      "candidate_near_present": false,
+      "candidate_overlong_present": false,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "2d46c056-f855-4c49-b8bb-72c0d499b85d",
+        "39828cac-45ef-47b3-a8c5-ef051f5c416e"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-09",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": false,
+      "normalization_results": [
+        "potential energy",
+        "mechanical energy",
+        "potential energy",
+        "mechanical energy",
+        "gravitational potential energy"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "2ef7ee746fa58e58",
+        "1161c2ac411509cf",
+        "b649a06c6c93a58d",
+        "35badaffe1342e7e",
+        "420654392dea0ea3"
+      ],
+      "system_candidate_summaries": [
+        "potential energy",
+        "Mechanical energy",
+        "potential energy",
+        "mechanical energy",
+        "Gravitational potential energy"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        30,
+        23,
+        16,
+        16,
+        13
+      ],
+      "candidate_near_present": false,
+      "candidate_overlong_present": false,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "d8e6e8a6-6a20-43a2-9f95-57454df5bb55"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-10",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": false,
+      "normalization_results": [
+        "gravitational potential energy",
+        "gravitational potential",
+        "potential energy",
+        "potential energy",
+        "gravitational"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "420654392dea0ea3",
+        "6a1f1453e24d31b0",
+        "2ef7ee746fa58e58",
+        "b649a06c6c93a58d",
+        "54c6084a9a7495be"
+      ],
+      "system_candidate_summaries": [
+        "Gravitational potential energy",
+        "Gravitational potential",
+        "potential energy",
+        "potential energy",
+        "Gravitational"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        15,
+        21,
+        17,
+        22,
+        20
+      ],
+      "candidate_near_present": true,
+      "candidate_overlong_present": true,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "83a02746-13ad-465b-b4e1-f8dc46529900",
+        "8aafe39c-d17f-4e7f-9d8e-4859257dbf44",
+        "c8089a87-a7e8-4a91-9935-ff9593ea9e84",
+        "940af662-6d8c-4512-b3f3-e97dba08a538"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-11",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": true,
+      "normalization_results": [
+        "work and energy",
+        "work and energy share",
+        "english mechanics",
+        "authoritative teaching",
+        "synthetic evaluation"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": true,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "3d1ccd7874cb58dc",
+        "17771a9f3ad3b53e",
+        "c8342650ea628b1b",
+        "022617df3b7dc15b",
+        "7c39a0b5b5941dbc"
+      ],
+      "system_candidate_summaries": [
+        "Work and energy",
+        "Work and energy share",
+        "English Mechanics",
+        "authoritative teaching",
+        "synthetic evaluation"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        17,
+        22,
+        20,
+        17,
+        17
+      ],
+      "candidate_near_present": false,
+      "candidate_overlong_present": false,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "8aafe39c-d17f-4e7f-9d8e-4859257dbf44"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-12",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": false,
+      "normalization_results": [
+        "english mechanics",
+        "authoritative teaching",
+        "synthetic evaluation",
+        "not authoritative",
+        "teaching material"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "c8342650ea628b1b",
+        "022617df3b7dc15b",
+        "7c39a0b5b5941dbc",
+        "dbb5ad35113b66b9",
+        "9a7f27c6eda03108"
+      ],
+      "system_candidate_summaries": [
+        "English Mechanics",
+        "authoritative teaching",
+        "synthetic evaluation",
+        "not authoritative",
+        "teaching material"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        17,
+        17,
+        10,
+        33,
+        16
+      ],
+      "candidate_near_present": true,
+      "candidate_overlong_present": true,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "39828cac-45ef-47b3-a8c5-ef051f5c416e",
+        "c8089a87-a7e8-4a91-9935-ff9593ea9e84"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-13",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": true,
+      "normalization_results": [
+        "mechanical energy",
+        "mechanical energy",
+        "mechanical",
+        "conservation of mechanical energy",
+        "potential energy"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": true,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "1161c2ac411509cf",
+        "35badaffe1342e7e",
+        "ebf614f1ca8a7cba",
+        "0d2e8aedef517f17",
+        "2ef7ee746fa58e58"
+      ],
+      "system_candidate_summaries": [
+        "Mechanical energy",
+        "mechanical energy",
+        "Mechanical",
+        "Conservation of mechanical energy",
+        "potential energy"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        24,
+        29,
+        26,
+        33,
+        8
+      ],
+      "candidate_near_present": true,
+      "candidate_overlong_present": true,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "d0fd6b31-ceb3-421a-90ff-8e60fd053f56"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-14",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": true,
+      "normalization_results": [
+        "conservation of momentum",
+        "conservation of momentum says",
+        "conservation of mechanical",
+        "conservation of mechanical energy",
+        "momentum"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": true,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "d010d77fbe7e4940",
+        "10090adaaf6ce5ad",
+        "ef681b2d2f75c404",
+        "0d2e8aedef517f17",
+        "f7c383bc52bd4590"
+      ],
+      "system_candidate_summaries": [
+        "Conservation of momentum",
+        "Conservation of momentum says",
+        "Conservation of mechanical",
+        "Conservation of mechanical energy",
+        "momentum"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        33,
+        26,
+        17,
+        17,
+        24
+      ],
+      "candidate_near_present": true,
+      "candidate_overlong_present": false,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "c8089a87-a7e8-4a91-9935-ff9593ea9e84"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-15",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": true,
+      "normalization_results": [
+        "conservation of mechanical energy",
+        "conservation of mechanical",
+        "mechanical energy",
+        "mechanical energy",
+        "conservation of momentum"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "0d2e8aedef517f17",
+        "ef681b2d2f75c404",
+        "1161c2ac411509cf",
+        "35badaffe1342e7e",
+        "d010d77fbe7e4940"
+      ],
+      "system_candidate_summaries": [
+        "Conservation of mechanical energy",
+        "Conservation of mechanical",
+        "Mechanical energy",
+        "mechanical energy",
+        "Conservation of momentum"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        23,
+        15,
+        15,
+        17,
+        17
+      ],
+      "candidate_near_present": false,
+      "candidate_overlong_present": false,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "ba1a2298-1f5b-4852-8954-fac699111ec4"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-16",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": false,
+      "normalization_results": [
+        "uniform circular motion",
+        "circular motion",
+        "circular motion",
+        "rotational motion",
+        "english mechanics"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "cb6d2f0cce9ea63d",
+        "c9ff8580946a124e",
+        "ce06f40cf7b4891a",
+        "1f80d6f3942bfcb4",
+        "c8342650ea628b1b"
+      ],
+      "system_candidate_summaries": [
+        "Uniform circular motion",
+        "circular motion",
+        "circular motion",
+        "rotational motion",
+        "English Mechanics"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        17,
+        11,
+        17,
+        22,
+        20
+      ],
+      "candidate_near_present": false,
+      "candidate_overlong_present": false,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "e4ea96e3-4e62-4a0c-9b22-13917b03872a"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-17",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": false,
+      "normalization_results": [
+        "centripetal force",
+        "centripetal",
+        "english mechanics",
+        "authoritative teaching",
+        "synthetic evaluation"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "b278ff90b49a4594",
+        "79edb3b6a0a00048",
+        "c8342650ea628b1b",
+        "022617df3b7dc15b",
+        "7c39a0b5b5941dbc"
+      ],
+      "system_candidate_summaries": [
+        "Centripetal force",
+        "Centripetal",
+        "English Mechanics",
+        "authoritative teaching",
+        "synthetic evaluation"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        16,
+        16,
+        8,
+        7,
+        7
+      ],
+      "candidate_near_present": false,
+      "candidate_overlong_present": false,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "13602b9d-da34-4702-8d39-bf82c018f366",
+        "0957eccb-3468-4501-9f30-e6b546ec7d3e"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-18",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": false,
+      "normalization_results": [
+        "angular velocity",
+        "angular velocity",
+        "velocity",
+        "angular",
+        "angular"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "0031a4410cd04e99",
+        "36c5b302ba986778",
+        "d1e19baca335f644",
+        "111cf321dca525f4",
+        "6f75c310e218cc87"
+      ],
+      "system_candidate_summaries": [
+        "Angular velocity",
+        "angular velocity",
+        "Velocity",
+        "Angular",
+        "Angular"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": true,
+      "candidate_lengths": [
+        26,
+        8,
+        7,
+        7,
+        37
+      ],
+      "candidate_near_present": true,
+      "candidate_overlong_present": true,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "0957eccb-3468-4501-9f30-e6b546ec7d3e",
+        "940af662-6d8c-4512-b3f3-e97dba08a538"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-19",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": true,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": true,
+      "normalization_results": [
+        "angular momentum describes",
+        "momentum",
+        "angular",
+        "angular",
+        "angular momentum describes rotational"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": true,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "1df222a8df40e13b",
+        "f7c383bc52bd4590",
+        "111cf321dca525f4",
+        "6f75c310e218cc87",
+        "c668fe2b76210a7c"
+      ],
+      "system_candidate_summaries": [
+        "Angular momentum describes",
+        "momentum",
+        "Angular",
+        "Angular",
+        "Angular momentum describes rotational"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        17,
+        22,
+        20,
+        17,
+        17
+      ],
+      "candidate_near_present": false,
+      "candidate_overlong_present": false,
+      "chinese_source_id": "chinese-mechanics",
+      "chunk_ids": [
+        "23e547e5-1e63-47c0-a68e-af9df56f085c",
+        "940af662-6d8c-4512-b3f3-e97dba08a538"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-20",
+      "disappearance_stage": "candidate_boundary",
+      "earliest_failure_stage": "candidate_boundary",
+      "english_source_id": "english-mechanics",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": false,
+      "normalization_results": [
+        "english mechanics",
+        "authoritative teaching",
+        "synthetic evaluation",
+        "not authoritative",
+        "teaching material"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_BOUNDARY_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=item_limit_exceeded",
+        "raw_candidate_count=63",
+        "canonical_candidate_count=55"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "c8342650ea628b1b",
+        "022617df3b7dc15b",
+        "7c39a0b5b5941dbc",
+        "dbb5ad35113b66b9",
+        "9a7f27c6eda03108"
+      ],
+      "system_candidate_summaries": [
+        "English Mechanics",
+        "authoritative teaching",
+        "synthetic evaluation",
+        "not authoritative",
+        "teaching material"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        8,
+        18,
+        25,
+        35,
+        22
+      ],
+      "candidate_near_present": false,
+      "candidate_overlong_present": false,
+      "chinese_source_id": "chinese-electricity",
+      "chunk_ids": [
+        "17b2f5d9-14c5-4c11-88ea-c6fe4be65bab",
+        "cda849ce-7a48-403b-9085-d0099f4f551a"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-21",
+      "disappearance_stage": "candidate_extraction",
+      "earliest_failure_stage": "candidate_extraction",
+      "english_source_id": "english-electricity",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": false,
+      "normalization_results": [
+        "electric",
+        "electric potential",
+        "confusion checks electric",
+        "confusion checks electric potential",
+        "authoritative teaching"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_EXTRACTION_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=extracted",
+        "raw_candidate_count=34",
+        "canonical_candidate_count=26"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "5bbbe0354ae46535",
+        "927a97c60170cc91",
+        "409746c86c361f03",
+        "0c5d46f5ebd9bcc5",
+        "7305bfc38865a3f2"
+      ],
+      "system_candidate_summaries": [
+        "Electric",
+        "Electric potential",
+        "Confusion checks electric",
+        "Confusion checks electric potential",
+        "authoritative teaching"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "missing",
+      "candidate_alias_present": false,
+      "candidate_exact_present": false,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        8,
+        18,
+        25,
+        35,
+        22
+      ],
+      "candidate_near_present": false,
+      "candidate_overlong_present": false,
+      "chinese_source_id": "chinese-electricity",
+      "chunk_ids": [
+        "95f7d6a5-eee8-4bf9-9b54-c7e5f679bed1",
+        "cda849ce-7a48-403b-9085-d0099f4f551a"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-22",
+      "disappearance_stage": "candidate_extraction",
+      "earliest_failure_stage": "candidate_extraction",
+      "english_source_id": "english-electricity",
+      "exact_candidate_present": false,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": false,
+      "normalization_results": [
+        "electric",
+        "electric potential",
+        "confusion checks electric",
+        "confusion checks electric potential",
+        "authoritative teaching"
+      ],
+      "normalization_status": "no_normalized_match",
+      "normalized_match_present": false,
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "CANDIDATE_EXTRACTION_DEFECT",
+      "secondary_observations": [
+        "formal_extraction_outcome=extracted",
+        "raw_candidate_count=34",
+        "canonical_candidate_count=26"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "5bbbe0354ae46535",
+        "927a97c60170cc91",
+        "409746c86c361f03",
+        "0c5d46f5ebd9bcc5",
+        "7305bfc38865a3f2"
+      ],
+      "system_candidate_summaries": [
+        "Electric",
+        "Electric potential",
+        "Confusion checks electric",
+        "Confusion checks electric potential",
+        "authoritative teaching"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "matched",
+      "candidate_alias_present": false,
+      "candidate_exact_present": true,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        18,
+        8,
+        9,
+        35,
+        16
+      ],
+      "candidate_near_present": true,
+      "candidate_overlong_present": true,
+      "chinese_source_id": "chinese-electricity",
+      "chunk_ids": [
+        "6e6029f5-e79d-4e23-9b64-f189b6eeb4fe",
+        "a22d9f44-f58d-45fb-9d1e-e0b93564504d",
+        "cda849ce-7a48-403b-9085-d0099f4f551a"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-23",
+      "disappearance_stage": "none",
+      "earliest_failure_stage": "none",
+      "english_source_id": "english-electricity",
+      "exact_candidate_present": true,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": true,
+      "normalization_results": [
+        "electric potential",
+        "electric",
+        "potential",
+        "confusion checks electric potential",
+        "potential energy"
+      ],
+      "normalization_status": "normalized_match",
+      "normalized_match_present": true,
+      "overlong_candidate_present": true,
+      "parsed_text_term_present": true,
+      "primary_attribution": "NO_DEFECT_MATCHED",
+      "secondary_observations": [
+        "formal_extraction_outcome=extracted",
+        "raw_candidate_count=34",
+        "canonical_candidate_count=26"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "927a97c60170cc91",
+        "5bbbe0354ae46535",
+        "38058fe3d3bf39e8",
+        "0c5d46f5ebd9bcc5",
+        "9b2517e2848320ca"
+      ],
+      "system_candidate_summaries": [
+        "Electric potential",
+        "Electric",
+        "potential",
+        "Confusion checks electric potential",
+        "potential energy"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_ALIAS_INCOMPLETE",
+      "binding_status": "matched",
+      "candidate_alias_present": false,
+      "candidate_exact_present": true,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        20,
+        9,
+        10,
+        18,
+        16
+      ],
+      "candidate_near_present": false,
+      "candidate_overlong_present": false,
+      "chinese_source_id": "chinese-electricity",
+      "chunk_ids": [
+        "a22d9f44-f58d-45fb-9d1e-e0b93564504d",
+        "8c6a3057-3705-47c7-980d-b978b2732d89",
+        "cda849ce-7a48-403b-9085-d0099f4f551a"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-24",
+      "disappearance_stage": "none",
+      "earliest_failure_stage": "none",
+      "english_source_id": "english-electricity",
+      "exact_candidate_present": true,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": false,
+      "normalization_results": [
+        "potential difference",
+        "potential",
+        "difference",
+        "electric potential",
+        "potential energy"
+      ],
+      "normalization_status": "normalized_match",
+      "normalized_match_present": true,
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "NO_DEFECT_MATCHED",
+      "secondary_observations": [
+        "formal_extraction_outcome=extracted",
+        "raw_candidate_count=34",
+        "canonical_candidate_count=26",
+        "source_contains_reasonable_voltage_alias"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "dab1d600ba30be72",
+        "38058fe3d3bf39e8",
+        "d49bd4690ce5979d",
+        "927a97c60170cc91",
+        "9b2517e2848320ca"
+      ],
+      "system_candidate_summaries": [
+        "Potential difference",
+        "potential",
+        "difference",
+        "Electric potential",
+        "potential energy"
+      ]
+    },
+    {
+      "benchmark_status": "BENCHMARK_SOURCE_VALID",
+      "binding_status": "matched",
+      "candidate_alias_present": false,
+      "candidate_exact_present": true,
+      "candidate_fragment_present": false,
+      "candidate_lengths": [
+        11,
+        22,
+        11,
+        19,
+        15
+      ],
+      "candidate_near_present": false,
+      "candidate_overlong_present": false,
+      "chinese_source_id": "chinese-electricity",
+      "chunk_ids": [
+        "8c6a3057-3705-47c7-980d-b978b2732d89"
+      ],
+      "chunk_term_present": true,
+      "concept_id": "physics-25",
+      "disappearance_stage": "none",
+      "earliest_failure_stage": "none",
+      "english_source_id": "english-electricity",
+      "exact_candidate_present": true,
+      "fragmented_candidate_present": false,
+      "included_in_denominator": true,
+      "language_trace": {
+        "chinese": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        },
+        "english": {
+          "chunk": true,
+          "parsed": true,
+          "source": true
+        }
+      },
+      "near_candidate_present": false,
+      "normalization_results": [
+        "capacitance",
+        "authoritative teaching",
+        "electricity",
+        "english electricity",
+        "evaluation only"
+      ],
+      "normalization_status": "normalized_match",
+      "normalized_match_present": true,
+      "overlong_candidate_present": false,
+      "parsed_text_term_present": true,
+      "primary_attribution": "NO_DEFECT_MATCHED",
+      "secondary_observations": [
+        "formal_extraction_outcome=extracted",
+        "raw_candidate_count=34",
+        "canonical_candidate_count=26"
+      ],
+      "source_term_present": true,
+      "system_candidate_ids": [
+        "e458998929c73dfd",
+        "7305bfc38865a3f2",
+        "74db23e7ca20d2cb",
+        "665112181eef3010",
+        "925b592530199fab"
+      ],
+      "system_candidate_summaries": [
+        "Capacitance",
+        "authoritative teaching",
+        "Electricity",
+        "English Electricity",
+        "evaluation only"
+      ]
+    }
+  ],
+  "task": "12A"
+}

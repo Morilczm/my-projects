@@ -1,0 +1,38 @@
+{
+  "artifact_schema_version": "12IB-real-provider-smoke-manifest-v1",
+  "selected_opaque_item_id": "6f6945108e85f8ec6a1f",
+  "selection_algorithm": "READY rows by stable opaque evaluation UID ascending; first row",
+  "ready_population": 3,
+  "selected_item_count": 1,
+  "provider_id": "deepseek-alignment-v1",
+  "requested_model_id": "deepseek-chat",
+  "prompt_registry_id": "formal_alignment",
+  "prompt_version": "alignment-v1",
+  "request_hash": "5b737eb973c1fde0a332d505be590941fa4825b9848f6efc6c7526148141706d",
+  "idempotency_key_hash": "f30048a054dbb1ef8d7f846a2beb28330ddc0dc571526e5d3b0e5b5ee3a218bd",
+  "prompt_chars": 2995,
+  "estimated_input_tokens": 749,
+  "output_token_ceiling": 1000,
+  "english_context_chars": 151,
+  "chinese_context_chars": 46,
+  "english_provenance": [
+    "en-s04",
+    "en-s04-p04"
+  ],
+  "chinese_provenance": [
+    "zh-s12",
+    "zh-s12-p01"
+  ],
+  "qualification_result_id": "evidence-qualification:dbbafabe4c011317b19f04bd1d529162eb1b4169deaf0a5cf7b0e9aa203d0546",
+  "readiness_result_id": "provider-readiness:fb6f8c7797cf7a4e4e433f25e97594080615e9288dfada0ecd1195eba696df27",
+  "request_budget": 1,
+  "billable_attempt_budget": 1,
+  "retry_budget": 0,
+  "concurrency": 1,
+  "cost_ceiling": 0.05,
+  "timeout_seconds": 30,
+  "gold_included_in_request": false,
+  "stores_request_content": false,
+  "stores_prompt_content": false,
+  "credential_stored": false
+}

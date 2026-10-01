@@ -1,0 +1,9 @@
+Energy and Interactions
+
+Power is the rate at which work is performed. Work is energy transferred when a force acts through displacement.
+
+Gravitational potential energy depends on position in a gravitational field. Kinetic energy is associated with motion.
+
+Mechanical energy combines kinetic and potential contributions. Conservation of mechanical energy applies when nonconservative transfer is absent.
+
+Force can alter motion through an interaction. Weight is a gravitational force and should not be confused with mass. Magnetic flux density is an additional field quantity outside this benchmark.

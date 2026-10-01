@@ -1,0 +1,155 @@
+{
+  "task": "11D",
+  "status": "PUBLICATION_INTEGRITY_PROVENANCE_HARDENED",
+  "baseline_commit": "e6334f8dce6d4cd07b3c89675a76456fa181c417",
+  "branch": "feature/publication-integrity-provenance-11d",
+  "production_scope": {
+    "database_schema_changed": false,
+    "parser_changed": false,
+    "ocr_changed": false,
+    "provider_changed": false,
+    "frontend_changed": true,
+    "concept_card_publication_changed": true
+  },
+  "stale_review": {
+    "token": "ConceptAlignmentCard.version exposed as review_token and submitted as expected_version",
+    "api_status": 409,
+    "error_code": "CONCEPT_CARD_STALE_REVIEW",
+    "missing_token_fail_closed": true,
+    "stale_edit_blocked": true,
+    "stale_approve_blocked": true,
+    "stale_reject_blocked": true,
+    "lost_update_prevented": true,
+    "frontend_error_message": "This card changed; reload before reviewing"
+  },
+  "source_withdrawal": {
+    "availability_source": "KnowledgeSource.status",
+    "non_active_source_blocks_approval": true,
+    "withdrawn_english_source_blocks_approval": true,
+    "withdrawn_chinese_source_blocks_approval": true,
+    "withdrawn_source_hides_approved_student_card": true,
+    "withdrawn_source_blocks_student_detail": true,
+    "withdrawn_source_blocks_student_feedback": true,
+    "historical_teacher_access_retained": true,
+    "unrelated_cards_unaffected": true
+  },
+  "provenance": {
+    "english_chinese_evidence_separated": true,
+    "source_uid_returned": true,
+    "chunk_uid_returned": true,
+    "parse_uid_returned_when_available": true,
+    "parse_block_uid_returned_when_available": true,
+    "page_number_returned_when_available": true,
+    "bbox_returned_when_available": true,
+    "bbox_fabricated_when_missing": false,
+    "location_available_flag": true,
+    "parser_quality_returned_when_available": true,
+    "teacher_frontend_display": true,
+    "student_frontend_display": true
+  },
+  "api_contract": {
+    "review_detail": "GET /api/concept-cards/<card_uid>",
+    "edit_card": "PATCH /api/concept-cards/<card_uid>",
+    "review_action": "POST /api/concept-cards/<card_uid>/review",
+    "student_list": "GET /api/student/concept-cards",
+    "student_detail": "GET /api/student/concept-cards/<card_uid>",
+    "student_feedback": "POST /api/student/concept-cards/<card_uid>/feedback",
+    "source_status": "PATCH /api/knowledge-sources/<source_uid>",
+    "stable_errors": [
+      "CONCEPT_CARD_STALE_REVIEW",
+      "CONCEPT_CARD_SOURCE_UNAVAILABLE",
+      "CONCEPT_CARD_NOT_PUBLISHED",
+      "CONCEPT_CARD_EVIDENCE_INCOMPLETE"
+    ]
+  },
+  "frontend": {
+    "review_forms_send_expected_version": true,
+    "stale_review_message": true,
+    "source_unavailable_warning": true,
+    "teacher_evidence_provenance": true,
+    "student_evidence_provenance": true,
+    "mock_data_used": false
+  },
+  "browser_e2e": {
+    "command": "backend/.venv-macos/bin/python scripts/run_publication_integrity_browser_e2e.py --json-output /private/tmp/lexibridge-11d-browser-e2e.json",
+    "result": "PASS",
+    "browser": "chromium",
+    "console_errors": 0,
+    "page_errors": 0,
+    "external_dependency_requests": 0,
+    "scenarios": [
+      "teacher stale review conflict",
+      "admin approval after reload",
+      "student approved card view",
+      "student feedback",
+      "source withdrawal hides student card",
+      "teacher historical source warning"
+    ]
+  },
+  "authorization": {
+    "student_cannot_review": true,
+    "other_teacher_cannot_review_unpermitted_course": true,
+    "non_enrolled_student_cannot_view": true,
+    "source_withdrawal_endpoint_requires_teacher_or_admin": true,
+    "course_permission_checked_for_teacher_source_update": true
+  },
+  "tests": [
+    {
+      "command": "backend/.venv-macos/bin/python -m pytest tests/test_concept_card_publication_integrity.py -q",
+      "result": "4 passed"
+    },
+    {
+      "command": "backend/.venv-macos/bin/python -m pytest tests/test_concept_card_provenance_api.py -q",
+      "result": "2 passed"
+    },
+    {
+      "command": "backend/.venv-macos/bin/python -m pytest tests/test_teacher_reviewed_concept_card_publication_e2e.py tests/test_concept_card_review.py tests/test_concept_card_review_route_contract.py tests/test_student_concept_cards.py tests/test_course_review_policy.py tests/test_permission_matrix.py tests/test_pilot_end_to_end.py tests/test_review_demo_seed.py tests/test_frontend_contract.py tests/test_browser_e2e_runner.py -q",
+      "result": "58 passed"
+    },
+    {
+      "command": "backend/.venv-macos/bin/python -m pytest tests/test_knowledge_governance.py tests/test_knowledge_ingestion.py tests/test_knowledge_versioning.py tests/test_document_alignment_formal_api_e2e.py tests/test_document_alignment_workflow_route_integration.py tests/test_document_alignment_workflow_start_route.py tests/test_document_alignment_workflow_query_permissions.py -q",
+      "result": "35 passed"
+    },
+    {
+      "command": "backend/.venv-macos/bin/python scripts/run_publication_integrity_browser_e2e.py --json-output /private/tmp/lexibridge-11d-browser-e2e.json",
+      "result": "PASS"
+    },
+    {
+      "command": "LEXIBRIDGE_TESSERACT_CMD=<verified local tesseract> backend/.venv-macos/bin/python scripts/dev_check.py",
+      "result": "All local pre-release checks passed; internal pytest 1219 passed, 6 warnings"
+    },
+    {
+      "command": "LEXIBRIDGE_TESSERACT_CMD=<verified local tesseract> backend/.venv-macos/bin/python -m pytest -q",
+      "result": "1219 passed, 6 warnings"
+    },
+    {
+      "command": "backend/.venv-macos/bin/python scripts/check_release_safety.py",
+      "result": "Release safety check passed."
+    }
+  ],
+  "database_protection": {
+    "incident_database": "backend/lexibridge.db",
+    "incident_sha256": "9e6fb68ab13dff2763e2fff18d2aee531486360c557f058eb8a471d9209a9eaa",
+    "accepted_as_new_normal_baseline": false,
+    "tests_use_isolated_database": true,
+    "wal_created": false,
+    "shm_created": false
+  },
+  "privacy_network": {
+    "provider_requests": 0,
+    "external_document_api_requests": 0,
+    "document_egress": 0,
+    "private_data_usage": 0,
+    "model_downloads": 0,
+    "external_network_requests": 0,
+    "local_loopback_browser_e2e": true
+  },
+  "remaining_limitations": [
+    "This task verifies flow integrity, not real semantic quality.",
+    "Records without page or bbox cannot display geometry.",
+    "Complex PDF parsing remains limited by the current parser path.",
+    "Formula structure recognition is not implemented.",
+    "LaTeX and MathML recognition are not implemented.",
+    "Production embedding/vector retrieval remains outside this task."
+  ]
+}

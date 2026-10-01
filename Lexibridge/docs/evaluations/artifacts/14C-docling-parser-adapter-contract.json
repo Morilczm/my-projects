@@ -1,0 +1,35 @@
+{
+  "contract_version": "14C-docling-parser-adapter-contract@1.0.0",
+  "docling_version": "2.117.0",
+  "policy_id": "conditional-docling-parser@1.0.0",
+  "worker_contract": "docling-layout-worker@1.0.0",
+  "production_adapter_authorized": true,
+  "routing": {
+    "multi_column_pdf": "CURRENT_PARSER_EXCLUDED_FROM_DOCLING",
+    "scanned_pdf": "DOCLING",
+    "simple_digital_pdf": "CURRENT_NATIVE_PARSER",
+    "simple_table_pdf": "DOCLING"
+  },
+  "bounds": {
+    "max_blocks": 10000,
+    "max_file_bytes": 52428800,
+    "max_output_bytes": 16777216,
+    "max_pages": 50,
+    "max_text_chars_per_block": 20000,
+    "timeout_seconds": 120
+  },
+  "production_invariants": {
+    "existing_formula_region_composition": true,
+    "existing_knowledge_chunk_builder": true,
+    "existing_multilingual_retrieval": true,
+    "parser_override_exposed_to_upload_api": false,
+    "schema_migration_required": false
+  },
+  "safety": {
+    "application_external_api_requests": 0,
+    "credential_environment_propagated": false,
+    "model_download_allowed": false,
+    "real_provider_requests": 0,
+    "worker_external_requests": 0
+  }
+}

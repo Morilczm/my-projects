@@ -1,0 +1,25 @@
+{
+  "browser": {
+    "name": "chromium",
+    "playwright_version": "1.60.0",
+    "version": "148.0.7778.96"
+  },
+  "contract_id": "personal-chinese-evidence-browser-e2e-13c2@1.0.0",
+  "external_dependency_requests": 0,
+  "flows": {
+    "instructor_flow": "PASS",
+    "reviewer_flow": "PASS",
+    "student_flow": "PASS"
+  },
+  "private_source_body_recorded": false,
+  "real_provider_requests": 0,
+  "status": "PASS",
+  "student_contract_checks": [
+    "Chinese evidence PDF uploaded with explicit private-use attestation",
+    "Chinese evidence admitted to PERSONAL_PRIVATE searchable corpus",
+    "English PDF uploaded and queried through the same Student alignment flow",
+    "English and Chinese evidence displayed",
+    "PersonalLearningRecord saved",
+    "other Student denied query and record access"
+  ]
+}

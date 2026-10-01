@@ -1,0 +1,60 @@
+{
+  "evaluation_id": "controlled-provider-synthetic-v1",
+  "authorization_basis": "SYNTHETIC_FIXTURE_FOR_CONTROLLED_PROVIDER_EVALUATION",
+  "items": [
+    {
+      "evaluation_item_uid": "synth-ee-001",
+      "course_or_domain": "electrical engineering",
+      "english_term": "equivalent resistance",
+      "normalized_english_term": "equivalent resistance",
+      "bounded_context": "Equivalent resistance summarizes a resistor network as one resistance.",
+      "context_source_type": "synthetic_fixture",
+      "privacy_classification": "SYNTHETIC"
+    },
+    {
+      "evaluation_item_uid": "synth-ee-002",
+      "course_or_domain": "electrical engineering",
+      "english_term": "operational amplifier",
+      "normalized_english_term": "operational amplifier",
+      "bounded_context": "An operational amplifier is discussed as an ideal high-gain circuit component.",
+      "context_source_type": "synthetic_fixture",
+      "privacy_classification": "SYNTHETIC"
+    },
+    {
+      "evaluation_item_uid": "synth-ss-001",
+      "course_or_domain": "signals and systems",
+      "english_term": "impulse response",
+      "normalized_english_term": "impulse response",
+      "bounded_context": "The impulse response characterizes the output of an LTI system to an impulse input.",
+      "context_source_type": "synthetic_fixture",
+      "privacy_classification": "SYNTHETIC"
+    },
+    {
+      "evaluation_item_uid": "synth-math-001",
+      "course_or_domain": "engineering mathematics",
+      "english_term": "eigenvalue",
+      "normalized_english_term": "eigenvalue",
+      "bounded_context": "An eigenvalue is the scalar associated with a nonzero vector preserved in direction.",
+      "context_source_type": "synthetic_fixture",
+      "privacy_classification": "SYNTHETIC"
+    },
+    {
+      "evaluation_item_uid": "synth-cs-001",
+      "course_or_domain": "computer science",
+      "english_term": "time complexity",
+      "normalized_english_term": "time complexity",
+      "bounded_context": "Time complexity describes how an algorithm's resource use grows with input size.",
+      "context_source_type": "synthetic_fixture",
+      "privacy_classification": "SYNTHETIC"
+    },
+    {
+      "evaluation_item_uid": "synth-design-001",
+      "course_or_domain": "design thinking",
+      "english_term": "prototype testing",
+      "normalized_english_term": "prototype testing",
+      "bounded_context": "Prototype testing evaluates a draft artifact with representative users.",
+      "context_source_type": "synthetic_fixture",
+      "privacy_classification": "SYNTHETIC"
+    }
+  ]
+}

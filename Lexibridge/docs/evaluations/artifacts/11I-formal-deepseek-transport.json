@@ -1,0 +1,267 @@
+{
+  "task": "11I",
+  "schema_version": "11I-formal-deepseek-transport-v1",
+  "status": "FORMAL_DEEPSEEK_TRANSPORT_CLOSED",
+  "baseline_commit": "164ff06063dda6df917581d480e9eac03e8bfaf1",
+  "branch": "feat/formal-deepseek-transport-11i",
+  "provider": {
+    "provider_id": "deepseek-alignment-v1",
+    "model_id": "deepseek-chat",
+    "disabled_provider_id_retained": "deepseek-alignment-v1-disabled",
+    "default_formal_provider": "mock-rule-v1",
+    "supports_external_calls": true,
+    "feature_flag_env": "LEXIBRIDGE_EXTERNAL_LLM_ENABLED",
+    "credential_env": "DEEPSEEK_API_KEY",
+    "configured": true,
+    "feature_enabled_by_default": false,
+    "credential_present_by_default": false,
+    "executable_by_default": false,
+    "ordinary_formal_workflow_default_closed": true
+  },
+  "transport_contract": {
+    "class": "DeepSeekHTTPTransport",
+    "base_interface": "BaseLLMTransport.generate(prompt, config, request_options=None) -> LLMTransportResult",
+    "network_on_import": false,
+    "network_on_construction": false,
+    "credential_resolution_time": "generate",
+    "http_executor_injectable": true,
+    "default_retry_count": 0,
+    "parses_alignment_domain_json": false
+  },
+  "request_envelope": {
+    "method": "POST",
+    "path": "/chat/completions",
+    "content_type": "application/json",
+    "authorization_header": "bearer credential redacted",
+    "body_fields": [
+      "model",
+      "messages",
+      "stream"
+    ],
+    "model_allowlist": [
+      "deepseek-chat"
+    ],
+    "api_key_in_body": false
+  },
+  "response_parsing": {
+    "content_path": "choices[0].message.content",
+    "usage_supported": true,
+    "usage_missing_allowed": true,
+    "metadata": [
+      "provider",
+      "model",
+      "http_status",
+      "request_count",
+      "retry_count",
+      "error_category",
+      "response_model",
+      "finish_reason",
+      "usage"
+    ]
+  },
+  "error_classification": {
+    "provider_disabled": [
+      "provider disabled",
+      "feature flag disabled",
+      "permanently disabled provider"
+    ],
+    "credential_missing": [
+      "missing DEEPSEEK_API_KEY"
+    ],
+    "invalid_request": [
+      "HTTP 400",
+      "non-auth 4xx"
+    ],
+    "authentication_failed": [
+      "HTTP 401",
+      "HTTP 403"
+    ],
+    "rate_limited": [
+      "HTTP 429"
+    ],
+    "provider_server_error": [
+      "HTTP 500",
+      "HTTP 502",
+      "HTTP 503"
+    ],
+    "connection_timeout": [
+      "connection timeout"
+    ],
+    "read_timeout": [
+      "read timeout"
+    ],
+    "network_error": [
+      "network failure"
+    ],
+    "invalid_json": [
+      "invalid JSON response"
+    ],
+    "malformed_provider_response": [
+      "missing choices",
+      "empty choices",
+      "missing message"
+    ],
+    "missing_response_content": [
+      "missing content",
+      "empty content",
+      "non-string content"
+    ]
+  },
+  "secret_safety": {
+    "real_credentials_read": false,
+    "real_credentials_logged": false,
+    "authorization_header_logged": false,
+    "fake_secret_used_in_tests": true,
+    "fake_secret_committed": true,
+    "secret_exposure": 0
+  },
+  "factory_policy": {
+    "injected_transport_priority": true,
+    "replay_uses_replay_transport": true,
+    "disabled_provider_uses_disabled_transport": true,
+    "formal_deepseek_uses_http_transport_only_when_executable": true,
+    "feature_flag_missing_denies": true,
+    "credential_missing_denies": true,
+    "ordinary_formal_selection_rejects_external": true,
+    "ordinary_alignment_verify_api_blocked_by_governance": true,
+    "evaluation_gate_required": true
+  },
+  "network": {
+    "fake_executor_calls": "covered by unit tests",
+    "real_deepseek_requests": 0,
+    "credentialed_runner_executed": false,
+    "external_network_requests": 0,
+    "external_document_api_requests": 0,
+    "model_downloads": 0
+  },
+  "tests": [
+    {
+      "command": "backend/.venv-macos/bin/python -m pytest tests/test_formal_deepseek_provider_config.py tests/test_formal_deepseek_transport.py tests/test_formal_external_provider_selection.py tests/test_formal_real_provider_evaluation_policy.py tests/test_alignment_external_provider_guard.py -q",
+      "result": "39 passed"
+    },
+    {
+      "command": "backend/.venv-macos/bin/python -m pytest tests/test_alignment_verify_route_characterization.py::test_alignment_verify_provider_modes_and_write_set tests/test_formal_external_provider_selection.py tests/test_formal_deepseek_provider_config.py -q",
+      "result": "11 passed"
+    },
+    {
+      "command": "backend/.venv-macos/bin/python -m pytest tests/test_formal_document_alignment_provider_selection.py tests/test_document_alignment_production_contract_convergence.py tests/test_document_alignment_item_verification_security.py tests/test_alignment_verification_execution_service.py tests/test_alignment_verify_route_characterization.py tests/test_bilingual_knowledge_quality_metrics.py tests/test_bilingual_evidence_workflow.py tests/test_chinese_term_candidates.py -q",
+      "result": "54 passed"
+    },
+    {
+      "command": "host-executed 11I targeted tests",
+      "result": "47 passed in 3.63s"
+    },
+    {
+      "command": "host-executed full pytest",
+      "result": "1254 passed, 6 warnings in 207.15s"
+    },
+    {
+      "command": "host-executed dev_check.py",
+      "result": "passed; internal pytest 1254 passed, 6 warnings in 210.34s; temporary database migrated; backend smoke passed"
+    },
+    {
+      "command": "LEXIBRIDGE_TESSERACT_CMD=<verified local tesseract> backend/.venv-macos/bin/python -m pytest -q",
+      "result": "1222 passed, 20 failed, 12 errors, 6 warnings",
+      "failure_category": "loopback_bind_permission_denied"
+    },
+    {
+      "command": "LEXIBRIDGE_TESSERACT_CMD=<verified local tesseract> backend/.venv-macos/bin/python scripts/dev_check.py",
+      "result": "attempted, interrupted after loopback failures surfaced",
+      "failure_category": "loopback_bind_permission_denied"
+    },
+    {
+      "command": "backend/.venv-macos/bin/python scripts/check_release_safety.py",
+      "result": "passed"
+    }
+  ],
+  "environment": {
+    "deepseek_api_key_set": false,
+    "external_llm_flag_set": false,
+    "loopback_bind": {
+      "available": false,
+      "address": "127.0.0.1",
+      "port": 0,
+      "error_type": "PermissionError",
+      "errno": 1
+    },
+    "tesseract": {
+      "default_path_available": false,
+      "verified_ocr_environment_version": "5.5.3",
+      "local_absolute_path_committed": false
+    }
+  },
+  "host_verification": {
+    "environment": "macOS host terminal",
+    "executed_by": "user",
+    "codex_sandbox_execution": false,
+    "loopback_bind": true,
+    "loopback_address": "127.0.0.1",
+    "loopback_port": 58357,
+    "loopback_result": "LOOPBACK_BIND_OK",
+    "tesseract_version": "5.5.3",
+    "targeted_tests": {
+      "passed": 47,
+      "duration_seconds": 3.63
+    },
+    "full_pytest": {
+      "passed": 1254,
+      "warnings": 6,
+      "duration_seconds": 207.15
+    },
+    "dev_check": {
+      "passed": true,
+      "temp_dir": "host temporary directory, exact path omitted",
+      "pytest_passed": 1254,
+      "warnings": 6,
+      "pytest_duration_seconds": 210.34,
+      "migration_command": "scripts/migrate_db.py --apply",
+      "database_migrated": true,
+      "backend_smoke": true,
+      "final_message": "All local pre-release checks passed."
+    },
+    "release_safety": {
+      "passed": true
+    },
+    "worktree_clean_after_host_verification": true,
+    "credentials_unset_before_verification": [
+      "DEEPSEEK_API_KEY",
+      "OPENAI_API_KEY",
+      "LEXIBRIDGE_FORMAL_REAL_PROVIDER_EVAL_ENABLED"
+    ],
+    "real_deepseek_requests": 0,
+    "credentialed_runner_executed": false,
+    "status_upgrade_reason": "Codex sandbox loopback failure was environmental; host verification passed full pytest, dev_check, backend smoke, and release safety."
+  },
+  "database_protection": {
+    "accident_database_path": "backend/lexibridge.db",
+    "expected_frozen_sha256": "9e6fb68ab13dff2763e2fff18d2aee531486360c557f058eb8a471d9209a9eaa",
+    "before_sha256": "9e6fb68ab13dff2763e2fff18d2aee531486360c557f058eb8a471d9209a9eaa",
+    "before_size": 1015808,
+    "before_mtime_epoch": 1785496597,
+    "wal_exists_before": false,
+    "shm_exists_before": false,
+    "final_sha256": "9e6fb68ab13dff2763e2fff18d2aee531486360c557f058eb8a471d9209a9eaa",
+    "final_size": 1015808,
+    "final_mtime_epoch": 1785496597,
+    "wal_exists_final": false,
+    "shm_exists_final": false,
+    "accident_database_used": false
+  },
+  "privacy_network": {
+    "private_data_usage": 0,
+    "private_pdf_usage": 0,
+    "real_provider_requests": 0,
+    "external_document_api_requests": 0,
+    "model_downloads": 0,
+    "secret_exposure": 0
+  },
+  "remaining_limitations": [
+    "No real Provider request was performed in Task 11I.",
+    "The 25-item credentialed semantic quality rerun has not been executed.",
+    "Existing English retrieval weakness and Chinese candidate quality issues remain unfixed.",
+    "Real course material and teacher blind review remain unvalidated.",
+    "Production Provider execution remains default-closed.",
+    "Codex sandbox loopback remains unavailable, but host verification closed the 11I regression gate."
+  ],
+  "next_task": "Task 11J: Credentialed DeepSeek Synthetic Quality Evaluation"
+}

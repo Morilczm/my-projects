@@ -1,0 +1,9 @@
+Foundations of Translational Mechanics
+
+Impulse equals force accumulated over a time interval. Momentum is mass multiplied by velocity, while linear momentum is a more explicit name used in some contexts.
+
+Inertia is resistance to a change of motion. Mass measures an object's inertial matter content and is distinct from weight.
+
+Acceleration is the time rate of change of velocity. Velocity includes both speed and direction.
+
+Displacement is the directed change from an initial position to a final position. Speed, distance, and path length are neighboring but different ideas.

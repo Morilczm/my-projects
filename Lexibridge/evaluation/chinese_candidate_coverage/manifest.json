@@ -1,0 +1,75 @@
+{
+  "evaluation_id": "chinese-candidate-coverage-10a1r",
+  "manifest_version": "coverage-manifest-v1",
+  "created_at": "2026-07-25",
+  "source_policy": {
+    "local_file_reference_policy": "Resolve files from a user-provided local corpus root outside Git. Do not commit absolute paths.",
+    "storage": "LOCAL_PRIVATE_ONLY",
+    "external_sharing_allowed": false,
+    "main_database_allowed": false,
+    "real_provider_allowed": false
+  },
+  "documents": [
+    {
+      "safe_id": "SC-01",
+      "logical_name": "03.22_CT.Python-Programming.pdf",
+      "sha256": "182fb9eb65dc22dbd50c6f764a3d8853e9180ee7e88a6fe764049c64535b5e39",
+      "course_id": "computational-thinking-design-aesthetics-pilot-02",
+      "domain": "computational_thinking_python",
+      "privacy_classification": "LOCAL_ONLY_PRIVATE",
+      "external_sharing_allowed": false,
+      "expected_parse_eligibility": "included"
+    },
+    {
+      "safe_id": "SC-02",
+      "logical_name": "04.13_CT.Abstraction.pdf",
+      "sha256": "44d63b9cad7b2147733b6dbbbbe48d55db6ec12a201080602763cbc8d0582508",
+      "course_id": "computational-thinking-design-aesthetics-pilot-02",
+      "domain": "abstraction",
+      "privacy_classification": "LOCAL_ONLY_PRIVATE",
+      "external_sharing_allowed": false,
+      "expected_parse_eligibility": "included"
+    },
+    {
+      "safe_id": "SC-03",
+      "logical_name": "10.30_Models.pdf",
+      "sha256": "58dab8d121a09f1f316164f480346942f0516b553e941c6eb19c10f5d7cdfd53",
+      "course_id": "computational-thinking-design-aesthetics-pilot-02",
+      "domain": "models",
+      "privacy_classification": "LOCAL_ONLY_PRIVATE",
+      "external_sharing_allowed": false,
+      "expected_parse_eligibility": "included"
+    },
+    {
+      "safe_id": "SC-04",
+      "logical_name": "12.11-CT.Algorithm.pdf",
+      "sha256": "dcd451052955c91c09073cd85fa3e92b8e5389a1695af0631287b48746810d20",
+      "course_id": "computational-thinking-design-aesthetics-pilot-02",
+      "domain": "algorithms",
+      "privacy_classification": "LOCAL_ONLY_PRIVATE",
+      "external_sharing_allowed": false,
+      "expected_parse_eligibility": "included"
+    },
+    {
+      "safe_id": "SC-05",
+      "logical_name": "12. 18 prototype and test (2).pdf",
+      "sha256": "d6bfbdcf7e052540ceeab6e8b6650145c55322a02e2d3e58d65a2107f7377cd6",
+      "course_id": "computational-thinking-design-aesthetics-pilot-02",
+      "domain": "prototype_test",
+      "privacy_classification": "LOCAL_ONLY_PRIVATE_SENSITIVE_BOUNDARY",
+      "external_sharing_allowed": false,
+      "expected_parse_eligibility": "excluded",
+      "exclusion_reason": "student_pii_shape_detected_in_prior_manifest"
+    },
+    {
+      "safe_id": "SC-06",
+      "logical_name": "Computational Thinking and Design Aesthetics-3.16 DT.pdf",
+      "sha256": "9b9e2a4ecf5e5f1c68d1d6654feed0ed7e1e403d02e41bd28b028dd129b4052d",
+      "course_id": "computational-thinking-design-aesthetics-pilot-02",
+      "domain": "design_thinking",
+      "privacy_classification": "LOCAL_ONLY_PRIVATE",
+      "external_sharing_allowed": false,
+      "expected_parse_eligibility": "included"
+    }
+  ]
+}

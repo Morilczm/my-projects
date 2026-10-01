@@ -1,0 +1,45 @@
+{
+  "contract_id": "personal-workspace-material-lifecycle@1.0.0",
+  "domain_adapter": {
+    "product_name": "PersonalMaterial",
+    "persistence_object": "Document",
+    "duplicate_table_created": false
+  },
+  "workspace_scope": "PERSONAL",
+  "visibility": "PRIVATE",
+  "supported_product_upload_types": [
+    "application/pdf"
+  ],
+  "processing_statuses": [
+    "UPLOADED",
+    "PARSING",
+    "READY",
+    "FAILED"
+  ],
+  "lifecycle_statuses": [
+    "ACTIVE",
+    "DELETED"
+  ],
+  "pipeline": [
+    "Document",
+    "DocumentParseRecord",
+    "DocumentParseBlock",
+    "layout-aware chunking",
+    "KnowledgeSource",
+    "KnowledgeChunk",
+    "student_personal_kb",
+    "StudentConceptQuery"
+  ],
+  "provenance_fields": [
+    "source_uid",
+    "parse_uid",
+    "parse_block_uid",
+    "page_number",
+    "source_locator",
+    "content_hash",
+    "parser_id",
+    "parser_version"
+  ],
+  "external_api_requests": 0,
+  "real_provider_requests": 0
+}

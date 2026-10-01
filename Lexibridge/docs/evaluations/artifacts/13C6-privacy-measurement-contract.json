@@ -1,0 +1,30 @@
+{
+  "admin_access": "AGGREGATE_ONLY",
+  "aggregate_policy_id": "student-pilot-private-aggregate@1.0.0",
+  "audit_contains_private_content": false,
+  "collected_session_fields": [
+    "status",
+    "bounded_duration_ms",
+    "alignment_status",
+    "evidence_complete",
+    "saved",
+    "note_present",
+    "understanding_state",
+    "one_way_query_reference_hash"
+  ],
+  "forbidden_session_fields": [
+    "query_uid",
+    "source_uid",
+    "selected_text",
+    "english_term",
+    "chinese_term",
+    "evidence_text",
+    "note_text"
+  ],
+  "instructor_access": false,
+  "optional_comment_in_aggregate": false,
+  "reviewer_access": false,
+  "small_cell_suppression_threshold": 3,
+  "withdrawal_erases_product_data": false,
+  "withdrawal_erases_study_sessions_and_surveys": true
+}

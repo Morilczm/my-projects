@@ -1,0 +1,30 @@
+{
+  "artifact": "14E-learning-card-contract",
+  "artifact_version": "1.0.0",
+  "scope": "student-facing presentation of existing AlignmentResult and PersonalLearningRecord",
+  "contract": {
+    "renderer": "student-concept-learning-card",
+    "machine_statuses": ["READY", "REVIEW_REQUIRED", "NOT_READY"],
+    "student_status_labels": {
+      "READY": "证据充分",
+      "REVIEW_REQUIRED": "存在多个有证据的候选",
+      "NOT_READY": "暂无可靠中文对应"
+    },
+    "visibility": "PRIVATE",
+    "authority": "NON_OFFICIAL",
+    "publication_status": "NOT_APPLICABLE",
+    "evidence_mode": "bounded_existing_alignment_result",
+    "learning_actions": ["SAVE", "UNSAVE", "NOTE", "UNDERSTOOD", "STILL_CONFUSED", "ACTIVE_RECALL"],
+    "new_domain_tables": false,
+    "provider_used": false,
+    "generated_hints_are_evidence": false
+  },
+  "safety": {
+    "external_api_used": false,
+    "real_provider_requests": 0,
+    "real_credentials_read": false,
+    "complete_source_included": false,
+    "raw_provider_payload_included": false,
+    "absolute_paths_included": false
+  }
+}

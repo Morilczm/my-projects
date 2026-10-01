@@ -1,0 +1,53 @@
+{
+  "summary": {
+    "contract_id": "controlled-multi-student-pilot@1.0.0",
+    "counts": {
+      "completed": 5,
+      "consented": 5,
+      "personas": 5,
+      "sessions_started": 5
+    },
+    "metrics": {
+      "completion_rate": 1.0,
+      "evidence_complete_rate": 1.0,
+      "median_duration_ms": 0,
+      "note_presence_rate": 1.0,
+      "save_rate": 1.0,
+      "survey_averages": {
+        "evidence_helpfulness": 4.0,
+        "helpfulness": 5.0,
+        "task_difficulty": 2.0,
+        "uncertainty_understanding": 4.0
+      },
+      "would_use_again_rate": 1.0
+    },
+    "participant_mode": "self_simulated",
+    "privacy": {
+      "content_collected": false,
+      "individual_rows_returned": false,
+      "isolation_audit": {
+        "cross_account_access_blocked": true,
+        "external_requests": 0,
+        "incident_count": 0,
+        "real_provider_requests": 0,
+        "unique_personas": 5
+      },
+      "metrics_suppressed": false
+    },
+    "quality_gate": {
+      "checks": {
+        "completion_rate_target": true,
+        "evidence_helpfulness_target": true,
+        "external_requests_target": true,
+        "median_duration_target": true,
+        "privacy_target": true,
+        "real_provider_requests_target": true,
+        "uncertainty_understanding_target": true
+      },
+      "conclusion_gate_open": true,
+      "minimum_completed_sessions": 5
+    },
+    "quality_status": "SELF_SIMULATED_MULTI_STUDENT_BASELINE_ESTABLISHED",
+    "real_participants_claimed": false
+  }
+}

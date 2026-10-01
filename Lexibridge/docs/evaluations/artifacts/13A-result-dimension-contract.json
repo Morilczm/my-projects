@@ -1,0 +1,21 @@
+{
+  "contract_id": "student-alignment-result@1.0.0",
+  "dimensions": {
+    "workspace_scope": ["PERSONAL", "MANAGED_COURSE"],
+    "visibility": ["PRIVATE", "COURSE_SHARED"],
+    "authority": ["NON_OFFICIAL", "OFFICIAL"],
+    "alignment_status": ["READY", "REVIEW_REQUIRED", "NOT_READY"],
+    "publication_status": ["NOT_APPLICABLE", "DRAFT", "PUBLISHED", "WITHDRAWN"]
+  },
+  "student_display_modes": {
+    "READY": "EVIDENCE_BACKED_RECOMMENDATION",
+    "REVIEW_REQUIRED": "EVIDENCE_BACKED_ALTERNATIVES",
+    "NOT_READY": "NO_RELIABLE_ALIGNMENT"
+  },
+  "ordinary_query_defaults": {
+    "visibility": "PRIVATE",
+    "authority": "NON_OFFICIAL",
+    "publication_status": "NOT_APPLICABLE",
+    "requires_human_review_before_view": false
+  }
+}

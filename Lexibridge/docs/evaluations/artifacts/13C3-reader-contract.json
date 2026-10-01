@@ -1,0 +1,43 @@
+{
+  "contract_id": "student-material-reader@1.0.0",
+  "endpoints": {
+    "file": "GET /api/student/concept-materials/{source_uid}/file",
+    "reader": "GET /api/student/concept-materials/{source_uid}/reader?page={page}"
+  },
+  "file_delivery": {
+    "authorization": "bearer_fetch_to_browser_blob",
+    "cache_control": "private, no-store",
+    "content_type": "application/pdf",
+    "credential_in_url": false,
+    "inline": true,
+    "nosniff": true
+  },
+  "item_fields": [
+    "chunk_uid",
+    "text",
+    "page_number",
+    "block_uid",
+    "heading_path",
+    "block_type",
+    "chunk_index",
+    "content_hash",
+    "span_start",
+    "span_end",
+    "selectable"
+  ],
+  "maximum_item_characters": 8000,
+  "page_aware": true,
+  "prohibited_fields": [
+    "storage_key",
+    "absolute_path",
+    "authorization_header",
+    "credential",
+    "complete_document_body"
+  ],
+  "selection_contract": "existing student-concept-query@1.0.0",
+  "status": "CLOSED",
+  "workspace_scopes": [
+    "PERSONAL",
+    "MANAGED_COURSE"
+  ]
+}

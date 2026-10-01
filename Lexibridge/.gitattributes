@@ -1,0 +1,4 @@
+*.docx binary
+*.pdf binary
+*.png binary
+frontend/vendor/pdfjs/** -whitespace

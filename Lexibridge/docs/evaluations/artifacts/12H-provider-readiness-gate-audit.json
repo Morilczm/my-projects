@@ -1,0 +1,19 @@
+{
+  "policy": "governed-provider-readiness@1.0.0",
+  "active_qualification_policy": "governed-bilingual-evidence-qualification@1.1.0",
+  "hard_gates": {
+    "qualification": {"passed": 3, "blocked_or_review": 22},
+    "formal_input_completeness": {"passed": 3, "not_evaluated_or_incomplete": 22},
+    "privacy": {"eligible_passed": 3, "eligible_failed": 0},
+    "provenance": {"eligible_passed": 3, "eligible_failed": 0},
+    "prompt_registry": {"eligible_passed": 3, "eligible_failed": 0},
+    "provider_policy_and_local_config": {"eligible_passed": 3, "eligible_failed": 0},
+    "bounded_budget": {"eligible_passed": 3, "eligible_failed": 0},
+    "audit_and_idempotency": {"eligible_passed": 3, "eligible_failed": 0}
+  },
+  "qualification_review_to_ready": 0,
+  "outside_qualification_approved_ready": 0,
+  "false_ready": 0,
+  "network_probe_performed": false,
+  "credential_value_read": false
+}

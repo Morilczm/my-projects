@@ -1,0 +1,22 @@
+{
+  "concept_boundary_policy": "UNRESOLVED_WITHOUT_GOVERNED_CONTRAST_EVIDENCE",
+  "deleted_source": {
+    "bounded_context_returned": false,
+    "candidate_comparison_returned": false,
+    "evidence_returned": false,
+    "historical_result_retained": true,
+    "personal_record_retained": true
+  },
+  "forbidden_inputs": {
+    "aliases": false,
+    "gold": false,
+    "provider_generated_claims": false,
+    "required_propositions": false,
+    "scores_as_student_explanations": false
+  },
+  "generated_hint_enters_evidence": false,
+  "network_required": false,
+  "prompt_changed": false,
+  "provider_required": false,
+  "unknown_provenance_candidate_admitted": false
+}

@@ -1,0 +1,21 @@
+{
+  "backend_id": "local_bge_reranker_v2_m3_cpu_v1",
+  "model_id": "BAAI/bge-reranker-v2-m3",
+  "model_revision": "79c481748842b7efa0a12db59915db91731f0b93",
+  "license": "Apache-2.0",
+  "architecture": "XLMRobertaForSequenceClassification",
+  "controlled_pair_token_limit": 512,
+  "controlled_english_token_limit": 192,
+  "controlled_chinese_token_limit": 316,
+  "runtime": "Transformers + PyTorch CPU",
+  "local_files_only": true,
+  "trust_remote_code": false,
+  "repository_external_cache": true,
+  "model_cache_tracked": false,
+  "backend_ready": true,
+  "pairs_scored": 119,
+  "reranking_seconds": 7.82856,
+  "offline_only": true,
+  "external_api_requests": 0,
+  "real_provider_requests": 0
+}

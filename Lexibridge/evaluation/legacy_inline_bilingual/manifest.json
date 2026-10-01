@@ -1,0 +1,9 @@
+{
+  "benchmark_id": "legacy-inline-bilingual-v1",
+  "production_core_path_represented": false,
+  "cross_corpus_alignment_validated": false,
+  "contains_inline_bilingual_leakage": true,
+  "retained_for_regression_only": true,
+  "corpus_sha256": "33715999c16a74610091b1e40896ee41921570a3740ebc2815565cf0ab7202dc",
+  "gold_sha256": "199baed9a8cb6deb68ae3480c3a67679b2daf273d3733e909d4e861685d45302"
+}

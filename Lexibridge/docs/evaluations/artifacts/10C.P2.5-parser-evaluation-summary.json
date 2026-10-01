@@ -1,0 +1,3919 @@
+{
+  "baseline_result": {
+    "parser_id": "baseline_native_tesseract_formula_region",
+    "valid_fixture_count": 16
+  },
+  "candidate_runtime_results": {
+    "docling": {
+      "blocked_reason": "model_runtime_download_or_initialization_not_completed",
+      "valid_fixture_count": 0
+    },
+    "mineru": {
+      "blocked_reason": "local_cli_execution_failed_and_license_requires_review",
+      "valid_fixture_count": 0
+    },
+    "paddle": {
+      "blocked_reason": "model_runtime_download_or_initialization_not_completed",
+      "valid_fixture_count": 0
+    }
+  },
+  "evaluation_status": "blocked",
+  "production_adapter_authorized": false,
+  "aggregates": [
+    {
+      "average_anchor_recall": 0.9405,
+      "bbox_completeness_average": 0.0312,
+      "failed_fixture_count": 0,
+      "formula_detection_rate": 0.5,
+      "hard_gate": {
+        "cpu_only_basic": true,
+        "fallback_safe": true,
+        "license_not_blocked": true,
+        "local_only": true,
+        "macos_arm64_runs": true,
+        "non_text_distinction": true,
+        "page_and_bbox": true,
+        "provenance_mapping": true,
+        "reading_order": true,
+        "structured_blocks": true,
+        "windows_path_plausible": true
+      },
+      "median_runtime_ms": 27.45,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "passed_hard_gate": true,
+      "table_detection_rate": 0.0,
+      "valid_fixture_count": 16,
+      "weighted": {
+        "cpu_performance": 8,
+        "cross_platform": 5,
+        "layout_reading_order": 10.31,
+        "lexibridge_adaptation": 12,
+        "license_maintenance": 10,
+        "table_formula_structure": 3.75,
+        "text_ocr_quality": 23.51
+      },
+      "weighted_total": 72.57
+    },
+    {
+      "average_anchor_recall": 0.0,
+      "bbox_completeness_average": 0.0,
+      "failed_fixture_count": 16,
+      "formula_detection_rate": null,
+      "hard_gate": {
+        "cpu_only_basic": true,
+        "fallback_safe": true,
+        "license_not_blocked": true,
+        "local_only": true,
+        "macos_arm64_runs": false,
+        "non_text_distinction": false,
+        "page_and_bbox": false,
+        "provenance_mapping": false,
+        "reading_order": true,
+        "structured_blocks": false,
+        "windows_path_plausible": true
+      },
+      "median_runtime_ms": null,
+      "parser_id": "docling",
+      "passed_hard_gate": false,
+      "table_detection_rate": null,
+      "valid_fixture_count": 0,
+      "weighted": {
+        "cpu_performance": 0,
+        "cross_platform": 5,
+        "layout_reading_order": 10.0,
+        "lexibridge_adaptation": 5,
+        "license_maintenance": 10,
+        "table_formula_structure": 0,
+        "text_ocr_quality": 0.0
+      },
+      "weighted_total": 30.0
+    },
+    {
+      "average_anchor_recall": 0.0,
+      "bbox_completeness_average": 0.0,
+      "failed_fixture_count": 16,
+      "formula_detection_rate": null,
+      "hard_gate": {
+        "cpu_only_basic": true,
+        "fallback_safe": true,
+        "license_not_blocked": false,
+        "local_only": true,
+        "macos_arm64_runs": false,
+        "non_text_distinction": false,
+        "page_and_bbox": false,
+        "provenance_mapping": false,
+        "reading_order": true,
+        "structured_blocks": false,
+        "windows_path_plausible": true
+      },
+      "median_runtime_ms": null,
+      "parser_id": "mineru",
+      "passed_hard_gate": false,
+      "table_detection_rate": null,
+      "valid_fixture_count": 0,
+      "weighted": {
+        "cpu_performance": 0,
+        "cross_platform": 5,
+        "layout_reading_order": 10.0,
+        "lexibridge_adaptation": 5,
+        "license_maintenance": 0,
+        "table_formula_structure": 0,
+        "text_ocr_quality": 0.0
+      },
+      "weighted_total": 20.0
+    },
+    {
+      "average_anchor_recall": 0.0,
+      "bbox_completeness_average": 0.0,
+      "failed_fixture_count": 16,
+      "formula_detection_rate": null,
+      "hard_gate": {
+        "cpu_only_basic": true,
+        "fallback_safe": true,
+        "license_not_blocked": true,
+        "local_only": true,
+        "macos_arm64_runs": false,
+        "non_text_distinction": false,
+        "page_and_bbox": false,
+        "provenance_mapping": false,
+        "reading_order": true,
+        "structured_blocks": false,
+        "windows_path_plausible": true
+      },
+      "median_runtime_ms": null,
+      "parser_id": "paddle",
+      "passed_hard_gate": false,
+      "table_detection_rate": null,
+      "valid_fixture_count": 0,
+      "weighted": {
+        "cpu_performance": 0,
+        "cross_platform": 5,
+        "layout_reading_order": 10.0,
+        "lexibridge_adaptation": 5,
+        "license_maintenance": 10,
+        "table_formula_structure": 0,
+        "text_ocr_quality": 0.0
+      },
+      "weighted_total": 30.0
+    }
+  ],
+  "branch": "eval/open-source-document-parser-10cp25",
+  "created_at": "2026-07-30T16:53:12.557168Z",
+  "evaluation_id": "10cp25-56f15127-3129-4807-bc9b-54a2c255532d",
+  "evaluator_version": "10C.P2.5-parser-eval-v1",
+  "fixture_count": 16,
+  "fixtures": [
+    {
+      "anchor_count": 4,
+      "complex_layout": false,
+      "domains": [
+        "signals",
+        "circuits"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_raster_formula_count": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "filename": "single-column-born-digital.pdf",
+      "fixture_id": "single_column_born_digital",
+      "negative": false,
+      "page_count": 1,
+      "privacy_classification": "SYNTHETIC",
+      "scanned": false,
+      "source_hash": "c1af58767ac3befe484b2db11ffd93531629fd47872b62afb2b4e9c8621f21d9"
+    },
+    {
+      "anchor_count": 8,
+      "complex_layout": true,
+      "domains": [
+        "signals",
+        "circuits"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_raster_formula_count": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "filename": "two-column-born-digital.pdf",
+      "fixture_id": "two_column_born_digital",
+      "negative": false,
+      "page_count": 1,
+      "privacy_classification": "SYNTHETIC",
+      "scanned": false,
+      "source_hash": "cb757d31aeeacdeda9be391da5562cf3487ac5e899fdcc2b2bcee8472b1d8405"
+    },
+    {
+      "anchor_count": 6,
+      "complex_layout": false,
+      "domains": [
+        "signals",
+        "circuits"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_raster_formula_count": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "filename": "bilingual-born-digital.pdf",
+      "fixture_id": "bilingual_born_digital",
+      "negative": false,
+      "page_count": 1,
+      "privacy_classification": "SYNTHETIC",
+      "scanned": false,
+      "source_hash": "0e493acda4e3ffdc17cdf2e482a428b921248c77910808e70c2ba0770eebdf90"
+    },
+    {
+      "anchor_count": 4,
+      "complex_layout": false,
+      "domains": [
+        "signals"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_raster_formula_count": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "filename": "scanned-english.pdf",
+      "fixture_id": "scanned_english",
+      "negative": false,
+      "page_count": 1,
+      "privacy_classification": "SYNTHETIC",
+      "scanned": true,
+      "source_hash": "74d463809188557582a2f4361cf5eff9f1d5a2ae33b5124a916f5625ed2060d7"
+    },
+    {
+      "anchor_count": 4,
+      "complex_layout": false,
+      "domains": [
+        "signals",
+        "circuits"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_raster_formula_count": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "filename": "scanned-chinese.pdf",
+      "fixture_id": "scanned_chinese",
+      "negative": false,
+      "page_count": 1,
+      "privacy_classification": "SYNTHETIC",
+      "scanned": true,
+      "source_hash": "5dbb16812d05dc35e551276075e20d8b72bbeed422e008346e8c8755f0d170e7"
+    },
+    {
+      "anchor_count": 6,
+      "complex_layout": false,
+      "domains": [
+        "signals",
+        "circuits"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_raster_formula_count": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "filename": "scanned-bilingual.pdf",
+      "fixture_id": "scanned_bilingual",
+      "negative": false,
+      "page_count": 1,
+      "privacy_classification": "SYNTHETIC",
+      "scanned": true,
+      "source_hash": "dfd0295b0df99c41a0d51d8b39e7ad9f7a0b7bae9f65ec35681752ac990ebe3d"
+    },
+    {
+      "anchor_count": 4,
+      "complex_layout": true,
+      "domains": [
+        "signals",
+        "circuits"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_raster_formula_count": 0,
+      "expected_table_cols": 3,
+      "expected_table_rows": 2,
+      "filename": "mixed-layout-blocker.pdf",
+      "fixture_id": "mixed_layout_blocker",
+      "negative": false,
+      "page_count": 1,
+      "privacy_classification": "SYNTHETIC",
+      "scanned": false,
+      "source_hash": "c2effa92bf58d3e1fd3afd156cfdb63f590cc9ebf7389cc42348286b74b9a9c7"
+    },
+    {
+      "anchor_count": 4,
+      "complex_layout": false,
+      "domains": [
+        "signals"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_raster_formula_count": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "filename": "title-body-list.pdf",
+      "fixture_id": "title_body_list",
+      "negative": false,
+      "page_count": 1,
+      "privacy_classification": "SYNTHETIC",
+      "scanned": false,
+      "source_hash": "9733b7164018372bfd96eedab8ea1b0b653ccc5b6df958ed015faece25dfa352"
+    },
+    {
+      "anchor_count": 1,
+      "complex_layout": false,
+      "domains": [
+        "negative"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 1,
+      "expected_raster_formula_count": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "filename": "plain-raster-image.pdf",
+      "fixture_id": "plain_raster_image",
+      "negative": false,
+      "page_count": 1,
+      "privacy_classification": "SYNTHETIC",
+      "scanned": false,
+      "source_hash": "edf035a87c88084953dc1c74bf9a56ffbed80b3d0050d3aad0162a4eb21cfa44"
+    },
+    {
+      "anchor_count": 1,
+      "complex_layout": false,
+      "domains": [
+        "math"
+      ],
+      "expected_formula_count": 1,
+      "expected_images": 0,
+      "expected_raster_formula_count": 1,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "filename": "raster-formula.pdf",
+      "fixture_id": "raster_formula",
+      "negative": false,
+      "page_count": 1,
+      "privacy_classification": "SYNTHETIC",
+      "scanned": false,
+      "source_hash": "02f89aa17c2076831a66812b83232cbb5105cd4affbba57421927e7e34d25d70"
+    },
+    {
+      "anchor_count": 2,
+      "complex_layout": false,
+      "domains": [
+        "math"
+      ],
+      "expected_formula_count": 1,
+      "expected_images": 0,
+      "expected_raster_formula_count": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "filename": "born-digital-formula.pdf",
+      "fixture_id": "born_digital_formula",
+      "negative": false,
+      "page_count": 1,
+      "privacy_classification": "SYNTHETIC",
+      "scanned": false,
+      "source_hash": "4d78ebd5b2dbbe0f633956847f9499bdeef740acc930f9ab23cf27ce4096983f"
+    },
+    {
+      "anchor_count": 3,
+      "complex_layout": true,
+      "domains": [
+        "signals",
+        "circuits"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_raster_formula_count": 0,
+      "expected_table_cols": 3,
+      "expected_table_rows": 4,
+      "filename": "simple-table.pdf",
+      "fixture_id": "simple_table",
+      "negative": false,
+      "page_count": 1,
+      "privacy_classification": "SYNTHETIC",
+      "scanned": false,
+      "source_hash": "07091c7721578bb2f4b700df25e37664d8d46cc3dcd8c7614da7887bc82b48c3"
+    },
+    {
+      "anchor_count": 4,
+      "complex_layout": true,
+      "domains": [
+        "signals",
+        "circuits"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_raster_formula_count": 0,
+      "expected_table_cols": 3,
+      "expected_table_rows": 4,
+      "filename": "multi-column-table.pdf",
+      "fixture_id": "multi_column_table",
+      "negative": false,
+      "page_count": 1,
+      "privacy_classification": "SYNTHETIC",
+      "scanned": false,
+      "source_hash": "f4c9f364157e628aa00a403523fdebe9c2dc1478eddd990dc4c9ce0a0086ef86"
+    },
+    {
+      "anchor_count": 3,
+      "complex_layout": false,
+      "domains": [
+        "signals"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_raster_formula_count": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "filename": "header-footer-page-number.pdf",
+      "fixture_id": "header_footer_page_number",
+      "negative": false,
+      "page_count": 1,
+      "privacy_classification": "SYNTHETIC",
+      "scanned": false,
+      "source_hash": "d1a3bf0ef4473b84f25fcdfc020b4f543041979d393fcc0b5de8dbb0f53ccb1e"
+    },
+    {
+      "anchor_count": 0,
+      "complex_layout": false,
+      "domains": [
+        "negative"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_raster_formula_count": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "filename": "negative-no-terms.pdf",
+      "fixture_id": "negative_no_terms",
+      "negative": true,
+      "page_count": 1,
+      "privacy_classification": "SYNTHETIC",
+      "scanned": false,
+      "source_hash": "350eca15ad303def555b9322f7a85af495b24c6ea5c3f7f2c853a667831771a9"
+    },
+    {
+      "anchor_count": 0,
+      "complex_layout": true,
+      "domains": [
+        "local_private_course"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_raster_formula_count": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "filename": "local-private-course-sample.pdf",
+      "fixture_id": "local_private_course_sample",
+      "negative": false,
+      "page_count": 80,
+      "privacy_classification": "LOCAL_ONLY_PRIVATE",
+      "scanned": false,
+      "source_hash": "182fb9eb65dc22dbd50c6f764a3d8853e9180ee7e88a6fe764049c64535b5e39"
+    }
+  ],
+  "git_commit": "3c72265ba46245436ec0edc5d4c627c7974ea08c",
+  "network": {
+    "external_attempts": [],
+    "external_provider_request_count": 0,
+    "external_request_count": 0,
+    "private_course_external_send_count": 0
+  },
+  "parser_results": [
+    {
+      "block_count": 1,
+      "errors": [],
+      "fixture_id": "single_column_born_digital",
+      "page_count": 1,
+      "parse_duration_ms": 79.93,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "parser_version": "current_commit",
+      "peak_memory_delta_kb": 12730368,
+      "source_hash": "c1af58767ac3befe484b2db11ffd93531629fd47872b62afb2b4e9c8621f21d9",
+      "warnings": []
+    },
+    {
+      "block_count": 1,
+      "errors": [],
+      "fixture_id": "two_column_born_digital",
+      "page_count": 1,
+      "parse_duration_ms": 27.45,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "parser_version": "current_commit",
+      "peak_memory_delta_kb": 81920,
+      "source_hash": "cb757d31aeeacdeda9be391da5562cf3487ac5e899fdcc2b2bcee8472b1d8405",
+      "warnings": []
+    },
+    {
+      "block_count": 1,
+      "errors": [],
+      "fixture_id": "bilingual_born_digital",
+      "page_count": 1,
+      "parse_duration_ms": 26.85,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "parser_version": "current_commit",
+      "peak_memory_delta_kb": 16384,
+      "source_hash": "0e493acda4e3ffdc17cdf2e482a428b921248c77910808e70c2ba0770eebdf90",
+      "warnings": []
+    },
+    {
+      "block_count": 5,
+      "errors": [],
+      "fixture_id": "scanned_english",
+      "page_count": 1,
+      "parse_duration_ms": 408.24,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "parser_version": "current_commit",
+      "peak_memory_delta_kb": 21381120,
+      "source_hash": "74d463809188557582a2f4361cf5eff9f1d5a2ae33b5124a916f5625ed2060d7",
+      "warnings": []
+    },
+    {
+      "block_count": 4,
+      "errors": [],
+      "fixture_id": "scanned_chinese",
+      "page_count": 1,
+      "parse_duration_ms": 409.53,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "parser_version": "current_commit",
+      "peak_memory_delta_kb": 34455552,
+      "source_hash": "5dbb16812d05dc35e551276075e20d8b72bbeed422e008346e8c8755f0d170e7",
+      "warnings": []
+    },
+    {
+      "block_count": 4,
+      "errors": [],
+      "fixture_id": "scanned_bilingual",
+      "page_count": 1,
+      "parse_duration_ms": 478.38,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "parser_version": "current_commit",
+      "peak_memory_delta_kb": 31260672,
+      "source_hash": "dfd0295b0df99c41a0d51d8b39e7ad9f7a0b7bae9f65ec35681752ac990ebe3d",
+      "warnings": []
+    },
+    {
+      "block_count": 1,
+      "errors": [],
+      "fixture_id": "mixed_layout_blocker",
+      "page_count": 1,
+      "parse_duration_ms": 26.92,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "parser_version": "current_commit",
+      "peak_memory_delta_kb": 16384,
+      "source_hash": "c2effa92bf58d3e1fd3afd156cfdb63f590cc9ebf7389cc42348286b74b9a9c7",
+      "warnings": []
+    },
+    {
+      "block_count": 1,
+      "errors": [],
+      "fixture_id": "title_body_list",
+      "page_count": 1,
+      "parse_duration_ms": 25.13,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "parser_version": "current_commit",
+      "peak_memory_delta_kb": 32768,
+      "source_hash": "9733b7164018372bfd96eedab8ea1b0b653ccc5b6df958ed015faece25dfa352",
+      "warnings": []
+    },
+    {
+      "block_count": 1,
+      "errors": [],
+      "fixture_id": "plain_raster_image",
+      "page_count": 1,
+      "parse_duration_ms": 71.38,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "parser_version": "current_commit",
+      "peak_memory_delta_kb": 933888,
+      "source_hash": "edf035a87c88084953dc1c74bf9a56ffbed80b3d0050d3aad0162a4eb21cfa44",
+      "warnings": []
+    },
+    {
+      "block_count": 2,
+      "errors": [],
+      "fixture_id": "raster_formula",
+      "page_count": 1,
+      "parse_duration_ms": 59.47,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "parser_version": "current_commit",
+      "peak_memory_delta_kb": 16384,
+      "source_hash": "02f89aa17c2076831a66812b83232cbb5105cd4affbba57421927e7e34d25d70",
+      "warnings": []
+    },
+    {
+      "block_count": 1,
+      "errors": [],
+      "fixture_id": "born_digital_formula",
+      "page_count": 1,
+      "parse_duration_ms": 25.16,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "parser_version": "current_commit",
+      "peak_memory_delta_kb": 0,
+      "source_hash": "4d78ebd5b2dbbe0f633956847f9499bdeef740acc930f9ab23cf27ce4096983f",
+      "warnings": []
+    },
+    {
+      "block_count": 1,
+      "errors": [],
+      "fixture_id": "simple_table",
+      "page_count": 1,
+      "parse_duration_ms": 24.67,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "parser_version": "current_commit",
+      "peak_memory_delta_kb": 0,
+      "source_hash": "07091c7721578bb2f4b700df25e37664d8d46cc3dcd8c7614da7887bc82b48c3",
+      "warnings": []
+    },
+    {
+      "block_count": 1,
+      "errors": [],
+      "fixture_id": "multi_column_table",
+      "page_count": 1,
+      "parse_duration_ms": 25.04,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "parser_version": "current_commit",
+      "peak_memory_delta_kb": 32768,
+      "source_hash": "f4c9f364157e628aa00a403523fdebe9c2dc1478eddd990dc4c9ce0a0086ef86",
+      "warnings": []
+    },
+    {
+      "block_count": 1,
+      "errors": [],
+      "fixture_id": "header_footer_page_number",
+      "page_count": 1,
+      "parse_duration_ms": 24.32,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "parser_version": "current_commit",
+      "peak_memory_delta_kb": 0,
+      "source_hash": "d1a3bf0ef4473b84f25fcdfc020b4f543041979d393fcc0b5de8dbb0f53ccb1e",
+      "warnings": []
+    },
+    {
+      "block_count": 1,
+      "errors": [],
+      "fixture_id": "negative_no_terms",
+      "page_count": 1,
+      "parse_duration_ms": 24.07,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "parser_version": "current_commit",
+      "peak_memory_delta_kb": 0,
+      "source_hash": "350eca15ad303def555b9322f7a85af495b24c6ea5c3f7f2c853a667831771a9",
+      "warnings": []
+    },
+    {
+      "block_count": 97,
+      "errors": [],
+      "fixture_id": "local_private_course_sample",
+      "page_count": 80,
+      "parse_duration_ms": 22866.44,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "parser_version": "current_commit",
+      "peak_memory_delta_kb": 77103104,
+      "source_hash": "182fb9eb65dc22dbd50c6f764a3d8853e9180ee7e88a6fe764049c64535b5e39",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "fixture_id": "single_column_born_digital",
+      "page_count": 1,
+      "parse_duration_ms": 2329.01,
+      "parser_id": "docling",
+      "parser_version": "2.117.0",
+      "peak_memory_delta_kb": null,
+      "source_hash": "c1af58767ac3befe484b2db11ffd93531629fd47872b62afb2b4e9c8621f21d9",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "fixture_id": "two_column_born_digital",
+      "page_count": 1,
+      "parse_duration_ms": 1501.01,
+      "parser_id": "docling",
+      "parser_version": "2.117.0",
+      "peak_memory_delta_kb": null,
+      "source_hash": "cb757d31aeeacdeda9be391da5562cf3487ac5e899fdcc2b2bcee8472b1d8405",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "fixture_id": "bilingual_born_digital",
+      "page_count": 1,
+      "parse_duration_ms": 1504.57,
+      "parser_id": "docling",
+      "parser_version": "2.117.0",
+      "peak_memory_delta_kb": null,
+      "source_hash": "0e493acda4e3ffdc17cdf2e482a428b921248c77910808e70c2ba0770eebdf90",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "fixture_id": "scanned_english",
+      "page_count": 1,
+      "parse_duration_ms": 1496.57,
+      "parser_id": "docling",
+      "parser_version": "2.117.0",
+      "peak_memory_delta_kb": null,
+      "source_hash": "74d463809188557582a2f4361cf5eff9f1d5a2ae33b5124a916f5625ed2060d7",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "fixture_id": "scanned_chinese",
+      "page_count": 1,
+      "parse_duration_ms": 1631.47,
+      "parser_id": "docling",
+      "parser_version": "2.117.0",
+      "peak_memory_delta_kb": null,
+      "source_hash": "5dbb16812d05dc35e551276075e20d8b72bbeed422e008346e8c8755f0d170e7",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "fixture_id": "scanned_bilingual",
+      "page_count": 1,
+      "parse_duration_ms": 1505.08,
+      "parser_id": "docling",
+      "parser_version": "2.117.0",
+      "peak_memory_delta_kb": null,
+      "source_hash": "dfd0295b0df99c41a0d51d8b39e7ad9f7a0b7bae9f65ec35681752ac990ebe3d",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "fixture_id": "mixed_layout_blocker",
+      "page_count": 1,
+      "parse_duration_ms": 1516.91,
+      "parser_id": "docling",
+      "parser_version": "2.117.0",
+      "peak_memory_delta_kb": null,
+      "source_hash": "c2effa92bf58d3e1fd3afd156cfdb63f590cc9ebf7389cc42348286b74b9a9c7",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "fixture_id": "title_body_list",
+      "page_count": 1,
+      "parse_duration_ms": 1491.76,
+      "parser_id": "docling",
+      "parser_version": "2.117.0",
+      "peak_memory_delta_kb": null,
+      "source_hash": "9733b7164018372bfd96eedab8ea1b0b653ccc5b6df958ed015faece25dfa352",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "fixture_id": "plain_raster_image",
+      "page_count": 1,
+      "parse_duration_ms": 1495.1,
+      "parser_id": "docling",
+      "parser_version": "2.117.0",
+      "peak_memory_delta_kb": null,
+      "source_hash": "edf035a87c88084953dc1c74bf9a56ffbed80b3d0050d3aad0162a4eb21cfa44",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "fixture_id": "raster_formula",
+      "page_count": 1,
+      "parse_duration_ms": 1507.26,
+      "parser_id": "docling",
+      "parser_version": "2.117.0",
+      "peak_memory_delta_kb": null,
+      "source_hash": "02f89aa17c2076831a66812b83232cbb5105cd4affbba57421927e7e34d25d70",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "fixture_id": "born_digital_formula",
+      "page_count": 1,
+      "parse_duration_ms": 1504.07,
+      "parser_id": "docling",
+      "parser_version": "2.117.0",
+      "peak_memory_delta_kb": null,
+      "source_hash": "4d78ebd5b2dbbe0f633956847f9499bdeef740acc930f9ab23cf27ce4096983f",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "fixture_id": "simple_table",
+      "page_count": 1,
+      "parse_duration_ms": 1499.69,
+      "parser_id": "docling",
+      "parser_version": "2.117.0",
+      "peak_memory_delta_kb": null,
+      "source_hash": "07091c7721578bb2f4b700df25e37664d8d46cc3dcd8c7614da7887bc82b48c3",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "fixture_id": "multi_column_table",
+      "page_count": 1,
+      "parse_duration_ms": 1501.4,
+      "parser_id": "docling",
+      "parser_version": "2.117.0",
+      "peak_memory_delta_kb": null,
+      "source_hash": "f4c9f364157e628aa00a403523fdebe9c2dc1478eddd990dc4c9ce0a0086ef86",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "fixture_id": "header_footer_page_number",
+      "page_count": 1,
+      "parse_duration_ms": 1514.4,
+      "parser_id": "docling",
+      "parser_version": "2.117.0",
+      "peak_memory_delta_kb": null,
+      "source_hash": "d1a3bf0ef4473b84f25fcdfc020b4f543041979d393fcc0b5de8dbb0f53ccb1e",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "fixture_id": "negative_no_terms",
+      "page_count": 1,
+      "parse_duration_ms": 1559.6,
+      "parser_id": "docling",
+      "parser_version": "2.117.0",
+      "peak_memory_delta_kb": null,
+      "source_hash": "350eca15ad303def555b9322f7a85af495b24c6ea5c3f7f2c853a667831771a9",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "fixture_id": "local_private_course_sample",
+      "page_count": 80,
+      "parse_duration_ms": 1512.34,
+      "parser_id": "docling",
+      "parser_version": "2.117.0",
+      "peak_memory_delta_kb": null,
+      "source_hash": "182fb9eb65dc22dbd50c6f764a3d8853e9180ee7e88a6fe764049c64535b5e39",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "fixture_id": "single_column_born_digital",
+      "page_count": 1,
+      "parse_duration_ms": 1364.46,
+      "parser_id": "paddle",
+      "parser_version": "",
+      "peak_memory_delta_kb": null,
+      "source_hash": "c1af58767ac3befe484b2db11ffd93531629fd47872b62afb2b4e9c8621f21d9",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "fixture_id": "two_column_born_digital",
+      "page_count": 1,
+      "parse_duration_ms": 798.67,
+      "parser_id": "paddle",
+      "parser_version": "",
+      "peak_memory_delta_kb": null,
+      "source_hash": "cb757d31aeeacdeda9be391da5562cf3487ac5e899fdcc2b2bcee8472b1d8405",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "fixture_id": "bilingual_born_digital",
+      "page_count": 1,
+      "parse_duration_ms": 809.77,
+      "parser_id": "paddle",
+      "parser_version": "",
+      "peak_memory_delta_kb": null,
+      "source_hash": "0e493acda4e3ffdc17cdf2e482a428b921248c77910808e70c2ba0770eebdf90",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "fixture_id": "scanned_english",
+      "page_count": 1,
+      "parse_duration_ms": 796.76,
+      "parser_id": "paddle",
+      "parser_version": "",
+      "peak_memory_delta_kb": null,
+      "source_hash": "74d463809188557582a2f4361cf5eff9f1d5a2ae33b5124a916f5625ed2060d7",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "fixture_id": "scanned_chinese",
+      "page_count": 1,
+      "parse_duration_ms": 808.81,
+      "parser_id": "paddle",
+      "parser_version": "",
+      "peak_memory_delta_kb": null,
+      "source_hash": "5dbb16812d05dc35e551276075e20d8b72bbeed422e008346e8c8755f0d170e7",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "fixture_id": "scanned_bilingual",
+      "page_count": 1,
+      "parse_duration_ms": 799.64,
+      "parser_id": "paddle",
+      "parser_version": "",
+      "peak_memory_delta_kb": null,
+      "source_hash": "dfd0295b0df99c41a0d51d8b39e7ad9f7a0b7bae9f65ec35681752ac990ebe3d",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "fixture_id": "mixed_layout_blocker",
+      "page_count": 1,
+      "parse_duration_ms": 806.27,
+      "parser_id": "paddle",
+      "parser_version": "",
+      "peak_memory_delta_kb": null,
+      "source_hash": "c2effa92bf58d3e1fd3afd156cfdb63f590cc9ebf7389cc42348286b74b9a9c7",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "fixture_id": "title_body_list",
+      "page_count": 1,
+      "parse_duration_ms": 806.02,
+      "parser_id": "paddle",
+      "parser_version": "",
+      "peak_memory_delta_kb": null,
+      "source_hash": "9733b7164018372bfd96eedab8ea1b0b653ccc5b6df958ed015faece25dfa352",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "fixture_id": "plain_raster_image",
+      "page_count": 1,
+      "parse_duration_ms": 798.12,
+      "parser_id": "paddle",
+      "parser_version": "",
+      "peak_memory_delta_kb": null,
+      "source_hash": "edf035a87c88084953dc1c74bf9a56ffbed80b3d0050d3aad0162a4eb21cfa44",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "fixture_id": "raster_formula",
+      "page_count": 1,
+      "parse_duration_ms": 795.95,
+      "parser_id": "paddle",
+      "parser_version": "",
+      "peak_memory_delta_kb": null,
+      "source_hash": "02f89aa17c2076831a66812b83232cbb5105cd4affbba57421927e7e34d25d70",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "fixture_id": "born_digital_formula",
+      "page_count": 1,
+      "parse_duration_ms": 799.55,
+      "parser_id": "paddle",
+      "parser_version": "",
+      "peak_memory_delta_kb": null,
+      "source_hash": "4d78ebd5b2dbbe0f633956847f9499bdeef740acc930f9ab23cf27ce4096983f",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "fixture_id": "simple_table",
+      "page_count": 1,
+      "parse_duration_ms": 803.53,
+      "parser_id": "paddle",
+      "parser_version": "",
+      "peak_memory_delta_kb": null,
+      "source_hash": "07091c7721578bb2f4b700df25e37664d8d46cc3dcd8c7614da7887bc82b48c3",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "fixture_id": "multi_column_table",
+      "page_count": 1,
+      "parse_duration_ms": 795.93,
+      "parser_id": "paddle",
+      "parser_version": "",
+      "peak_memory_delta_kb": null,
+      "source_hash": "f4c9f364157e628aa00a403523fdebe9c2dc1478eddd990dc4c9ce0a0086ef86",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "fixture_id": "header_footer_page_number",
+      "page_count": 1,
+      "parse_duration_ms": 792.57,
+      "parser_id": "paddle",
+      "parser_version": "",
+      "peak_memory_delta_kb": null,
+      "source_hash": "d1a3bf0ef4473b84f25fcdfc020b4f543041979d393fcc0b5de8dbb0f53ccb1e",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "fixture_id": "negative_no_terms",
+      "page_count": 1,
+      "parse_duration_ms": 802.46,
+      "parser_id": "paddle",
+      "parser_version": "",
+      "peak_memory_delta_kb": null,
+      "source_hash": "350eca15ad303def555b9322f7a85af495b24c6ea5c3f7f2c853a667831771a9",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "fixture_id": "local_private_course_sample",
+      "page_count": 80,
+      "parse_duration_ms": 792.77,
+      "parser_id": "paddle",
+      "parser_version": "",
+      "peak_memory_delta_kb": null,
+      "source_hash": "182fb9eb65dc22dbd50c6f764a3d8853e9180ee7e88a6fe764049c64535b5e39",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "fixture_id": "single_column_born_digital",
+      "page_count": 1,
+      "parse_duration_ms": 960.08,
+      "parser_id": "mineru",
+      "parser_version": "3.4.4",
+      "peak_memory_delta_kb": null,
+      "source_hash": "c1af58767ac3befe484b2db11ffd93531629fd47872b62afb2b4e9c8621f21d9",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "fixture_id": "two_column_born_digital",
+      "page_count": 1,
+      "parse_duration_ms": 684.19,
+      "parser_id": "mineru",
+      "parser_version": "3.4.4",
+      "peak_memory_delta_kb": null,
+      "source_hash": "cb757d31aeeacdeda9be391da5562cf3487ac5e899fdcc2b2bcee8472b1d8405",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "fixture_id": "bilingual_born_digital",
+      "page_count": 1,
+      "parse_duration_ms": 680.08,
+      "parser_id": "mineru",
+      "parser_version": "3.4.4",
+      "peak_memory_delta_kb": null,
+      "source_hash": "0e493acda4e3ffdc17cdf2e482a428b921248c77910808e70c2ba0770eebdf90",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "fixture_id": "scanned_english",
+      "page_count": 1,
+      "parse_duration_ms": 678.56,
+      "parser_id": "mineru",
+      "parser_version": "3.4.4",
+      "peak_memory_delta_kb": null,
+      "source_hash": "74d463809188557582a2f4361cf5eff9f1d5a2ae33b5124a916f5625ed2060d7",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "fixture_id": "scanned_chinese",
+      "page_count": 1,
+      "parse_duration_ms": 681.82,
+      "parser_id": "mineru",
+      "parser_version": "3.4.4",
+      "peak_memory_delta_kb": null,
+      "source_hash": "5dbb16812d05dc35e551276075e20d8b72bbeed422e008346e8c8755f0d170e7",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "fixture_id": "scanned_bilingual",
+      "page_count": 1,
+      "parse_duration_ms": 681.22,
+      "parser_id": "mineru",
+      "parser_version": "3.4.4",
+      "peak_memory_delta_kb": null,
+      "source_hash": "dfd0295b0df99c41a0d51d8b39e7ad9f7a0b7bae9f65ec35681752ac990ebe3d",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "fixture_id": "mixed_layout_blocker",
+      "page_count": 1,
+      "parse_duration_ms": 677.27,
+      "parser_id": "mineru",
+      "parser_version": "3.4.4",
+      "peak_memory_delta_kb": null,
+      "source_hash": "c2effa92bf58d3e1fd3afd156cfdb63f590cc9ebf7389cc42348286b74b9a9c7",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "fixture_id": "title_body_list",
+      "page_count": 1,
+      "parse_duration_ms": 677.29,
+      "parser_id": "mineru",
+      "parser_version": "3.4.4",
+      "peak_memory_delta_kb": null,
+      "source_hash": "9733b7164018372bfd96eedab8ea1b0b653ccc5b6df958ed015faece25dfa352",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "fixture_id": "plain_raster_image",
+      "page_count": 1,
+      "parse_duration_ms": 684.51,
+      "parser_id": "mineru",
+      "parser_version": "3.4.4",
+      "peak_memory_delta_kb": null,
+      "source_hash": "edf035a87c88084953dc1c74bf9a56ffbed80b3d0050d3aad0162a4eb21cfa44",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "fixture_id": "raster_formula",
+      "page_count": 1,
+      "parse_duration_ms": 683.37,
+      "parser_id": "mineru",
+      "parser_version": "3.4.4",
+      "peak_memory_delta_kb": null,
+      "source_hash": "02f89aa17c2076831a66812b83232cbb5105cd4affbba57421927e7e34d25d70",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "fixture_id": "born_digital_formula",
+      "page_count": 1,
+      "parse_duration_ms": 678.96,
+      "parser_id": "mineru",
+      "parser_version": "3.4.4",
+      "peak_memory_delta_kb": null,
+      "source_hash": "4d78ebd5b2dbbe0f633956847f9499bdeef740acc930f9ab23cf27ce4096983f",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "fixture_id": "simple_table",
+      "page_count": 1,
+      "parse_duration_ms": 678.1,
+      "parser_id": "mineru",
+      "parser_version": "3.4.4",
+      "peak_memory_delta_kb": null,
+      "source_hash": "07091c7721578bb2f4b700df25e37664d8d46cc3dcd8c7614da7887bc82b48c3",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "fixture_id": "multi_column_table",
+      "page_count": 1,
+      "parse_duration_ms": 686.96,
+      "parser_id": "mineru",
+      "parser_version": "3.4.4",
+      "peak_memory_delta_kb": null,
+      "source_hash": "f4c9f364157e628aa00a403523fdebe9c2dc1478eddd990dc4c9ce0a0086ef86",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "fixture_id": "header_footer_page_number",
+      "page_count": 1,
+      "parse_duration_ms": 677.3,
+      "parser_id": "mineru",
+      "parser_version": "3.4.4",
+      "peak_memory_delta_kb": null,
+      "source_hash": "d1a3bf0ef4473b84f25fcdfc020b4f543041979d393fcc0b5de8dbb0f53ccb1e",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "fixture_id": "negative_no_terms",
+      "page_count": 1,
+      "parse_duration_ms": 679.88,
+      "parser_id": "mineru",
+      "parser_version": "3.4.4",
+      "peak_memory_delta_kb": null,
+      "source_hash": "350eca15ad303def555b9322f7a85af495b24c6ea5c3f7f2c853a667831771a9",
+      "warnings": []
+    },
+    {
+      "block_count": 0,
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': \"[Errno 1] Operation not permitted: '<LOCAL_PRIVATE_TMP>/'\"}"
+      ],
+      "fixture_id": "local_private_course_sample",
+      "page_count": 80,
+      "parse_duration_ms": 13.46,
+      "parser_id": "mineru",
+      "parser_version": "3.4.4",
+      "peak_memory_delta_kb": null,
+      "source_hash": "182fb9eb65dc22dbd50c6f764a3d8853e9180ee7e88a6fe764049c64535b5e39",
+      "warnings": []
+    }
+  ],
+  "platform": {
+    "machine": "arm64",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.9.6",
+    "system": "Darwin"
+  },
+  "scores": [
+    {
+      "anchor_recall": {
+        "matched": 4,
+        "missing": [],
+        "recall": 1.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 1,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [
+          "paragraph"
+        ],
+        "present": [
+          "paragraph"
+        ],
+        "proxy_recall": 1.0
+      },
+      "errors": [],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "single_column_born_digital",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 79.93,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 8,
+        "missing": [],
+        "recall": 1.0,
+        "total": 8
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 1,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [
+          "paragraph"
+        ],
+        "present": [
+          "paragraph"
+        ],
+        "proxy_recall": 1.0
+      },
+      "errors": [],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "two_column_born_digital",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 27.45,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 6,
+        "missing": [],
+        "recall": 1.0,
+        "total": 6
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 1,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [
+          "paragraph"
+        ],
+        "present": [
+          "paragraph"
+        ],
+        "proxy_recall": 1.0
+      },
+      "errors": [],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "bilingual_born_digital",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 26.85,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 4,
+        "missing": [],
+        "recall": 1.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 5,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [
+          "paragraph"
+        ],
+        "present": [
+          "paragraph"
+        ],
+        "proxy_recall": 1.0
+      },
+      "errors": [],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "scanned_english",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 408.24,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 2,
+        "missing": [
+          "傅里叶变换",
+          "卷积"
+        ],
+        "recall": 0.5,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 4,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [
+          "paragraph"
+        ],
+        "present": [
+          "paragraph"
+        ],
+        "proxy_recall": 1.0
+      },
+      "errors": [],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "scanned_chinese",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 409.53,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 4,
+        "missing": [
+          "傅里叶变换",
+          "卷积"
+        ],
+        "recall": 0.6667,
+        "total": 6
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 4,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [
+          "paragraph"
+        ],
+        "present": [
+          "paragraph"
+        ],
+        "proxy_recall": 1.0
+      },
+      "errors": [],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "scanned_bilingual",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 478.38,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 4,
+        "missing": [],
+        "recall": 1.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 1,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph",
+          "table"
+        ],
+        "matched": [
+          "paragraph"
+        ],
+        "present": [
+          "paragraph"
+        ],
+        "proxy_recall": 0.5
+      },
+      "errors": [],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 3,
+      "expected_table_rows": 2,
+      "fixture_id": "mixed_layout_blocker",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 26.92,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 4,
+        "missing": [],
+        "recall": 1.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 1,
+      "block_type_proxy": {
+        "expected": [
+          "heading",
+          "list_item"
+        ],
+        "matched": [],
+        "present": [
+          "paragraph"
+        ],
+        "proxy_recall": 0.0
+      },
+      "errors": [],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "title_body_list",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 25.13,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 1,
+        "missing": [],
+        "recall": 1.0,
+        "total": 1
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 1,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [
+          "paragraph"
+        ],
+        "present": [
+          "paragraph"
+        ],
+        "proxy_recall": 1.0
+      },
+      "errors": [],
+      "expected_formula_count": 0,
+      "expected_images": 1,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "plain_raster_image",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 71.38,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 1,
+        "missing": [],
+        "recall": 1.0,
+        "total": 1
+      },
+      "bbox_completeness": 0.5,
+      "block_count": 2,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [
+          "paragraph"
+        ],
+        "present": [
+          "formula",
+          "paragraph"
+        ],
+        "proxy_recall": 1.0
+      },
+      "errors": [],
+      "expected_formula_count": 1,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "raster_formula",
+      "formula_block_count": 1,
+      "formula_detected": true,
+      "image_block_count": 0,
+      "parse_duration_ms": 59.47,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 2,
+        "missing": [],
+        "recall": 1.0,
+        "total": 2
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 1,
+      "block_type_proxy": {
+        "expected": [
+          "formula",
+          "paragraph"
+        ],
+        "matched": [
+          "paragraph"
+        ],
+        "present": [
+          "paragraph"
+        ],
+        "proxy_recall": 0.5
+      },
+      "errors": [],
+      "expected_formula_count": 1,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "born_digital_formula",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 25.16,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 3,
+        "missing": [],
+        "recall": 1.0,
+        "total": 3
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 1,
+      "block_type_proxy": {
+        "expected": [
+          "table"
+        ],
+        "matched": [],
+        "present": [
+          "paragraph"
+        ],
+        "proxy_recall": 0.0
+      },
+      "errors": [],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 3,
+      "expected_table_rows": 4,
+      "fixture_id": "simple_table",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 24.67,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 4,
+        "missing": [],
+        "recall": 1.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 1,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph",
+          "table"
+        ],
+        "matched": [
+          "paragraph"
+        ],
+        "present": [
+          "paragraph"
+        ],
+        "proxy_recall": 0.5
+      },
+      "errors": [],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 3,
+      "expected_table_rows": 4,
+      "fixture_id": "multi_column_table",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 25.04,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 3,
+        "missing": [],
+        "recall": 1.0,
+        "total": 3
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 1,
+      "block_type_proxy": {
+        "expected": [
+          "page_number",
+          "paragraph"
+        ],
+        "matched": [
+          "paragraph"
+        ],
+        "present": [
+          "paragraph"
+        ],
+        "proxy_recall": 0.5
+      },
+      "errors": [],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "header_footer_page_number",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 24.32,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [],
+        "recall": null,
+        "total": 0
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 1,
+      "block_type_proxy": {
+        "expected": [],
+        "matched": [],
+        "present": [
+          "paragraph"
+        ],
+        "proxy_recall": null
+      },
+      "errors": [],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "negative_no_terms",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 24.07,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [],
+        "recall": null,
+        "total": 0
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 97,
+      "block_type_proxy": {
+        "expected": [],
+        "matched": [],
+        "present": [
+          "paragraph"
+        ],
+        "proxy_recall": null
+      },
+      "errors": [],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "local_private_course_sample",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 22866.44,
+      "parser_id": "baseline_native_tesseract_formula_region",
+      "privacy_classification": "LOCAL_ONLY_PRIVATE",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Fourier Transform",
+          "Impulse Response",
+          "Convolution",
+          "Voltage Divider"
+        ],
+        "recall": 0.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "single_column_born_digital",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 2329.01,
+      "parser_id": "docling",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Fourier Transform",
+          "Impulse Response",
+          "Convolution",
+          "Transfer Function",
+          "Voltage Divider",
+          "Operational Amplifier",
+          "Equivalent Resistance",
+          "Boundary Condition"
+        ],
+        "recall": 0.0,
+        "total": 8
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "two_column_born_digital",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 1501.01,
+      "parser_id": "docling",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Fourier Transform",
+          "傅里叶变换",
+          "Convolution",
+          "卷积",
+          "Voltage Divider",
+          "分压器"
+        ],
+        "recall": 0.0,
+        "total": 6
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "bilingual_born_digital",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 1504.57,
+      "parser_id": "docling",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Fourier Transform",
+          "Impulse Response",
+          "Convolution",
+          "Voltage Divider"
+        ],
+        "recall": 0.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "scanned_english",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 1496.57,
+      "parser_id": "docling",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "傅里叶变换",
+          "冲激响应",
+          "卷积",
+          "分压器"
+        ],
+        "recall": 0.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "scanned_chinese",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 1631.47,
+      "parser_id": "docling",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Fourier Transform",
+          "傅里叶变换",
+          "Convolution",
+          "卷积",
+          "Voltage Divider",
+          "分压器"
+        ],
+        "recall": 0.0,
+        "total": 6
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "scanned_bilingual",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 1505.08,
+      "parser_id": "docling",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Impulse Response",
+          "Operational Amplifier",
+          "Voltage Divider",
+          "Equivalent Resistance"
+        ],
+        "recall": 0.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph",
+          "table"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 3,
+      "expected_table_rows": 2,
+      "fixture_id": "mixed_layout_blocker",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 1516.91,
+      "parser_id": "docling",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Signal Processing",
+          "Fourier Transform",
+          "Impulse Response",
+          "Transfer Function"
+        ],
+        "recall": 0.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "heading",
+          "list_item"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "title_body_list",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 1491.76,
+      "parser_id": "docling",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Plain raster image"
+        ],
+        "recall": 0.0,
+        "total": 1
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 1,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "plain_raster_image",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 1495.1,
+      "parser_id": "docling",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Transfer Function"
+        ],
+        "recall": 0.0,
+        "total": 1
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "expected_formula_count": 1,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "raster_formula",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 1507.26,
+      "parser_id": "docling",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Transfer Function",
+          "H(s)"
+        ],
+        "recall": 0.0,
+        "total": 2
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "formula",
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "expected_formula_count": 1,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "born_digital_formula",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 1504.07,
+      "parser_id": "docling",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Impulse Response",
+          "Voltage Divider",
+          "Eigenvalue"
+        ],
+        "recall": 0.0,
+        "total": 3
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "table"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 3,
+      "expected_table_rows": 4,
+      "fixture_id": "simple_table",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 1499.69,
+      "parser_id": "docling",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Impulse Response",
+          "Voltage Divider",
+          "Convolution",
+          "Boundary Condition"
+        ],
+        "recall": 0.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph",
+          "table"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 3,
+      "expected_table_rows": 4,
+      "fixture_id": "multi_column_table",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 1501.4,
+      "parser_id": "docling",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Fourier Transform",
+          "Impulse Response",
+          "Page 1"
+        ],
+        "recall": 0.0,
+        "total": 3
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "page_number",
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "header_footer_page_number",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 1514.4,
+      "parser_id": "docling",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [],
+        "recall": null,
+        "total": 0
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [],
+        "matched": [],
+        "present": [],
+        "proxy_recall": null
+      },
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "negative_no_terms",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 1559.6,
+      "parser_id": "docling",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [],
+        "recall": null,
+        "total": 0
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [],
+        "matched": [],
+        "present": [],
+        "proxy_recall": null
+      },
+      "errors": [
+        "{'code': 'DOCLING_EXECUTION_FAILED', 'message': 'Failed to download https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/torch/PP-OCRv4/det/ch_PP-OCRv4_det_mobile.pth'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "local_private_course_sample",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 1512.34,
+      "parser_id": "docling",
+      "privacy_classification": "LOCAL_ONLY_PRIVATE",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Fourier Transform",
+          "Impulse Response",
+          "Convolution",
+          "Voltage Divider"
+        ],
+        "recall": 0.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "single_column_born_digital",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 1364.46,
+      "parser_id": "paddle",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Fourier Transform",
+          "Impulse Response",
+          "Convolution",
+          "Transfer Function",
+          "Voltage Divider",
+          "Operational Amplifier",
+          "Equivalent Resistance",
+          "Boundary Condition"
+        ],
+        "recall": 0.0,
+        "total": 8
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "two_column_born_digital",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 798.67,
+      "parser_id": "paddle",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Fourier Transform",
+          "傅里叶变换",
+          "Convolution",
+          "卷积",
+          "Voltage Divider",
+          "分压器"
+        ],
+        "recall": 0.0,
+        "total": 6
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "bilingual_born_digital",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 809.77,
+      "parser_id": "paddle",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Fourier Transform",
+          "Impulse Response",
+          "Convolution",
+          "Voltage Divider"
+        ],
+        "recall": 0.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "scanned_english",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 796.76,
+      "parser_id": "paddle",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "傅里叶变换",
+          "冲激响应",
+          "卷积",
+          "分压器"
+        ],
+        "recall": 0.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "scanned_chinese",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 808.81,
+      "parser_id": "paddle",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Fourier Transform",
+          "傅里叶变换",
+          "Convolution",
+          "卷积",
+          "Voltage Divider",
+          "分压器"
+        ],
+        "recall": 0.0,
+        "total": 6
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "scanned_bilingual",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 799.64,
+      "parser_id": "paddle",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Impulse Response",
+          "Operational Amplifier",
+          "Voltage Divider",
+          "Equivalent Resistance"
+        ],
+        "recall": 0.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph",
+          "table"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 3,
+      "expected_table_rows": 2,
+      "fixture_id": "mixed_layout_blocker",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 806.27,
+      "parser_id": "paddle",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Signal Processing",
+          "Fourier Transform",
+          "Impulse Response",
+          "Transfer Function"
+        ],
+        "recall": 0.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "heading",
+          "list_item"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "title_body_list",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 806.02,
+      "parser_id": "paddle",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Plain raster image"
+        ],
+        "recall": 0.0,
+        "total": 1
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 1,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "plain_raster_image",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 798.12,
+      "parser_id": "paddle",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Transfer Function"
+        ],
+        "recall": 0.0,
+        "total": 1
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "expected_formula_count": 1,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "raster_formula",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 795.95,
+      "parser_id": "paddle",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Transfer Function",
+          "H(s)"
+        ],
+        "recall": 0.0,
+        "total": 2
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "formula",
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "expected_formula_count": 1,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "born_digital_formula",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 799.55,
+      "parser_id": "paddle",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Impulse Response",
+          "Voltage Divider",
+          "Eigenvalue"
+        ],
+        "recall": 0.0,
+        "total": 3
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "table"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 3,
+      "expected_table_rows": 4,
+      "fixture_id": "simple_table",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 803.53,
+      "parser_id": "paddle",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Impulse Response",
+          "Voltage Divider",
+          "Convolution",
+          "Boundary Condition"
+        ],
+        "recall": 0.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph",
+          "table"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 3,
+      "expected_table_rows": 4,
+      "fixture_id": "multi_column_table",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 795.93,
+      "parser_id": "paddle",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Fourier Transform",
+          "Impulse Response",
+          "Page 1"
+        ],
+        "recall": 0.0,
+        "total": 3
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "page_number",
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "header_footer_page_number",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 792.57,
+      "parser_id": "paddle",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [],
+        "recall": null,
+        "total": 0
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [],
+        "matched": [],
+        "present": [],
+        "proxy_recall": null
+      },
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "negative_no_terms",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 802.46,
+      "parser_id": "paddle",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [],
+        "recall": null,
+        "total": 0
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [],
+        "matched": [],
+        "present": [],
+        "proxy_recall": null
+      },
+      "errors": [
+        "{'code': 'PADDLE_EXECUTION_FAILED', 'message': 'A dependency error occurred during pipeline creation. Please refer to the installation documentation to ensure all required dependencies are installed.'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "local_private_course_sample",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 792.77,
+      "parser_id": "paddle",
+      "privacy_classification": "LOCAL_ONLY_PRIVATE",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Fourier Transform",
+          "Impulse Response",
+          "Convolution",
+          "Voltage Divider"
+        ],
+        "recall": 0.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "single_column_born_digital",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 960.08,
+      "parser_id": "mineru",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Fourier Transform",
+          "Impulse Response",
+          "Convolution",
+          "Transfer Function",
+          "Voltage Divider",
+          "Operational Amplifier",
+          "Equivalent Resistance",
+          "Boundary Condition"
+        ],
+        "recall": 0.0,
+        "total": 8
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "two_column_born_digital",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 684.19,
+      "parser_id": "mineru",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Fourier Transform",
+          "傅里叶变换",
+          "Convolution",
+          "卷积",
+          "Voltage Divider",
+          "分压器"
+        ],
+        "recall": 0.0,
+        "total": 6
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "bilingual_born_digital",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 680.08,
+      "parser_id": "mineru",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Fourier Transform",
+          "Impulse Response",
+          "Convolution",
+          "Voltage Divider"
+        ],
+        "recall": 0.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "scanned_english",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 678.56,
+      "parser_id": "mineru",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "傅里叶变换",
+          "冲激响应",
+          "卷积",
+          "分压器"
+        ],
+        "recall": 0.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "scanned_chinese",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 681.82,
+      "parser_id": "mineru",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Fourier Transform",
+          "傅里叶变换",
+          "Convolution",
+          "卷积",
+          "Voltage Divider",
+          "分压器"
+        ],
+        "recall": 0.0,
+        "total": 6
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "scanned_bilingual",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 681.22,
+      "parser_id": "mineru",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Impulse Response",
+          "Operational Amplifier",
+          "Voltage Divider",
+          "Equivalent Resistance"
+        ],
+        "recall": 0.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph",
+          "table"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 3,
+      "expected_table_rows": 2,
+      "fixture_id": "mixed_layout_blocker",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 677.27,
+      "parser_id": "mineru",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Signal Processing",
+          "Fourier Transform",
+          "Impulse Response",
+          "Transfer Function"
+        ],
+        "recall": 0.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "heading",
+          "list_item"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "title_body_list",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 677.29,
+      "parser_id": "mineru",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Plain raster image"
+        ],
+        "recall": 0.0,
+        "total": 1
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 1,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "plain_raster_image",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 684.51,
+      "parser_id": "mineru",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Transfer Function"
+        ],
+        "recall": 0.0,
+        "total": 1
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "expected_formula_count": 1,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "raster_formula",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 683.37,
+      "parser_id": "mineru",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Transfer Function",
+          "H(s)"
+        ],
+        "recall": 0.0,
+        "total": 2
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "formula",
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "expected_formula_count": 1,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "born_digital_formula",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 678.96,
+      "parser_id": "mineru",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Impulse Response",
+          "Voltage Divider",
+          "Eigenvalue"
+        ],
+        "recall": 0.0,
+        "total": 3
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "table"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 3,
+      "expected_table_rows": 4,
+      "fixture_id": "simple_table",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 678.1,
+      "parser_id": "mineru",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Impulse Response",
+          "Voltage Divider",
+          "Convolution",
+          "Boundary Condition"
+        ],
+        "recall": 0.0,
+        "total": 4
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "paragraph",
+          "table"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 3,
+      "expected_table_rows": 4,
+      "fixture_id": "multi_column_table",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 686.96,
+      "parser_id": "mineru",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [
+          "Fourier Transform",
+          "Impulse Response",
+          "Page 1"
+        ],
+        "recall": 0.0,
+        "total": 3
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [
+          "page_number",
+          "paragraph"
+        ],
+        "matched": [],
+        "present": [],
+        "proxy_recall": 0.0
+      },
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "header_footer_page_number",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 677.3,
+      "parser_id": "mineru",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [],
+        "recall": null,
+        "total": 0
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [],
+        "matched": [],
+        "present": [],
+        "proxy_recall": null
+      },
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': 'Traceback (most recent call last): File \"<LOCAL_PRIVATE_TMP>/\", line 6, in <module> sys.exit(main()) ^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1569, in __call__ return self.main(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1490, in main rv = self.invoke(ctx) ^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 1353, in invoke return ctx.invoke(self.callback, **ctx.params) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 907, in invoke return callback(*args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/\", line 34, in new_func return f(get_current_context(), *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"<LOCAL_PRIVATE_TMP>/'}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "negative_no_terms",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 679.88,
+      "parser_id": "mineru",
+      "privacy_classification": "SYNTHETIC",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    },
+    {
+      "anchor_recall": {
+        "matched": 0,
+        "missing": [],
+        "recall": null,
+        "total": 0
+      },
+      "bbox_completeness": 0.0,
+      "block_count": 0,
+      "block_type_proxy": {
+        "expected": [],
+        "matched": [],
+        "present": [],
+        "proxy_recall": null
+      },
+      "errors": [
+        "{'code': 'MINERU_EXECUTION_FAILED', 'message': \"[Errno 1] Operation not permitted: '<LOCAL_PRIVATE_TMP>/'\"}"
+      ],
+      "expected_formula_count": 0,
+      "expected_images": 0,
+      "expected_table_cols": 0,
+      "expected_table_rows": 0,
+      "fixture_id": "local_private_course_sample",
+      "formula_block_count": 0,
+      "formula_detected": false,
+      "image_block_count": 0,
+      "parse_duration_ms": 13.46,
+      "parser_id": "mineru",
+      "privacy_classification": "LOCAL_ONLY_PRIVATE",
+      "reading_order_errors": 0,
+      "table_block_count": 0,
+      "table_detected": false,
+      "warnings": []
+    }
+  ],
+  "selected": {
+    "best_non_selected_candidate": "docling",
+    "complex_document_routing_rule": "No open-source candidate passed hard gates in this run.",
+    "fallback_parser": "baseline_native_tesseract_formula_region",
+    "formula_handling_strategy": "Keep Task 10C.P2 FormulaRegion detection; formula structure recognition remains unavailable.",
+    "integration_risk": "high",
+    "license_status": "open_candidate_not_selected",
+    "macos_arm64_status": "open_source_candidate_not_selected",
+    "offline_runtime_status": "open_source_candidate_not_selected",
+    "production_integration_next_step": "Resolve parser candidate blockers or rerun with an installable candidate.",
+    "selected_parser_role": "no_open_source_parser_selected",
+    "selected_parser_version": "",
+    "selected_primary_parser": null,
+    "table_handling_strategy": "Do not claim structured table support until a selected adapter preserves rows/cells.",
+    "windows_status": "baseline_existing_contract_only"
+  }
+}

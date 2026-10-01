@@ -1,0 +1,35 @@
+{
+  "technical_status": "PROVIDER_READINESS_CONTRACT_CLOSED",
+  "quality_status": "PROVIDER_READINESS_BASELINE_ESTABLISHED",
+  "metrics": {
+    "all_25": 25,
+    "qualification_executed": 18,
+    "qualification_qualified": 3,
+    "qualification_review_required": 15,
+    "qualification_rejected": 0,
+    "provider_readiness_eligible": 3,
+    "ready": 3,
+    "review_required": 15,
+    "not_ready": 7,
+    "false_ready": 0
+  },
+  "upstream_metrics": {
+    "retrieval_hit_at_1": 0.7222,
+    "retrieval_hit_at_3": 0.8333,
+    "retrieval_mrr": 0.7778,
+    "candidate_top1": 0.4667,
+    "candidate_top3": 0.8,
+    "candidate_mrr": 0.6378,
+    "pair_top1": 0.7857,
+    "pair_top3": 1.0,
+    "pair_mrr": 0.869
+  },
+  "qualification_policy": "governed-bilingual-evidence-qualification@1.1.0",
+  "provider_readiness_policy": "governed-provider-readiness@1.0.0",
+  "prompt_registry": "term_alignment@v1",
+  "provider_configuration": "injected fake local configuration; no credential value",
+  "external_api_requests": 0,
+  "real_provider_requests": 0,
+  "real_credentials_read": false,
+  "production_policy_uses_gold_aliases_or_required_propositions": false
+}

@@ -1,0 +1,32 @@
+{
+  "package": "pdfjs-dist",
+  "version": "6.2.108",
+  "upstream": "https://github.com/mozilla/pdf.js",
+  "registry": "https://registry.npmjs.org/pdfjs-dist/-/pdfjs-dist-6.2.108.tgz",
+  "npm_shasum": "1e0ce0f4b3a034f953dbbe2334ab01fbddf0eb30",
+  "license": "Apache-2.0",
+  "files": {
+    "LICENSE": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+    "pdf.mjs": "e0be3863c23c8af2305b16548febd58e7f8874a460253317d7771cddbc1c0f6d",
+    "pdf.worker.mjs": "0613f41490dd6aaceed7a93fbbd38c85e6d6aa60474b6588c6e7709cfbe18cb3"
+  },
+  "asset_directories": {
+    "cmaps": {
+      "file_count": 169,
+      "sha256": "604c03d6eefa9b37b5d9ad26b8b768d48675b94e81c855248585266f488f7a2e"
+    },
+    "standard_fonts": {
+      "file_count": 16,
+      "sha256": "ec903072b002f74c3021e812dca13b407eed8ad36faec1adc89d3e2b5d56d54e"
+    },
+    "wasm": {
+      "file_count": 13,
+      "sha256": "c2b4bb0849911d355efc4d2ce61c3e79ca846efb3f1f31866415bd60934b2d3a"
+    }
+  },
+  "selection_contract": "pdfjs-direct-concept-capture@1.0.0",
+  "vendored_files": {
+    "pdf.mjs": "build/pdf.min.mjs",
+    "pdf.worker.mjs": "build/pdf.worker.min.mjs"
+  }
+}

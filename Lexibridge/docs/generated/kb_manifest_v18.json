@@ -1,0 +1,52 @@
+{
+  "knowledge_base_version_id": 18,
+  "course_id": 1,
+  "scope_type": "course",
+  "version_name": "course-1-kb-v2",
+  "status": "published",
+  "source_count": 4,
+  "chunk_count": 38,
+  "deduped_chunk_count": 0,
+  "index_backend": "local_lexical",
+  "index_version": "local_lexical_v1",
+  "retrieval_version": "local_lexical_v1",
+  "sources": [
+    {
+      "source_title": "english_course_notes.md",
+      "language": "en",
+      "source_type": "demo_seed",
+      "authorization_status": "allowed_for_course_use",
+      "status": "active",
+      "chunk_count": 21
+    },
+    {
+      "source_title": "chinese_reference.md",
+      "language": "zh",
+      "source_type": "demo_seed",
+      "authorization_status": "allowed_for_course_use",
+      "status": "active",
+      "chunk_count": 17
+    },
+    {
+      "source_title": "image_text_sample.png",
+      "language": "bilingual",
+      "source_type": "demo_seed",
+      "authorization_status": "allowed_for_course_use",
+      "status": "active",
+      "chunk_count": 0
+    },
+    {
+      "source_title": "formula_sample.png",
+      "language": "en",
+      "source_type": "demo_seed",
+      "authorization_status": "allowed_for_course_use",
+      "status": "active",
+      "chunk_count": 0
+    }
+  ],
+  "quality": {
+    "duplicate_ratio": 0.0,
+    "unknown_authorization_count": 0,
+    "health_status": "PASS"
+  }
+}

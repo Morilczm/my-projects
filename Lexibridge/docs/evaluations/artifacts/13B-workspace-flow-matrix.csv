@@ -1,0 +1,3 @@
+workspace,concept_query_contract,orchestrator,serializer,result_component,personal_record,default_dimensions
+PERSONAL,student-concept-query@1.0.0,shared_task12_adapter,student-alignment-result@1.1.0,shared_student_component,shared_service,PRIVATE|NON_OFFICIAL|NOT_APPLICABLE
+MANAGED_COURSE,student-concept-query@1.0.0,shared_task12_adapter,student-alignment-result@1.1.0,shared_student_component,shared_service,PRIVATE|NON_OFFICIAL|NOT_APPLICABLE

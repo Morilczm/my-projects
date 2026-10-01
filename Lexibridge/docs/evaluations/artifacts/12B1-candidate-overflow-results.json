@@ -1,0 +1,244 @@
+{
+  "accident_database_after": {
+    "exists": true,
+    "mtime_epoch": 1785496597,
+    "sha256": "9e6fb68ab13dff2763e2fff18d2aee531486360c557f058eb8a471d9209a9eaa",
+    "shm_exists": false,
+    "size": 1015808,
+    "wal_exists": false
+  },
+  "accident_database_before": {
+    "exists": true,
+    "mtime_epoch": 1785496597,
+    "sha256": "9e6fb68ab13dff2763e2fff18d2aee531486360c557f058eb8a471d9209a9eaa",
+    "shm_exists": false,
+    "size": 1015808,
+    "wal_exists": false
+  },
+  "after": {
+    "admitted_candidates": 76,
+    "ambiguous": 0,
+    "canonical_candidates": 81,
+    "exact_binding_recall": 0.56,
+    "exact_matched": 14,
+    "missing": 11,
+    "overflow_candidates": 5,
+    "provider_ready": 3,
+    "whole_set_rejected_sources": 0
+  },
+  "before": {
+    "admitted_candidates": 26,
+    "ambiguous": 0,
+    "canonical_candidates": 81,
+    "exact_binding_recall": 0.12,
+    "exact_matched": 3,
+    "missing": 22,
+    "overflow_candidates": 55,
+    "provider_ready": 3,
+    "whole_set_rejected_sources": 1
+  },
+  "frozen_hashes": {
+    "corpus_sha256": "33715999c16a74610091b1e40896ee41921570a3740ebc2815565cf0ab7202dc",
+    "gold_sha256": "199baed9a8cb6deb68ae3480c3a67679b2daf273d3733e909d4e861685d45302"
+  },
+  "governance_overflow_benchmark_misses": 0,
+  "real_provider_requests": 0,
+  "rows": [
+    {
+      "binding_status": "matched",
+      "concept_id": "physics-01",
+      "included_in_denominator": true,
+      "preparation_status": "evidence_insufficient",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "matched",
+      "concept_id": "physics-02",
+      "included_in_denominator": true,
+      "preparation_status": "evidence_insufficient",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "matched",
+      "concept_id": "physics-03",
+      "included_in_denominator": true,
+      "preparation_status": "evidence_insufficient",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "missing",
+      "concept_id": "physics-04",
+      "included_in_denominator": true,
+      "preparation_status": "not_applicable",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "missing",
+      "concept_id": "physics-05",
+      "included_in_denominator": true,
+      "preparation_status": "not_applicable",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "missing",
+      "concept_id": "physics-06",
+      "included_in_denominator": true,
+      "preparation_status": "not_applicable",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "matched",
+      "concept_id": "physics-07",
+      "included_in_denominator": true,
+      "preparation_status": "evidence_insufficient",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "missing",
+      "concept_id": "physics-08",
+      "included_in_denominator": true,
+      "preparation_status": "not_applicable",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "missing",
+      "concept_id": "physics-09",
+      "included_in_denominator": true,
+      "preparation_status": "not_applicable",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "matched",
+      "concept_id": "physics-10",
+      "included_in_denominator": true,
+      "preparation_status": "evidence_insufficient",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "missing",
+      "concept_id": "physics-11",
+      "included_in_denominator": true,
+      "preparation_status": "not_applicable",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "missing",
+      "concept_id": "physics-12",
+      "included_in_denominator": true,
+      "preparation_status": "not_applicable",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "matched",
+      "concept_id": "physics-13",
+      "included_in_denominator": true,
+      "preparation_status": "evidence_insufficient",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "matched",
+      "concept_id": "physics-14",
+      "included_in_denominator": true,
+      "preparation_status": "evidence_insufficient",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "matched",
+      "concept_id": "physics-15",
+      "included_in_denominator": true,
+      "preparation_status": "evidence_insufficient",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "matched",
+      "concept_id": "physics-16",
+      "included_in_denominator": true,
+      "preparation_status": "evidence_insufficient",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "matched",
+      "concept_id": "physics-17",
+      "included_in_denominator": true,
+      "preparation_status": "evidence_insufficient",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "matched",
+      "concept_id": "physics-18",
+      "included_in_denominator": true,
+      "preparation_status": "evidence_insufficient",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "missing",
+      "concept_id": "physics-19",
+      "included_in_denominator": true,
+      "preparation_status": "not_applicable",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "missing",
+      "concept_id": "physics-20",
+      "included_in_denominator": true,
+      "preparation_status": "not_applicable",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "missing",
+      "concept_id": "physics-21",
+      "included_in_denominator": true,
+      "preparation_status": "not_applicable",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "missing",
+      "concept_id": "physics-22",
+      "included_in_denominator": true,
+      "preparation_status": "not_applicable",
+      "provider_ready": false
+    },
+    {
+      "binding_status": "matched",
+      "concept_id": "physics-23",
+      "included_in_denominator": true,
+      "preparation_status": "prepared",
+      "provider_ready": true
+    },
+    {
+      "binding_status": "matched",
+      "concept_id": "physics-24",
+      "included_in_denominator": true,
+      "preparation_status": "prepared",
+      "provider_ready": true
+    },
+    {
+      "binding_status": "matched",
+      "concept_id": "physics-25",
+      "included_in_denominator": true,
+      "preparation_status": "prepared",
+      "provider_ready": true
+    }
+  ],
+  "source_results": [
+    {
+      "admitted_candidates": 50,
+      "canonical_candidates": 55,
+      "governance_status": "overflow_rejected",
+      "overflow_candidates": 5,
+      "source_id": "english-mechanics",
+      "whole_set_rejected": false
+    },
+    {
+      "admitted_candidates": 26,
+      "canonical_candidates": 26,
+      "governance_status": "admitted",
+      "overflow_candidates": 0,
+      "source_id": "english-electricity",
+      "whole_set_rejected": false
+    }
+  ],
+  "status": "CANDIDATE_SET_OVERFLOW_GOVERNANCE_CLOSED",
+  "task": "12B.1",
+  "true_exact_candidate_missing": 11
+}
