@@ -1,0 +1,13 @@
+{
+  "versions": {
+    "torch": "2.3.1+cu121",
+    "transformers": "4.35.2",
+    "numpy": "2.2.6",
+    "sentencepiece": "0.2.1",
+    "safetensors": "0.7.0"
+  },
+  "gpu": "NVIDIA A800-SXM4-80GB",
+  "cuda": "12.1",
+  "torch_file": "/data/home/scyb475/.local/lib/python3.10/site-packages/torch/__init__.py",
+  "transformers_file": "/data/home/scyb475/.local/lib/python3.10/site-packages/transformers/__init__.py"
+}

@@ -1,0 +1,12 @@
+# Large shared artifacts stay on the cluster and are referenced by path.
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.mp3
+*.wav
+*.zip
+model/
+audio/
+data/raw/

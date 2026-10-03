@@ -1,0 +1,28 @@
+{
+  "status": "ok",
+  "rows": 1200,
+  "same_dev_rows": true,
+  "test_used": false,
+  "adapter": "/data/home/scyb475/run/czm/adapters/train_full_163783",
+  "baseline_wer": 0.4729368182753653,
+  "adapter_wer": 0.4328737051519517,
+  "wer_change_percentage_points": -4.00631131234136,
+  "relative_wer_reduction": 0.08471134319698288,
+  "baseline_exact": 260,
+  "adapter_exact": 348,
+  "baseline_exact_rate": 0.21666666666666667,
+  "adapter_exact_rate": 0.29,
+  "baseline_empty_normalized": 67,
+  "adapter_empty_normalized": 0,
+  "baseline_empty_raw": 0,
+  "adapter_empty_raw": 0,
+  "changed_hypotheses": 909,
+  "exact_change_counts": {
+    "both_exact": 216,
+    "corrected": 132,
+    "regressed": 44,
+    "both_inexact": 808
+  },
+  "failed_rows": 0,
+  "note": "Status describes execution integrity, not a quality improvement gate. WER values are ratios."
+}

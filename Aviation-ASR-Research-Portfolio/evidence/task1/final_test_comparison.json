@@ -1,0 +1,761 @@
+{
+  "status": "ok",
+  "test_used": true,
+  "same_test_rows": true,
+  "rows": 1200,
+  "models": {
+    "baseline": {
+      "asr": {
+        "rows": 1200,
+        "corpus_wer": 0.6034093757834044,
+        "exact": 273,
+        "exact_rate": 0.2275,
+        "empty_normalized": 68,
+        "empty_raw": 0,
+        "failed_rows": 0
+      },
+      "all_test_rows": {
+        "rows": 1200,
+        "reference_entity_rows": 371,
+        "reference_no_entity_rows": 829,
+        "entity_exact_on_reference_positive": 116,
+        "entity_exact_rate_on_reference_positive": 0.31266846361185985,
+        "predicted_values_on_reference_no_entity_rows": 0,
+        "rows_with_predictions_on_reference_no_entity_rows": 0,
+        "micro": {
+          "tp": 182,
+          "fp": 7,
+          "fn": 299,
+          "support": 481,
+          "predicted": 189,
+          "precision": 0.9629629629629629,
+          "recall": 0.3783783783783784,
+          "f1": 0.5432835820895522
+        },
+        "per_type": {
+          "callsign": {
+            "tp": 11,
+            "fp": 2,
+            "fn": 147,
+            "support": 158,
+            "predicted": 13,
+            "precision": 0.8461538461538461,
+            "recall": 0.06962025316455696,
+            "f1": 0.1286549707602339,
+            "reference_rows": 155
+          },
+          "runway": {
+            "tp": 58,
+            "fp": 3,
+            "fn": 63,
+            "support": 121,
+            "predicted": 61,
+            "precision": 0.9508196721311475,
+            "recall": 0.4793388429752066,
+            "f1": 0.6373626373626373,
+            "reference_rows": 121
+          },
+          "heading": {
+            "tp": 26,
+            "fp": 0,
+            "fn": 34,
+            "support": 60,
+            "predicted": 26,
+            "precision": 1.0,
+            "recall": 0.43333333333333335,
+            "f1": 0.6046511627906976,
+            "reference_rows": 60
+          },
+          "frequency": {
+            "tp": 19,
+            "fp": 1,
+            "fn": 10,
+            "support": 29,
+            "predicted": 20,
+            "precision": 0.95,
+            "recall": 0.6551724137931034,
+            "f1": 0.7755102040816326,
+            "reference_rows": 29
+          },
+          "distance": {
+            "tp": 33,
+            "fp": 1,
+            "fn": 9,
+            "support": 42,
+            "predicted": 34,
+            "precision": 0.9705882352941176,
+            "recall": 0.7857142857142857,
+            "f1": 0.868421052631579,
+            "reference_rows": 42
+          },
+          "time": {
+            "tp": 33,
+            "fp": 0,
+            "fn": 35,
+            "support": 68,
+            "predicted": 33,
+            "precision": 1.0,
+            "recall": 0.4852941176470588,
+            "f1": 0.6534653465346535,
+            "reference_rows": 60
+          },
+          "flight_level": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "altitude_m": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "support": 2,
+            "predicted": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "reference_rows": 2
+          },
+          "altitude_ft": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "speed": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "qnh": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "pob": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "squawk": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "support": 1,
+            "predicted": 0,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "reference_rows": 1
+          }
+        }
+      },
+      "reference_entity_positive_rows": {
+        "rows": 371,
+        "reference_entity_rows": 371,
+        "reference_no_entity_rows": 0,
+        "entity_exact_on_reference_positive": 116,
+        "entity_exact_rate_on_reference_positive": 0.31266846361185985,
+        "predicted_values_on_reference_no_entity_rows": 0,
+        "rows_with_predictions_on_reference_no_entity_rows": 0,
+        "micro": {
+          "tp": 182,
+          "fp": 7,
+          "fn": 299,
+          "support": 481,
+          "predicted": 189,
+          "precision": 0.9629629629629629,
+          "recall": 0.3783783783783784,
+          "f1": 0.5432835820895522
+        },
+        "per_type": {
+          "callsign": {
+            "tp": 11,
+            "fp": 2,
+            "fn": 147,
+            "support": 158,
+            "predicted": 13,
+            "precision": 0.8461538461538461,
+            "recall": 0.06962025316455696,
+            "f1": 0.1286549707602339,
+            "reference_rows": 155
+          },
+          "runway": {
+            "tp": 58,
+            "fp": 3,
+            "fn": 63,
+            "support": 121,
+            "predicted": 61,
+            "precision": 0.9508196721311475,
+            "recall": 0.4793388429752066,
+            "f1": 0.6373626373626373,
+            "reference_rows": 121
+          },
+          "heading": {
+            "tp": 26,
+            "fp": 0,
+            "fn": 34,
+            "support": 60,
+            "predicted": 26,
+            "precision": 1.0,
+            "recall": 0.43333333333333335,
+            "f1": 0.6046511627906976,
+            "reference_rows": 60
+          },
+          "frequency": {
+            "tp": 19,
+            "fp": 1,
+            "fn": 10,
+            "support": 29,
+            "predicted": 20,
+            "precision": 0.95,
+            "recall": 0.6551724137931034,
+            "f1": 0.7755102040816326,
+            "reference_rows": 29
+          },
+          "distance": {
+            "tp": 33,
+            "fp": 1,
+            "fn": 9,
+            "support": 42,
+            "predicted": 34,
+            "precision": 0.9705882352941176,
+            "recall": 0.7857142857142857,
+            "f1": 0.868421052631579,
+            "reference_rows": 42
+          },
+          "time": {
+            "tp": 33,
+            "fp": 0,
+            "fn": 35,
+            "support": 68,
+            "predicted": 33,
+            "precision": 1.0,
+            "recall": 0.4852941176470588,
+            "f1": 0.6534653465346535,
+            "reference_rows": 60
+          },
+          "flight_level": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "altitude_m": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "support": 2,
+            "predicted": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "reference_rows": 2
+          },
+          "altitude_ft": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "speed": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "qnh": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "pob": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "squawk": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "support": 1,
+            "predicted": 0,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "reference_rows": 1
+          }
+        }
+      }
+    },
+    "lora": {
+      "asr": {
+        "rows": 1200,
+        "corpus_wer": 0.5013787916771121,
+        "exact": 411,
+        "exact_rate": 0.3425,
+        "empty_normalized": 0,
+        "empty_raw": 0,
+        "failed_rows": 0
+      },
+      "all_test_rows": {
+        "rows": 1200,
+        "reference_entity_rows": 371,
+        "reference_no_entity_rows": 829,
+        "entity_exact_on_reference_positive": 140,
+        "entity_exact_rate_on_reference_positive": 0.37735849056603776,
+        "predicted_values_on_reference_no_entity_rows": 104,
+        "rows_with_predictions_on_reference_no_entity_rows": 98,
+        "micro": {
+          "tp": 207,
+          "fp": 202,
+          "fn": 274,
+          "support": 481,
+          "predicted": 409,
+          "precision": 0.5061124694376528,
+          "recall": 0.4303534303534304,
+          "f1": 0.4651685393258427
+        },
+        "per_type": {
+          "callsign": {
+            "tp": 35,
+            "fp": 182,
+            "fn": 123,
+            "support": 158,
+            "predicted": 217,
+            "precision": 0.16129032258064516,
+            "recall": 0.22151898734177214,
+            "f1": 0.18666666666666668,
+            "reference_rows": 155
+          },
+          "runway": {
+            "tp": 56,
+            "fp": 8,
+            "fn": 65,
+            "support": 121,
+            "predicted": 64,
+            "precision": 0.875,
+            "recall": 0.4628099173553719,
+            "f1": 0.6054054054054054,
+            "reference_rows": 121
+          },
+          "heading": {
+            "tp": 27,
+            "fp": 1,
+            "fn": 33,
+            "support": 60,
+            "predicted": 28,
+            "precision": 0.9642857142857143,
+            "recall": 0.45,
+            "f1": 0.6136363636363636,
+            "reference_rows": 60
+          },
+          "frequency": {
+            "tp": 19,
+            "fp": 1,
+            "fn": 10,
+            "support": 29,
+            "predicted": 20,
+            "precision": 0.95,
+            "recall": 0.6551724137931034,
+            "f1": 0.7755102040816326,
+            "reference_rows": 29
+          },
+          "distance": {
+            "tp": 34,
+            "fp": 10,
+            "fn": 8,
+            "support": 42,
+            "predicted": 44,
+            "precision": 0.7727272727272727,
+            "recall": 0.8095238095238095,
+            "f1": 0.7906976744186046,
+            "reference_rows": 42
+          },
+          "time": {
+            "tp": 34,
+            "fp": 0,
+            "fn": 34,
+            "support": 68,
+            "predicted": 34,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "reference_rows": 60
+          },
+          "flight_level": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "altitude_m": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "support": 2,
+            "predicted": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "reference_rows": 2
+          },
+          "altitude_ft": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "speed": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "qnh": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "pob": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "squawk": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "support": 1,
+            "predicted": 0,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "reference_rows": 1
+          }
+        }
+      },
+      "reference_entity_positive_rows": {
+        "rows": 371,
+        "reference_entity_rows": 371,
+        "reference_no_entity_rows": 0,
+        "entity_exact_on_reference_positive": 140,
+        "entity_exact_rate_on_reference_positive": 0.37735849056603776,
+        "predicted_values_on_reference_no_entity_rows": 0,
+        "rows_with_predictions_on_reference_no_entity_rows": 0,
+        "micro": {
+          "tp": 207,
+          "fp": 98,
+          "fn": 274,
+          "support": 481,
+          "predicted": 305,
+          "precision": 0.6786885245901639,
+          "recall": 0.4303534303534304,
+          "f1": 0.5267175572519084
+        },
+        "per_type": {
+          "callsign": {
+            "tp": 35,
+            "fp": 84,
+            "fn": 123,
+            "support": 158,
+            "predicted": 119,
+            "precision": 0.29411764705882354,
+            "recall": 0.22151898734177214,
+            "f1": 0.2527075812274368,
+            "reference_rows": 155
+          },
+          "runway": {
+            "tp": 56,
+            "fp": 7,
+            "fn": 65,
+            "support": 121,
+            "predicted": 63,
+            "precision": 0.8888888888888888,
+            "recall": 0.4628099173553719,
+            "f1": 0.6086956521739131,
+            "reference_rows": 121
+          },
+          "heading": {
+            "tp": 27,
+            "fp": 1,
+            "fn": 33,
+            "support": 60,
+            "predicted": 28,
+            "precision": 0.9642857142857143,
+            "recall": 0.45,
+            "f1": 0.6136363636363636,
+            "reference_rows": 60
+          },
+          "frequency": {
+            "tp": 19,
+            "fp": 1,
+            "fn": 10,
+            "support": 29,
+            "predicted": 20,
+            "precision": 0.95,
+            "recall": 0.6551724137931034,
+            "f1": 0.7755102040816326,
+            "reference_rows": 29
+          },
+          "distance": {
+            "tp": 34,
+            "fp": 5,
+            "fn": 8,
+            "support": 42,
+            "predicted": 39,
+            "precision": 0.8717948717948718,
+            "recall": 0.8095238095238095,
+            "f1": 0.8395061728395061,
+            "reference_rows": 42
+          },
+          "time": {
+            "tp": 34,
+            "fp": 0,
+            "fn": 34,
+            "support": 68,
+            "predicted": 34,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "reference_rows": 60
+          },
+          "flight_level": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "altitude_m": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "support": 2,
+            "predicted": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "reference_rows": 2
+          },
+          "altitude_ft": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "speed": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "qnh": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "pob": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "predicted": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_rows": 0
+          },
+          "squawk": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "support": 1,
+            "predicted": 0,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "reference_rows": 1
+          }
+        }
+      }
+    }
+  },
+  "baseline_reused": true,
+  "baseline_job_id": "161294",
+  "adapter": "/data/home/scyb475/run/czm/adapters/train_full_163783",
+  "adapter_final_test_runs": 1,
+  "known_history": [
+    "2026-09-13: baseline test first 100 smoke and complete 1200 under job 161294",
+    "Current final test: reuse full baseline predictions; run selected adapter once; no test-driven tuning"
+  ],
+  "protocol": {
+    "task": "task1 spoken-form ASR entity-value evaluation",
+    "test_used": true,
+    "reference": "raw test transcription_n; frozen rules",
+    "prediction": "saved normalized hypothesis",
+    "matching": "exact (entity_type, canonical_hint) set intersection within each row; deduplicate identical values within row",
+    "main_scope": "all test rows",
+    "compatibility_scope": "reference_entity_positive_rows; repository main-table entity_metrics scope",
+    "zero_division": "precision/recall: null when denominator=0; F1: 2TP/(2TP+FP+FN), null only when denominator=0",
+    "callsign_prefixes": [
+      "air cruiser",
+      "blue nova",
+      "chase air",
+      "china star",
+      "exo",
+      "kingfisher",
+      "orbit air",
+      "ornate",
+      "zenith"
+    ],
+    "human_gold": false,
+    "rules_path": "/data/home/scyb475/run/zz/atc_entity_pipeline_20260723/src_entity_aux/atc_entity_rules.py",
+    "rules_sha256": "a73e9b901987665193a89fda4bce8a1a0bf83fe5a63777a01fe6fd9569997705",
+    "rules_changed": false,
+    "duplicate_spans_collapsed": {
+      "reference": 0,
+      "baseline": 3,
+      "lora": 7
+    }
+  },
+  "runtime": {
+    "status": "ok",
+    "job_id": "167945",
+    "started_at_utc": "2026-09-21T14:39:20.154150+00:00",
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "versions": {
+      "torch": "2.3.1+cu121",
+      "transformers": "4.35.2",
+      "peft": "0.6.0",
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "av": "17.1.0"
+    },
+    "seed": 20260913,
+    "test_used": true,
+    "plan_sha256": "2aa78fcfaded7870add9b7017c16d3c21fe269e6985aa39a534370204da35e9b",
+    "base_weight_sha256": {
+      "/data/home/scyb475/run/model/WhisperATC/whisper-large-v3-atco2-asr/training_args.bin": "1eb4f77e6d8139e50e4d9b8cd40debebdbc1cb3b3e88565963f183f5d8c330e5",
+      "/data/home/scyb475/run/model/WhisperATC/whisper-large-v3-atco2-asr/model.safetensors": "cf49b415ea67378ce91ae66ee6ecb3aebe1c7b002a03658d413f14442d8f3313"
+    },
+    "timing_scope": "generate_one includes feature extraction, generation, token decoding and confidence; excludes archive/audio decode; first 3 calls excluded from steady summary",
+    "wall_seconds": 849.2267172625288,
+    "finished_at_utc": "2026-09-21T14:53:33.162250+00:00",
+    "peak_gpu_allocated_bytes": 3434347520,
+    "peak_gpu_reserved_bytes": 3892314112,
+    "steady_timing": {
+      "warmup_rows_excluded": 3,
+      "rows": 1197,
+      "p50_seconds": 0.6429318888112903,
+      "p95_seconds": 1.1835667349398136,
+      "throughput_rows_per_second": 1.4629691853642894,
+      "rtf": 0.11111622121367327,
+      "decoded_audio_seconds": 7363.452812499995
+    }
+  },
+  "plan_sha256": "2aa78fcfaded7870add9b7017c16d3c21fe269e6985aa39a534370204da35e9b",
+  "quality_improvement_is_not_assumed": true
+}

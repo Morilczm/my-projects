@@ -1,0 +1,47 @@
+{
+  "status": "verified",
+  "job_id": "169202",
+  "original_job": "169151",
+  "prediction_files": 12,
+  "rows_each": 1200,
+  "independent_word_edit_recomputation": true,
+  "all_saved_metrics_match": true,
+  "per_subset_metrics_match": true,
+  "identities_and_gate_verified": true,
+  "oracle_original_bytes_reused": true,
+  "overlength_row_retained_in_denominators": true,
+  "overlength_raw_failure_rows": 1,
+  "overlength_guarded_fallback_rows": 1,
+  "primary_not_reselected_on_test": true,
+  "recovery_protocol_amendment_disclosed": true,
+  "wrapper_exit_code": 0,
+  "complete_status": "task2_final_test_complete_with_disclosed_recovery",
+  "slurm_sacct_independently_available": false,
+  "limits": [
+    "Raw remote test manifest and ASR CSV were not transferred; original remote identity/hash checks are recorded by frozen plan and executed code. Local verification checks cross-system identities, references and declared input hashes.",
+    "No model weights were downloaded or rehashed locally in this report; remote model checks and saved dev/test inventories agree.",
+    "GPU timing is recovery-only; not full original-plus-recovery wall clock, not end-to-end ASR latency."
+  ],
+  "source_sha256": {
+    "resolved_plan.json": "457c3a14f46b532b914f5c1a25f442a742de2e10d406b0776d6c1b739e7cd587",
+    "original_marker.json": "4caa59b99df208fd136952ee13116e8342ba4a7cbbd68128fca43f5d19d4389a",
+    "pipeline_exit_code.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "result/final_result.json": "dd033c2dc52fab3885d4e3ae93b8e3e3fb7a426c488423e65df75a1649aa5800",
+    "result/COMPLETE.json": "0527533579cbe41304e1a1cfd2bb828e3f62e62043c2b2efa7c3760ea140c48e",
+    "code/SHA256SUMS": "581fa3986d4413d115d8586ecec644e38327a2f8ee8d61e2416c9975d6ada789"
+  },
+  "predictions_sha256": {
+    "baseline_asr_conservative_rules.jsonl": "2aac3fca7bf877821096dfbbb6eee9f89e43cf58cad6bf5d7293ed8b4d1998f9",
+    "baseline_asr_guarded_t5.jsonl": "1f5fe81460bcf100a63fe2276de373b3f1cf095f6e1d638a404a31a0ee02d004",
+    "baseline_asr_legacy_rules.jsonl": "0e1ddc184dccab2d2dd4bb45a0275bba3d97ac5e366c3cae0e63c1bc21cc2273",
+    "baseline_asr_raw_t5.jsonl": "c11517ae025f5d91782c9350c2dfccc24a442647a8a90537d317bf14305e69ea",
+    "oracle_conservative_rules.jsonl": "e1e7fd7c8f48cb62b670ae26da98966521e1aaf2e1fd860b3bd3f40c83352927",
+    "oracle_guarded_t5.jsonl": "3dda8119b0e99247e2faad0e66ff4191fecaecb995663f81143895e52e2ae873",
+    "oracle_legacy_rules.jsonl": "edef0a85c8aa01f8d0d8b8c9d7f2fea7901cc349b59237c5db4e2038bda3d654",
+    "oracle_raw_t5.jsonl": "0512ca99d17b0b80374d87cdac0cb22c0be754d53d9dc2fce28ff1d69ce04819",
+    "task1_asr_conservative_rules.jsonl": "324134a68fd039f598601bc978f155daa7e2620044a14626901d72c3eb8770a7",
+    "task1_asr_guarded_t5.jsonl": "0163c9aed522f05a7be64a4e255393acf164b3fe488e41f6dc57a6dc2de4632a",
+    "task1_asr_legacy_rules.jsonl": "c273656ee877741ac2c82c6c85d48959e5a79d10b1c5b7aa936d05724362e872",
+    "task1_asr_raw_t5.jsonl": "7d8c0d7f7a3def759fae958f02d2318ce0b690537b06fb4d66f2e2f23a80d8b8"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "task": "task1 spoken-form ASR entity-value evaluation",
+  "test_used": false,
+  "reference": "raw train-independent dev transcription_n",
+  "prediction": "saved normalized hypothesis",
+  "matching": "exact (entity_type, canonical_hint) set intersection within each row; deduplicate identical values within row",
+  "main_scope": "all dev rows including false positives on rows with no rule-extracted reference entities",
+  "compatibility_scope": "reference_entity_positive_rows; repository main-table entity_metrics scope",
+  "zero_division": "precision/recall: null when denominator=0; F1: 2TP/(2TP+FP+FN), null only when denominator=0",
+  "callsign_prefixes": [
+    "air cruiser",
+    "blue nova",
+    "chase air",
+    "china star",
+    "exo",
+    "kingfisher",
+    "orbit air",
+    "ornate",
+    "zenith"
+  ],
+  "human_gold": false,
+  "rules_path": "/data/home/scyb475/run/zz/atc_entity_pipeline_20260723/src_entity_aux/atc_entity_rules.py",
+  "rules_sha256": "a73e9b901987665193a89fda4bce8a1a0bf83fe5a63777a01fe6fd9569997705",
+  "rules_changed": false,
+  "duplicate_spans_collapsed": {
+    "reference": 0,
+    "baseline": 3,
+    "lora": 7
+  }
+}

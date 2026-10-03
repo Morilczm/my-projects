@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>航空语音识别与统一文本恢复 | 科研作品集</title>
+  <style>
+    :root { color-scheme: light; --ink:#17252a; --muted:#52646a; --line:#d8e0dd; --paper:#f9fbf9; --white:#fff; --green:#11675b; --rust:#b35335; --blue:#2d617a; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.65 "Segoe UI", "Microsoft YaHei", sans-serif; }
+    a { color:var(--green); text-underline-offset:3px; }
+    .shell { width:min(1120px,calc(100% - 40px)); margin-inline:auto; }
+    header { background:var(--white); border-bottom:1px solid var(--line); }
+    .top { min-height:66px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { font-size:14px; font-weight:750; color:var(--ink); text-decoration:none; }
+    nav { display:flex; flex-wrap:wrap; gap:20px; font-size:13px; font-weight:650; }
+    nav a { color:var(--muted); text-decoration:none; }
+    nav a:hover, nav a:focus-visible { color:var(--green); }
+    main section { border-bottom:1px solid var(--line); }
+    .intro { padding:64px 0 48px; display:grid; grid-template-columns:minmax(0,1.3fr) minmax(240px,.7fr); gap:48px; align-items:start; }
+    .eyebrow { margin:0 0 12px; color:var(--rust); font-size:12px; font-weight:800; text-transform:uppercase; }
+    h1 { margin:0 0 18px; max-width:760px; font-size:clamp(32px,4vw,52px); line-height:1.17; font-weight:800; }
+    h2 { margin:0 0 20px; font-size:25px; line-height:1.3; }
+    h3 { margin:0 0 8px; font-size:17px; line-height:1.4; }
+    p { margin:0 0 18px; }
+    .lead { max-width:680px; font-size:18px; color:#34484e; }
+    .intro-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:42px; padding:9px 16px; border:1px solid var(--green); border-radius:4px; background:var(--green); color:white; text-decoration:none; font-size:14px; font-weight:700; }
+    .button.secondary { background:transparent; color:var(--green); }
+    .paper { margin:0; border:1px solid var(--line); background:white; padding:9px; }
+    .paper img { display:block; width:100%; max-height:340px; object-fit:cover; object-position:top; }
+    .paper figcaption { padding:8px 4px 2px; color:var(--muted); font-size:12px; }
+    .band { padding:42px 0; }
+    .section-head { display:flex; align-items:baseline; justify-content:space-between; gap:24px; }
+    .scope { color:var(--muted); font-size:13px; }
+    .flow { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0; margin-top:18px; border:1px solid var(--line); background:white; }
+    .step { padding:19px 22px; min-width:0; }
+    .step + .step { border-left:1px solid var(--line); }
+    .step .number { display:block; color:var(--rust); font-size:12px; font-weight:800; }
+    .step strong { display:block; margin:5px 0; font-size:16px; }
+    .step span:last-child { display:block; color:var(--muted); font-size:13px; }
+    .columns { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:42px; }
+    .metric-group { border-top:3px solid var(--green); padding-top:15px; }
+    .metric-group.alt { border-top-color:var(--blue); }
+    .stat-line { display:flex; justify-content:space-between; gap:12px; padding:10px 0; border-bottom:1px solid var(--line); }
+    .stat-line .label { color:var(--muted); font-size:14px; }
+    .stat-line strong { font-size:15px; text-align:right; }
+    .down { color:var(--green); }
+    .risk { color:var(--rust); }
+    .note { margin-top:18px; color:var(--muted); font-size:13px; }
+    .insight-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; }
+    .insight { padding-top:12px; border-top:1px solid var(--line); }
+    .insight p { color:var(--muted); font-size:14px; }
+    .document-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 32px; }
+    .document { display:flex; justify-content:space-between; gap:14px; padding:12px 0; border-bottom:1px solid var(--line); text-decoration:none; }
+    .document span { color:var(--ink); font-weight:650; }
+    .document small { color:var(--muted); white-space:nowrap; }
+    footer { padding:28px 0 42px; color:var(--muted); font-size:13px; }
+    @media (max-width:760px) { .intro,.columns,.insight-grid,.document-grid { grid-template-columns:1fr; } .intro { gap:28px; padding-top:40px; } .paper { max-width:340px; } .section-head { display:block; } .flow { grid-template-columns:1fr; } .step + .step { border-left:0; border-top:1px solid var(--line); } nav { gap:11px; } .top { align-items:flex-start; flex-direction:column; padding-block:14px; gap:8px; } .band { padding:32px 0; } }
+  </style>
+</head>
+<body>
+  <header><div class="shell top"><a class="brand" href="#top">AVIATION ASR / RESEARCH PORTFOLIO</a><nav aria-label="页面导航"><a href="#pipeline">研究路线</a><a href="#results">实验结果</a><a href="#findings">关键发现</a><a href="#materials">资料与证据</a></nav></div></header>
+  <main id="top">
+    <section><div class="shell intro">
+      <div><p class="eyebrow">科研项目 · 2026</p><h1>航空语音识别与统一文本恢复</h1><p class="lead">从航空录音到口语转写，再到规范书面文本。通过参数高效适配与实体级评估，研究整体识别准确率与关键航空信息可靠性之间的差异。</p><p class="scope">个人实习实验：12,000 train / 1,200 dev / 1,200 test。论文完整实验：58,507 条课程录音，作为背景材料单独列示。</p><div class="intro-actions"><a class="button" href="01_project_overview.md">阅读项目概览</a><a class="button secondary" href="papers/Rule_Guided_Weak_Supervision_for_Entity_Aware_Aviation_Speech_Recognition_and_Unified_Text_Restoration.pdf">查看论文 PDF</a></div></div>
+      <figure class="paper"><a href="papers/Rule_Guided_Weak_Supervision_for_Entity_Aware_Aviation_Speech_Recognition_and_Unified_Text_Restoration.pdf"><img src="papers/paper-page-1.png" alt="航空语音识别论文首页预览"></a><figcaption>论文首页 · 完整研究实验的背景材料</figcaption></figure>
+    </div></section>
+    <section id="pipeline"><div class="shell band"><div class="section-head"><h2>研究路线</h2><span class="scope">两个阶段，四层评价</span></div><div class="flow"><div class="step"><span class="number">01 / INPUT</span><strong>航空课程录音</strong><span>共享音频归档与冻结数据清单</span></div><div class="step"><span class="number">02 / RECOGNITION</span><strong>Whisper + Decoder LoRA</strong><span>生成 spoken-form，计算 WER、Exact 和实体指标</span></div><div class="step"><span class="number">03 / RESTORATION</span><strong>规则 / Flan-T5 / Gate</strong><span>恢复 canonical 文本，并分析上游错误传播</span></div></div><p class="note">以 oracle spoken、基模 ASR 和任务一 ASR 作为不同输入，分别识别恢复能力与实际串联表现。<a href="02_method_and_pipeline.md">方法与评估协议</a></p></div></section>
+    <section id="results"><div class="shell band"><div class="section-head"><h2>个人实验结果</h2><span class="scope">冻结子集的最终 test，n = 1,200</span></div><div class="columns"><div class="metric-group"><h3>任务一 · spoken-form ASR</h3><div class="stat-line"><span class="label">WER</span><strong class="down">60.34% → 50.14%</strong></div><div class="stat-line"><span class="label">Exact</span><strong>22.75% → 34.25%</strong></div><div class="stat-line"><span class="label">实体 micro F1</span><strong class="risk">54.33% → 46.52%</strong></div><p class="note">Decoder-only LoRA 提高整体转写指标，但实体精确率下降，呼号误报突出。</p></div><div class="metric-group alt"><h3>任务二 · canonical 文本恢复</h3><div class="stat-line"><span class="label">dev 选定主方案 WER</span><strong>54.73%</strong></div><div class="stat-line"><span class="label">主方案 Exact / 实体 F1</span><strong>33.92% / 48.93%</strong></div><div class="stat-line"><span class="label">固定 T5 + gate 对照 WER</span><strong>52.08%</strong></div><p class="note">主方案为任务一 ASR + legacy rules，按 dev 指标预先选定；test 的其他指标仅作为对照报告。</p></div></div><p class="note"><a href="03_results.md">查看完整 dev/test 对照与结果来源</a></p></div></section>
+    <section id="findings"><div class="shell band"><h2>关键发现与边界</h2><div class="insight-grid"><div class="insight"><h3>WER 不能代替实体可靠性</h3><p>更少的词错误可与更多错误呼号同时出现。跑道、航向、频率等关键字段需要单独评价。</p></div><div class="insight"><h3>干净输入不代表真实串联系统</h3><p>T5 在 oracle spoken 上可学习格式转换，但 ASR 已经丢失的实体证据无法仅靠规范化可靠恢复。</p></div><div class="insight"><h3>保留异常与复核记录</h3><p>任务二 test 有一条超出输入预算的样本；失败、回退、复用和评分分母均在最终报告中披露。</p></div></div><p class="note">课程录音不是实时无线电；实体标签来自固定规则，不是人工金标准。<a href="05_limitations_and_next_steps.md">局限与后续工作</a></p></div></section>
+    <section id="materials"><div class="shell band"><h2>资料与证据</h2><div class="document-grid"><a class="document" href="reports/任务一_实验总结报告.md"><span>任务一实验报告</span><small>个人成果</small></a><a class="document" href="reports/任务二_最终实验总结报告.md"><span>任务二最终报告</span><small>个人成果</small></a><a class="document" href="evidence/task1/FINAL_TEST_REPORT.md"><span>ASR 最终 test</span><small>结果证据</small></a><a class="document" href="evidence/task2/verification.json"><span>任务二验证记录</span><small>审计证据</small></a><a class="document" href="guides/REPRODUCTION.md"><span>共享项目复现指南</span><small>背景资料</small></a><a class="document" href="guides/INTERN_ASSESSMENT_TASK.md"><span>实习任务手册</span><small>任务依据</small></a><a class="document" href="04_reproduction.md"><span>复现与文件来源</span><small>使用说明</small></a><a class="document" href="MANIFEST.json"><span>文件清单与 SHA-256</span><small>来源记录</small></a></div></div></section>
+  </main>
+  <footer><div class="shell">科研作品集 · 本地离线浏览 · 大型模型与音频仍在集群原路径</div></footer>
+</body>
+</html>

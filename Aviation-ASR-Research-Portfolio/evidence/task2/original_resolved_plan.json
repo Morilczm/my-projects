@@ -1,0 +1,109 @@
+{
+  "status": "resolved_and_frozen_before_task2_test",
+  "frozen_date": "2026-09-23",
+  "primary_system": "task1_asr_plus_legacy_rules",
+  "model_comparators": [
+    "trained_flan_t5_raw",
+    "trained_flan_t5_guarded"
+  ],
+  "modes": {
+    "oracle": "transcription_n",
+    "baseline_asr": "baseline_hypothesis",
+    "task1_asr": "task1_hypothesis"
+  },
+  "test_manifest": "/data/home/scyb475/run/zz/data_relationship_audit/intern_assessment_subset_20260911/test_manifest.csv.gz",
+  "baseline_details": "/data/home/scyb475/run/czm/results/baseline_3_4_161294/test/whisper_atco2_baseline_test_details.csv",
+  "task1_details": "/data/home/scyb475/run/czm/results/final_test_167945/lora_final_test_details.csv",
+  "task1_summary": "/data/home/scyb475/run/czm/results/final_test_167945/lora_final_test_summary.json",
+  "task1_final_comparison": "/data/home/scyb475/run/czm/results/final_test_167945/final_test_comparison.json",
+  "task1_complete": "/data/home/scyb475/run/czm/results/final_test_167945/COMPLETE.json",
+  "trained_model": "/data/home/scyb475/run/czm/task2/full_v1_168698/training/model",
+  "task2_training_record": "/data/home/scyb475/run/czm/task2/full_v1_168698/training/training.json",
+  "task2_dev_summary": "/data/home/scyb475/run/czm/task2/full_v1_168698/dev_summary.json",
+  "task2_full_result": "/data/home/scyb475/run/czm/task2/full_v1_168698/full_result.json",
+  "expected_sha256": {
+    "test_manifest": "b0678927be64bab75b46cc7bbf558855a92cad44a6f55d293f13955573dc899e",
+    "baseline_details": "17a6d5261405bb78230196ff3606eeb08837c34abc5a8402250acdacc88a139b",
+    "task1_final_comparison": "8e252148d10b2976ab3f0b4a8d317c7e33d531bfa43a5f33d8a2125b7f18abf0",
+    "task1_complete": "30890cbf7734575d63bf7508896d8d9b9a01d32415f20ad318ef564d12047660",
+    "task2_training_record": "60ac19d199614ef9bdf8f0e36f2bcf1af361c22f89ce073aee89ae0dbaa4f59e",
+    "task2_dev_summary": "8ffd6bf452e07b4f97cf328134bc031a2596a4dcfd7c2eb2c68b7523a322a944",
+    "task2_full_result": "427840006a6978de2fd79b58614d826e2371eb343c88795deaeeddbf2f71e4cf"
+  },
+  "trained_model_sha256": {
+    "tokenizer.json": "f228c94709d6f4ae55e80160e7fcb4257299bf15fbee3e1f758ba4a40a51495d",
+    "config.json": "cb07f158f5a979c4a56e80c43a60b0a287b39c7ae99c115d0d2023914b1e2355",
+    "generation_config.json": "bffbc218fd150d938535991586f61ed1568d371e4a235e94a4f52ca75e54f9ff",
+    "tokenizer_config.json": "6fa625547e73f7a565e5fa7f6cc0b89e61c521c15816c8415238f639fa5b9e21",
+    "model.safetensors": "262ccb7d67e840e1f36543a3fafc745040a279291029b9d6c2d4a5f60f042373",
+    "special_tokens_map.json": "5c87151ef0f72a99d1f766a4c418bd2a1f90aaa30a8e22fe5eca9641daebb64f",
+    "spiece.model": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86"
+  },
+  "model_revision": "7bcac572ce56db69c1ea7c8af255c5d7c9672fc2",
+  "generation": {
+    "num_beams": 1,
+    "do_sample": false,
+    "max_new_tokens": 192
+  },
+  "precision": "float32",
+  "eval_batch_size": 4,
+  "max_source_tokens": 256,
+  "max_target_tokens": 192,
+  "gate_policy": "ordered-content-equivalence-v1",
+  "entity_protocol": "task2-canonical-13-types-v1 all rows",
+  "normalization": "frozen legacy normalize_eval; decimal punctuation retained for model target and entity extraction",
+  "test_history": [
+    "Task1 baseline test used in job 161294",
+    "Task1 LoRA final test used once in job 167945",
+    "Task2 has not used test reference for model/rule/gate/checkpoint selection"
+  ],
+  "selection_sha256": "a3a77bfd64f55ec8aa6697b5b8a59f86d5eb1c3097e10b867d7dcfb6ba792dcd",
+  "test_used_for_selection": false,
+  "post_test_tuning_allowed": false,
+  "test_run_policy": "single frozen task2 generation run; all declared systems reported; no selection from test",
+  "resolved_sha256": {
+    "test_manifest": "b0678927be64bab75b46cc7bbf558855a92cad44a6f55d293f13955573dc899e",
+    "baseline_details": "17a6d5261405bb78230196ff3606eeb08837c34abc5a8402250acdacc88a139b",
+    "task1_details": "432e8541cb8bdb0370fa8528020a26f6338dba2f1a73a3ab89e5590ca9bf7f41",
+    "task1_summary": "ab569b389295061cd667cfddf640b746d595bb8b3f3a1d55bfb8fd59fee3d1bc",
+    "task1_final_comparison": "8e252148d10b2976ab3f0b4a8d317c7e33d531bfa43a5f33d8a2125b7f18abf0",
+    "task1_complete": "30890cbf7734575d63bf7508896d8d9b9a01d32415f20ad318ef564d12047660",
+    "task2_training_record": "60ac19d199614ef9bdf8f0e36f2bcf1af361c22f89ce073aee89ae0dbaa4f59e",
+    "task2_dev_summary": "8ffd6bf452e07b4f97cf328134bc031a2596a4dcfd7c2eb2c68b7523a322a944",
+    "task2_full_result": "427840006a6978de2fd79b58614d826e2371eb343c88795deaeeddbf2f71e4cf"
+  },
+  "package_sha256s_sha256": "0a8030a29222e817a90f67c5a3038bda27911e1ad499878a40d5e490815b40c7",
+  "package_path": "/data/home/scyb475/run/czm/task2/configs/task2_final_0a8030a29222/package",
+  "task2_versions": {
+    "torch": "2.3.1+cu121",
+    "transformers": "4.35.2",
+    "numpy": "2.2.6",
+    "sentencepiece": "0.2.1",
+    "safetensors": "0.7.0"
+  },
+  "task2_torch_file": "/data/home/scyb475/.local/lib/python3.10/site-packages/torch/__init__.py",
+  "task1_asr_summary": {
+    "baseline": {
+      "rows": 1200,
+      "corpus_wer": 0.6034093757834044,
+      "exact": 273,
+      "exact_rate": 0.2275,
+      "empty_normalized": 68,
+      "empty_raw": 0,
+      "failed_rows": 0
+    },
+    "lora": {
+      "rows": 1200,
+      "corpus_wer": 0.5013787916771121,
+      "exact": 411,
+      "exact_rate": 0.3425,
+      "empty_normalized": 0,
+      "empty_raw": 0,
+      "failed_rows": 0
+    }
+  },
+  "task1_details_role": {
+    "baseline_asr": "/data/home/scyb475/run/czm/results/baseline_3_4_161294/test/whisper_atco2_baseline_test_details.csv",
+    "task1_asr": "/data/home/scyb475/run/czm/results/final_test_167945/lora_final_test_details.csv"
+  }
+}

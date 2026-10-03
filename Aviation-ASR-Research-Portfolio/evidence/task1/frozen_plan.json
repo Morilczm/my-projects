@@ -1,0 +1,121 @@
+{
+  "status": "frozen",
+  "frozen_at_utc": "2026-09-21T14:24:27.694316+00:00",
+  "model": "/data/home/scyb475/run/model/WhisperATC/whisper-large-v3-atco2-asr",
+  "adapter": "/data/home/scyb475/run/czm/adapters/train_full_163783",
+  "manifest": "/data/home/scyb475/run/zz/data_relationship_audit/intern_assessment_subset_20260911/test_manifest.csv.gz",
+  "baseline_details": "/data/home/scyb475/run/czm/results/baseline_3_4_161294/test/whisper_atco2_baseline_test_details.csv",
+  "baseline_summary": "/data/home/scyb475/run/czm/results/baseline_3_4_161294/test/whisper_atco2_baseline_test_summary.json",
+  "baseline_metadata": "/data/home/scyb475/run/czm/results/baseline_3_4_161294/test/run_metadata.json",
+  "evaluator": "/data/home/scyb475/run/czm/configs/final_test_train_full_163783_v1/eval_v3_entity_confidence.py",
+  "entity_rules": "/data/home/scyb475/run/czm/configs/final_test_train_full_163783_v1/atc_entity_rules.py",
+  "entity_scorer": "/data/home/scyb475/run/czm/configs/final_test_train_full_163783_v1/entity_scorer.py",
+  "versions": {
+    "torch": "2.3.1+cu121",
+    "transformers": "4.35.2",
+    "peft": "0.6.0",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "av": "17.1.0"
+  },
+  "gpu_model": "NVIDIA A800-SXM4-80GB",
+  "seed": 20260913,
+  "generation": {
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "no_repeat_ngram_size": 0,
+    "language": "en",
+    "task": "transcribe",
+    "precision": "fp16",
+    "no_reference_prompt": true
+  },
+  "entity_protocol": {
+    "task": "task1 spoken-form ASR entity-value evaluation",
+    "test_used": true,
+    "reference": "raw test transcription_n; frozen rules",
+    "prediction": "saved normalized hypothesis",
+    "matching": "exact (entity_type, canonical_hint) set intersection within each row; deduplicate identical values within row",
+    "main_scope": "all test rows",
+    "compatibility_scope": "reference_entity_positive_rows; repository main-table entity_metrics scope",
+    "zero_division": "precision/recall: null when denominator=0; F1: 2TP/(2TP+FP+FN), null only when denominator=0",
+    "callsign_prefixes": [
+      "air cruiser",
+      "blue nova",
+      "chase air",
+      "china star",
+      "exo",
+      "kingfisher",
+      "orbit air",
+      "ornate",
+      "zenith"
+    ],
+    "human_gold": false,
+    "rules_path": "/data/home/scyb475/run/zz/atc_entity_pipeline_20260723/src_entity_aux/atc_entity_rules.py",
+    "rules_sha256": "a73e9b901987665193a89fda4bce8a1a0bf83fe5a63777a01fe6fd9569997705",
+    "rules_changed": false,
+    "duplicate_spans_collapsed": {
+      "reference": 0,
+      "baseline": 3,
+      "lora": 7
+    }
+  },
+  "test_history": [
+    "2026-09-13: baseline test first 100 smoke and complete 1200 under job 161294",
+    "Current final test: reuse full baseline predictions; run selected adapter once; no test-driven tuning"
+  ],
+  "baseline_reuse_checks": {
+    "manifest_hash_match": true,
+    "evaluator_hash_match": true,
+    "versions_match": true,
+    "generation_config_match": true,
+    "prediction_fingerprints_match": true,
+    "historical_weight_content_hash_available": false
+  },
+  "base_weight_stat": {
+    "/data/home/scyb475/run/model/WhisperATC/whisper-large-v3-atco2-asr/training_args.bin": {
+      "size": 5883,
+      "mtime_ns": 1780679674206612912
+    },
+    "/data/home/scyb475/run/model/WhisperATC/whisper-large-v3-atco2-asr/model.safetensors": {
+      "size": 3219908024,
+      "mtime_ns": 1780680317148000888
+    }
+  },
+  "fingerprints": {
+    "/data/home/scyb475/run/zz/data_relationship_audit/intern_assessment_subset_20260911/test_manifest.csv.gz": "b0678927be64bab75b46cc7bbf558855a92cad44a6f55d293f13955573dc899e",
+    "/data/home/scyb475/run/zz/atc_entity_pipeline_20260723/src_entity_aux/eval_v3_entity_confidence.py": "2492ea3117a8270fed5f30fcabc8ac0cee642aeaa6a35f31f32bcde1100a00a7",
+    "/data/home/scyb475/run/zz/atc_entity_pipeline_20260723/src_entity_aux/atc_entity_rules.py": "a73e9b901987665193a89fda4bce8a1a0bf83fe5a63777a01fe6fd9569997705",
+    "/data/home/scyb475/run/czm/results/baseline_3_4_161294/test/run_metadata.json": "91c3499b9a5e83e9f0540c7296590ac9546dbc95580e5362800d3dc44b651c0e",
+    "/data/home/scyb475/run/czm/results/baseline_3_4_161294/test/whisper_atco2_baseline_test_summary.json": "658677226f4f07afd52429864a3f3bcdb565584cf1448f7bb09303255d16c1f1",
+    "/data/home/scyb475/run/czm/results/baseline_3_4_161294/test/whisper_atco2_baseline_test_details.csv": "17a6d5261405bb78230196ff3606eeb08837c34abc5a8402250acdacc88a139b",
+    "/data/home/scyb475/run/czm/scripts/run_final_test_v1.sbatch": "0c3c059ded6a8b6ff6ba311e9028daf65f005c7d1087d594011fef1c51a5006b",
+    "/data/home/scyb475/run/czm/configs/final_test_train_full_163783_v1/dev_selection_record.json": "31f8a3fe2c31e34c41e325ffec703250d2a48679b23a1d165320580553b85f97",
+    "/data/home/scyb475/run/czm/configs/final_test_train_full_163783_v1/run_final_test_v1.sbatch": "0c3c059ded6a8b6ff6ba311e9028daf65f005c7d1087d594011fef1c51a5006b",
+    "/data/home/scyb475/run/czm/configs/final_test_train_full_163783_v1/historical_baseline_metadata.json": "91c3499b9a5e83e9f0540c7296590ac9546dbc95580e5362800d3dc44b651c0e",
+    "/data/home/scyb475/run/czm/configs/final_test_train_full_163783_v1/eval_v3_entity_confidence.py": "2492ea3117a8270fed5f30fcabc8ac0cee642aeaa6a35f31f32bcde1100a00a7",
+    "/data/home/scyb475/run/czm/configs/final_test_train_full_163783_v1/entity_scorer.py": "f69c4a285564b76ce6fdb431843749e90faee567c213af8890c265a0a22ed7ad",
+    "/data/home/scyb475/run/czm/configs/final_test_train_full_163783_v1/run_final_test.py": "e05c8424cbdf9e5351fca3058ab153408363478f0df655d17298a2520602f0e8",
+    "/data/home/scyb475/run/czm/configs/final_test_train_full_163783_v1/atc_entity_rules.py": "a73e9b901987665193a89fda4bce8a1a0bf83fe5a63777a01fe6fd9569997705",
+    "/data/home/scyb475/run/czm/adapters/train_full_163783/prefix_alignment.json": "4f6567254a6bd8b3fbc4c22143f1003040294c7168663994acf43045fed71eff",
+    "/data/home/scyb475/run/czm/adapters/train_full_163783/README.md": "8ea36230e110657a549e05922c0d8234efea79564c78347495e1c36eb3fbf011",
+    "/data/home/scyb475/run/czm/adapters/train_full_163783/vocab.json": "e2aa043ef015641d363d8288e7c241c85e36a5c761fb303598e0710233344387",
+    "/data/home/scyb475/run/czm/adapters/train_full_163783/adapter_model.bin": "6b7a71661ad447800742c19c38d81ab6517a985b1073f5949bcb388f37538081",
+    "/data/home/scyb475/run/czm/adapters/train_full_163783/training_model_config.json": "1f91a96e13be26f18adf5db7750703379fd854f4c49a671865ac33eea500565b",
+    "/data/home/scyb475/run/czm/adapters/train_full_163783/entity_weighted_lora_summary.json": "ce40f2848a621579d4016115d69ae4b854bb8b1914fd2d8f1b75cff872084670",
+    "/data/home/scyb475/run/czm/adapters/train_full_163783/adapter_config.json": "d99cd390b79eecb263fbc34abcde0dbbfe2354606cc5f0bc440eb7b6b1e31c2a",
+    "/data/home/scyb475/run/czm/adapters/train_full_163783/resolved_train_args.json": "477a25e044fe0a3b676e778d723f68f507a7462c3d9858b64e27d6519a50a181",
+    "/data/home/scyb475/run/czm/adapters/train_full_163783/added_tokens.json": "3c51f66c4c21f9e126970078f11ae77a78c74aee8df606ee9daba86e467108e0",
+    "/data/home/scyb475/run/czm/adapters/train_full_163783/tokenizer_config.json": "3aa8b955b487e6f6a2a80d1734532e7ad15458092cfc1e92539f3917fa4520cb",
+    "/data/home/scyb475/run/czm/adapters/train_full_163783/special_tokens_map.json": "baea4ea09372eb4fca86b4e4346139fd73cb807d5087e9de0948e971739c3e74",
+    "/data/home/scyb475/run/czm/adapters/train_full_163783/preprocessor_config.json": "7ccc62c6f2765af1f3b46c00c9b5894426835a05021c8b9c01eecb6dfb542711",
+    "/data/home/scyb475/run/czm/adapters/train_full_163783/merges.txt": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6",
+    "/data/home/scyb475/run/model/WhisperATC/whisper-large-v3-atco2-asr/vocab.json": "e2aa043ef015641d363d8288e7c241c85e36a5c761fb303598e0710233344387",
+    "/data/home/scyb475/run/model/WhisperATC/whisper-large-v3-atco2-asr/tokenizer.json": "6d8cbd7cd0d8d5815e478dac67b85a26bbe77c1f5e0c6d76d1ce2abc0e5f21ca",
+    "/data/home/scyb475/run/model/WhisperATC/whisper-large-v3-atco2-asr/config.json": "52c384dfbfc761d0c59cad69669552445f7909526e10fa03390212a181e81e22",
+    "/data/home/scyb475/run/model/WhisperATC/whisper-large-v3-atco2-asr/generation_config.json": "8d638515a61753ed6cc937ed53702d33fc93714b58b232b5746c6342faaca210",
+    "/data/home/scyb475/run/model/WhisperATC/whisper-large-v3-atco2-asr/special_tokens_map.json": "1c70773c078cb2ca96e0fcff113102f1d3e2b1504272c3bb63b035d4a6700d87",
+    "/data/home/scyb475/run/model/WhisperATC/whisper-large-v3-atco2-asr/preprocessor_config.json": "7ccc62c6f2765af1f3b46c00c9b5894426835a05021c8b9c01eecb6dfb542711",
+    "/data/home/scyb475/run/model/WhisperATC/whisper-large-v3-atco2-asr/merges.txt": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6"
+  },
+  "new_adapter_test_inference_limit": 1
+}

@@ -1,0 +1,20 @@
+{
+  "job_id": "167720",
+  "python": "/data/home/scyb475/run/zz/envs/whisperatc/bin/python",
+  "versions": {
+    "torch": "2.3.1+cu121",
+    "transformers": "4.35.2",
+    "peft": "0.6.0",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "av": "17.1.0"
+  },
+  "gpu": "NVIDIA A800-SXM4-80GB",
+  "model": "/data/home/scyb475/run/model/WhisperATC/whisper-large-v3-atco2-asr",
+  "adapter": "/data/home/scyb475/run/czm/adapters/train_full_163783",
+  "manifest": "/data/home/scyb475/run/zz/data_relationship_audit/intern_assessment_subset_20260911/dev_manifest.csv.gz",
+  "dev_manifest_sha256": "71bcf74b8eaf2838d0f419ae442c268ddd5bd83db8a8fd47bb52f686839ae6b5",
+  "eval_script_sha256": "2492ea3117a8270fed5f30fcabc8ac0cee642aeaa6a35f31f32bcde1100a00a7",
+  "baseline_inputs_match": true,
+  "test_used": false
+}

@@ -1,0 +1,39 @@
+{
+  "status": "dev_selection_frozen_for_final_test",
+  "selected_primary_system": "task1_asr_plus_legacy_rules",
+  "selected_reason": "Lowest full-dev Task1-ASR canonical corpus WER under the predeclared selection rule; also higher Exact than trained guarded T5.",
+  "primary_dev": {
+    "canonical_wer": 0.4666870182400977,
+    "canonical_exact": 0.29083333333333333,
+    "entity_micro_f1": 0.6861702127659575
+  },
+  "frozen_model_comparators": [
+    "trained_flan_t5_raw",
+    "trained_flan_t5_guarded"
+  ],
+  "trained_guarded_dev": {
+    "canonical_wer": 0.4797374647027398,
+    "canonical_exact": 0.28583333333333333,
+    "entity_micro_f1": 0.6873290793072014,
+    "fallback_rate": 0.1525
+  },
+  "additional_training_selected": false,
+  "gate_tuning_selected": false,
+  "test_used_for_this_selection": false,
+  "final_test_protocol": "One frozen run should report oracle restoration, baseline-ASR noisy restoration, task1-ASR end-to-end text restoration, legacy primary, and trained raw/guarded comparators. No post-test changes.",
+  "evidence": {
+    "job_id": 168698,
+    "analysis_sha256": "105f81457e7e8e00e8ac7d09054fc4431957bc9f9d4467a6fb4a15d18cb62460",
+    "predictions_transfer_index_sha256": "6251e68b2f7ced93d97877f6c1dcd15fe576867856c5c6867cec072a1644b02e",
+    "model_checkpoint_sha256": {
+      "tokenizer.json": "f228c94709d6f4ae55e80160e7fcb4257299bf15fbee3e1f758ba4a40a51495d",
+      "config.json": "cb07f158f5a979c4a56e80c43a60b0a287b39c7ae99c115d0d2023914b1e2355",
+      "generation_config.json": "bffbc218fd150d938535991586f61ed1568d371e4a235e94a4f52ca75e54f9ff",
+      "tokenizer_config.json": "6fa625547e73f7a565e5fa7f6cc0b89e61c521c15816c8415238f639fa5b9e21",
+      "model.safetensors": "262ccb7d67e840e1f36543a3fafc745040a279291029b9d6c2d4a5f60f042373",
+      "special_tokens_map.json": "5c87151ef0f72a99d1f766a4c418bd2a1f90aaa30a8e22fe5eca9641daebb64f",
+      "spiece.model": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86"
+    },
+    "code_sha256sum_file": "2487fbffcf5a30411a71f0f15ca8f8a773582be0c71835f1a707804bc4bfbb88"
+  }
+}
