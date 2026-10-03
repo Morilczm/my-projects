@@ -1,0 +1,17 @@
+{
+  "archive": "E:\\byrdocs-archive",
+  "resources": "E:\\byrdocs",
+  "metadata_records": 1202,
+  "local_resource_ids": 1125,
+  "status_counts": {
+    "ready": 1092,
+    "missing_source": 110,
+    "missing_metadata": 32,
+    "preview_only": 1
+  },
+  "missing_source_types": {
+    "test": 66,
+    "book": 37,
+    "doc": 7
+  }
+}

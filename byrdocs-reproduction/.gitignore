@@ -1,0 +1,10 @@
+# Local large resources and generated/private configuration
+resources/
+data/original-downloaded/
+data/regenerated/
+.env
+.dev.vars
+.ossutilconfig
+*.secret
+*.key
+*.pem

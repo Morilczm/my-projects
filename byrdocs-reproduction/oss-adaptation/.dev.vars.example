@@ -1,0 +1,3 @@
+# Copy these entries into the ignored .dev.vars file for local development.
+OSS_ACCESS_KEY_ID=replace-with-your-aliyun-access-key-id
+OSS_ACCESS_KEY_SECRET=replace-with-your-aliyun-access-key-secret
